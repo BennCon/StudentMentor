@@ -1,0 +1,61 @@
+
+body, html {
+
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+html::after {
+    content: "";
+    background: url(/background.jpeg);
+    background-size: cover;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+    background-repeat: no-repeat;
+    min-height: 100%;
+}
+#welcome-section {
+    color: #14213D;
+    text-align: center;
+    padding: 20%;
+}
+
+#sign-in-section{
+    padding-bottom: 20%;
+}
+
+.container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#sign-up {
+    background-color: #14213D;
+    color: white;
+    border-radius: 10%;
+    padding: 10%;
+   
+}
+
+#sign-up:hover {
+    color: #14213D;
+    background-color:#FCA311;
+    transition: 0.5s;
+}
+
+header figure {
+    max-width: 20%;
+    max-height: 20%;
+}
+
+footer {
+    background-color: #14213D;
+    color: white;
+}
