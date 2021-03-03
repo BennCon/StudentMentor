@@ -12,9 +12,9 @@
             <h1>
                 WLECOME TO THE MENTOR-MENTEE MATCHING SYSTEM!
             </h1>
-            <P>
+            <p>
                 "overview of the system"
-            </P>
+            </p>
         </section>
            
         <section id="sign-in-section">
@@ -23,24 +23,21 @@
                 <h2>
                         sign in 
                 </h2>
-                <from name="sign-in" id="sign-in">
+                <form name="sign-in" id="sign-in">
                     <label for="email">Enter your Email</label>
                     <input type="email" name="email" id="email" required>
 
                     <label for="psw">Password</label>
                     <input type="password" name="psw" id="psw" required>
 
-            </from> 
+                </form> 
                 <p> not a member? </p>
            
-            <form action="/signup.html">
-                <button type="submit" id="sign-up"> Sign up now !</button>
-            </form>
+                <form action="/signup.html">
+                    <button type="submit" id="sign-up"> Sign up now !</button>
+                </form>
             </div>
            
         </section>
-    </body>
-<footer>
-    <p>common footer</p>
-</footer>
-</html>
+<%= erb :"commons/footer" %>
+
