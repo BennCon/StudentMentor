@@ -1,32 +1,40 @@
 
-body, html {
+body {
+    font-family: 'Montserrat', sans-serif;  
+}
+/*index.html csss*/
+#welcome-section {
+    text-align: center;
+    padding: 10%;
+    flex: 50%;  
+    background-image: url(/background.jpeg);
+    background-repeat: no-repeat;
+}
 
-    font-family: 'Montserrat', sans-serif;
+#welcome-section h1 {
+    color: white;
+    font-size: 300%;
+}
+#welcome-section h1:hover{
+    font-size: 305%;
+    transition: 0.5s;
     
 }
-
-html::after {
-    content: "";
-    background: url(/background.jpeg);
-    background-size: cover;
-    opacity: 0.5;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;   
-    background-repeat: no-repeat;
-    min-height: 100%;
-}
-#welcome-section {
+#welcome-section p {
     color: #14213D;
-    text-align: center;
-    padding: 20%;
+}
+#welcome-section p:hover{
+    color:white;
+    background-color: #14213D;
+    transition: 0.5s;
 }
 
 #sign-in-section{
-    padding-bottom: 20%;
+    flex: 50%;
+    justify-content: center;
+    padding: 10%;
+    font-size: 150%;
+  
 }
 
 .container {
@@ -35,16 +43,19 @@ html::after {
     align-items: center;
     
 }
-
-#sign-up {
+#sign-in {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#button{
     background-color: #14213D;
     color: white;
     border-radius: 10%;
-    padding: 10%;
    
 }
 
-#sign-up:hover {
+#button:hover {
     color: #14213D;
     background-color:#FCA311;
     transition: 0.5s;
@@ -57,5 +68,63 @@ header figure {
 
 footer {
     background-color: #14213D;
+    color: white; 
+}
+
+/*displying the page as two vertical sections*/
+
+#page {
+    display: flex;
+    flex-direction: row;
+    min-height: 100%; /*to make the footer sticky at the bottom*/
+}
+
+/*MyAccount.html css*/
+
+/*aside*/
+aside {
+    background-color: #14213D;
+    width: 30%;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+#profile {
+   color: white;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   text-align: center;
+}
+
+ #profile img {
+    max-width: 50%;
+    max-height: 50%;
+    border-radius: 50%;
+}
+
+nav {
+    height: 70%;
+}
+
+nav li {
+    background-color: #60697B;
+    list-style: none;
+    padding: 10%;
+    margin-bottom: 2%;
     color: white;
+    font-weight: bold;
+}
+
+nav li:hover{
+    background-color:#2A364F;
+    transition: 0.5s;
+}
+
+/*main*/
+main {
+    padding-left: 10%;
 }
