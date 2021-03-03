@@ -13,6 +13,7 @@ CREATE TABLE mentor (
     id INTEGER PRIMARY KEY,
     first_name TEXT,
     surname TEXT,
+    industry TEXT,
     company TEXT,
     number_of_mentees INTEGER,
     seeking_mentee INTEGER,
