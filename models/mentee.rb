@@ -6,4 +6,5 @@ class Mentee < Sequel::Model
         self.year_of_study = params.fetch("year_of_study", "").strip
         self.email = params.fetch("email", "").strip
         self.password = params.fetch("password", "").strip
-  end
+    end
+end

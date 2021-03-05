@@ -5,4 +5,5 @@ class Admin < Sequel::Model
         self.admin_code = params.fetch("code", "").strip
         self.email = params.fetch("email", "").strip
         self.password = params.fetch("password", "").strip
-  end
+    end
+end

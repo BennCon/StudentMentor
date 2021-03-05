@@ -6,4 +6,5 @@ class Mentor < Sequel::Model
         self.company = params.fetch("company", "").strip
         self.email = params.fetch("email", "").strip
         self.password = params.fetch("password", "").strip
-  end
+    end
+end
