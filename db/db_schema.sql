@@ -1,15 +1,17 @@
-CREATE TABLE mentee (
+CREATE TABLE mentees (
     id INTEGER PRIMARY KEY,
     first_name TEXT,
     surname TEXT,
     course TEXT,
     year_of_study INTEGER,
+    has_contacted INTEGER,
     has_mentor INTEGER,
+    number_of_rejections INTEGER,
     email TEXT,
     password TEXT
 );
 
-CREATE TABLE mentor (
+CREATE TABLE mentors (
     id INTEGER PRIMARY KEY,
     first_name TEXT,
     surname TEXT,
@@ -21,7 +23,7 @@ CREATE TABLE mentor (
     password TEXT
 );
 
-CREATE TABLE admin (
+CREATE TABLE admins (
     id INTEGER PRIMARY KEY,
     first_name TEXT,
     surname TEXT,
