@@ -1,89 +1,19 @@
-# Logfile created on 2021-03-05 16:34:19 +0000 by logger.rb/66358
-I, [2021-03-05T16:34:19.309334 #1223]  INFO -- : (0.002108s) PRAGMA foreign_keys = 1
-I, [2021-03-05T16:34:19.309438 #1223]  INFO -- : (0.000017s) PRAGMA case_sensitive_like = 1
-I, [2021-03-05T16:34:35.192503 #1225]  INFO -- : (0.000179s) PRAGMA foreign_keys = 1
-I, [2021-03-05T16:34:35.192625 #1225]  INFO -- : (0.000018s) PRAGMA case_sensitive_like = 1
-I, [2021-03-05T16:35:22.115789 #1226]  INFO -- : (0.000180s) PRAGMA foreign_keys = 1
-I, [2021-03-05T16:35:22.115893 #1226]  INFO -- : (0.000016s) PRAGMA case_sensitive_like = 1
-I, [2021-03-05T16:35:53.169150 #1227]  INFO -- : (0.000224s) PRAGMA foreign_keys = 1
-I, [2021-03-05T16:35:53.169296 #1227]  INFO -- : (0.000042s) PRAGMA case_sensitive_like = 1
-I, [2021-03-05T16:35:53.169906 #1227]  INFO -- : (0.000071s) SELECT sqlite_version()
-I, [2021-03-05T16:35:53.170128 #1227]  INFO -- : (0.000053s) PRAGMA table_info('admins')
-E, [2021-03-05T16:35:53.170345 #1227] ERROR -- : SQLite3::SQLException: no such table: admins: SELECT * FROM `admins` LIMIT 1
-I, [2021-03-05T16:38:34.333891 #1274]  INFO -- : (0.000181s) PRAGMA foreign_keys = 1
-I, [2021-03-05T16:38:34.333985 #1274]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
-I, [2021-03-05T16:38:34.334407 #1274]  INFO -- : (0.000051s) SELECT sqlite_version()
-I, [2021-03-05T16:38:34.334611 #1274]  INFO -- : (0.000092s) PRAGMA table_info('admins')
-I, [2021-03-05T16:38:34.335336 #1274]  INFO -- : (0.000140s) PRAGMA table_info('mentees')
-I, [2021-03-05T16:39:01.039822 #1275]  INFO -- : (0.000214s) PRAGMA foreign_keys = 1
-I, [2021-03-05T16:39:01.039949 #1275]  INFO -- : (0.000016s) PRAGMA case_sensitive_like = 1
-I, [2021-03-05T16:39:01.040413 #1275]  INFO -- : (0.000055s) SELECT sqlite_version()
-I, [2021-03-05T16:39:01.040651 #1275]  INFO -- : (0.000094s) PRAGMA table_info('admins')
-I, [2021-03-05T16:39:01.041368 #1275]  INFO -- : (0.000123s) PRAGMA table_info('mentees')
-I, [2021-03-05T16:39:01.042199 #1275]  INFO -- : (0.000110s) PRAGMA table_info('mentors')
-I, [2021-03-05T16:39:08.078633 #1276]  INFO -- : (0.000237s) PRAGMA foreign_keys = 1
-I, [2021-03-05T16:39:08.078787 #1276]  INFO -- : (0.000045s) PRAGMA case_sensitive_like = 1
-I, [2021-03-05T16:39:08.079385 #1276]  INFO -- : (0.000082s) SELECT sqlite_version()
-I, [2021-03-05T16:39:08.079750 #1276]  INFO -- : (0.000169s) PRAGMA table_info('admins')
-I, [2021-03-05T16:39:08.080946 #1276]  INFO -- : (0.000200s) PRAGMA table_info('mentees')
-I, [2021-03-05T16:39:08.082265 #1276]  INFO -- : (0.000161s) PRAGMA table_info('mentors')
-I, [2021-03-07T12:00:41.178984 #266]  INFO -- : (0.003897s) PRAGMA foreign_keys = 1
-I, [2021-03-07T12:00:41.181052 #266]  INFO -- : (0.000021s) PRAGMA case_sensitive_like = 1
-I, [2021-03-07T12:00:41.181667 #266]  INFO -- : (0.000074s) SELECT sqlite_version()
-I, [2021-03-07T12:00:41.181979 #266]  INFO -- : (0.000136s) PRAGMA table_info('admins')
-I, [2021-03-07T12:00:41.182852 #266]  INFO -- : (0.000147s) PRAGMA table_info('mentees')
-I, [2021-03-07T12:00:41.183860 #266]  INFO -- : (0.000144s) PRAGMA table_info('mentors')
-I, [2021-03-07T12:18:22.883636 #292]  INFO -- : (0.000190s) PRAGMA foreign_keys = 1
-I, [2021-03-07T12:18:22.883734 #292]  INFO -- : (0.000016s) PRAGMA case_sensitive_like = 1
-I, [2021-03-07T12:18:22.884204 #292]  INFO -- : (0.000054s) SELECT sqlite_version()
-I, [2021-03-07T12:18:22.884457 #292]  INFO -- : (0.000113s) PRAGMA table_info('admins')
-I, [2021-03-07T12:18:22.885421 #292]  INFO -- : (0.000159s) PRAGMA table_info('mentees')
-I, [2021-03-07T12:18:22.886343 #292]  INFO -- : (0.000133s) PRAGMA table_info('mentors')
-I, [2021-03-07T12:28:00.955031 #360]  INFO -- : (0.000174s) PRAGMA foreign_keys = 1
-I, [2021-03-07T12:28:00.955142 #360]  INFO -- : (0.000032s) PRAGMA case_sensitive_like = 1
-I, [2021-03-07T12:28:00.955615 #360]  INFO -- : (0.000055s) SELECT sqlite_version()
-I, [2021-03-07T12:28:00.955865 #360]  INFO -- : (0.000127s) PRAGMA table_info('admins')
-I, [2021-03-07T12:28:00.956588 #360]  INFO -- : (0.000122s) PRAGMA table_info('mentees')
-I, [2021-03-07T12:28:00.957427 #360]  INFO -- : (0.000111s) PRAGMA table_info('mentors')
-I, [2021-03-07T12:33:13.013802 #383]  INFO -- : (0.000186s) PRAGMA foreign_keys = 1
-I, [2021-03-07T12:33:13.013916 #383]  INFO -- : (0.000032s) PRAGMA case_sensitive_like = 1
-I, [2021-03-07T12:33:13.014389 #383]  INFO -- : (0.000057s) SELECT sqlite_version()
-I, [2021-03-07T12:33:13.014620 #383]  INFO -- : (0.000105s) PRAGMA table_info('admins')
-I, [2021-03-07T12:33:13.015358 #383]  INFO -- : (0.000122s) PRAGMA table_info('mentees')
-I, [2021-03-07T12:33:13.016229 #383]  INFO -- : (0.000113s) PRAGMA table_info('mentors')
-I, [2021-03-07T12:34:56.623349 #404]  INFO -- : (0.000173s) PRAGMA foreign_keys = 1
-I, [2021-03-07T12:34:56.623468 #404]  INFO -- : (0.000035s) PRAGMA case_sensitive_like = 1
-I, [2021-03-07T12:34:56.623978 #404]  INFO -- : (0.000064s) SELECT sqlite_version()
-I, [2021-03-07T12:34:56.624211 #404]  INFO -- : (0.000105s) PRAGMA table_info('admins')
-I, [2021-03-07T12:34:56.624949 #404]  INFO -- : (0.000128s) PRAGMA table_info('mentees')
-I, [2021-03-07T12:34:56.625777 #404]  INFO -- : (0.000110s) PRAGMA table_info('mentors')
-I, [2021-03-07T20:41:50.102709 #302]  INFO -- : (0.000200s) PRAGMA foreign_keys = 1
-I, [2021-03-07T20:41:50.102830 #302]  INFO -- : (0.000016s) PRAGMA case_sensitive_like = 1
-I, [2021-03-07T20:41:50.103348 #302]  INFO -- : (0.000066s) SELECT sqlite_version()
-I, [2021-03-07T20:41:50.103594 #302]  INFO -- : (0.000110s) PRAGMA table_info('admins')
-I, [2021-03-07T20:41:50.104400 #302]  INFO -- : (0.000123s) PRAGMA table_info('mentees')
-I, [2021-03-07T20:41:50.105282 #302]  INFO -- : (0.000112s) PRAGMA table_info('mentors')
-I, [2021-03-07T20:49:16.717815 #325]  INFO -- : (0.000170s) PRAGMA foreign_keys = 1
-I, [2021-03-07T20:49:16.717936 #325]  INFO -- : (0.000041s) PRAGMA case_sensitive_like = 1
-I, [2021-03-07T20:49:16.718398 #325]  INFO -- : (0.000054s) SELECT sqlite_version()
-I, [2021-03-07T20:49:16.718621 #325]  INFO -- : (0.000102s) PRAGMA table_info('admins')
-I, [2021-03-07T20:49:16.719320 #325]  INFO -- : (0.000117s) PRAGMA table_info('mentees')
-I, [2021-03-07T20:49:16.720166 #325]  INFO -- : (0.000111s) PRAGMA table_info('mentors')
-I, [2021-03-07T20:51:36.879662 #346]  INFO -- : (0.000170s) PRAGMA foreign_keys = 1
-I, [2021-03-07T20:51:36.879792 #346]  INFO -- : (0.000048s) PRAGMA case_sensitive_like = 1
-I, [2021-03-07T20:51:36.880252 #346]  INFO -- : (0.000054s) SELECT sqlite_version()
-I, [2021-03-07T20:51:36.880490 #346]  INFO -- : (0.000106s) PRAGMA table_info('admins')
-I, [2021-03-07T20:51:36.881220 #346]  INFO -- : (0.000120s) PRAGMA table_info('mentees')
-I, [2021-03-07T20:51:36.882055 #346]  INFO -- : (0.000113s) PRAGMA table_info('mentors')
-I, [2021-03-07T21:16:06.916073 #457]  INFO -- : (0.000185s) PRAGMA foreign_keys = 1
-I, [2021-03-07T21:16:06.916180 #457]  INFO -- : (0.000015s) PRAGMA case_sensitive_like = 1
-I, [2021-03-07T21:16:06.916607 #457]  INFO -- : (0.000051s) SELECT sqlite_version()
-I, [2021-03-07T21:16:06.916819 #457]  INFO -- : (0.000102s) PRAGMA table_info('admins')
-I, [2021-03-07T21:16:06.917639 #457]  INFO -- : (0.000124s) PRAGMA table_info('mentees')
-I, [2021-03-07T21:16:06.918478 #457]  INFO -- : (0.000112s) PRAGMA table_info('mentors')
-I, [2021-03-07T21:17:17.885826 #513]  INFO -- : (0.000177s) PRAGMA foreign_keys = 1
-I, [2021-03-07T21:17:17.885924 #513]  INFO -- : (0.000015s) PRAGMA case_sensitive_like = 1
-I, [2021-03-07T21:17:17.886403 #513]  INFO -- : (0.000057s) SELECT sqlite_version()
-I, [2021-03-07T21:17:17.886629 #513]  INFO -- : (0.000094s) PRAGMA table_info('admins')
-I, [2021-03-07T21:17:17.887372 #513]  INFO -- : (0.000121s) PRAGMA table_info('mentees')
-I, [2021-03-07T21:17:17.888235 #513]  INFO -- : (0.000111s) PRAGMA table_info('mentors')
+# Logfile created on 2021-03-08 20:31:16 +0000 by logger.rb/66358
+I, [2021-03-08T20:31:16.928628 #353]  INFO -- : (0.000179s) PRAGMA foreign_keys = 1
+I, [2021-03-08T20:31:16.928755 #353]  INFO -- : (0.000015s) PRAGMA case_sensitive_like = 1
+I, [2021-03-08T20:31:16.929255 #353]  INFO -- : (0.000061s) SELECT sqlite_version()
+I, [2021-03-08T20:31:16.929499 #353]  INFO -- : (0.000115s) PRAGMA table_info('admins')
+I, [2021-03-08T20:31:16.930270 #353]  INFO -- : (0.000122s) PRAGMA table_info('mentees')
+I, [2021-03-08T20:31:16.931133 #353]  INFO -- : (0.000113s) PRAGMA table_info('mentors')
+I, [2021-03-08T20:31:40.139290 #353]  INFO -- : (0.000049s) BEGIN
+I, [2021-03-08T20:31:40.139789 #353]  INFO -- : (0.000223s) INSERT INTO `admins` (`first_name`, `surname`, `admin_code`, `email`, `password`) VALUES ('adminName', 'adminSur', 'adminCode', 'admin@test.test', 'adminPass')
+I, [2021-03-08T20:31:40.140037 #353]  INFO -- : (0.000097s) SELECT * FROM `admins` WHERE `id` = 1
+I, [2021-03-08T20:31:40.230382 #353]  INFO -- : (0.090256s) COMMIT
+I, [2021-03-08T20:32:02.737499 #353]  INFO -- : (0.000052s) BEGIN
+I, [2021-03-08T20:32:02.738037 #353]  INFO -- : (0.000226s) INSERT INTO `mentees` (`first_name`, `surname`, `course`, `year_of_study`, `email`, `password`) VALUES ('menteeName', 'menteeSur', 'menteeCourse', 2021, 'mentee@test.test', 'menteePass')
+I, [2021-03-08T20:32:02.738287 #353]  INFO -- : (0.000110s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-03-08T20:32:02.837704 #353]  INFO -- : (0.099324s) COMMIT
+I, [2021-03-08T20:32:21.696204 #353]  INFO -- : (0.000043s) BEGIN
+I, [2021-03-08T20:32:21.696688 #353]  INFO -- : (0.000234s) INSERT INTO `mentors` (`first_name`, `surname`, `industry`, `company`, `email`, `password`) VALUES ('mentorName', 'mentorSur', 'mentorInd', 'mentorCompany', 'mentor@test.test', 'mentorPass')
+I, [2021-03-08T20:32:21.696938 #353]  INFO -- : (0.000106s) SELECT * FROM `mentors` WHERE `id` = 1
+I, [2021-03-08T20:32:21.800610 #353]  INFO -- : (0.103577s) COMMIT

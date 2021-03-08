@@ -3,10 +3,6 @@ require "sinatra"
 
 set :bind, '0.0.0.0'
 
-get "/" do
-    erb :mentee_form
-end
-
 # So we can escape HTML special characters in the view
 include ERB::Util
 

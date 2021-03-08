@@ -27,6 +27,7 @@ CREATE TABLE admins (
     id INTEGER PRIMARY KEY,
     first_name TEXT,
     surname TEXT,
+    admin_code TEXT,
     email TEXT,
     password TEXT
 );
