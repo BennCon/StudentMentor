@@ -4,7 +4,7 @@ RSpec.describe "Mentor Form" do
     describe "GET /mentor-form" do
         it "has a status code of 200 (OK)" do
             get "/mentor-form"
-            expect(last_response.status).to be_ok
+            expect(last_response.status).to eq(200)
         end
         
         it "includes a form" do
