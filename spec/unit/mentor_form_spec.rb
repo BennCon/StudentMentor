@@ -1,16 +1,6 @@
-require "rspec"
-require "rack/test"
-
-require_relative "../../controllers/mentor_form"
 require_relative "../../helpers/spec_helper"
 
 RSpec.describe "Mentor Form" do
-    include Rack::Test::Methods
-    
-    def app
-        Sinatra::Application
-    end
-    
     describe "GET /mentor-form" do
         it "has a status code of 200 (OK)" do
             get "/mentor-form"

@@ -1,0 +1,33 @@
+# Logfile created on 2021-03-09 09:56:20 +0000 by logger.rb/66358
+I, [2021-03-09T09:56:20.933092 #353]  INFO -- : (0.000109s) PRAGMA foreign_keys = 1
+I, [2021-03-09T09:56:20.933168 #353]  INFO -- : (0.000013s) PRAGMA case_sensitive_like = 1
+I, [2021-03-09T09:57:24.302961 #355]  INFO -- : (0.000105s) PRAGMA foreign_keys = 1
+I, [2021-03-09T09:57:24.303042 #355]  INFO -- : (0.000013s) PRAGMA case_sensitive_like = 1
+I, [2021-03-09T09:58:24.387211 #357]  INFO -- : (0.000103s) PRAGMA foreign_keys = 1
+I, [2021-03-09T09:58:24.387304 #357]  INFO -- : (0.000018s) PRAGMA case_sensitive_like = 1
+I, [2021-03-09T09:59:12.595951 #358]  INFO -- : (0.000102s) PRAGMA foreign_keys = 1
+I, [2021-03-09T09:59:12.596035 #358]  INFO -- : (0.000013s) PRAGMA case_sensitive_like = 1
+I, [2021-03-09T09:59:14.353451 #359]  INFO -- : (0.000122s) PRAGMA foreign_keys = 1
+I, [2021-03-09T09:59:14.353534 #359]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
+I, [2021-03-09T10:00:14.701277 #360]  INFO -- : (0.000099s) PRAGMA foreign_keys = 1
+I, [2021-03-09T10:00:14.701375 #360]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
+I, [2021-03-09T10:01:03.803108 #361]  INFO -- : (0.000104s) PRAGMA foreign_keys = 1
+I, [2021-03-09T10:01:03.803191 #361]  INFO -- : (0.000013s) PRAGMA case_sensitive_like = 1
+I, [2021-03-09T10:05:27.688460 #1208]  INFO -- : (0.000108s) PRAGMA foreign_keys = 1
+I, [2021-03-09T10:05:27.688551 #1208]  INFO -- : (0.000017s) PRAGMA case_sensitive_like = 1
+I, [2021-03-09T10:12:30.087330 #2789]  INFO -- : (0.000100s) PRAGMA foreign_keys = 1
+I, [2021-03-09T10:12:30.087415 #2789]  INFO -- : (0.000017s) PRAGMA case_sensitive_like = 1
+I, [2021-03-09T10:14:51.195102 #2790]  INFO -- : (0.000118s) PRAGMA foreign_keys = 1
+I, [2021-03-09T10:14:51.195184 #2790]  INFO -- : (0.000013s) PRAGMA case_sensitive_like = 1
+I, [2021-03-09T10:15:56.516368 #2794]  INFO -- : (0.000101s) PRAGMA foreign_keys = 1
+I, [2021-03-09T10:15:56.516449 #2794]  INFO -- : (0.000013s) PRAGMA case_sensitive_like = 1
+I, [2021-03-09T10:25:58.928480 #2800]  INFO -- : (0.000104s) PRAGMA foreign_keys = 1
+I, [2021-03-09T10:25:58.928568 #2800]  INFO -- : (0.000013s) PRAGMA case_sensitive_like = 1
+I, [2021-03-09T10:25:58.929000 #2800]  INFO -- : (0.000051s) SELECT sqlite_version()
+I, [2021-03-09T10:25:58.929153 #2800]  INFO -- : (0.000030s) PRAGMA table_info('admins')
+E, [2021-03-09T10:25:58.929324 #2800] ERROR -- : SQLite3::SQLException: no such table: admins: SELECT * FROM `admins` LIMIT 1
+I, [2021-03-09T10:26:26.828374 #2803]  INFO -- : (0.000112s) PRAGMA foreign_keys = 1
+I, [2021-03-09T10:26:26.828455 #2803]  INFO -- : (0.000013s) PRAGMA case_sensitive_like = 1
+I, [2021-03-09T10:26:26.828876 #2803]  INFO -- : (0.000050s) SELECT sqlite_version()
+I, [2021-03-09T10:26:26.829011 #2803]  INFO -- : (0.000027s) PRAGMA table_info('admins')
+E, [2021-03-09T10:26:26.829145 #2803] ERROR -- : SQLite3::SQLException: no such table: admins: SELECT * FROM `admins` LIMIT 1

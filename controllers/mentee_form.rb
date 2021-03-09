@@ -1,3 +1,6 @@
+# I have to add this for tests to work - Charlie
+require 'sinatra'
+
 get "/mentee_form" do
    @mentee = Mentee.new
    erb :mentee_form
