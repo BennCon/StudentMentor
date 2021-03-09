@@ -7,6 +7,6 @@ post "/admin-form" do
    @admin = Admin.new
    @admin.load(params)
    @admin.save_changes
-   redirect "/admin_form"
+   redirect "/admin-form"
    erb :admin_form
 end

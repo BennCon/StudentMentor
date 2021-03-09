@@ -7,6 +7,6 @@ post "/mentor-form" do
    @mentor = Mentor.new
    @mentor.load(params)
    @mentor.save_changes
-   redirect "/mentor_form"
+   redirect "/mentor-form"
    erb :mentor_form
 end

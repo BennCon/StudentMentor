@@ -7,6 +7,6 @@ post "/mentee-form" do
    @mentee = Mentee.new
    @mentee.load(params)
    @mentee.save_changes
-   redirect "/mentee_form"
+   redirect "/mentee-form"
    erb :mentee_form
 end
