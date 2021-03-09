@@ -1,9 +1,9 @@
-get "/mentor_form" do
+get "/mentor-form" do
    @mentor = Mentor.new
    erb :mentor_form
 end
 
-post "/mentor_form" do
+post "/mentor-form" do
    @mentor = Mentor.new
    @mentor.load(params)
    @mentor.save_changes

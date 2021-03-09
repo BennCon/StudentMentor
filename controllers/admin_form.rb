@@ -1,9 +1,9 @@
-get "/admin_form" do
+get "/admin-form" do
    @admin = Admin.new
    erb :admin_form
 end
 
-post "/admin_form" do
+post "/admin-form" do
    @admin = Admin.new
    @admin.load(params)
    @admin.save_changes
