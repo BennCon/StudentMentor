@@ -27,16 +27,13 @@
             </section>
             <section id="information"> 
                 <h2> Basic information</h2>
-                <table>
-                      <tr>
-                        <th>Full name</th>
-                        <th>Email</th>
-                      </tr>
-                      <tr>
-                        <td contentEditable="true" >..</td>
-                          <td contentEditable="true">..</td>
-                      </tr>
-                    </table>
+                 <form method="post" action="login" id="sign-in">
+                        <label for="email">Enter your Email</label>
+                        <input type="email" name="email" id="email" required>
+                        <label for="name">Enter your full name</label>
+                        <input type="name" name="name" id="name" required>
+                        <button type="submit" id="button"> save changes</button>
+                    </form>
             </section>
         </main>
 </div>
