@@ -110,13 +110,11 @@ nav {
     height: 70%;
 }
 
-nav li {
+nav li{
     background-color: #60697B;
     list-style: none;
     padding: 10%;
     margin-bottom: 2%;
-    color: white;
-    font-weight: bold;
 }
 
 nav li:hover{
@@ -124,6 +122,10 @@ nav li:hover{
     transition: 0.5s;
 }
 
+nav li a {
+    text-decoration: none;
+    color: white;
+}
 /*main*/
 main {
     padding-left: 10%;

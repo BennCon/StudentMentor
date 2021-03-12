@@ -10,17 +10,28 @@
     <p class="label">Course</p>
     <p class="field"><input type="text" name="course" /></p>
     
-
-    <p class="label">Year of study</p>
-    <p class="field"><input type="text" name="year_of_study" /></p>
- 
+    <p class="label">Gender</p>
+    <select class="field" name="gender">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="non_binary">Non-binary</option>
+    </select>
+    
+    <p class="label">Year of Study</p>
+    <select class="field" name="year_of_study">
+      <option value="1">1st</option>
+      <option value="2">2nd</option>
+      <option value="3">3rd</option>
+      <option value="4">4th</option>
+    </select>
+    
     <p class="label">Email</p>
     <p class="field"><input type="email" name="email" /></p>
 
     <p class="label">Password</p>
     <p class="field"><input type="password" name="password" /></p>
 
-    <p class="submit"><input type="submit" value="Submit" /></p>
+    <button type="submit" id="button"> Submit </button>
 </form>
 
 <%= erb :"commons/footer" %>

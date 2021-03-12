@@ -6,12 +6,76 @@
 
     <p class="label">Surname</p>
     <p class="field"><input type="text" name="surname" /></p>
+    
+    <p class="label">Gender</p>
+    <select class="field" name="gender">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="non_binary">Non-binary</option>
+    </select>
 
     <p class="label">Industry</p>
-    <p class="field"><input type="text" name="industry" /></p>
+    <select class="field" name="industry">
+      <option value="aerospace">Aerospace</option>
+      <option value="agriculture">Agriculture</option>
+      <option value="animal">Animal care</option>
+      <option value="automotive">Automotive</option>
+      <option value="bio">Bio</option>
+      <option value="education">Education</option>
+      <option value="energy">Energy</option>
+      <option value="fashion">Fashion</option>   
+      <option value="finance">Finance</option>
+      <option value="food">Food industry</option>
+      <option value="government">Government</option>
+      <option value="health">Health</option>
+      <option value="hr">HR</option>
+      <option value="it">IT</option>
+      <option value="media">Media and Communications</option>
+      <option value="pharmacy">Pharmacy</option>
+      <option value="retail">Retail</option>
+      <option value="sport">Sport</option>  
+      <option value="transport">Transport</option>
+      <option value="tourism">Tourism</option>
+    </select>
     
     <p class="label">Company</p>
     <p class="field"><input type="text" name="company" /></p>
+    
+    <p class="label">Are you a Sheffield graduate?</p>
+    <input type="radio"  name="sheff_grad" value="1">
+    <label for="yes">Yes</label><br>
+    <input type="radio" name="sheff_grad" value="0">
+    <label for="no">No</label><br>
+    
+    <p class="label">Degree field</p>
+    <select class="field" name="degree_field">
+      <option value="accounting">Accounting</option>
+      <option value="aerospace">Aerospace</option>
+      <option value="agriculture">Agriculture</option>
+      <option value="archaeology">Archaeology</option>
+      <option value="architecture">Architecture</option>
+      <option value="biology">Biology</option>
+      <option value="business">Business</option>
+      <option value="chemistry">Chemistry</option>
+      <option value="computer_science">Computer Science</option>
+      <option value="dentistry">Dentistry</option>
+      <option value="economics">Economics</option>
+      <option value="education">Education</option>
+      <option value="engineering">Engineering</option>
+      <option value="geography">Geography</option>
+      <option value="history">History</option>
+      <option value="health">Health</option>
+      <option value="hr">HR</option>
+      <option value="it">IT</option>
+      <option value="linguistics">Linguistics</option>
+      <option value="mathematics">Mathematics</option>
+      <option value="media">Media and Communications</option>
+      <option value="medicine">Medicine</option>
+      <option value="pharmacy">Pharmacy</option>
+      <option value="physics">Physics</option>
+      <option value="psychology">Psychology</option>
+      <option value="sport">Sport</option>  
+    </select>
     
     <p class="label">Email</p>
     <p class="field"><input type="email" name="email" /></p>
@@ -19,7 +83,7 @@
     <p class="label">Password</p>
     <p class="field"><input type="password" name="password" /></p>
 
-    <p class="submit"><input type="submit" value="Submit" /></p>
+    <button type="submit" id="button"> Submit </button>
 </form>
 
 <%= erb :"commons/footer" %>
