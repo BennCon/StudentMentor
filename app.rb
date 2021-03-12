@@ -10,10 +10,6 @@ include ERB::Util
 require_relative "db/db"
 
 # App
-# Why require_rel instead of require_all? require_rel is like require_relative_all
-# in that require_all looks for files in the load path, meaning if tests are ran
-# require_all starts looking for files in the test directories instead of relative to
-# this file.
 require_rel "models"
 require_rel "controllers"
 require_rel "helpers"

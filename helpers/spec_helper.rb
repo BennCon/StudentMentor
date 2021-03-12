@@ -1,3 +1,5 @@
+#ENV["APP_ENV"] = "test"
+
 # load the app
 require_relative "../app"
 
