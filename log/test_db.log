@@ -1,7 +1,42 @@
-# Logfile created on 2021-03-11 16:41:49 +0000 by logger.rb/66358
-I, [2021-03-11T16:41:49.240651 #236]  INFO -- : (0.000176s) PRAGMA foreign_keys = 1
-I, [2021-03-11T16:41:49.240747 #236]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
-I, [2021-03-11T16:41:49.241253 #236]  INFO -- : (0.000068s) SELECT sqlite_version()
-I, [2021-03-11T16:41:49.241485 #236]  INFO -- : (0.000108s) PRAGMA table_info('admins')
-I, [2021-03-11T16:41:49.242251 #236]  INFO -- : (0.000126s) PRAGMA table_info('mentees')
-I, [2021-03-11T16:41:49.243181 #236]  INFO -- : (0.000133s) PRAGMA table_info('mentors')
+# Logfile created on 2021-03-13 17:44:59 +0000 by logger.rb/66358
+I, [2021-03-13T17:44:59.948091 #217]  INFO -- : (0.000184s) PRAGMA foreign_keys = 1
+I, [2021-03-13T17:44:59.948180 #217]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
+I, [2021-03-13T17:44:59.948660 #217]  INFO -- : (0.000053s) SELECT sqlite_version()
+I, [2021-03-13T17:44:59.948877 #217]  INFO -- : (0.000098s) PRAGMA table_info('admins')
+I, [2021-03-13T17:44:59.949629 #217]  INFO -- : (0.000133s) PRAGMA table_info('mentees')
+I, [2021-03-13T17:44:59.950559 #217]  INFO -- : (0.000150s) PRAGMA table_info('mentors')
+I, [2021-03-13T17:44:59.951480 #217]  INFO -- : (0.000085s) PRAGMA table_info('users')
+I, [2021-03-13T17:45:38.377932 #217]  INFO -- : (0.000051s) BEGIN
+I, [2021-03-13T17:45:38.378514 #217]  INFO -- : (0.000283s) INSERT INTO `users` (`email`, `password`, `user_type`) VALUES ('mentor@test.test', 'mentorPass', 'mentor')
+I, [2021-03-13T17:45:38.378810 #217]  INFO -- : (0.000120s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-03-13T17:45:38.494081 #217]  INFO -- : (0.115168s) COMMIT
+I, [2021-03-13T17:45:38.494287 #217]  INFO -- : (0.000031s) BEGIN
+I, [2021-03-13T17:45:38.494620 #217]  INFO -- : (0.000155s) INSERT INTO `mentors` (`first_name`, `surname`, `industry`, `company`, `email`, `password`) VALUES ('mentorName', 'mentorSur', 'energy', 'mentorCompany', 'mentor@test.test', 'mentorPass')
+I, [2021-03-13T17:45:38.494858 #217]  INFO -- : (0.000120s) SELECT * FROM `mentors` WHERE `id` = 1
+I, [2021-03-13T17:45:38.611882 #217]  INFO -- : (0.116927s) COMMIT
+I, [2021-03-13T17:48:37.059364 #238]  INFO -- : (0.000174s) PRAGMA foreign_keys = 1
+I, [2021-03-13T17:48:37.059461 #238]  INFO -- : (0.000019s) PRAGMA case_sensitive_like = 1
+I, [2021-03-13T17:48:37.059950 #238]  INFO -- : (0.000052s) SELECT sqlite_version()
+I, [2021-03-13T17:48:37.060190 #238]  INFO -- : (0.000113s) PRAGMA table_info('admins')
+I, [2021-03-13T17:48:37.060938 #238]  INFO -- : (0.000135s) PRAGMA table_info('mentees')
+I, [2021-03-13T17:48:37.061870 #238]  INFO -- : (0.000145s) PRAGMA table_info('mentors')
+I, [2021-03-13T17:48:37.062780 #238]  INFO -- : (0.000086s) PRAGMA table_info('users')
+I, [2021-03-13T17:48:57.787002 #238]  INFO -- : (0.000041s) BEGIN
+I, [2021-03-13T17:48:57.787510 #238]  INFO -- : (0.000243s) INSERT INTO `users` (`email`, `password`, `user_type`) VALUES ('admin@test.test', 'adminPass', 'admin')
+I, [2021-03-13T17:48:57.787788 #238]  INFO -- : (0.000115s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-03-13T17:48:57.884018 #238]  INFO -- : (0.096132s) COMMIT
+I, [2021-03-13T17:48:57.884258 #238]  INFO -- : (0.000038s) BEGIN
+I, [2021-03-13T17:48:57.884709 #238]  INFO -- : (0.000200s) INSERT INTO `admins` (`first_name`, `surname`, `admin_code`, `email`, `password`) VALUES ('adminName', 'adminSur', 'adminCode', 'admin@test.test', 'adminPass')
+I, [2021-03-13T17:48:57.884985 #238]  INFO -- : (0.000116s) SELECT * FROM `admins` WHERE `id` = 1
+I, [2021-03-13T17:48:57.985683 #238]  INFO -- : (0.100601s) COMMIT
+I, [2021-03-13T17:48:57.985953 #238]  INFO -- : (0.000035s) BEGIN
+I, [2021-03-13T17:48:57.986338 #238]  INFO -- : (0.000211s) UPDATE `admins` SET `id` = 2 WHERE (`id` = 1)
+I, [2021-03-13T17:48:58.085417 #238]  INFO -- : (0.098997s) COMMIT
+I, [2021-03-13T17:49:13.257536 #238]  INFO -- : (0.000038s) BEGIN
+I, [2021-03-13T17:49:13.257880 #238]  INFO -- : (0.000160s) INSERT INTO `users` (`email`, `password`, `user_type`) VALUES ('admin@test.testd', 'adiksmd', 'admin')
+I, [2021-03-13T17:49:13.258067 #238]  INFO -- : (0.000078s) SELECT * FROM `users` WHERE `id` = 3
+I, [2021-03-13T17:49:13.369166 #238]  INFO -- : (0.111012s) COMMIT
+I, [2021-03-13T17:49:13.369420 #238]  INFO -- : (0.000033s) BEGIN
+I, [2021-03-13T17:49:13.369726 #238]  INFO -- : (0.000149s) INSERT INTO `admins` (`first_name`, `surname`, `admin_code`, `email`, `password`) VALUES ('admin2', 'adddsd', 'sdasd', 'admin@test.testd', 'adiksmd')
+I, [2021-03-13T17:49:13.369931 #238]  INFO -- : (0.000092s) SELECT * FROM `admins` WHERE `id` = 3
+I, [2021-03-13T17:49:13.474828 #238]  INFO -- : (0.104815s) COMMIT

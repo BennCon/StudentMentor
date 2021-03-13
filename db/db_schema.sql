@@ -37,3 +37,10 @@ CREATE TABLE admins (
     email TEXT,
     password TEXT
 );
+
+CREATE TABLE users (
+   id INTEGER PRIMARY KEY,
+   email TEXT,
+   password TEXT,
+   user_type TEXT
+);
