@@ -19,7 +19,10 @@
                 <h2>
                         sign in 
                 </h2>
-                    <form method="post" action="login" name="sign-in" id="sign-in">
+                    <form method="post" action="/index" name="sign-in" id="sign-in">
+                        <% unless @error.nil? %>
+                           <p><strong class="error"><%= @error %></strong></p>
+                        <% end %>
                         <label for="email">Enter your Email</label>
                         <input type="email" name="email" id="email" required>
                         <label for="password">Password</label>
