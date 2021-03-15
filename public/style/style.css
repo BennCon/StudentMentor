@@ -62,7 +62,7 @@ body {
 }
 
 #button a {
-    color: white
+    color: white;
 }
 
 header figure {
@@ -133,5 +133,9 @@ nav li a {
 /*main*/
 main {
     padding-left: 10%;
+}
+
+#sign-in-form {
+    display: none;
 }
 
