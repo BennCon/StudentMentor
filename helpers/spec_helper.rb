@@ -34,7 +34,7 @@ def register_mentee
     select 'Male', from: "gender"
     select '1st', from: "year_of_study"
     fill_in "email", with: "test@test.com"
-    fill_in "password", with "Testpass"
+    fill_in "password", with: "Testpass"
     click_button "mentee_submit"
 end
 
@@ -49,6 +49,6 @@ def register_mentor
     choose 'yes'
     select "Accounting", from: "degree_field"
     fill_in "email", with: "test@test.com"
-    fill_in "password", with "Testpass"
+    fill_in "password", with: "Testpass"
     click_button "mentor_submit"
 end
