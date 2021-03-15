@@ -33,7 +33,7 @@
                 <p> Year of Study: <strong><%= @year_of_study %></strong></p>
                 <% end %>
                 <button onclick="showForm()">Edit details</button>
-                <form method="post" action="/my-account" id="accDetails sign-in">
+                <form method="post" action="/my-account" id="accDetails">
                         <label for="email">Enter your Email</label>
                         <input type="email" name="email" id="email" required>
                         <label for="name">Enter your full name</label>
@@ -45,6 +45,9 @@
                           <option >3rd</option>
                           <option >4th</option>
                         </select>
+                        <label for="biography">Edit your biography:</label>
+                        <textarea name="biography" id="biography" rows="10" cols="40" ></textarea>
+                        
                         <button type="submit" action="submit" id="button"> save changes</button>
                     </form>
                 <script>
