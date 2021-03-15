@@ -12,3 +12,10 @@ end
 RSpec.configure do |config|
   config.include Rack::Test::Methods
 end
+
+# Display LOC test coverage
+require "simplecov"
+SimpleCov.start do
+    add_filter "/spec/"
+end
+SimpleCov.coverage_dir "coverage"
