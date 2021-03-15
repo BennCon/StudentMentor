@@ -27,13 +27,36 @@
             </section>
             <section id="information"> 
                 <h2> Basic information</h2>
-                 <form method="post" action="login" id="sign-in">
+                <% unless @name.nil?&&@email.nil? && @year_of_study.nil? %>
+                <p> name: <strong><%= @name %></strong></p>
+                <p> email: <strong><%= @email %></strong></p>
+                <p> Year of Study: <strong><%= @year_of_study %></strong></p>
+                <% end %>
+                <button onclick="showForm()">Edit details</button>
+                <form method="post" action="/my-account" id="accDetails sign-in">
                         <label for="email">Enter your Email</label>
                         <input type="email" name="email" id="email" required>
                         <label for="name">Enter your full name</label>
                         <input type="name" name="name" id="name" required>
-                        <button type="submit" id="button"> save changes</button>
+                        <label> choose year of study </label>
+                         <select  name="year_of_study">
+                          <option >1st</option>
+                          <option >2nd</option>
+                          <option >3rd</option>
+                          <option >4th</option>
+                        </select>
+                        <button type="submit" action="submit" id="button"> save changes</button>
                     </form>
+                <script>
+                    function showForm() {
+                        var x = document.getElementById("accDetails");
+                          if (x.style.display === "none") {
+                            x.style.display = "block";
+                          } else {
+                            x.style.display = "none"; 
+                          } 
+                    }
+                </script>
             </section>
         </main>
 </div>
