@@ -9,8 +9,15 @@ post '/index' do
   @error = nil
 
   if @user.exist?
+    puts @user.user_type
     session[:logged_in] = true
-    redirect "/my-account"
+    if @user.user_type = "admin"
+       redirect "/my-account-admin"
+    elsif @user.user_type = "mentor"
+       redirect "/my-account-mentor"
+    else
+       redirect "/my-account-mentee"
+    end
   else
     @error = "Username/Password combination incorrect"
 #     redirect "/index"

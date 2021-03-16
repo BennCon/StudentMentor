@@ -123,3 +123,54 @@ I, [2021-03-13T18:08:22.713843 #355]  INFO -- : (0.000167s) PRAGMA table_info('m
 I, [2021-03-13T18:08:22.714777 #355]  INFO -- : (0.000085s) PRAGMA table_info('users')
 I, [2021-03-13T18:08:30.924742 #355]  INFO -- : (0.000153s) SELECT * FROM `users` WHERE (`email` = 'dfdf@dff.com') LIMIT 1
 I, [2021-03-13T18:08:43.712455 #355]  INFO -- : (0.000159s) SELECT * FROM `users` WHERE (`email` = 'admin@test.test') LIMIT 1
+I, [2021-03-15T17:55:54.232109 #406]  INFO -- : (0.000189s) PRAGMA foreign_keys = 1
+I, [2021-03-15T17:55:54.232222 #406]  INFO -- : (0.000015s) PRAGMA case_sensitive_like = 1
+I, [2021-03-15T17:55:54.232735 #406]  INFO -- : (0.000061s) SELECT sqlite_version()
+I, [2021-03-15T17:55:54.232978 #406]  INFO -- : (0.000114s) PRAGMA table_info('admins')
+I, [2021-03-15T17:55:54.233767 #406]  INFO -- : (0.000134s) PRAGMA table_info('mentees')
+I, [2021-03-15T17:55:54.234730 #406]  INFO -- : (0.000152s) PRAGMA table_info('mentors')
+I, [2021-03-15T17:55:54.235624 #406]  INFO -- : (0.000084s) PRAGMA table_info('users')
+I, [2021-03-16T11:55:48.100330 #294]  INFO -- : (0.000198s) PRAGMA foreign_keys = 1
+I, [2021-03-16T11:55:48.102200 #294]  INFO -- : (0.000021s) PRAGMA case_sensitive_like = 1
+I, [2021-03-16T11:55:48.102906 #294]  INFO -- : (0.000085s) SELECT sqlite_version()
+I, [2021-03-16T11:55:48.103254 #294]  INFO -- : (0.000126s) PRAGMA table_info('admins')
+I, [2021-03-16T11:55:48.104137 #294]  INFO -- : (0.000137s) PRAGMA table_info('mentees')
+I, [2021-03-16T11:55:48.105114 #294]  INFO -- : (0.000153s) PRAGMA table_info('mentors')
+I, [2021-03-16T11:55:48.106029 #294]  INFO -- : (0.000086s) PRAGMA table_info('users')
+I, [2021-03-16T11:56:14.479041 #295]  INFO -- : (0.000180s) PRAGMA foreign_keys = 1
+I, [2021-03-16T11:56:14.479139 #295]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
+I, [2021-03-16T11:56:14.479638 #295]  INFO -- : (0.000059s) SELECT sqlite_version()
+I, [2021-03-16T11:56:14.479891 #295]  INFO -- : (0.000112s) PRAGMA table_info('admins')
+I, [2021-03-16T11:56:14.480683 #295]  INFO -- : (0.000137s) PRAGMA table_info('mentees')
+I, [2021-03-16T11:56:14.481636 #295]  INFO -- : (0.000155s) PRAGMA table_info('mentors')
+I, [2021-03-16T11:56:14.482540 #295]  INFO -- : (0.000085s) PRAGMA table_info('users')
+I, [2021-03-16T11:56:25.459617 #295]  INFO -- : (0.003528s) SELECT * FROM `users` WHERE (`email` = 'admin@test.test') LIMIT 1
+I, [2021-03-16T11:56:33.801802 #295]  INFO -- : (0.000141s) SELECT * FROM `users` WHERE (`email` = 'mentee@test.test') LIMIT 1
+I, [2021-03-16T11:56:41.107053 #295]  INFO -- : (0.000132s) SELECT * FROM `users` WHERE (`email` = 'mentee@test.test') LIMIT 1
+I, [2021-03-16T11:56:47.875049 #295]  INFO -- : (0.000149s) SELECT * FROM `users` WHERE (`email` = 'mentor@test.test') LIMIT 1
+I, [2021-03-16T11:56:55.137382 #295]  INFO -- : (0.000163s) SELECT * FROM `users` WHERE (`email` = 'mentor@test.test') LIMIT 1
+I, [2021-03-16T11:57:30.354956 #316]  INFO -- : (0.000175s) PRAGMA foreign_keys = 1
+I, [2021-03-16T11:57:30.355050 #316]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
+I, [2021-03-16T11:57:30.355517 #316]  INFO -- : (0.000054s) SELECT sqlite_version()
+I, [2021-03-16T11:57:30.355777 #316]  INFO -- : (0.000099s) PRAGMA table_info('admins')
+I, [2021-03-16T11:57:30.356536 #316]  INFO -- : (0.000134s) PRAGMA table_info('mentees')
+I, [2021-03-16T11:57:30.357466 #316]  INFO -- : (0.000150s) PRAGMA table_info('mentors')
+I, [2021-03-16T11:57:30.358360 #316]  INFO -- : (0.000084s) PRAGMA table_info('users')
+I, [2021-03-16T11:58:13.284184 #316]  INFO -- : (0.000160s) SELECT * FROM `users` WHERE (`email` = 'mentor@test.test') LIMIT 1
+I, [2021-03-16T11:58:37.277693 #316]  INFO -- : (0.000148s) SELECT * FROM `users` WHERE (`email` = 'test1@test.test') LIMIT 1
+I, [2021-03-16T11:59:19.453245 #337]  INFO -- : (0.000172s) PRAGMA foreign_keys = 1
+I, [2021-03-16T11:59:19.453332 #337]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
+I, [2021-03-16T11:59:19.453783 #337]  INFO -- : (0.000055s) SELECT sqlite_version()
+I, [2021-03-16T11:59:19.454004 #337]  INFO -- : (0.000109s) PRAGMA table_info('admins')
+I, [2021-03-16T11:59:19.454727 #337]  INFO -- : (0.000132s) PRAGMA table_info('mentees')
+I, [2021-03-16T11:59:19.455653 #337]  INFO -- : (0.000158s) PRAGMA table_info('mentors')
+I, [2021-03-16T11:59:19.456559 #337]  INFO -- : (0.000083s) PRAGMA table_info('users')
+I, [2021-03-16T11:59:39.787919 #337]  INFO -- : (0.000278s) SELECT * FROM `users` WHERE (`email` = 'mentor@test.test') LIMIT 1
+I, [2021-03-16T12:01:59.037292 #358]  INFO -- : (0.000197s) PRAGMA foreign_keys = 1
+I, [2021-03-16T12:01:59.037399 #358]  INFO -- : (0.000015s) PRAGMA case_sensitive_like = 1
+I, [2021-03-16T12:01:59.037851 #358]  INFO -- : (0.000053s) SELECT sqlite_version()
+I, [2021-03-16T12:01:59.038075 #358]  INFO -- : (0.000111s) PRAGMA table_info('admins')
+I, [2021-03-16T12:01:59.038807 #358]  INFO -- : (0.000134s) PRAGMA table_info('mentees')
+I, [2021-03-16T12:01:59.039737 #358]  INFO -- : (0.000154s) PRAGMA table_info('mentors')
+I, [2021-03-16T12:01:59.040639 #358]  INFO -- : (0.000084s) PRAGMA table_info('users')
+I, [2021-03-16T12:02:13.840523 #358]  INFO -- : (0.000161s) SELECT * FROM `users` WHERE (`email` = 'mentor@test.test') LIMIT 1
