@@ -8,4 +8,16 @@ class Mentee < Sequel::Model
         self.email = params.fetch("email", "").strip
         self.password = params.fetch("password", "").strip
     end
+    
+    def self.id_exists?(id)
+        return false if id.nil? # check the id is not nil
+        return false if Mentee[id].nil? # check the database has a record with this id
+
+        true # all checks are ok - the id exists
+    end
+    
+    def get_id
+        this_mentee = Mentee.first(email:email)
+        return this_mentee.id
+    end
 end
