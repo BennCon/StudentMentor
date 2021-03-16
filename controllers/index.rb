@@ -9,11 +9,11 @@ post '/index' do
   @error = nil
 
   if @user.exist?
-    puts @user.user_type
+    puts @user.get_type
     session[:logged_in] = true
-    if @user.user_type = "admin"
+    if @user.get_type == "admin"
        redirect "/my-account-admin"
-    elsif @user.user_type = "mentor"
+    elsif @user.get_type == "mentor"
        redirect "/my-account-mentor"
     else
        redirect "/my-account-mentee"
