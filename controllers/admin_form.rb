@@ -23,6 +23,6 @@ post "/admin-form" do
    
    @user.save_changes
    @admin.save_changes
-   redirect "/admin-form"
+   redirect "/index"
    erb :admin_form
 end
