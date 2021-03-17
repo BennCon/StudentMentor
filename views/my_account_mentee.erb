@@ -27,13 +27,16 @@
             </section>
             <section id="information"> 
                 <h2> Basic information</h2>
-                <% unless @name.nil?&&@email.nil? && @year_of_study.nil? %>
+                <p> user type: menteee. </p>
+                <% unless @name.nil?&& @email.nil? && @year_of_study.nil? && @biography.nil? %>
                 <p> name: <strong><%= @name %></strong></p>
                 <p> email: <strong><%= @email %></strong></p>
                 <p> Year of Study: <strong><%= @year_of_study %></strong></p>
+                <p> Biography: <strong> <%= @biography %> </strong>
+                </p>
                 <% end %>
                 <button onclick="showForm()">Edit details</button>
-                <form method="post" action="/my-account" id="accDetails">
+                <form method="post" action="/my-account-mentee" id="accDetails">
                         <label for="email">Enter your Email</label>
                         <input type="email" name="email" id="email" required>
                         <label for="name">Enter your full name</label>
