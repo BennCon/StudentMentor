@@ -135,11 +135,13 @@ main {
     padding-left: 10%;
 }
 
-#accDetails {
+.accDetails {
     display: none;
 }
 
 .active {
     display: flex;
+    justify-content: center;
     flex-direction: column;
+    max-width: 50%;
 }
