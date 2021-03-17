@@ -1,7 +1,7 @@
 <%= erb :"commons/header" %>
-    <header>
-        <figure><img src="/university-img.svg" alt="The University of Sheffield logo"></figure>
-    </header>
+<header>
+    <figure><img src="/university-img.svg" alt="The University of Sheffield logo"></figure>
+</header>
 <div id="page">
         <aside>
             <div id="profile">
@@ -28,28 +28,29 @@
             <section id="information"> 
                 <h2> Basic information</h2>
                 <p> User type: Mentee. </p>
-                <% unless @name.nil?&& @email.nil? && @year_of_study.nil? && @biography.nil? %>
-                <p> name: <strong><%= @name %></strong></p>
-                <p> email: <strong><%= @email %></strong></p>
-                <p> Year of Study: <strong><%= @year_of_study %></strong></p>
-                <p> Biography: <strong> <%= @biography %> </strong>
-                </p>
-                <% end %>
+                <p> First name: <strong><%= @mentee.first_name %></strong></p>
+                <p> Surname: <strong><%= @mentee.surname %></strong></p>
+                <p> Email: <strong><%= @mentee.email %></strong></p>
+                <p> Year of Study: <strong><%= @mentee.year_of_study %></strong></p>
+                <p> Biography: <strong> <%= @mentee.biography %></strong></p>
+
                 <button class="button">Edit details</button>
                 <form method="post" action="/my-account-mentee" id="accDetails" class="accDetails">
                         <label for="email">Enter your Email</label>
-                        <input type="email" name="email" id="email" required>
-                        <label for="name">Enter your full name</label>
-                        <input type="name" name="name" id="name" required>
-                        <label> choose year of study </label>
-                         <select  name="year_of_study">
+                        <input type="email" name="email" id="email" value="<%= h @mentee.email%>" required>
+                        <label for="first_name">Enter your first name</label>
+                        <input type="name" name="first_name" id="name" value="<%= h @mentee.first_name%>" required>
+                        <label for="surname">Enter your surname</label>
+                        <input type="name" name="surname" id="name" value="<%= h @mentee.surname%>" required>
+                        <label> Choose year of study </label>
+                         <select name="year_of_study">
                           <option >1st</option>
                           <option >2nd</option>
                           <option >3rd</option>
                           <option >4th</option>
                         </select>
                         <label for="biography">Edit your biography:</label>
-                        <textarea name="biography" id="biography" rows="10" cols="40" ></textarea>
+                        <textarea name="biography" id="biography" rows="10" cols="40" value="<%= h @mentee.biography%>"></textarea>
                         
                         <button type="submit" action="submit" id="button"> save changes</button>
                     </form>

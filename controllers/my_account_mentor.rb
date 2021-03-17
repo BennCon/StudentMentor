@@ -7,7 +7,7 @@ end
 post "/my-account-mentor" do
     @name = params["name"]
     @email = params["email"]
-    @Industry = params["Industry"]
+    @industry = params["industry"]
     @biography = params["biography"]
     erb :my_account_mentor
 end
