@@ -5,7 +5,8 @@ get "/my-account-mentee" do
 end
 
 post "/my-account-mentee" do
-    @name = params["name"]
+    @first_name = params["first_name"]
+    @surname = params["surname"]
     @email = params["email"]
     @year_of_study = params["year_of_study"]
     @biography = params["biography"]

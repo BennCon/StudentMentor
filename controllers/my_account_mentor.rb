@@ -5,7 +5,8 @@ get "/my-account-mentor" do
 end
 
 post "/my-account-mentor" do
-    @name = params["name"]
+    @first_name = params["first_name"]
+    @surname = params["surname"]
     @email = params["email"]
     @industry = params["industry"]
     @biography = params["biography"]
