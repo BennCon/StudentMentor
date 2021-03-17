@@ -26,7 +26,7 @@
             </section>
             <section id="information"> 
                 <h2> Basic information</h2>
-                <p> user type: mentor. </p>
+                <p> User type: Mentor. </p>
                 <% unless @name.nil?&& @email.nil? && @Industry.nil? && @biography.nil? %>
                 <p> name: <strong><%= h @name %></strong></p>
                 <p> email: <strong><%= h @email %></strong></p>
@@ -34,8 +34,8 @@
                 <p> Biography: <strong> <%= h @biography %> </strong>
                 </p>
                 <% end %>
-                <button onclick="showForm()">Edit details</button>
-                <form method="post" action="/my-account-mentor" id="accDetails">
+                <button class="button">Edit details</button>
+                <form method="post" action="/my-account-mentor" id="accDetails" class="accDetails">
                         <label for="email">Enter your Email</label>
                         <input type="email" name="email" id="email" required>
                         <label for="name">Enter your full name</label>
@@ -69,11 +69,9 @@
                         <button type="submit" action="submit" id="button"> save changes</button>
                     </form>
                 <script>
-                    
-                    var submitButton = document.getElementById('button')[0]
-                    var accdetails = document.getElementById('accDetails')[0]
+                    var submitButton = document.getElementsByClassName('button')[0]
+                    var accdetails = document.getElementsByClassName('accDetails')[0]
                     submitButton.addEventListener('click',function(a){accdetails.classList.toggle('active')})
-                    
                 </script>
             </section>
         </main>

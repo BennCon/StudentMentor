@@ -27,7 +27,7 @@
             </section>
             <section id="information"> 
                 <h2> Basic information</h2>
-                <p> user type: menteee. </p>
+                <p> User type: Mentee. </p>
                 <% unless @name.nil?&& @email.nil? && @year_of_study.nil? && @biography.nil? %>
                 <p> name: <strong><%= @name %></strong></p>
                 <p> email: <strong><%= @email %></strong></p>
@@ -35,8 +35,8 @@
                 <p> Biography: <strong> <%= @biography %> </strong>
                 </p>
                 <% end %>
-                <button onclick="showForm()">Edit details</button>
-                <form method="post" action="/my-account-mentee" id="accDetails">
+                <button class="button">Edit details</button>
+                <form method="post" action="/my-account-mentee" id="accDetails" class="accDetails">
                         <label for="email">Enter your Email</label>
                         <input type="email" name="email" id="email" required>
                         <label for="name">Enter your full name</label>
@@ -54,14 +54,9 @@
                         <button type="submit" action="submit" id="button"> save changes</button>
                     </form>
                 <script>
-                    function showForm() {
-                        var x = document.getElementById("accDetails");
-                          if (x.style.display === "none") {
-                            x.style.display = "block";
-                          } else {
-                            x.style.display = "none"; 
-                          } 
-                    }
+                    var submitButton = document.getElementsByClassName('button')[0]
+                    var accdetails = document.getElementsByClassName('accDetails')[0]
+                    submitButton.addEventListener('click',function(a){accdetails.classList.toggle('active')})
                 </script>
             </section>
         </main>
