@@ -12,7 +12,7 @@
                 </figure>
             </div>
             <nav class="menu">
-                <li><a href="my-account"> My Account</a></li>
+                <li><a href="my-account-mentee"> My Account</a></li>
                 <li><a href="find-mentor"> Find A Mentor</a></li>
                 <li><a href="requests"> My Requests</a></li>
                 <li><a href="get-help"> Get Help</a></li>
@@ -33,7 +33,6 @@
                 <p> Email: <strong><%= @mentee.email %></strong></p>
                 <p> Year of Study: <strong><%= @mentee.year_of_study %></strong></p>
                 <p> Biography: <strong> <%= @mentee.biography %></strong></p>
-
                 <button class="button">Edit details</button>
                 <form method="post" action="/my-account-mentee" id="accDetails" class="accDetails">
                         <label for="email">Enter your Email</label>
@@ -51,7 +50,6 @@
                         </select>
                         <label for="biography">Edit your biography:</label>
                         <textarea name="biography" id="biography" rows="10" cols="40" value="<%= h @mentee.biography%>"></textarea>
-                        
                         <button type="submit" action="submit" id="button"> save changes</button>
                     </form>
                 <script>
