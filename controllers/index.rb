@@ -1,4 +1,5 @@
 get "/index" do
+  session.clear
   @user = User.new
   erb :index
 end
