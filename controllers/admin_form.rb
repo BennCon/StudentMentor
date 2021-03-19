@@ -1,6 +1,3 @@
-# I have to add this for tests to work - Charlie
-require 'sinatra'
-
 get "/admin-form" do
    @user = User.new
    @admin = Admin.new

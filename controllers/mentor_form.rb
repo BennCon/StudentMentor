@@ -1,6 +1,3 @@
-# I have to add this for tests to work - Charlie
-require 'sinatra'
-
 get "/mentor-form" do
    @user = User.new
    @mentor = Mentor.new

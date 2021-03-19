@@ -1,6 +1,3 @@
-# I have to add this for tests to work - Charlie
-require 'sinatra'
-
 get "/mentee-form" do
    @user = User.new
    @mentee = Mentee.new
