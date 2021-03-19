@@ -11,15 +11,49 @@
                     <figcaption>University email</figcaption>
                 </figure>
             </div>
-            <nav class="menu">
-                <li><a href="/my-account-mentee?id=<%= @mentee.id %>"> > My Account</a></li>
+             <nav class="menu">
+                <li><a href="/my-account-mentee"> > My Account</a></li>
                 <li><a href="/find-mentor"> > Find A Mentor</a></li>
-                <li><a href="/requests?id=<%= @mentee.id %>"> > My Requests</a></li>
+                <li><a href="/requests"> > My Requests</a></li>
                 <li><a href="/get-help"> > Get Help</a></li>
             </nav>
         </aside>
         <main>
-            <h1>Here is the requests details</h1>
+            <div id="mentors">
+                <div class="top">
+                    <div id="mentor-bottom">
+                       <h2>Available </h2> 
+                       <h2 id="orange"> Mentors</h2>
+                    </div>
+                    
+                    <button id="button-filters">
+                        Filters
+                    </button>
+                </div>
+                    <div class="mentor">
+                        <section id="mentor-top">
+                            <button id="request">
+                            Request
+                            </button>
+                        </section>
+                        <section id="mentor-bottom">
+                        <aside>
+                            <div id="profile">
+                            <figure>
+                               <!--this img just for testing-->
+                            <img src="/background.jpeg" alt="personal Id picture">
+                            <figcaption>University email</figcaption>
+                        </figure>
+                    </div>
+                      </aside>
+                            <main>
+                            <h1>Mentor Name</h1>
+                                <p>Mentor Biography: Hi, my name is """"" and I'm looking fowrward to 
+                                helping you out with your studies.</p>
+                            </main>
+                        </section>
+                    </div>
+                </div>
         </main>
 </div>
                 
