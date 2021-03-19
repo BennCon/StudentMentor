@@ -1880,3 +1880,77 @@ I, [2021-03-19T11:46:15.786910 #257]  INFO -- : (0.000081s) SELECT * FROM `users
 I, [2021-03-19T11:46:15.871672 #257]  INFO -- : (0.084691s) COMMIT
 I, [2021-03-19T11:46:15.872089 #257]  INFO -- : (0.000154s) SELECT * FROM `users` WHERE (`email` = '123@AB.CDE') LIMIT 1
 I, [2021-03-19T11:46:15.966240 #257]  INFO -- : (0.094013s) DELETE FROM `users` WHERE `id` = 9
+I, [2021-03-19T11:49:03.605568 #194]  INFO -- : (0.000187s) PRAGMA foreign_keys = 1
+I, [2021-03-19T11:49:03.605666 #194]  INFO -- : (0.000013s) PRAGMA case_sensitive_like = 1
+I, [2021-03-19T11:49:03.606293 #194]  INFO -- : (0.000067s) SELECT sqlite_version()
+I, [2021-03-19T11:49:03.606598 #194]  INFO -- : (0.000130s) PRAGMA table_info('admins')
+I, [2021-03-19T11:49:03.607535 #194]  INFO -- : (0.000133s) PRAGMA table_info('mentees')
+I, [2021-03-19T11:49:03.608661 #194]  INFO -- : (0.000135s) PRAGMA table_info('mentors')
+I, [2021-03-19T11:49:03.609682 #194]  INFO -- : (0.000085s) PRAGMA table_info('users')
+I, [2021-03-19T11:49:31.015377 #194]  INFO -- : (0.000163s) SELECT * FROM `users` WHERE (`email` = 'mentor@test.test') LIMIT 1
+I, [2021-03-19T11:49:31.015674 #194]  INFO -- : (0.000091s) SELECT * FROM `users` WHERE (`email` = 'mentor@test.test') LIMIT 1
+I, [2021-03-19T11:49:31.015970 #194]  INFO -- : (0.000085s) SELECT * FROM `users` WHERE (`email` = 'mentor@test.test') LIMIT 1
+I, [2021-03-19T11:49:31.016692 #194]  INFO -- : (0.000637s) SELECT * FROM `users` WHERE (`email` = 'mentor@test.test') LIMIT 1
+I, [2021-03-19T11:49:31.016956 #194]  INFO -- : (0.000108s) SELECT * FROM `mentors` WHERE (`email` LIKE '%mentor@test.test%' ESCAPE '\') LIMIT 1
+I, [2021-03-19T11:49:42.734638 #194]  INFO -- : (0.000152s) SELECT * FROM `users` WHERE (`email` = 'mentor@test.test') LIMIT 1
+I, [2021-03-19T11:49:42.734890 #194]  INFO -- : (0.000097s) SELECT * FROM `users` WHERE (`email` = 'mentor@test.test') LIMIT 1
+I, [2021-03-19T11:49:42.735069 #194]  INFO -- : (0.000071s) SELECT * FROM `users` WHERE (`email` = 'mentor@test.test') LIMIT 1
+I, [2021-03-19T11:49:42.735235 #194]  INFO -- : (0.000084s) SELECT * FROM `users` WHERE (`email` = 'mentor@test.test') LIMIT 1
+I, [2021-03-19T11:49:42.735496 #194]  INFO -- : (0.000099s) SELECT * FROM `mentors` WHERE (`email` LIKE '%mentor@test.test%' ESCAPE '\') LIMIT 1
+I, [2021-03-19T11:50:28.258341 #215]  INFO -- : (0.000192s) PRAGMA foreign_keys = 1
+I, [2021-03-19T11:50:28.258448 #215]  INFO -- : (0.000020s) PRAGMA case_sensitive_like = 1
+I, [2021-03-19T11:50:28.259020 #215]  INFO -- : (0.000058s) SELECT sqlite_version()
+I, [2021-03-19T11:50:28.259274 #215]  INFO -- : (0.000118s) PRAGMA table_info('admins')
+I, [2021-03-19T11:50:28.260159 #215]  INFO -- : (0.000152s) PRAGMA table_info('mentees')
+I, [2021-03-19T11:50:28.261195 #215]  INFO -- : (0.000133s) PRAGMA table_info('mentors')
+I, [2021-03-19T11:50:28.262128 #215]  INFO -- : (0.000084s) PRAGMA table_info('users')
+I, [2021-03-19T11:50:48.666163 #215]  INFO -- : (0.000047s) BEGIN
+I, [2021-03-19T11:50:48.666637 #215]  INFO -- : (0.000252s) INSERT INTO `users` (`email`, `password`, `user_type`) VALUES ('mentor@mentor', 'a', 'mentor')
+I, [2021-03-19T11:50:48.666864 #215]  INFO -- : (0.000092s) SELECT * FROM `users` WHERE `id` = 9
+I, [2021-03-19T11:50:48.774934 #215]  INFO -- : (0.107989s) COMMIT
+I, [2021-03-19T11:50:48.775149 #215]  INFO -- : (0.000032s) BEGIN
+I, [2021-03-19T11:50:48.775516 #215]  INFO -- : (0.000168s) INSERT INTO `mentors` (`first_name`, `surname`, `gender`, `industry`, `company`, `sheffield_graduate`, `degree_field`, `email`, `password`) VALUES ('wefdf', 'fdfsd', 'male', 'Aerospace', 'dsfsdf', 0, 'accounting', 'mentor@mentor', 'a')
+I, [2021-03-19T11:50:48.775778 #215]  INFO -- : (0.000126s) SELECT * FROM `mentors` WHERE `id` = 1
+I, [2021-03-19T11:50:48.862718 #215]  INFO -- : (0.086853s) COMMIT
+I, [2021-03-19T11:50:48.862944 #215]  INFO -- : (0.000031s) BEGIN
+I, [2021-03-19T11:50:48.863284 #215]  INFO -- : (0.000181s) UPDATE `mentors` SET `id` = 9 WHERE (`id` = 1)
+I, [2021-03-19T11:50:48.964505 #215]  INFO -- : (0.101123s) COMMIT
+I, [2021-03-19T11:50:53.906622 #215]  INFO -- : (0.000153s) SELECT * FROM `users` WHERE (`email` = 'mentor@mentor') LIMIT 1
+I, [2021-03-19T11:50:53.906891 #215]  INFO -- : (0.000080s) SELECT * FROM `users` WHERE (`email` = 'mentor@mentor') LIMIT 1
+I, [2021-03-19T11:50:53.907161 #215]  INFO -- : (0.000082s) SELECT * FROM `users` WHERE (`email` = 'mentor@mentor') LIMIT 1
+I, [2021-03-19T11:50:53.907310 #215]  INFO -- : (0.000071s) SELECT * FROM `users` WHERE (`email` = 'mentor@mentor') LIMIT 1
+I, [2021-03-19T11:50:53.907566 #215]  INFO -- : (0.000118s) SELECT * FROM `mentors` WHERE (`email` LIKE '%mentor@mentor%' ESCAPE '\') LIMIT 1
+I, [2021-03-19T11:50:53.907828 #215]  INFO -- : (0.000131s) SELECT * FROM `mentors` WHERE (`email` = 'mentor@mentor') LIMIT 1
+I, [2021-03-19T11:50:54.018269 #215]  INFO -- : (0.000171s) SELECT * FROM `mentors` WHERE `id` = '9'
+I, [2021-03-19T11:50:54.018483 #215]  INFO -- : (0.000098s) SELECT * FROM `mentors` WHERE `id` = '9'
+I, [2021-03-19T11:51:08.506675 #215]  INFO -- : (0.000172s) SELECT * FROM `mentors` WHERE `id` = '9'
+I, [2021-03-19T11:51:08.506886 #215]  INFO -- : (0.000099s) SELECT * FROM `mentors` WHERE `id` = '9'
+I, [2021-03-19T11:52:05.034879 #237]  INFO -- : (0.000185s) PRAGMA foreign_keys = 1
+I, [2021-03-19T11:52:05.034979 #237]  INFO -- : (0.000015s) PRAGMA case_sensitive_like = 1
+I, [2021-03-19T11:52:05.035529 #237]  INFO -- : (0.000060s) SELECT sqlite_version()
+I, [2021-03-19T11:52:05.035823 #237]  INFO -- : (0.000161s) PRAGMA table_info('admins')
+I, [2021-03-19T11:52:05.036710 #237]  INFO -- : (0.000139s) PRAGMA table_info('mentees')
+I, [2021-03-19T11:52:05.037812 #237]  INFO -- : (0.000147s) PRAGMA table_info('mentors')
+I, [2021-03-19T11:52:05.038759 #237]  INFO -- : (0.000086s) PRAGMA table_info('users')
+I, [2021-03-19T11:52:10.159794 #238]  INFO -- : (0.000204s) PRAGMA foreign_keys = 1
+I, [2021-03-19T11:52:10.159894 #238]  INFO -- : (0.000016s) PRAGMA case_sensitive_like = 1
+I, [2021-03-19T11:52:10.160451 #238]  INFO -- : (0.000061s) SELECT sqlite_version()
+I, [2021-03-19T11:52:10.160707 #238]  INFO -- : (0.000123s) PRAGMA table_info('admins')
+I, [2021-03-19T11:52:10.161527 #238]  INFO -- : (0.000134s) PRAGMA table_info('mentees')
+I, [2021-03-19T11:52:10.162509 #238]  INFO -- : (0.000132s) PRAGMA table_info('mentors')
+I, [2021-03-19T11:52:10.163426 #238]  INFO -- : (0.000084s) PRAGMA table_info('users')
+I, [2021-03-19T11:52:32.671167 #239]  INFO -- : (0.000281s) PRAGMA foreign_keys = 1
+I, [2021-03-19T11:52:32.671270 #239]  INFO -- : (0.000016s) PRAGMA case_sensitive_like = 1
+I, [2021-03-19T11:52:32.671844 #239]  INFO -- : (0.000064s) SELECT sqlite_version()
+I, [2021-03-19T11:52:32.672097 #239]  INFO -- : (0.000115s) PRAGMA table_info('admins')
+I, [2021-03-19T11:52:32.672946 #239]  INFO -- : (0.000133s) PRAGMA table_info('mentees')
+I, [2021-03-19T11:52:32.673964 #239]  INFO -- : (0.000138s) PRAGMA table_info('mentors')
+I, [2021-03-19T11:52:32.674875 #239]  INFO -- : (0.000085s) PRAGMA table_info('users')
+I, [2021-03-19T11:52:40.699047 #239]  INFO -- : (0.000171s) SELECT * FROM `users` WHERE (`email` = 'mentor@mentor') LIMIT 1
+I, [2021-03-19T11:52:40.699323 #239]  INFO -- : (0.000086s) SELECT * FROM `users` WHERE (`email` = 'mentor@mentor') LIMIT 1
+I, [2021-03-19T11:52:40.699594 #239]  INFO -- : (0.000084s) SELECT * FROM `users` WHERE (`email` = 'mentor@mentor') LIMIT 1
+I, [2021-03-19T11:52:40.699767 #239]  INFO -- : (0.000077s) SELECT * FROM `users` WHERE (`email` = 'mentor@mentor') LIMIT 1
+I, [2021-03-19T11:52:40.700034 #239]  INFO -- : (0.000118s) SELECT * FROM `mentors` WHERE (`email` LIKE '%mentor@mentor%' ESCAPE '\') LIMIT 1
+I, [2021-03-19T11:52:40.700247 #239]  INFO -- : (0.000098s) SELECT * FROM `mentors` WHERE (`email` = 'mentor@mentor') LIMIT 1
+I, [2021-03-19T11:52:40.800428 #239]  INFO -- : (0.000180s) SELECT * FROM `mentors` WHERE `id` = '9'
+I, [2021-03-19T11:52:40.800638 #239]  INFO -- : (0.000100s) SELECT * FROM `mentors` WHERE `id` = '9'
