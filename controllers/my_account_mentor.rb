@@ -1,5 +1,5 @@
 get "/my-account-mentor" do
-#   redirect "/index" unless session[:logged_in]
+#   redirect "/" unless session[:logged_in]
   id = params["id"]
   @mentor = Mentor[id] if Mentor.id_exists?(id)
   erb :my_account_mentor

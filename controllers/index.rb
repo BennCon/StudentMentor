@@ -1,10 +1,10 @@
-get "/index" do
+get "/" do
   session.clear
   @user = User.new
   erb :index
 end
 
-post '/index' do
+post '/' do
   @user = User.new
   @user.load(params)
   @error = nil
@@ -30,7 +30,7 @@ post '/index' do
     end
   else
     @error = "Username/Password combination incorrect"
-#     redirect "/index"
+#     redirect "/"
   end
 
   erb :index

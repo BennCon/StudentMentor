@@ -26,7 +26,7 @@ SimpleCov.coverage_dir "coverage"
 # Methods for better acceptance testing
 
 def register_mentee
-    visit "/index"
+    visit "/"
     click_button "mentee-signup"
     fill_in "first_name", with: "First"
     fill_in "surname", with: "Surname"
@@ -39,7 +39,7 @@ def register_mentee
 end
 
 def register_mentor
-    visit "/index"
+    visit "/"
     click_button "mentor-signup"
     fill_in "first_name", with: "First"
     fill_in "surname", with: "Surname"
