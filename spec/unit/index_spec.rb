@@ -7,9 +7,9 @@ RSpec.describe "Index" do
             expect(last_response.status).to eq(200)
         end
         
-        it "includes a welcome and a sign-in" do
+        it "includes a sign-in" do
             post "/"
-            expect(last_response.body).to include('welcome', 'sign', '<form method="post">')
+            expect(last_response.body).to include('form method="post"')
         end
     end
     
