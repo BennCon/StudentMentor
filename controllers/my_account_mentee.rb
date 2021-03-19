@@ -1,6 +1,6 @@
 get "/my-account-mentee" do
 #   redirect "/" unless session[:logged_in]
-  id = params["id"]
+  id = session[:id]
   @mentee = Mentee[id] if Mentee.id_exists?(id)
   erb :my_account_mentee
 end
