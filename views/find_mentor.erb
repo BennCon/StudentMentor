@@ -12,48 +12,15 @@
                 </figure>
             </div>
             <nav class="menu">
-                <li><a href="my-account-mentee"> My Account</a></li>
-                <li><a href="find-mentor"> Find A Mentor</a></li>
-                <li><a href="requests"> My Requests</a></li>
-                <li><a href="get-help"> Get Help</a></li>
+                <li><a href="/my-account-mentee?id=<%= @mentee.id %>"> > My Account</a></li>
+                <li><a href="/find-mentor"> > Find A Mentor</a></li>
+                <li><a href="/requests?id=<%= @mentee.id %>"> > My Requests</a></li>
+                <li><a href="/get-help"> > Get Help</a></li>
             </nav>
         </aside>
         <main>
-            <%= erb :"commons/header" %>
-<header>
- Available Mentors
-    </header>
-<div id="page">
-        <aside>
-            <div id="mentorlist">
-                
-                
-                <main>
-<h1>Mentor Name</h1>
-<p>Mentor Background:</p>
-                    <figure>
-                    <!--this img just for testing-->
-                    <img src="/background.jpeg" alt="mentor picture">
-                </figure>
-<hr>
-
-<h2>Mentor Name</h2>
-<p>Mentor Background:</p>
-          <figure>
-                    <!--this img just for testing-->
-                    <img src="/background.jpeg" alt="mentor picture">
-                </figure>          
-<hr>
-
-<h3>Mentor Name</h3>
-<p>Mentor Background:</p>
-                    <figure>
-                    <!--this img just for testing-->
-                    <img src="/background.jpeg" alt="mentor picture">
-                </figure>
-
-
-        </main> 
-           </div> 
+            <h1>Here is the requests details</h1>
+        </main>
+</div>
                 
 <%= erb :"commons/footer" %>

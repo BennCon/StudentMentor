@@ -21,6 +21,6 @@ post "/mentee-form" do
  
    @user.save_changes
    @mentee.save_changes
-   redirect "/index"
+   redirect "/"
    erb :mentee_form
 end

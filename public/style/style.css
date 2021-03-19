@@ -88,7 +88,8 @@ footer {
 /*aside*/
 aside {
     background-color: #14213D;
-    width: 30%;
+    width: 300px;
+    min-width: 300px;
     justify-content: space-evenly;
     display: flex;
     flex-direction: column;
@@ -98,9 +99,6 @@ aside {
 
 #profile {
    color: white;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
    text-align: center;
 }
 
@@ -133,6 +131,7 @@ nav li a {
 /*main*/
 main {
     padding-left: 10%;
+    padding-right: 10%;
 }
 
 .accDetails {

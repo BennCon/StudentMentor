@@ -1,15 +1,21 @@
 get "/my-account-mentor" do
-#   redirect "/index" unless session[:logged_in]
-  id = params["id"]
+#   redirect "/" unless session[:logged_in]
+  id = session[:id]
   @mentor = Mentor[id] if Mentor.id_exists?(id)
+  @user = User[id]
   erb :my_account_mentor
 end
 
 post "/my-account-mentor" do
-    @first_name = params["first_name"]
-    @surname = params["surname"]
-    @email = params["email"]
-    @industry = params["industry"]
-    @biography = params["biography"]
+    id = session[:id]
+    @mentor = Mentor[id] if Mentor.id_exists?(id)
+    @user = User[id]
+   
+    @mentor.load_edit(params)
+    @user.load_edit(params)
+   
+    @mentor.save_changes
+    @user.save_changes
+    redirect "/my-account-mentor"
     erb :my_account_mentor
 end

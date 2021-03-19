@@ -20,6 +20,6 @@ post "/mentor-form" do
    
    @user.save_changes
    @mentor.save_changes
-   redirect "/index"
+   redirect "/"
    erb :mentor_form
 end
