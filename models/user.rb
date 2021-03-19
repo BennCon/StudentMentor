@@ -4,6 +4,11 @@ class User < Sequel::Model
     self.password = params.fetch("password", "").strip
     self.user_type = params.fetch("user_type","").strip
   end
+   
+  def load_edit(params)
+     self.email = params.fetch("email", "").strip
+  end
+   
 
 #   def validate
 #     super
