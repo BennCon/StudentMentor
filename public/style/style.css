@@ -130,7 +130,7 @@ nav li a {
 }
 /*main*/
 main {
-    padding-left: 10%;
+    padding-left: 5%;
     padding-right: 10%;
 }
 
@@ -143,4 +143,53 @@ main {
     justify-content: center;
     flex-direction: column;
     max-width: 50%;
+}
+
+/* find_mentor css */
+
+.top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#orange {
+    color:#FCA311;
+}
+
+.mentor {
+    background-color: #F4F4F4;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    
+}
+
+#mentor-bottom{
+    display:flex;
+    flex-direction: row;
+}
+
+#request {
+    position: absolute;
+    border-radius: 20%;
+    background-color:#FCA311;
+    font-size: large; 
+}
+
+#request:hover {
+    background-color:white;
+    transition:0.5s;
+}
+
+#button-filters {
+   border-radius: 20%;
+   background-color:#FCA311;  
+   height: 30%;
+   margin-top: 5%;
+}
+
+#button-filters:hover {
+   background-color:#14213D;
+   color:white;
+   transition:0.5s; 
 }
