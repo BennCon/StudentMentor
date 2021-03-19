@@ -25,9 +25,25 @@
                        <h2>Available </h2> 
                        <h2 id="orange"> Mentors</h2>
                     </div>
-                    <button id="button-filters">
+                    <div class="filter">
+                    <button class="button" id="button-filters" >
                         Filters
                     </button>
+                    <form class="accDetails">
+                       <p>Gender</p>
+                      <input type="radio" id="male" name="gender" value="male">
+                      <label for="male">Male</label><br>
+                      <input type="radio" id="female" name="gender" value="female">
+                      <label for="female">Female</label><br>
+                      <input type="radio" id="other" name="gender" value="none-binary">
+                      <label for="none-binary">None-binary</label> 
+                    </form>
+                    <script>
+                    var submitButton = document.getElementsByClassName('button')[0]
+                    var accdetails = document.getElementsByClassName('accDetails')[0]
+                    submitButton.addEventListener('click',function(a){accdetails.classList.toggle('active-form')})
+                </script>
+                    </div>
                 </div>
                 <div class="mentorsList">
                     <div class="mentor">

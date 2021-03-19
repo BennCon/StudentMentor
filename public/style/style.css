@@ -73,6 +73,7 @@ header figure {
 footer {
     background-color: #14213D;
     color: white; 
+    text-align: center;
 }
 
 /*displying the page as two vertical sections*/
@@ -184,12 +185,21 @@ main {
 #button-filters {
    border-radius: 20%;
    background-color:#FCA311;  
-   height: 30%;
-   margin-top: 5%;
 }
 
 #button-filters:hover {
    background-color:#14213D;
    color:white;
    transition:0.5s; 
+}
+
+.filter-form {
+    display:none; 
+}
+
+.active-form {
+    position:absolute;
+    display:block;
+    background-color:#14213D;
+    color:white;
 }
