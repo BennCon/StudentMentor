@@ -8,7 +8,7 @@ end
 
 post "/my-account-admin" do
    id = session[:id]
-   @admin = Mentor[id] if Mentor.id_exists?(id)
+   @admin = Admin[id] if Admin.id_exists?(id)
    @user = User[id]
 
    @admin.load_edit(params)
