@@ -28,9 +28,8 @@ SimpleCov.coverage_dir "coverage"
 # Methods for acceptance testing
 
 def register_log_in_mentee
-    visit "/index"
-    click_button "mentee-signup"
-    fill_in "First name", with: "MenteeFirst"
+    visit "/mentee-form"
+    fill_in "first_name", with: "MenteeFirst"
     fill_in "surname", with: "Surname"
     fill_in "course", with: "COM1001"
     select 'Male', from: "gender"
@@ -45,14 +44,13 @@ def register_log_in_mentee
 end
 
 def register_log_in_mentor
-    visit "/index"
-    click_button "mentor-signup"
-    fill_in "First name", with: "MentorFirst"
+    visit "/mentor-form"
+    fill_in "first_name", with: "MentorFirst"
     fill_in "surname", with: "Surname"
     select 'Male', from: "gender"
     select 'Aerospace', from: "industry"
     fill_in "company", with: "Testcompany"
-    choose 'yes'
+    #choose 'Yes'
     select "Accounting", from: "degree_field"
     fill_in "email", with: "mentortest@test.com"
     fill_in "password", with: "Testpass"
