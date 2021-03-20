@@ -25,6 +25,17 @@ SimpleCov.start do
 end
 SimpleCov.coverage_dir "coverage"
 
+# Clears the entire testing database 
+def clear_db
+    DB.from("mentees").delete
+    DB.from("mentors").delete
+    DB.from("admins").delete
+    DB.from("users").delete
+end
+
+# Remove comment from below when there is more than one database
+#clear_db
+
 # Methods for acceptance testing
 
 def register_log_in_mentee
