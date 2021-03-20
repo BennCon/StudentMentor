@@ -93,9 +93,11 @@ aside {
     min-width: 300px;
     justify-content: space-evenly;
     display: flex;
-    flex-direction: column;
-    
-    
+    flex-direction: column; 
+}
+
+.menu_selected {
+   background-color: #434956;
 }
 
 #profile {
