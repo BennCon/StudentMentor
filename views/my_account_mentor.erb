@@ -31,7 +31,7 @@
                 <p> Surname: <strong><%= h @mentor.surname %></strong></p>
                 <p> Email: <strong><%= h @mentor.email %></strong></p>
                 <p> Industry: <strong><%= @mentor.industry%></strong></p>
-                <p> Biography: <strong> <%= h @biography %> </strong></p>
+                <p> Biography: <strong> <%= h @mentor.biography %> </strong></p>
                 
                 <button class="button" name="accEdit">Edit details</button>
                 <form method="post" action="/my-account-mentor" id="accDetails" class="accDetails">
@@ -65,7 +65,7 @@
                               <option value="Tourism">Tourism</option>
                         </select>
                         <label for="biography">Edit your biography:</label>
-                        <textarea name="biography" id="biography" rows="10" cols="40" ></textarea>
+                        <textarea name="biography" id="biography" rows="10" cols="40"></textarea>
                         <button type="submit" action="submit" id="button" name="save"> save changes</button>
                     </form>
                 <script>

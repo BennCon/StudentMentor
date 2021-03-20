@@ -44,13 +44,13 @@
                         <input type="name" name="surname" id="name" value="<%= h @mentee.surname%>" required>
                         <label> Choose year of study </label>
                          <select name="year_of_study">
-                          <option >1st</option>
-                          <option >2nd</option>
-                          <option >3rd</option>
-                          <option >4th</option>
+                          <option value="1">1st</option>
+                          <option value="2">2nd</option>
+                          <option value="3">3rd</option>
+                          <option value="4">4th</option>
                         </select>
                         <label for="biography">Edit your biography:</label>
-                        <textarea name="biography" id="biography" rows="10" cols="40" value="<%= h @mentee.biography%>"></textarea>
+                        <textarea name="biography" id="biography" rows="10" cols="40" placeholder="<%= h @mentee.biography%>"></textarea>
                         <button type="submit" action="submit" id="button" name="save"> save changes</button>
                     </form>
                 <script>

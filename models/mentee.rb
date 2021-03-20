@@ -12,6 +12,7 @@ class Mentee < Sequel::Model
    def load_edit(params)
       self.first_name = params.fetch("first_name", "").strip
       self.surname = params.fetch("surname", "").strip
+      self.year_of_study = params.fetch("year_of_study", "").strip
       self.biography = params.fetch("biography", "").strip
       self.email = params.fetch("email", "").strip
    end

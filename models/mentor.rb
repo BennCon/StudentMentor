@@ -15,6 +15,8 @@ class Mentor < Sequel::Model
        self.email = params.fetch("email", "").strip
        self.first_name = params.fetch("first_name", "").strip
        self.surname = params.fetch("surname", "").strip
+       self.industry = params.fetch("industry", "").strip
+       self.biography = params.fetch("biography", "").strip
     end
        
     
