@@ -7,5 +7,6 @@ describe "The edit profile system" do
         fill_in "biography", with: "Lorem Ipsum"
         click_button "save"
         expect(page).to have_content "Biography: Lorem Ipsum"
+        #clear_db
     end
 end

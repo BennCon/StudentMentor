@@ -9,5 +9,6 @@ describe "The sign up pages" do
     it "Can create mentor accounts" do
         register_log_in_mentor
         expect(page).to have_content "MentorFirst"
+        #clear_db
     end
 end
