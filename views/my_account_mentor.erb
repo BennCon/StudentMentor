@@ -33,7 +33,7 @@
                 <p> Industry: <strong><%= @mentor.industry%></strong></p>
                 <p> Biography: <strong> <%= h @biography %> </strong></p>
                 
-                <button class="button">Edit details</button>
+                <button class="button" name="accEdit">Edit details</button>
                 <form method="post" action="/my-account-mentor" id="accDetails" class="accDetails">
                         <label for="email">Enter your Email</label>
                         <input type="email" name="email" id="email" value="<%= h @mentor.email%>" required>
@@ -66,7 +66,7 @@
                         </select>
                         <label for="biography">Edit your biography:</label>
                         <textarea name="biography" id="biography" rows="10" cols="40" ></textarea>
-                        <button type="submit" action="submit" id="button"> save changes</button>
+                        <button type="submit" action="submit" id="button" name="save"> save changes</button>
                     </form>
                 <script>
                     var submitButton = document.getElementsByClassName('button')[0]

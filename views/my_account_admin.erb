@@ -29,7 +29,7 @@
                 <p> Surname: <strong><%= @admin.surname %></strong></p>
                 <p> Email: <strong><%= @admin.email %></strong></p>
               
-                <button class="button">Edit details</button>
+                <button class="button" name="accEdit">Edit details</button>
                
                 <form method="post" action="/my-account-admin" id="accDetails" class="accDetails">
                         <label for="email">Enter your Email</label>
@@ -38,7 +38,7 @@
                         <input type="name" name="first_name" id="name" value="<%= h @admin.first_name%>" required>
                         <label for="surname">Enter your surname</label>
                         <input type="name" name="surname" id="name" value="<%= h @admin.surname%>" required>
-                        <button type="submit" action="submit" id="button"> save changes</button>
+                        <button type="submit" action="submit" id="button" name="save"> save changes</button>
                     </form>
                 <script>
                     var submitButton = document.getElementsByClassName('button')[0]
