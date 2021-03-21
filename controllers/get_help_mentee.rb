@@ -1,6 +1,7 @@
-get "/get-help" do
+get "/get-help-mentee" do
 #   redirect "/index" unless session[:logged_in]
   id = params["id"]
   @mentee = Mentee[id] if Mentee.id_exists?(id)
-  erb :get_help
+  @user = User[id]
+  erb :get_help_mentee
 end

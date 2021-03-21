@@ -12,14 +12,13 @@
                 </figure>
             </div>
             <nav class="menu">
-                <li><a href="/my-account-mentee?id=<%= @mentee.id %>"> > My Account</a></li>
-                <li><a href="/find-mentor"> > Find A Mentor</a></li>
-                <li class="menu_selected"><a href="/requests?id=<%= @mentee.id %>"> > My Requests</a></li>
-                <li><a href="/get-help"> > Get Help</a></li>
+                <li><a href="/my-account-mentor?id=<%= @mentor.id %>"> > My Account</a></li>
+                <li><a href="/requests-mentor?id=<%= @mentor.id %>"> > My Requests</a></li>
+                <li class="menu_selected"><a href="/get-help-mentor?id=<%= @mentor.id %>"> > Get Help</a></li>
             </nav>
         </aside>
         <main>
-            <h1>Here is the requests details</h1>
+            <h1>Here is the form for getting help, or email or somth</h1>
         </main>
 </div>
 <%= erb :"commons/footer" %>
