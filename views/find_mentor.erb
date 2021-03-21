@@ -45,77 +45,34 @@
                 </script>
                     </div>
                 </div>
-                <div class="mentorsList">
-                    <div class="mentor">
-                        <section id="mentor-top">
-                            <button id="request">
-                            Request
-                            </button>
-                        </section>
-                        <section id="mentor-bottom">
-                        <aside>
-                            <div id="profile">
-                            <figure>
-                               <!--this img just for testing-->
-                            <img src="/background.jpeg" alt="personal Id picture">
-                            <figcaption>University email</figcaption>
-                        </figure>
-                    </div>
-                      </aside>
-                            <main>
-                            <h1>Mentor Name</h1>
-                                <p>Mentor Biography: Hi, my name is """"" and I'm looking fowrward to 
-                                helping you out with your studies.</p>
-                            </main>
-                        </section>
-                    </div>
-                <div class="mentor">
-                        <section id="mentor-top">
-                            <button id="request">
-                            Request
-                            </button>
-                        </section>
-                        <section id="mentor-bottom">
-                        <aside>
-                            <div id="profile">
-                            <figure>
-                               <!--this img just for testing-->
-                            <img src="/background.jpeg" alt="personal Id picture">
-                            <figcaption>University email</figcaption>
-                        </figure>
-                    </div>
-                      </aside>
-                            <main>
-                            <h1>Mentor Name</h1>
-                                <p>Mentor Biography: Hi, my name is """"" and I'm looking fowrward to 
-                                helping you out with your studies.</p>
-                            </main>
-                        </section>
-                    </div>
-                <div class="mentor">
-                        <section id="mentor-top">
-                            <button id="request">
-                            Request
-                            </button>
-                        </section>
-                        <section id="mentor-bottom">
-                        <aside>
-                            <div id="profile">
-                            <figure>
-                               <!--this img just for testing-->
-                            <img src="/background.jpeg" alt="personal Id picture">
-                            <figcaption>University email</figcaption>
-                        </figure>
-                    </div>
-                      </aside>
-                            <main>
-                            <h1>Mentor Name</h1>
-                                <p>Mentor Biography: Hi, my name is """"" and I'm looking fowrward to 
-                                helping you out with your studies.</p>
-                            </main>
-                        </section>
-                    </div>
-                </div>
+               
+              <div class = "mentorsList">
+                 <% (@dataset).each do |mentor| %>
+                     
+                     <div class="mentor">
+                           <section id="mentor-top">
+                               <button id="request">
+                               Request
+                               </button>
+                           </section>
+                           <section id="mentor-bottom">
+                           <aside>
+                               <div id="profile">
+                               <figure>
+
+                               <img src="/background.jpeg" alt="personal Id picture">
+                               <figcaption>University email</figcaption>
+                           </figure>
+                       </div>
+                         </aside>
+                               <main>
+                               <h1> <%= mentor[:first_name] %> </h1>
+                                   <p><%= mentor[:biography] %></p>
+                               </main>
+                           </section>
+                       </div>
+                 <% end %>    
+              </div>
              </div>
         </main>
 </div>
