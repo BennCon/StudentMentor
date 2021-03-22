@@ -12,7 +12,7 @@
                 <li><a href="/my-account-mentee"> > My Account</a></li>
                 <li class="menu_selected"><a href="/find-mentor"> > Find A Mentor</a></li>
                 <li><a href="/requests-mentee"> > My Requests</a></li>
-                <li><a href="/get-help-mente"> > Get Help</a></li>
+                <li><a href="/get-help-mentee"> > Get Help</a></li>
                 <li><a href="/"> > Logout</a></li>
             </nav>
         </aside>
@@ -104,7 +104,10 @@
                      
                      <div class="mentor">
                            <section id="mentor-top">
-                               <button id="request">Request</button>
+                               <form name="myform" action="mailto:<%= h mentor[:email] %>?subject=Test Email&body=You have a request from a Mentee to meet"
+                                  enctype="text/plain" method="post" onsubmit="alert('Email should open now');" >
+                                   <button id="request" type="submit">Request</button>
+                               </form>
                            </section>
                            <section id="mentor-bottom">
                                <aside>
