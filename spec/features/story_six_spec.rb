@@ -18,6 +18,6 @@ describe "An admin" do
     it "cannot register with an incorrect code" do
         register_admin "different","admin3test@test.com"
         expect(page).not_to have_content "sign in"
-        #clear_db
+        clear_db
     end
 end

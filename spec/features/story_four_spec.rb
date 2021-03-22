@@ -33,6 +33,6 @@ describe "The Filter System" do
         click_button "Apply filters"
         expect(page).to have_content "Mister"
         expect(page).not_to have_content "Miss"
-        #clear_db
+        clear_db
     end
 end
