@@ -3,18 +3,17 @@ get "/find-mentor" do
    id = session[:id]
    @mentee = Mentee[id] if Mentee.id_exists?(id)
    @user = User[id]
-   @dataset = DB[:mentors] 
 
-   @gender = params.fetch("gender", "").strip
-   @industry = params.fetch("industry", "").strip
-   @degree = params.fetch("degree_field", "").strip
-   @sheff_grad = params.fetch("sheffield_graduate", "").strip
+   filters = Hash.new
+   filters["gender"] = params.fetch("gender", "").strip
+   filters["industry"] = params.fetch("industry", "").strip
+   filters["degree_field"] = params.fetch("degree_field", "").strip
+   filters["sheffield_graduate"] = params.fetch("sheffield_graduate", "").strip
     
-   @mentors = if @gender.empty? && @industry.empty? && @degree.empty? && @sheff_grad.empty?
-                DB[:mentors]
-              else
-                Mentor.where(Sequel.like(:gender, "%#{@gender}%") && Sequel.like(:industry, "%#{@industry}%") && Sequel.like(:degree_field, "%#{@degree}%") && Sequel.like(:sheffield_graduate, "%#{@sheff_grad}%")) 
-              end
+   @mentors = DB[:mentors]
+   filters.each do |filter, value|
+      @mentors = @mentors.where(Sequel.like(:"#{filter}", "#{value}%"))
+   end
 
   erb :find_mentor
 end
