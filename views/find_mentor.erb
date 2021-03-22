@@ -9,10 +9,10 @@
                 </figure>
             </div>
              <nav class="menu">
-                <li><a href="/my-account-mentee?id=<%= @mentee.id %>"> > My Account</a></li>
-                <li class="menu_selected"><a href="/find-mentor?id=<%= @mentee.id %>"> > Find A Mentor</a></li>
-                <li><a href="/requests-mentee?id=<%= @mentee.id %>"> > My Requests</a></li>
-                <li><a href="/get-help-mentee?id=<%= @mentee.id %>"> > Get Help</a></li>
+                <li><a href="/my-account-mentee"> > My Account</a></li>
+                <li class="menu_selected"><a href="/find-mentor"> > Find A Mentor</a></li>
+                <li><a href="/requests-mentee"> > My Requests</a></li>
+                <li><a href="/get-help-mente"> > Get Help</a></li>
                 <li><a href="/"> > Logout</a></li>
             </nav>
         </aside>
@@ -116,6 +116,8 @@
                                </aside>
                                <main>
                                 <h1> <%= mentor[:first_name] %> <%= mentor[:surname] %> </h1>
+                                <p>Industry: <%= mentor[:industry] %></p>
+                                <p>Degree field: <%= mentor[:degree_field] %></p>
                                 <p><%= mentor[:biography] %></p>
                                </main>
                            </section>
