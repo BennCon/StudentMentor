@@ -32,6 +32,7 @@ def clear_db
     DB.from("mentors").delete
     DB.from("admins").delete
     DB.from("users").delete
+    DB.from("codes").delete
 end
 
 # Remove comment from below when there is more than one database
