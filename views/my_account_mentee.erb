@@ -42,16 +42,17 @@
                         <label for="surname">|Edit your surname</label>
                         <input type="name" name="surname" id="name" value="<%= h @mentee.surname%>" required>
                         <label> Choose year of study </label>
-                         <select name="year_of_study">
-                          <option value="1">1st</option>
-                          <option value="2">2nd</option>
-                          <option value="3">3rd</option>
-                          <option value="4">4th</option>
+                         <select name="year_of_study" required>
+                          <option value="<%= h @mentee.year_of_study%>"><%= h @mentee.year_of_study%></option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
                         </select>
                         <label for="surname">Edit your course</label>
                         <input type="course" name="course" id="name" value="<%= h @mentee.course%>" required>
                         <label for="biography">Edit your biography:</label>
-                        <textarea name="biography" id="biography" rows="10" cols="40" ><%= h @mentee.biography%></textarea>
+                        <textarea name="biography" id="biography" rows="10" cols="40" required><%= h @mentee.biography%></textarea>
                         <button type="submit" action="submit" id="button" name="save"> save changes</button>
                     </form>
                 <script>
