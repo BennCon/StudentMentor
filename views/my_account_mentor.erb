@@ -32,7 +32,7 @@
                 <p> Company: <strong><%= h @mentor.company%></strong></p>
                 <p> Biography: <strong> <%= h @mentor.biography %> </strong></p>
                 
-                <button class="button" name="accEdit">Edit details</button>
+                <button class="button" id="button" name="accEdit">Edit details</button>
                 <form method="post" action="/my-account-mentor" id="accDetails" class="accDetails">
                         <label for="email">Edit your Email</label>
                         <input type="email" name="email" id="email" value="<%= h @mentor.email%>" required>

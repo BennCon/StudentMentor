@@ -49,26 +49,26 @@ def register_log_in_mentee
     fill_in "email", with: "menteetest@test.com"
     fill_in "password", with: "Testpass"
     click_button "mentee_submit"
-    visit "/"
-    fill_in "email", with: "menteetest@test.com"
-    fill_in "password", with: "Testpass"
-    click_button "signin"
+    log_in "menteetest@test.com"
 end
 
-def register_log_in_mentor
+def register_mentor(first, sur, gender, industry, degree, email)
     visit "/mentor-form"
-    fill_in "first_name", with: "MentorFirst"
-    fill_in "surname", with: "Surname"
-    select 'Male', from: "gender"
-    select 'Aerospace', from: "industry"
+    fill_in "first_name", with: first
+    fill_in "surname", with: sur
+    select gender, from: "gender"
+    select industry, from: "industry"
     fill_in "company", with: "Testcompany"
-    #choose 'Yes'
-    select "Accounting", from: "degree_field"
-    fill_in "email", with: "mentortest@test.com"
+    choose "yes"
+    select degree, from: "degree_field"
+    fill_in "email", with: email
     fill_in "password", with: "Testpass"
     click_button "mentor_submit"
+end
+
+def log_in(email)
     visit "/"
-    fill_in "email", with: "mentortest@test.com"
+    fill_in "email", with: email
     fill_in "password", with: "Testpass"
     click_button "signin"
 end
