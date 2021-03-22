@@ -1,5 +1,13 @@
 #ENV["APP_ENV"] = "test"
 
+
+# Display LOC test coverage
+require "simplecov"
+SimpleCov.start do
+    add_filter "/spec/"
+end
+SimpleCov.coverage_dir "coverage"
+
 # load the app
 require_relative "../app"
 
@@ -17,13 +25,6 @@ RSpec.configure do |config|
   config.include Rack::Test::Methods
   config.include Capybara::DSL
 end
-
-# Display LOC test coverage
-require "simplecov"
-SimpleCov.start do
-    add_filter "/spec/"
-end
-SimpleCov.coverage_dir "coverage"
 
 # Clears the entire testing database 
 def clear_db
