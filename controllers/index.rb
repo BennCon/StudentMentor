@@ -30,13 +30,8 @@ post '/' do
     end
   else
     @error = "Username/Password combination incorrect"
-#     redirect "/"
   end
 
   erb :index
 end
 
-# get "/logout" do
-#   session.clear
-#   erb :logout
-# end
