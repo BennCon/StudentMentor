@@ -29,17 +29,18 @@
                 <p> Surname: <strong><%= h @mentor.surname %></strong></p>
                 <p> Email: <strong><%= h @mentor.email %></strong></p>
                 <p> Industry: <strong><%= @mentor.industry%></strong></p>
+                <p> Company: <strong><%= h @mentor.company%></strong></p>
                 <p> Biography: <strong> <%= h @mentor.biography %> </strong></p>
                 
                 <button class="button" name="accEdit">Edit details</button>
                 <form method="post" action="/my-account-mentor" id="accDetails" class="accDetails">
-                        <label for="email">Enter your Email</label>
+                        <label for="email">Edit your Email</label>
                         <input type="email" name="email" id="email" value="<%= h @mentor.email%>" required>
-                        <label for="first_name">Enter your first name</label>
+                        <label for="first_name">Edit your first name</label>
                         <input type="name" name="first_name" id="name" value="<%= h @mentor.first_name%>" required>
-                        <label for="surname">Enter your surname</label>
+                        <label for="surname">Edit your surname</label>
                         <input type="name" name="surname" id="name" value="<%= h @mentor.surname%>" required>
-                        <label> Choose Industry </label>
+                        <label for="industry"> Choose Industry </label>
                          <select  name="industry">
                               <option value="Aerospace">Aerospace</option>
                               <option value="Agriculture">Agriculture</option>
@@ -48,8 +49,8 @@
                               <option value="Bio">Bio</option>
                               <option value="Education">Education</option>
                               <option value="Energy">Energy</option>
-                              <option value="Eashion">Fashion</option>   
-                              <option value="Einance">Finance</option>
+                              <option value="Fashion">Fashion</option>   
+                              <option value="Finance">Finance</option>
                               <option value="Food">Food industry</option>
                               <option value="Government">Government</option>
                               <option value="Health">Health</option>
@@ -62,8 +63,10 @@
                               <option value="Transport">Transport</option>
                               <option value="Tourism">Tourism</option>
                         </select>
+                        <label for="company">Edit company</label>
+                        <input type="company" name="company" id="company" value="<%= h @mentor.company%>" required>
                         <label for="biography">Edit your biography:</label>
-                        <textarea name="biography" id="biography" rows="10" cols="40"></textarea>
+                        <textarea name="biography" id="biography" rows="10" cols="40" required><%= h @mentor.biography%></textarea>
                         <button type="submit" action="submit" id="button" name="save"> save changes</button>
                     </form>
                 <script>
