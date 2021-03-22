@@ -32,6 +32,7 @@ def clear_db
     DB.from("mentors").delete
     DB.from("admins").delete
     DB.from("users").delete
+    DB.from("codes").delete
 end
 
 # Remove comment from below when there is more than one database
@@ -64,6 +65,16 @@ def register_mentor(first, sur, gender, industry, degree, email)
     fill_in "email", with: email
     fill_in "password", with: "Testpass"
     click_button "mentor_submit"
+end
+
+def register_admin(code, email)
+    visit "/admin-form"
+    fill_in "first_name", with: "AdminFirst"
+    fill_in "surname", with: "Surname"
+    fill_in "admin_code", with: code
+    fill_in "email", with: email
+    fill_in "password", with: "Testpass"
+    click_button "admin_submit"
 end
 
 def log_in(email)
