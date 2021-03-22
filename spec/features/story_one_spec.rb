@@ -10,6 +10,6 @@ describe "The sign up pages" do
         register_mentor "MentorFirst","Surname","Male","Aerospace","Aerospace","mentortest@test.com"
         log_in "mentortest@test.com"
         expect(page).to have_content "MentorFirst"
-        #clear_db
+        clear_db
     end
 end

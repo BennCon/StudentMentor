@@ -5,5 +5,6 @@ describe "The help page" do
         register_log_in_mentee
         click_link "> Get Help"
         expect(page).to have_content "email"
+        clear_db
     end
 end
