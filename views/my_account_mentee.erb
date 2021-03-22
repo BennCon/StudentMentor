@@ -32,7 +32,7 @@
                 <p> Email: <strong><%= @mentee.email %></strong></p>
                 <p> Year of Study: <strong><%= @mentee.year_of_study %></strong></p>
                 <p> Biography: <strong> <%= @mentee.biography %></strong></p>
-                <button class="button" name="accEdit">Edit details</button>
+                <button id="button" class="button" name="accEdit">Edit details</button>
                 <form method="post" action="/my-account-mentee" id="accDetails" class="accDetails">
                         <label for="email">Enter your Email</label>
                         <input type="email" name="email" id="email" value="<%= h @mentee.email%>" required>
