@@ -51,10 +51,10 @@ def register_log_in_mentee
     log_in "menteetest@test.com"
 end
 
-def register_mentor(gender, industry, degree, email)
+def register_mentor(first, sur, gender, industry, degree, email)
     visit "/mentor-form"
-    fill_in "first_name", with: "MentorFirst"
-    fill_in "surname", with: "Surname"
+    fill_in "first_name", with: first
+    fill_in "surname", with: sur
     select gender, from: "gender"
     select industry, from: "industry"
     fill_in "company", with: "Testcompany"

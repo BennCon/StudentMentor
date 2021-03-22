@@ -2,7 +2,7 @@ require_relative "../../helpers/spec_helper.rb"
 
 describe "The edit profile system" do
     it "Is able to alter a mentor's biography" do
-        register_mentor "Male","Aerospace","Aerospace","mentortest@test.com"
+        register_mentor "MentorFirst","Surname","Male","Aerospace","Aerospace","mentortest@test.com"
         log_in "mentortest@test.com"
         click_button "accEdit"
         fill_in "biography", with: "Lorem Ipsum"
