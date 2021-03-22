@@ -1,19 +1,23 @@
 <%= erb :"commons/header" %>
-
-<form method="post">
+<div id="form-div">
+<form method="post" id="form-style">
+    <div id="mentor-bottom">
+         <h2>Signing up as a </h2> 
+         <h2 id="orange"> MENTOR</h2>
+     </div>
+    <div class="flex-row">
     <p class="label">First name</p>
     <p class="field"><input type="text" name="first_name" /></p>
-
     <p class="label">Surname</p>
     <p class="field"><input type="text" name="surname" /></p>
-    
+    </div>
     <p class="label">Gender</p>
     <select class="field" name="gender">
       <option value="male">Male</option>
       <option value="female">Female</option>
       <option value="non_binary">Non-binary</option>
     </select>
-
+    
     <p class="label">Industry</p>
     <select class="field" name="industry">
         <option value="Aerospace">Aerospace</option>
@@ -40,7 +44,7 @@
     
     <p class="label">Company</p>
     <p class="field"><input type="text" name="company" /></p>
-    
+     
     <p class="label">Are you a Sheffield graduate?</p>
     <input type="radio"  name="sheffield_graduate" value="1" id="yes">
     <label for="yes">Yes</label><br>
@@ -77,13 +81,13 @@
       <option value="sport">Sport</option>  
     </select>
     
+    <div class="flex-row">
     <p class="label">Email</p>
     <p class="field"><input type="email" name="email" /></p>
-
     <p class="label">Password</p>
     <p class="field"><input type="password" name="password" /></p>
-
+    </div>
     <button type="submit" id="button" name="mentor_submit"> Submit </button>
 </form>
-
+</div>
 <%= erb :"commons/footer" %>

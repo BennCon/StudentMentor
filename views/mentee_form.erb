@@ -1,12 +1,18 @@
 <%= erb :"commons/header" %>
-
-<form method="post">
+<div id="form-div">
+    
+<form method="post" id="form-style">
+    <div id="mentor-bottom">
+         <h2>Signing up as a </h2> 
+         <h2 id="orange"> MENTEE</h2>
+     </div>
+    <div class="flex-row">
     <p class="label">First name</p>
     <p class="field"><input type="text" name="first_name" /></p>
-
     <p class="label">Surname</p>
     <p class="field"><input type="text" name="surname" /></p>
-
+    </div>
+    
     <p class="label">Course</p>
     <p class="field"><input type="text" name="course" /></p>
     
@@ -25,13 +31,13 @@
       <option value="4">4th</option>
     </select>
     
+    <div class="flex-row">
     <p class="label">Email</p>
     <p class="field"><input type="email" name="email" /></p>
-
     <p class="label">Password</p>
     <p class="field"><input type="password" name="password" /></p>
-
+    </div>
     <button type="submit" id="button" name="mentee_submit"> Submit </button>
 </form>
-
+</div>
 <%= erb :"commons/footer" %>

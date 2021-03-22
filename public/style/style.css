@@ -52,6 +52,7 @@ body {
     background-color: #14213D;
     color: white;
     border-radius: 10%;
+    margin-top: 5px;
    
 }
 
@@ -63,7 +64,9 @@ body {
 
 #button a {
     color: white;
+    text-decoration: none;
 }
+
 
 header figure {
     max-width: 20%;
@@ -158,6 +161,7 @@ main {
 }
 #orange {
     color:#FCA311;
+    margin-left: 6px;
 }
 
 .mentor {
@@ -205,4 +209,42 @@ main {
     display:block;
     background-color:#14213D;
     color:white;
+}
+
+#form-div {
+    display: block;
+    text-align: center;
+    
+}
+
+#form-style {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    background-color:#F4F4F4;
+    border-color:#2A364F;
+    border-bottom-width: 5px;
+    border-style: solid;
+    padding: 10px;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup {
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    
 }

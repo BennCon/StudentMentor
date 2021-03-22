@@ -9,10 +9,10 @@
                 </figure>
             </div>
             <nav class="menu">
-                <li class="menu_selected"><a href="/my-account-mentee?id=<%= @mentee.id %>"> > My Account</a></li>
-                <li><a href="/find-mentor?id=<%= @mentee.id %>"> > Find A Mentor</a></li>
-                <li><a href="/requests-mentee?id=<%= @mentee.id %>"> > My Requests</a></li>
-                <li><a href="/get-help-mentee?id=<%= @mentee.id %>"> > Get Help</a></li>
+                <li class="menu_selected"><a href="/my-account-mentee"> > My Account</a></li>
+                <li><a href="/find-mentor"> > Find A Mentor</a></li>
+                <li><a href="/requests-mentee"> > My Requests</a></li>
+                <li><a href="/get-help-mentee"> > Get Help</a></li>
                 <li><a href="/"> > Logout</a></li>
                 
             </nav>
@@ -31,14 +31,15 @@
                 <p> Surname: <strong><%= @mentee.surname %></strong></p>
                 <p> Email: <strong><%= @mentee.email %></strong></p>
                 <p> Year of Study: <strong><%= @mentee.year_of_study %></strong></p>
+                <p> Course: <strong> <%= @mentee.course %></strong></p>
                 <p> Biography: <strong> <%= @mentee.biography %></strong></p>
-                <button class="button" name="accEdit">Edit details</button>
+                <button id="button" class="button" name="accEdit">Edit details</button>
                 <form method="post" action="/my-account-mentee" id="accDetails" class="accDetails">
-                        <label for="email">Enter your Email</label>
+                        <label for="email">Edit your Email</label>
                         <input type="email" name="email" id="email" value="<%= h @mentee.email%>" required>
-                        <label for="first_name">Enter your first name</label>
+                        <label for="first_name">Edit your first name</label>
                         <input type="name" name="first_name" id="name" value="<%= h @mentee.first_name%>" required>
-                        <label for="surname">Enter your surname</label>
+                        <label for="surname">|Edit your surname</label>
                         <input type="name" name="surname" id="name" value="<%= h @mentee.surname%>" required>
                         <label> Choose year of study </label>
                          <select name="year_of_study">
@@ -47,8 +48,10 @@
                           <option value="3">3rd</option>
                           <option value="4">4th</option>
                         </select>
+                        <label for="surname">Edit your course</label>
+                        <input type="course" name="course" id="name" value="<%= h @mentee.course%>" required>
                         <label for="biography">Edit your biography:</label>
-                        <textarea name="biography" id="biography" rows="10" cols="40" placeholder="<%= h @mentee.biography%>"></textarea>
+                        <textarea name="biography" id="biography" rows="10" cols="40" ><%= h @mentee.biography%></textarea>
                         <button type="submit" action="submit" id="button" name="save"> save changes</button>
                     </form>
                 <script>

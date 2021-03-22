@@ -14,45 +14,45 @@ RSpec.describe "Index" do
     end
     
     describe "Index Form Submission" do
-        it "Redirects on a success" do
-            admin = Admin.new(first_name: "Test", surname: "Test", admin_code: "1234", email: "testtest@test.test", password: "test1234")
+        
+        before(:all) do
+            user = User.new(email: "testtest@test.test", password: "test1234", user_type: "admin")
+            user.save_changes
+            admin = Admin.new(first_name: "A", surname: "B", admin_code: "1234", email: "testtest@test.test", password: "test1234")
             admin.save_changes
+        end
+        
+        after(:all) do
+            DB.from("mentees").delete
+            DB.from("mentors").delete
+            DB.from("admins").delete
+            DB.from("users").delete
+        end
+        
+        it "Redirects on a success" do
             post "/", "email" => "testtest@test.test", "password" => "test1234"
             expect(last_response).to be_redirect
             expect(last_response.location).to include('/my-account-admin')
-            DB.from("admin").delete
         end
         
         it "Fails when there's no password" do
-            admin = Admin.new(first_name: "Test", surname: "Test", admin_code: "1234", email: "testtest@test.test", password: "test1234")
-            admin.save_changes
             post "/", "email" => "testtest@test.test"
-            expect(last_response).to include('Error')
-            DB.from("admin").delete
+            expect(last_response.body).to include('Username/Password combination incorrect')
         end
         
         it "Fails when there's no email" do
-            admin = Admin.new(first_name: "Test", surname: "Test", admin_code: "1234", email: "testtest@test.test", password: "test1234")
-            admin.save_changes
             post "/", "password" => "test1234"
-            expect(last_response).to include('Error')
-            DB.from("admin").delete
+            expect(last_response.body).to include('Username/Password combination incorrect')
         end
         
         it "Fails when there's no parameters" do
-            admin = Admin.new(first_name: "Test", surname: "Test", admin_code: "1234", email: "testtest@test.test", password: "test1234")
-            admin.save_changes
             post "/"
-            expect(last_response).to include('Error')
-            DB.from("admin").delete
+            expect(last_response.body).to include('Username/Password combination incorrect')
         end
         
         it "Fails when a false email is inputted" do
-            admin = Admin.new(first_name: "Test", surname: "Test", admin_code: "1234", email: "testtest@test.test", password: "test1234")
-            admin.save_changes
             post "/", "email" => "test", "password" => "test1234"
-            expect(last_response).to include('Error')
-            DB.from("admin").delete
+            expect(last_response.body).to include('Username/Password combination incorrect')
         end
     end
 end
