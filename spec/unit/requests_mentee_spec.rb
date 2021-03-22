@@ -1,7 +1,7 @@
 require_relative "../../helpers/spec_helper"
 
-RSpec.describe "Find Mentor" do
-    describe "GET /find-mentor" do
+RSpec.describe "Requests Page" do
+    describe "GET /requests" do
         
         before(:all) do
             User.unrestrict_primary_key
@@ -21,13 +21,13 @@ RSpec.describe "Find Mentor" do
         end
         
         it "has a status code of 200 (OK)" do
-            get "/find-mentor"
+            get "/requests-mentee"
             expect(last_response.status).to eq(200)
         end
         
-        it "Has an availabe mentors section" do
-            get "/find-mentor"
-            expect(last_response.body).to include('<div id="mentors">')
+        it "Displays requests" do
+            get "/requests-mentee"
+            expect(last_response.body).to include('requests')
         end
     end
 end
