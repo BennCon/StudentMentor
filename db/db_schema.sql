@@ -44,3 +44,9 @@ CREATE TABLE users (
    password TEXT,
    user_type TEXT
 );
+
+CREATE TABLE codes (
+   id INTEGER PRIMARY KEY,
+   code TEXT,
+   used INTEGER
+);

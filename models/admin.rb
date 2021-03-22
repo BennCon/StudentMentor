@@ -12,6 +12,23 @@ class Admin < Sequel::Model
         self.surname = params.fetch("surname", "").strip
         self.email = params.fetch("email", "").strip
     end
+   
+    def valid_code?(in_code)
+      @codesTable = DB[:codes]
+      match = false
+      (@codesTable).each do |code|
+         if ((in_code == code[:code]) && (code[:used] == 0))
+            id = code[:id]
+            @code = Code[id]
+            @code.used = 1
+            @code.save_changes
+            match = true
+            break
+         end
+      end
+      return match
+    end
+       
     
     def self.id_exists?(id)
         return false if id.nil? # check the id is not nil

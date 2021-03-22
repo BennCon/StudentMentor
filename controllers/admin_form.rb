@@ -12,14 +12,18 @@ post "/admin-form" do
    @admin.load(params)
    @user.user_type = "admin"
    
-   @user.save_changes
-   @admin.save_changes
-   
-   id = @user.id
-   @admin.id = id
-   
-   @user.save_changes
-   @admin.save_changes
-   redirect "/"
+   if @admin.valid_code?(@admin.admin_code)
+      @user.save_changes
+      @admin.save_changes
+
+      id = @user.id
+      @admin.id = id
+
+      @user.save_changes
+      @admin.save_changes
+      redirect "/"
+   end
+      
+   redirect "/admin-form"
    erb :admin_form
 end
