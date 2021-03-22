@@ -17,3 +17,6 @@ To stop the application (in the terminal):
 
 To access the web page type in the browser the following link:
 - http://piano-baboon-4567.codio.io
+
+To run all automated tests, run:
+- rspec spec

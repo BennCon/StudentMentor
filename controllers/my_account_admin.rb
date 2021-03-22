@@ -1,5 +1,5 @@
 get "/my-account-admin" do
-#   redirect "/" unless session[:logged_in]
+  redirect "/" unless session[:logged_in]
   id = session[:id]
   @admin = Admin[id] if Admin.id_exists?(id)
   @user = User[id]
@@ -11,6 +11,7 @@ post "/my-account-admin" do
    @admin = Admin[id] if Admin.id_exists?(id)
    @user = User[id]
 
+   #Lets users edit details
    @admin.load_edit(params)
    @user.load_edit(params)
 

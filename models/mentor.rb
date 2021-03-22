@@ -11,6 +11,7 @@ class Mentor < Sequel::Model
         self.password = params.fetch("password", "").strip
     end
    
+   #Different param set for editing after sign-up
     def load_edit(params)
        self.email = params.fetch("email", "").strip
        self.first_name = params.fetch("first_name", "").strip

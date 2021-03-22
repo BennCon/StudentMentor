@@ -9,6 +9,7 @@ class Mentee < Sequel::Model
         self.password = params.fetch("password", "").strip
     end
    
+   #Different param set for editing after sign-up
    def load_edit(params)
       self.first_name = params.fetch("first_name", "").strip
       self.surname = params.fetch("surname", "").strip
