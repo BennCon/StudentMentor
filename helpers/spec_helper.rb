@@ -58,7 +58,7 @@ def register_mentor(first, sur, gender, industry, degree, email)
     select gender, from: "gender"
     select industry, from: "industry"
     fill_in "company", with: "Testcompany"
-    #choose 'Yes'
+    choose "yes"
     select degree, from: "degree_field"
     fill_in "email", with: email
     fill_in "password", with: "Testpass"
