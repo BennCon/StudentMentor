@@ -1,4 +1,4 @@
-#ENV["APP_ENV"] = "test"
+ENV["APP_ENV"] = "test_db"
 
 
 # Display LOC test coverage
@@ -35,8 +35,8 @@ def clear_db
     DB.from("codes").delete
 end
 
-# Remove comment from below when there is more than one database
-#clear_db
+# Clear the database so it is ready for testing
+clear_db
 
 # Methods for acceptance testing
 
