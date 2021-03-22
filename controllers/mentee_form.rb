@@ -5,6 +5,7 @@ get "/mentee-form" do
 end
 
 post "/mentee-form" do
+   #Creates instances of both for the 2 databases
    @user = User.new
    @mentee = Mentee.new
    

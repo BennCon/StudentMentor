@@ -5,17 +5,11 @@ class User < Sequel::Model
     self.user_type = params.fetch("user_type","").strip
   end
    
+  #Different param set for editing after sign-up
   def load_edit(params)
      self.email = params.fetch("email", "").strip
   end
    
-
-#   def validate
-#     super
-#     errors.add("username", "cannot be empty") if username.empty?
-#     errors.add("password", "cannot be empty") if password.empty?
-#   end
-
   def exist?
     other_user = User.first(email: email)
     !other_user.nil? && other_user.password == password

@@ -7,12 +7,14 @@ class Admin < Sequel::Model
         self.password = params.fetch("password", "").strip
     end
    
+    #Different param set for editing after sign-up
     def load_edit(params)
         self.first_name = params.fetch("first_name", "").strip
         self.surname = params.fetch("surname", "").strip
         self.email = params.fetch("email", "").strip
     end
    
+    #Method for checking admin code 
     def valid_code?(in_code)
       @codesTable = DB[:codes]
       match = false

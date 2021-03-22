@@ -6,6 +6,7 @@ get "/admin-form" do
 end
 
 post "/admin-form" do
+   #Creates instances of both for the 2 databases
    @user = User.new
    @admin = Admin.new
    
@@ -13,6 +14,7 @@ post "/admin-form" do
    @admin.load(params)
    @user.user_type = "admin"
    
+   #Checks if admin code is valid
    if @admin.valid_code?(@admin.admin_code)
       @user.save_changes
       @admin.save_changes
@@ -25,6 +27,7 @@ post "/admin-form" do
       redirect "/"
    end
    
+   #Refreshes page if invalid
    redirect "/admin-form"
    erb :admin_form
 end

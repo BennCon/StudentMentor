@@ -5,6 +5,7 @@ get "/mentor-form" do
 end
 
 post "/mentor-form" do
+   #Creates instances of both for the 2 databases
    @user = User.new
    @mentor = Mentor.new
    

@@ -1,5 +1,5 @@
 get "/my-account-mentor" do
-#   redirect "/" unless session[:logged_in]
+  redirect "/" unless session[:logged_in]
   id = session[:id]
   @mentor = Mentor[id] if Mentor.id_exists?(id)
   @user = User[id]
@@ -11,6 +11,7 @@ post "/my-account-mentor" do
     @mentor = Mentor[id] if Mentor.id_exists?(id)
     @user = User[id]
    
+    #Lets users edit details
     @mentor.load_edit(params)
     @user.load_edit(params)
    

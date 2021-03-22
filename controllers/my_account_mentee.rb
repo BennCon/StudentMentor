@@ -1,5 +1,5 @@
 get "/my-account-mentee" do
-#   redirect "/" unless session[:logged_in]
+  redirect "/" unless session[:logged_in]
   id = session[:id]
   @mentee = Mentee[id] if Mentee.id_exists?(id)
   @user = User[id]
@@ -11,6 +11,7 @@ post "/my-account-mentee" do
    @mentee = Mentee[id] if Mentee.id_exists?(id)
    @user = User[id]
    
+   #Lets users edit details
    @mentee.load_edit(params)
    @user.load_edit(params)
 

@@ -9,6 +9,7 @@ post '/' do
   @user.load(params)
   @error = nil
 
+  #Checks if user is valid, sends them to the correct my-account page
   if @user.exist?
     puts @user.get_type
     session[:logged_in] = true

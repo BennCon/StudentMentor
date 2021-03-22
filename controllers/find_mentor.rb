@@ -1,9 +1,10 @@
 get "/find-mentor" do
-#   redirect "/index" unless session[:logged_in]
+   redirect "/index" unless session[:logged_in]
    id = session[:id]
    @mentee = Mentee[id] if Mentee.id_exists?(id)
    @user = User[id]
 
+   #For filtering mentors
    filters = Hash.new
    filters["gender"] = params.fetch("gender", "").strip
    filters["industry"] = params.fetch("industry", "").strip
