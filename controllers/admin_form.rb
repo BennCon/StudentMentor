@@ -1,6 +1,7 @@
 get "/admin-form" do
    @user = User.new
    @admin = Admin.new
+   @not_valid = ""
    erb :admin_form
 end
 
@@ -23,7 +24,7 @@ post "/admin-form" do
       @admin.save_changes
       redirect "/"
    end
-      
+   
    redirect "/admin-form"
    erb :admin_form
 end
