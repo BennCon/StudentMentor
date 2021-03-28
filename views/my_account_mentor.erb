@@ -27,6 +27,7 @@
                 <p> User type: Mentor. </p>
                 <p> First name: <strong><%= h @mentor.first_name %></strong></p>
                 <p> Surname: <strong><%= h @mentor.surname %></strong></p>
+                <p> Username: <strong><%= h @mentor.username %></strong></p>
                 <p> Email: <strong><%= h @mentor.email %></strong></p>
                 <p> Industry: <strong><%= @mentor.industry%></strong></p>
                 <p> Company: <strong><%= h @mentor.company%></strong></p>
@@ -40,6 +41,8 @@
                         <input type="name" name="first_name" id="name" value="<%= h @mentor.first_name%>" required>
                         <label for="surname">Edit your surname</label>
                         <input type="name" name="surname" id="name" value="<%= h @mentor.surname%>" required>
+                        <label for="username">|Edit your username</label>
+                        <input type="username" name="username" id="username" value="<%= h @mentor.username%>" required>
                         <label for="industry"> Choose Industry </label>
                          <select  name="industry">
                              <option value="<%= @mentor.industry%>"><%= @mentor.industry%></option>

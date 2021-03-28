@@ -25,6 +25,7 @@
                 <p> User type: Admin. </p>
                 <p> First name: <strong><%= @admin.first_name %></strong></p>
                 <p> Surname: <strong><%= @admin.surname %></strong></p>
+                <p> Username: <strong><%= @admin.username %></strong></p>
                 <p> Email: <strong><%= @admin.email %></strong></p>
               
                 <button class="button" name="accEdit">Edit details</button>
@@ -36,6 +37,8 @@
                         <input type="name" name="first_name" id="name" value="<%= h @admin.first_name%>" required>
                         <label for="surname">Enter your surname</label>
                         <input type="name" name="surname" id="name" value="<%= h @admin.surname%>" required>
+                        <label for="username">Enter a username</label>
+                        <input type="username" name="username" id="username" value="<%= h @admin.username%>" required>
                         <button type="submit" action="submit" id="button" name="save"> save changes</button>
                     </form>
                 <script>

@@ -29,6 +29,7 @@
                 <p> User type: Mentee. </p>
                 <p> First name: <strong><%= @mentee.first_name %></strong></p>
                 <p> Surname: <strong><%= @mentee.surname %></strong></p>
+                <p> Username: <strong><%= @mentee.username %></strong></p>
                 <p> Email: <strong><%= @mentee.email %></strong></p>
                 <p> Year of Study: <strong><%= @mentee.year_of_study %></strong></p>
                 <p> Course: <strong> <%= @mentee.course %></strong></p>
@@ -41,6 +42,8 @@
                         <input type="name" name="first_name" id="name" value="<%= h @mentee.first_name%>" required>
                         <label for="surname">|Edit your surname</label>
                         <input type="name" name="surname" id="name" value="<%= h @mentee.surname%>" required>
+                        <label for="username">|Edit your username</label>
+                        <input type="username" name="username" id="username" value="<%= h @mentee.username%>" required>
                         <label> Choose year of study </label>
                          <select name="year_of_study" required>
                           <option value="<%= h @mentee.year_of_study%>"><%= h @mentee.year_of_study%></option>

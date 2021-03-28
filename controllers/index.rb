@@ -14,18 +14,18 @@ post '/' do
     puts @user.get_type
     session[:logged_in] = true
     if @user.get_type == "admin"
-       email = params.fetch("email", "").strip
-       @admin= Admin.where(Sequel.like(:email, "%#{email}%"))
+       username = params.fetch("username", "").strip
+       @admin= Admin.where(Sequel.like(:username, "%#{username}%"))
        session[:id] = @admin.first.get_id
        redirect "/my-account-admin"
     elsif @user.get_type == "mentor"
-       email = params.fetch("email", "").strip
-       @mentor = Mentor.where(Sequel.like(:email, "%#{email}%"))
+       username = params.fetch("username", "").strip
+       @mentor = Mentor.where(Sequel.like(:username, "%#{username}%"))
        session[:id] = @mentor.first.get_id
        redirect "/my-account-mentor"
     else
-       email = params.fetch("email", "").strip
-       @mentee = Mentee.where(Sequel.like(:email, "%#{email}%"))
+       username = params.fetch("username", "").strip
+       @mentee = Mentee.where(Sequel.like(:username, "%#{username}%"))
        session[:id] = @mentee.first.get_id
        redirect "/my-account-mentee"
     end

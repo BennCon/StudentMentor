@@ -2,6 +2,7 @@ CREATE TABLE mentees (
     id INTEGER PRIMARY KEY,
     first_name TEXT,
     surname TEXT,
+    username TEXT,
     gender TEXT,
     course TEXT,
     year_of_study INTEGER,
@@ -17,6 +18,7 @@ CREATE TABLE mentors (
     id INTEGER PRIMARY KEY,
     first_name TEXT,
     surname TEXT,
+    username TEXT,
     gender TEXT,
     industry TEXT,
     company TEXT,
@@ -33,6 +35,7 @@ CREATE TABLE admins (
     id INTEGER PRIMARY KEY,
     first_name TEXT,
     surname TEXT,
+    username TEXT,
     admin_code TEXT,
     email TEXT,
     password TEXT
@@ -40,6 +43,9 @@ CREATE TABLE admins (
 
 CREATE TABLE users (
    id INTEGER PRIMARY KEY,
+   first_name TEXT,
+   surname TEXT,
+   username TEXT,
    email TEXT,
    password TEXT,
    user_type TEXT
