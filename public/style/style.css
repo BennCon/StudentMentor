@@ -135,7 +135,13 @@ main {
     padding-left: 10%;
 }
 
-#sign-in-form {
+.accDetails {
     display: none;
 }
 
+.active {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 50%;
+}
