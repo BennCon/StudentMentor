@@ -52,6 +52,7 @@ body {
     background-color: #14213D;
     color: white;
     border-radius: 10%;
+    margin-top: 5px;
    
 }
 
@@ -63,7 +64,9 @@ body {
 
 #button a {
     color: white;
+    text-decoration: none;
 }
+
 
 header figure {
     max-width: 20%;
@@ -73,6 +76,7 @@ header figure {
 footer {
     background-color: #14213D;
     color: white; 
+    text-align: center;
 }
 
 /*displying the page as two vertical sections*/
@@ -88,19 +92,16 @@ footer {
 /*aside*/
 aside {
     background-color: #14213D;
-    width: 30%;
+    width: 300px;
+    min-width: 300px;
     justify-content: space-evenly;
     display: flex;
-    flex-direction: column;
-    
-    
+    flex-direction: column; 
 }
+
 
 #profile {
    color: white;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
    text-align: center;
 }
 
@@ -121,6 +122,10 @@ nav li{
     margin-bottom: 2%;
 }
 
+.menu_selected {
+   background-color: #2A364F;
+}
+
 nav li:hover{
     background-color:#2A364F;
     transition: 0.5s;
@@ -132,7 +137,8 @@ nav li a {
 }
 /*main*/
 main {
-    padding-left: 10%;
+    padding-left: 5%;
+    padding-right: 10%;
 }
 
 .accDetails {
@@ -144,4 +150,101 @@ main {
     justify-content: center;
     flex-direction: column;
     max-width: 50%;
+}
+
+/* find_mentor css */
+
+.top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#orange {
+    color:#FCA311;
+    margin-left: 6px;
+}
+
+.mentor {
+    background-color: #F4F4F4;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    
+}
+
+#mentor-bottom{
+    display:flex;
+    flex-direction: row;
+}
+
+#request {
+    position: absolute;
+    border-radius: 20%;
+    background-color:#FCA311;
+    font-size: large; 
+}
+
+#request:hover {
+    background-color:white;
+    transition:0.5s;
+}
+
+#button-filters {
+   border-radius: 20%;
+   background-color:#FCA311;  
+}
+
+#button-filters:hover {
+   background-color:#14213D;
+   color:white;
+   transition:0.5s; 
+}
+
+.filter-form {
+    display:none; 
+}
+
+.active-form {
+    position:absolute;
+    display:block;
+    background-color:#14213D;
+    color:white;
+}
+
+#form-div {
+    display: block;
+    text-align: center;
+    
+}
+
+#form-style {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    background-color:#F4F4F4;
+    border-color:#2A364F;
+    border-bottom-width: 5px;
+    border-style: solid;
+    padding: 10px;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup {
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    
 }

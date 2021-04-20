@@ -1,13 +1,12 @@
-# I have to add this for tests to work - Charlie
-require 'sinatra'
-
 get "/admin-form" do
    @user = User.new
    @admin = Admin.new
+   @not_valid = ""
    erb :admin_form
 end
 
 post "/admin-form" do
+   #Creates instances of both for the 2 databases
    @user = User.new
    @admin = Admin.new
    
@@ -15,14 +14,20 @@ post "/admin-form" do
    @admin.load(params)
    @user.user_type = "admin"
    
-   @user.save_changes
-   @admin.save_changes
+   #Checks if admin code is valid
+   if @admin.valid_code?(@admin.admin_code)
+      @user.save_changes
+      @admin.save_changes
+
+      id = @user.id
+      @admin.id = id
+
+      @user.save_changes
+      @admin.save_changes
+      redirect "/"
+   end
    
-   id = @user.id
-   @admin.id = id
-   
-   @user.save_changes
-   @admin.save_changes
-   redirect "/index"
+   #Refreshes page if invalid
+   redirect "/admin-form"
    erb :admin_form
 end

@@ -1,0 +1,23 @@
+<%= erb :"commons/header" %>
+<div id="page">
+        <aside>
+            <div id="profile">
+                <figure>
+                    <!--this img just for testing-->
+                    <img src="/background.jpeg" alt="personal Id picture">
+                    <figcaption><%= @mentee.email %></figcaption>
+                </figure>
+            </div>
+            <nav class="menu">
+                <li><a href="/my-account-mentee?id=<%= @mentee.id %>"> > My Account</a></li>
+                <li><a href="/find-mentor?id=<%= @mentee.id %>"> > Find A Mentor</a></li>
+                <li class="menu_selected"><a href="/requests-mentee?id=<%= @mentee.id %>"> > My Requests</a></li>
+                <li><a href="/get-help-mentee?id=<%= @mentee.id %>"> > Get Help</a></li>
+                <li><a href="/"> > Logout</a></li>
+            </nav>
+        </aside>
+        <main>
+            <h1>Here is the requests details</h1>
+        </main>
+</div>
+<%= erb :"commons/footer" %>

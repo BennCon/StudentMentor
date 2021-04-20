@@ -1,0 +1,608 @@
+# Logfile created on 2021-03-22 13:50:39 +0000 by logger.rb/66358
+I, [2021-03-22T13:50:39.611551 #1126]  INFO -- : (0.000184s) PRAGMA foreign_keys = 1
+I, [2021-03-22T13:50:39.611639 #1126]  INFO -- : (0.000015s) PRAGMA case_sensitive_like = 1
+I, [2021-03-22T13:50:39.612284 #1126]  INFO -- : (0.000055s) SELECT sqlite_version()
+I, [2021-03-22T13:50:39.612526 #1126]  INFO -- : (0.000103s) PRAGMA table_info('admins')
+I, [2021-03-22T13:50:39.613201 #1126]  INFO -- : (0.000097s) PRAGMA table_info('codes')
+I, [2021-03-22T13:50:39.613930 #1126]  INFO -- : (0.000132s) PRAGMA table_info('mentees')
+I, [2021-03-22T13:50:39.614950 #1126]  INFO -- : (0.000136s) PRAGMA table_info('mentors')
+I, [2021-03-22T13:50:39.615913 #1126]  INFO -- : (0.000092s) PRAGMA table_info('users')
+I, [2021-03-22T13:55:09.457841 #1126]  INFO -- : (0.000054s) SELECT * FROM `codes` WHERE `id` = 1
+I, [2021-03-22T13:55:09.458065 #1126]  INFO -- : (0.000023s) BEGIN
+I, [2021-03-22T13:55:09.458543 #1126]  INFO -- : (0.000249s) UPDATE `codes` SET `used` = 1 WHERE (`id` = 1)
+I, [2021-03-22T13:55:09.549899 #1126]  INFO -- : (0.091186s) COMMIT
+I, [2021-03-22T13:55:09.550247 #1126]  INFO -- : (0.092645s) SELECT * FROM `codes`
+I, [2021-03-22T13:55:09.550489 #1126]  INFO -- : (0.000054s) BEGIN
+I, [2021-03-22T13:55:09.551211 #1126]  INFO -- : (0.000317s) INSERT INTO `users` (`email`, `password`, `user_type`) VALUES ('admin@test', 'admin', 'admin')
+I, [2021-03-22T13:55:09.551526 #1126]  INFO -- : (0.000110s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-03-22T13:55:09.640258 #1126]  INFO -- : (0.088516s) COMMIT
+I, [2021-03-22T13:55:09.640459 #1126]  INFO -- : (0.000031s) BEGIN
+I, [2021-03-22T13:55:09.640778 #1126]  INFO -- : (0.000150s) INSERT INTO `admins` (`first_name`, `surname`, `admin_code`, `email`, `password`) VALUES ('Admin', 'Admin', 'admincode1', 'admin@test', 'admin')
+I, [2021-03-22T13:55:09.640995 #1126]  INFO -- : (0.000100s) SELECT * FROM `admins` WHERE `id` = 1
+I, [2021-03-22T13:55:09.734702 #1126]  INFO -- : (0.093629s) COMMIT
+I, [2021-03-22T13:56:08.582410 #1126]  INFO -- : (0.000042s) BEGIN
+I, [2021-03-22T13:56:08.582836 #1126]  INFO -- : (0.000224s) INSERT INTO `users` (`email`, `password`, `user_type`) VALUES ('mentee1@test', 'mentee1', 'mentee')
+I, [2021-03-22T13:56:08.583140 #1126]  INFO -- : (0.000128s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-03-22T13:56:08.676398 #1126]  INFO -- : (0.093152s) COMMIT
+I, [2021-03-22T13:56:08.676675 #1126]  INFO -- : (0.000045s) BEGIN
+I, [2021-03-22T13:56:08.677126 #1126]  INFO -- : (0.000188s) INSERT INTO `mentees` (`first_name`, `surname`, `course`, `gender`, `year_of_study`, `email`, `password`) VALUES ('Mentee', 'Mentee', 'Computer Science', 'female', 2, 'mentee1@test', 'mentee1')
+I, [2021-03-22T13:56:08.677364 #1126]  INFO -- : (0.000112s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-03-22T13:56:08.754830 #1126]  INFO -- : (0.077386s) COMMIT
+I, [2021-03-22T13:56:08.755105 #1126]  INFO -- : (0.000042s) BEGIN
+I, [2021-03-22T13:56:08.755512 #1126]  INFO -- : (0.000203s) UPDATE `mentees` SET `id` = 2 WHERE (`id` = 1)
+I, [2021-03-22T13:56:08.844112 #1126]  INFO -- : (0.088481s) COMMIT
+I, [2021-03-22T13:56:35.348497 #1126]  INFO -- : (0.000048s) BEGIN
+I, [2021-03-22T13:56:35.348859 #1126]  INFO -- : (0.000169s) INSERT INTO `users` (`email`, `password`, `user_type`) VALUES ('mentee2@test', 'mentee2', 'mentee')
+I, [2021-03-22T13:56:35.349061 #1126]  INFO -- : (0.000083s) SELECT * FROM `users` WHERE `id` = 3
+I, [2021-03-22T13:56:35.438540 #1126]  INFO -- : (0.089398s) COMMIT
+I, [2021-03-22T13:56:35.438777 #1126]  INFO -- : (0.000030s) BEGIN
+I, [2021-03-22T13:56:35.439091 #1126]  INFO -- : (0.000155s) INSERT INTO `mentees` (`first_name`, `surname`, `course`, `gender`, `year_of_study`, `email`, `password`) VALUES ('Mentee2', 'Mentee', 'Computer Science', 'male', 1, 'mentee2@test', 'mentee2')
+I, [2021-03-22T13:56:35.439921 #1126]  INFO -- : (0.000717s) SELECT * FROM `mentees` WHERE `id` = 3
+I, [2021-03-22T13:56:35.536888 #1126]  INFO -- : (0.096875s) COMMIT
+I, [2021-03-22T13:57:10.873725 #1126]  INFO -- : (0.000060s) BEGIN
+I, [2021-03-22T13:57:10.874245 #1126]  INFO -- : (0.000259s) INSERT INTO `users` (`email`, `password`, `user_type`) VALUES ('mentor1@test', 'mentor1', 'mentor')
+I, [2021-03-22T13:57:10.874540 #1126]  INFO -- : (0.000125s) SELECT * FROM `users` WHERE `id` = 4
+I, [2021-03-22T13:57:10.981641 #1126]  INFO -- : (0.106994s) COMMIT
+I, [2021-03-22T13:57:10.982698 #1126]  INFO -- : (0.000047s) BEGIN
+I, [2021-03-22T13:57:10.983144 #1126]  INFO -- : (0.000185s) INSERT INTO `mentors` (`first_name`, `surname`, `gender`, `industry`, `company`, `sheffield_graduate`, `degree_field`, `email`, `password`) VALUES ('Mentor1', 'Mentor', 'female', 'Food', 'Test Company', 1, 'history', 'mentor1@test', 'mentor1')
+I, [2021-03-22T13:57:10.983418 #1126]  INFO -- : (0.000135s) SELECT * FROM `mentors` WHERE `id` = 1
+I, [2021-03-22T13:57:11.075271 #1126]  INFO -- : (0.091761s) COMMIT
+I, [2021-03-22T13:57:11.075516 #1126]  INFO -- : (0.000037s) BEGIN
+I, [2021-03-22T13:57:11.075891 #1126]  INFO -- : (0.000213s) UPDATE `mentors` SET `id` = 4 WHERE (`id` = 1)
+I, [2021-03-22T13:57:11.167232 #1126]  INFO -- : (0.091242s) COMMIT
+I, [2021-03-22T13:57:35.236414 #1126]  INFO -- : (0.000045s) BEGIN
+I, [2021-03-22T13:57:35.236746 #1126]  INFO -- : (0.000153s) INSERT INTO `users` (`email`, `password`, `user_type`) VALUES ('mentor2@test', 'mentor2', 'mentor')
+I, [2021-03-22T13:57:35.237149 #1126]  INFO -- : (0.000083s) SELECT * FROM `users` WHERE `id` = 5
+I, [2021-03-22T13:57:35.321048 #1126]  INFO -- : (0.083819s) COMMIT
+I, [2021-03-22T13:57:35.321260 #1126]  INFO -- : (0.000035s) BEGIN
+I, [2021-03-22T13:57:35.321592 #1126]  INFO -- : (0.000163s) INSERT INTO `mentors` (`first_name`, `surname`, `gender`, `industry`, `company`, `sheffield_graduate`, `degree_field`, `email`, `password`) VALUES ('Mentor2', 'Mentor', 'female', 'Education', 'Test Company 2', 1, 'geography', 'mentor2@test', 'mentor2')
+I, [2021-03-22T13:57:35.321832 #1126]  INFO -- : (0.000113s) SELECT * FROM `mentors` WHERE `id` = 5
+I, [2021-03-22T13:57:35.413137 #1126]  INFO -- : (0.091226s) COMMIT
+I, [2021-03-22T13:57:42.355691 #1126]  INFO -- : (0.000151s) SELECT * FROM `users` WHERE (`email` = 'admin@test') LIMIT 1
+I, [2021-03-22T13:57:42.356010 #1126]  INFO -- : (0.000090s) SELECT * FROM `users` WHERE (`email` = 'admin@test') LIMIT 1
+I, [2021-03-22T13:57:42.356304 #1126]  INFO -- : (0.000083s) SELECT * FROM `users` WHERE (`email` = 'admin@test') LIMIT 1
+I, [2021-03-22T13:57:42.356574 #1126]  INFO -- : (0.000124s) SELECT * FROM `admins` WHERE (`email` LIKE '%admin@test%' ESCAPE '\') LIMIT 1
+I, [2021-03-22T13:57:42.357406 #1126]  INFO -- : (0.000097s) SELECT * FROM `admins` WHERE (`email` = 'admin@test') LIMIT 1
+I, [2021-03-22T13:57:42.492128 #1126]  INFO -- : (0.000153s) SELECT * FROM `admins` WHERE `id` = 1
+I, [2021-03-22T13:57:42.492331 #1126]  INFO -- : (0.000084s) SELECT * FROM `admins` WHERE `id` = 1
+I, [2021-03-22T13:57:42.492471 #1126]  INFO -- : (0.000068s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-03-22T13:57:56.336708 #1126]  INFO -- : (0.000186s) SELECT * FROM `users` WHERE (`email` = 'mentee1@test') LIMIT 1
+I, [2021-03-22T13:57:56.336996 #1126]  INFO -- : (0.000111s) SELECT * FROM `users` WHERE (`email` = 'mentee1@test') LIMIT 1
+I, [2021-03-22T13:57:56.337196 #1126]  INFO -- : (0.000085s) SELECT * FROM `users` WHERE (`email` = 'mentee1@test') LIMIT 1
+I, [2021-03-22T13:57:56.337368 #1126]  INFO -- : (0.000085s) SELECT * FROM `users` WHERE (`email` = 'mentee1@test') LIMIT 1
+I, [2021-03-22T13:57:56.338157 #1126]  INFO -- : (0.000180s) SELECT * FROM `mentees` WHERE (`email` LIKE '%mentee1@test%' ESCAPE '\') LIMIT 1
+I, [2021-03-22T13:57:56.338478 #1126]  INFO -- : (0.000141s) SELECT * FROM `mentees` WHERE (`email` = 'mentee1@test') LIMIT 1
+I, [2021-03-22T13:57:56.472513 #1126]  INFO -- : (0.000247s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T13:57:56.472793 #1126]  INFO -- : (0.000138s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T13:57:56.472955 #1126]  INFO -- : (0.000094s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-03-22T13:57:59.253371 #1126]  INFO -- : (0.000270s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T13:57:59.253726 #1126]  INFO -- : (0.000164s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T13:57:59.253913 #1126]  INFO -- : (0.000104s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-03-22T13:57:59.262011 #1126]  INFO -- : (0.000176s) SELECT count(*) AS 'count' FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\')) LIMIT 1
+I, [2021-03-22T13:57:59.263124 #1126]  INFO -- : (0.000915s) SELECT * FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\'))
+I, [2021-03-22T13:58:06.289404 #1126]  INFO -- : (0.000206s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T13:58:06.289652 #1126]  INFO -- : (0.000120s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T13:58:06.289798 #1126]  INFO -- : (0.000079s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-03-22T13:58:15.931106 #1126]  INFO -- : (0.000156s) SELECT * FROM `users` WHERE (`email` = 'mentee2@test') LIMIT 1
+I, [2021-03-22T13:58:15.931339 #1126]  INFO -- : (0.000082s) SELECT * FROM `users` WHERE (`email` = 'mentee2@test') LIMIT 1
+I, [2021-03-22T13:58:15.931543 #1126]  INFO -- : (0.000091s) SELECT * FROM `users` WHERE (`email` = 'mentee2@test') LIMIT 1
+I, [2021-03-22T13:58:15.931706 #1126]  INFO -- : (0.000070s) SELECT * FROM `users` WHERE (`email` = 'mentee2@test') LIMIT 1
+I, [2021-03-22T13:58:15.932575 #1126]  INFO -- : (0.000687s) SELECT * FROM `mentees` WHERE (`email` LIKE '%mentee2@test%' ESCAPE '\') LIMIT 1
+I, [2021-03-22T13:58:15.932822 #1126]  INFO -- : (0.000113s) SELECT * FROM `mentees` WHERE (`email` = 'mentee2@test') LIMIT 1
+I, [2021-03-22T13:58:16.075602 #1126]  INFO -- : (0.000175s) SELECT * FROM `mentees` WHERE `id` = 3
+I, [2021-03-22T13:58:16.075843 #1126]  INFO -- : (0.000132s) SELECT * FROM `mentees` WHERE `id` = 3
+I, [2021-03-22T13:58:16.075980 #1126]  INFO -- : (0.000071s) SELECT * FROM `users` WHERE `id` = 3
+I, [2021-03-22T13:58:18.737770 #1126]  INFO -- : (0.000173s) SELECT * FROM `mentees` WHERE `id` = 3
+I, [2021-03-22T13:58:18.738016 #1126]  INFO -- : (0.000114s) SELECT * FROM `mentees` WHERE `id` = 3
+I, [2021-03-22T13:58:18.738152 #1126]  INFO -- : (0.000072s) SELECT * FROM `users` WHERE `id` = 3
+I, [2021-03-22T13:58:18.739330 #1126]  INFO -- : (0.000097s) SELECT count(*) AS 'count' FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\')) LIMIT 1
+I, [2021-03-22T13:58:18.739590 #1126]  INFO -- : (0.000141s) SELECT * FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\'))
+I, [2021-03-22T13:58:20.131361 #1126]  INFO -- : (0.000167s) SELECT * FROM `mentees` WHERE `id` = 3
+I, [2021-03-22T13:58:20.131561 #1126]  INFO -- : (0.000100s) SELECT * FROM `mentees` WHERE `id` = 3
+I, [2021-03-22T13:58:20.131673 #1126]  INFO -- : (0.000061s) SELECT * FROM `users` WHERE `id` = 3
+I, [2021-03-22T13:58:33.624536 #1126]  INFO -- : (0.000158s) SELECT * FROM `users` WHERE (`email` = 'mentor1@test') LIMIT 1
+I, [2021-03-22T13:58:33.624768 #1126]  INFO -- : (0.000083s) SELECT * FROM `users` WHERE (`email` = 'mentor1@test') LIMIT 1
+I, [2021-03-22T13:58:33.624945 #1126]  INFO -- : (0.000082s) SELECT * FROM `users` WHERE (`email` = 'mentor1@test') LIMIT 1
+I, [2021-03-22T13:58:33.625079 #1126]  INFO -- : (0.000063s) SELECT * FROM `users` WHERE (`email` = 'mentor1@test') LIMIT 1
+I, [2021-03-22T13:58:33.625382 #1126]  INFO -- : (0.000145s) SELECT * FROM `mentors` WHERE (`email` LIKE '%mentor1@test%' ESCAPE '\') LIMIT 1
+I, [2021-03-22T13:58:33.625608 #1126]  INFO -- : (0.000093s) SELECT * FROM `mentors` WHERE (`email` = 'mentor1@test') LIMIT 1
+I, [2021-03-22T13:58:33.767429 #1126]  INFO -- : (0.000160s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-03-22T13:58:33.767643 #1126]  INFO -- : (0.000098s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-03-22T13:58:33.767780 #1126]  INFO -- : (0.000063s) SELECT * FROM `users` WHERE `id` = 4
+I, [2021-03-22T13:58:43.150371 #1126]  INFO -- : (0.000162s) SELECT * FROM `users` WHERE (`email` = 'mentor2@test') LIMIT 1
+I, [2021-03-22T13:58:43.150612 #1126]  INFO -- : (0.000081s) SELECT * FROM `users` WHERE (`email` = 'mentor2@test') LIMIT 1
+I, [2021-03-22T13:58:43.150809 #1126]  INFO -- : (0.000089s) SELECT * FROM `users` WHERE (`email` = 'mentor2@test') LIMIT 1
+I, [2021-03-22T13:58:43.150955 #1126]  INFO -- : (0.000066s) SELECT * FROM `users` WHERE (`email` = 'mentor2@test') LIMIT 1
+I, [2021-03-22T13:58:43.151213 #1126]  INFO -- : (0.000104s) SELECT * FROM `mentors` WHERE (`email` LIKE '%mentor2@test%' ESCAPE '\') LIMIT 1
+I, [2021-03-22T13:58:43.151413 #1126]  INFO -- : (0.000090s) SELECT * FROM `mentors` WHERE (`email` = 'mentor2@test') LIMIT 1
+I, [2021-03-22T13:58:43.299271 #1126]  INFO -- : (0.000162s) SELECT * FROM `mentors` WHERE `id` = 5
+I, [2021-03-22T13:58:43.299464 #1126]  INFO -- : (0.000092s) SELECT * FROM `mentors` WHERE `id` = 5
+I, [2021-03-22T13:58:43.299576 #1126]  INFO -- : (0.000063s) SELECT * FROM `users` WHERE `id` = 5
+I, [2021-03-22T13:58:49.865926 #1126]  INFO -- : (0.000151s) SELECT * FROM `users` WHERE (`email` = 'mentor1@test') LIMIT 1
+I, [2021-03-22T13:58:49.866149 #1126]  INFO -- : (0.000077s) SELECT * FROM `users` WHERE (`email` = 'mentor1@test') LIMIT 1
+I, [2021-03-22T13:58:49.866348 #1126]  INFO -- : (0.000089s) SELECT * FROM `users` WHERE (`email` = 'mentor1@test') LIMIT 1
+I, [2021-03-22T13:58:49.866492 #1126]  INFO -- : (0.000064s) SELECT * FROM `users` WHERE (`email` = 'mentor1@test') LIMIT 1
+I, [2021-03-22T13:58:49.866748 #1126]  INFO -- : (0.000105s) SELECT * FROM `mentors` WHERE (`email` LIKE '%mentor1@test%' ESCAPE '\') LIMIT 1
+I, [2021-03-22T13:58:49.866989 #1126]  INFO -- : (0.000094s) SELECT * FROM `mentors` WHERE (`email` = 'mentor1@test') LIMIT 1
+I, [2021-03-22T13:58:50.012778 #1126]  INFO -- : (0.000166s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-03-22T13:58:50.012973 #1126]  INFO -- : (0.000095s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-03-22T13:58:50.013084 #1126]  INFO -- : (0.000062s) SELECT * FROM `users` WHERE `id` = 4
+I, [2021-03-22T13:59:16.213576 #1126]  INFO -- : (0.000217s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-03-22T13:59:16.213842 #1126]  INFO -- : (0.000134s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-03-22T13:59:16.213991 #1126]  INFO -- : (0.000080s) SELECT * FROM `users` WHERE `id` = 4
+I, [2021-03-22T13:59:16.214201 #1126]  INFO -- : (0.000019s) BEGIN
+I, [2021-03-22T13:59:16.214658 #1126]  INFO -- : (0.000238s) UPDATE `mentors` SET `biography` = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.' WHERE (`id` = 4)
+I, [2021-03-22T13:59:16.315042 #1126]  INFO -- : (0.100294s) COMMIT
+I, [2021-03-22T13:59:16.448726 #1126]  INFO -- : (0.000190s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-03-22T13:59:16.448939 #1126]  INFO -- : (0.000116s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-03-22T13:59:16.449076 #1126]  INFO -- : (0.000075s) SELECT * FROM `users` WHERE `id` = 4
+I, [2021-03-22T13:59:24.550041 #1126]  INFO -- : (0.000246s) SELECT * FROM `users` WHERE (`email` = 'mentor2@test') LIMIT 1
+I, [2021-03-22T13:59:24.550401 #1126]  INFO -- : (0.000128s) SELECT * FROM `users` WHERE (`email` = 'mentor2@test') LIMIT 1
+I, [2021-03-22T13:59:24.550666 #1126]  INFO -- : (0.000114s) SELECT * FROM `users` WHERE (`email` = 'mentor2@test') LIMIT 1
+I, [2021-03-22T13:59:24.550882 #1126]  INFO -- : (0.000105s) SELECT * FROM `users` WHERE (`email` = 'mentor2@test') LIMIT 1
+I, [2021-03-22T13:59:24.552243 #1126]  INFO -- : (0.000223s) SELECT * FROM `mentors` WHERE (`email` LIKE '%mentor2@test%' ESCAPE '\') LIMIT 1
+I, [2021-03-22T13:59:24.552567 #1126]  INFO -- : (0.000176s) SELECT * FROM `mentors` WHERE (`email` = 'mentor2@test') LIMIT 1
+I, [2021-03-22T13:59:24.695825 #1126]  INFO -- : (0.000204s) SELECT * FROM `mentors` WHERE `id` = 5
+I, [2021-03-22T13:59:24.696638 #1126]  INFO -- : (0.000704s) SELECT * FROM `mentors` WHERE `id` = 5
+I, [2021-03-22T13:59:24.696800 #1126]  INFO -- : (0.000076s) SELECT * FROM `users` WHERE `id` = 5
+I, [2021-03-22T13:59:39.374345 #1126]  INFO -- : (0.000167s) SELECT * FROM `mentors` WHERE `id` = 5
+I, [2021-03-22T13:59:39.374554 #1126]  INFO -- : (0.000103s) SELECT * FROM `mentors` WHERE `id` = 5
+I, [2021-03-22T13:59:39.374670 #1126]  INFO -- : (0.000063s) SELECT * FROM `users` WHERE `id` = 5
+I, [2021-03-22T13:59:39.375411 #1126]  INFO -- : (0.000021s) BEGIN
+I, [2021-03-22T13:59:39.375719 #1126]  INFO -- : (0.000138s) UPDATE `mentors` SET `biography` = 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' WHERE (`id` = 5)
+I, [2021-03-22T13:59:39.496373 #1126]  INFO -- : (0.120550s) COMMIT
+I, [2021-03-22T13:59:39.652183 #1126]  INFO -- : (0.000175s) SELECT * FROM `mentors` WHERE `id` = 5
+I, [2021-03-22T13:59:39.652383 #1126]  INFO -- : (0.000097s) SELECT * FROM `mentors` WHERE `id` = 5
+I, [2021-03-22T13:59:39.652497 #1126]  INFO -- : (0.000064s) SELECT * FROM `users` WHERE `id` = 5
+I, [2021-03-22T13:59:46.634412 #1126]  INFO -- : (0.000194s) SELECT * FROM `users` WHERE (`email` = 'mentee1@test') LIMIT 1
+I, [2021-03-22T13:59:46.634714 #1126]  INFO -- : (0.000121s) SELECT * FROM `users` WHERE (`email` = 'mentee1@test') LIMIT 1
+I, [2021-03-22T13:59:46.634950 #1126]  INFO -- : (0.000101s) SELECT * FROM `users` WHERE (`email` = 'mentee1@test') LIMIT 1
+I, [2021-03-22T13:59:46.635143 #1126]  INFO -- : (0.000093s) SELECT * FROM `users` WHERE (`email` = 'mentee1@test') LIMIT 1
+I, [2021-03-22T13:59:46.636031 #1126]  INFO -- : (0.000123s) SELECT * FROM `mentees` WHERE (`email` LIKE '%mentee1@test%' ESCAPE '\') LIMIT 1
+I, [2021-03-22T13:59:46.636288 #1126]  INFO -- : (0.000096s) SELECT * FROM `mentees` WHERE (`email` = 'mentee1@test') LIMIT 1
+I, [2021-03-22T13:59:46.760472 #1126]  INFO -- : (0.000156s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T13:59:46.760657 #1126]  INFO -- : (0.000090s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T13:59:46.761455 #1126]  INFO -- : (0.000099s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-03-22T13:59:48.904426 #1126]  INFO -- : (0.000152s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T13:59:48.904611 #1126]  INFO -- : (0.000090s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T13:59:48.904722 #1126]  INFO -- : (0.000061s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-03-22T13:59:48.906917 #1126]  INFO -- : (0.000093s) SELECT count(*) AS 'count' FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\')) LIMIT 1
+I, [2021-03-22T13:59:48.907156 #1126]  INFO -- : (0.000135s) SELECT * FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\'))
+I, [2021-03-22T14:03:37.026036 #1180]  INFO -- : (0.000174s) PRAGMA foreign_keys = 1
+I, [2021-03-22T14:03:37.026120 #1180]  INFO -- : (0.000018s) PRAGMA case_sensitive_like = 1
+I, [2021-03-22T14:03:37.026756 #1180]  INFO -- : (0.000060s) SELECT sqlite_version()
+I, [2021-03-22T14:03:37.027003 #1180]  INFO -- : (0.000118s) PRAGMA table_info('admins')
+I, [2021-03-22T14:03:37.028080 #1180]  INFO -- : (0.000199s) PRAGMA table_info('codes')
+I, [2021-03-22T14:03:37.029208 #1180]  INFO -- : (0.000208s) PRAGMA table_info('mentees')
+I, [2021-03-22T14:03:37.030682 #1180]  INFO -- : (0.000212s) PRAGMA table_info('mentors')
+I, [2021-03-22T14:03:37.031985 #1180]  INFO -- : (0.000124s) PRAGMA table_info('users')
+I, [2021-03-22T14:03:49.644049 #1180]  INFO -- : (0.000300s) SELECT * FROM `users` WHERE (`email` = 'admin@test') LIMIT 1
+I, [2021-03-22T14:03:49.644538 #1180]  INFO -- : (0.000137s) SELECT * FROM `users` WHERE (`email` = 'admin@test') LIMIT 1
+I, [2021-03-22T14:03:49.644970 #1180]  INFO -- : (0.000121s) SELECT * FROM `users` WHERE (`email` = 'admin@test') LIMIT 1
+I, [2021-03-22T14:03:49.645352 #1180]  INFO -- : (0.000156s) SELECT * FROM `admins` WHERE (`email` LIKE '%admin@test%' ESCAPE '\') LIMIT 1
+I, [2021-03-22T14:03:49.645668 #1180]  INFO -- : (0.000135s) SELECT * FROM `admins` WHERE (`email` = 'admin@test') LIMIT 1
+I, [2021-03-22T14:03:49.786991 #1180]  INFO -- : (0.000153s) SELECT * FROM `admins` WHERE `id` = 1
+I, [2021-03-22T14:03:49.787180 #1180]  INFO -- : (0.000078s) SELECT * FROM `admins` WHERE `id` = 1
+I, [2021-03-22T14:03:49.787295 #1180]  INFO -- : (0.000062s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-03-22T14:04:04.138550 #1180]  INFO -- : (0.000145s) SELECT * FROM `users` WHERE (`email` = 'mentor1@test') LIMIT 1
+I, [2021-03-22T14:04:04.138764 #1180]  INFO -- : (0.000074s) SELECT * FROM `users` WHERE (`email` = 'mentor1@test') LIMIT 1
+I, [2021-03-22T14:04:04.138922 #1180]  INFO -- : (0.000066s) SELECT * FROM `users` WHERE (`email` = 'mentor1@test') LIMIT 1
+I, [2021-03-22T14:04:04.139053 #1180]  INFO -- : (0.000066s) SELECT * FROM `users` WHERE (`email` = 'mentor1@test') LIMIT 1
+I, [2021-03-22T14:04:04.139343 #1180]  INFO -- : (0.000120s) SELECT * FROM `mentors` WHERE (`email` LIKE '%mentor1@test%' ESCAPE '\') LIMIT 1
+I, [2021-03-22T14:04:04.139558 #1180]  INFO -- : (0.000094s) SELECT * FROM `mentors` WHERE (`email` = 'mentor1@test') LIMIT 1
+I, [2021-03-22T14:04:04.277266 #1180]  INFO -- : (0.000161s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-03-22T14:04:04.277462 #1180]  INFO -- : (0.000097s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-03-22T14:04:04.277573 #1180]  INFO -- : (0.000061s) SELECT * FROM `users` WHERE `id` = 4
+I, [2021-03-22T14:05:18.267554 #1180]  INFO -- : (0.000151s) SELECT * FROM `users` WHERE (`email` = 'mentor2@test') LIMIT 1
+I, [2021-03-22T14:05:18.267811 #1180]  INFO -- : (0.000107s) SELECT * FROM `users` WHERE (`email` = 'mentor2@test') LIMIT 1
+I, [2021-03-22T14:05:18.267991 #1180]  INFO -- : (0.000069s) SELECT * FROM `users` WHERE (`email` = 'mentor2@test') LIMIT 1
+I, [2021-03-22T14:05:18.268118 #1180]  INFO -- : (0.000060s) SELECT * FROM `users` WHERE (`email` = 'mentor2@test') LIMIT 1
+I, [2021-03-22T14:05:18.268381 #1180]  INFO -- : (0.000114s) SELECT * FROM `mentors` WHERE (`email` LIKE '%mentor2@test%' ESCAPE '\') LIMIT 1
+I, [2021-03-22T14:05:18.268585 #1180]  INFO -- : (0.000095s) SELECT * FROM `mentors` WHERE (`email` = 'mentor2@test') LIMIT 1
+I, [2021-03-22T14:05:18.369478 #1180]  INFO -- : (0.000147s) SELECT * FROM `mentors` WHERE `id` = 5
+I, [2021-03-22T14:05:18.369675 #1180]  INFO -- : (0.000109s) SELECT * FROM `mentors` WHERE `id` = 5
+I, [2021-03-22T14:05:18.369804 #1180]  INFO -- : (0.000067s) SELECT * FROM `users` WHERE `id` = 5
+I, [2021-03-22T14:05:26.823440 #1180]  INFO -- : (0.000149s) SELECT * FROM `users` WHERE (`email` = 'mentee1@test') LIMIT 1
+I, [2021-03-22T14:05:26.823677 #1180]  INFO -- : (0.000090s) SELECT * FROM `users` WHERE (`email` = 'mentee1@test') LIMIT 1
+I, [2021-03-22T14:05:26.823893 #1180]  INFO -- : (0.000073s) SELECT * FROM `users` WHERE (`email` = 'mentee1@test') LIMIT 1
+I, [2021-03-22T14:05:26.824041 #1180]  INFO -- : (0.000066s) SELECT * FROM `users` WHERE (`email` = 'mentee1@test') LIMIT 1
+I, [2021-03-22T14:05:26.824329 #1180]  INFO -- : (0.000110s) SELECT * FROM `mentees` WHERE (`email` LIKE '%mentee1@test%' ESCAPE '\') LIMIT 1
+I, [2021-03-22T14:05:26.824582 #1180]  INFO -- : (0.000101s) SELECT * FROM `mentees` WHERE (`email` = 'mentee1@test') LIMIT 1
+I, [2021-03-22T14:05:26.926016 #1180]  INFO -- : (0.000752s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T14:05:26.926213 #1180]  INFO -- : (0.000099s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T14:05:26.926327 #1180]  INFO -- : (0.000062s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-03-22T14:05:34.856725 #1180]  INFO -- : (0.000161s) SELECT * FROM `users` WHERE (`email` = 'mentee2@test') LIMIT 1
+I, [2021-03-22T14:05:34.856975 #1180]  INFO -- : (0.000083s) SELECT * FROM `users` WHERE (`email` = 'mentee2@test') LIMIT 1
+I, [2021-03-22T14:05:34.857192 #1180]  INFO -- : (0.000096s) SELECT * FROM `users` WHERE (`email` = 'mentee2@test') LIMIT 1
+I, [2021-03-22T14:05:34.857361 #1180]  INFO -- : (0.000081s) SELECT * FROM `users` WHERE (`email` = 'mentee2@test') LIMIT 1
+I, [2021-03-22T14:05:34.857656 #1180]  INFO -- : (0.000120s) SELECT * FROM `mentees` WHERE (`email` LIKE '%mentee2@test%' ESCAPE '\') LIMIT 1
+I, [2021-03-22T14:05:34.858421 #1180]  INFO -- : (0.000626s) SELECT * FROM `mentees` WHERE (`email` = 'mentee2@test') LIMIT 1
+I, [2021-03-22T14:05:34.956340 #1180]  INFO -- : (0.000173s) SELECT * FROM `mentees` WHERE `id` = 3
+I, [2021-03-22T14:05:34.956565 #1180]  INFO -- : (0.000113s) SELECT * FROM `mentees` WHERE `id` = 3
+I, [2021-03-22T14:05:34.956706 #1180]  INFO -- : (0.000072s) SELECT * FROM `users` WHERE `id` = 3
+I, [2021-03-22T14:05:36.895077 #1180]  INFO -- : (0.000229s) SELECT * FROM `mentees` WHERE `id` = 3
+I, [2021-03-22T14:05:36.895374 #1180]  INFO -- : (0.000153s) SELECT * FROM `mentees` WHERE `id` = 3
+I, [2021-03-22T14:05:36.895545 #1180]  INFO -- : (0.000093s) SELECT * FROM `users` WHERE `id` = 3
+I, [2021-03-22T14:05:36.898966 #1180]  INFO -- : (0.000134s) SELECT count(*) AS 'count' FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\')) LIMIT 1
+I, [2021-03-22T14:05:36.899345 #1180]  INFO -- : (0.000212s) SELECT * FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\'))
+I, [2021-03-22T14:40:15.589145 #1211]  INFO -- : (0.000204s) PRAGMA foreign_keys = 1
+I, [2021-03-22T14:40:15.589230 #1211]  INFO -- : (0.000015s) PRAGMA case_sensitive_like = 1
+I, [2021-03-22T14:40:15.589824 #1211]  INFO -- : (0.000056s) SELECT sqlite_version()
+I, [2021-03-22T14:40:15.590055 #1211]  INFO -- : (0.000098s) PRAGMA table_info('admins')
+I, [2021-03-22T14:40:15.590720 #1211]  INFO -- : (0.000083s) PRAGMA table_info('codes')
+I, [2021-03-22T14:40:15.591450 #1211]  INFO -- : (0.000148s) PRAGMA table_info('mentees')
+I, [2021-03-22T14:40:15.592468 #1211]  INFO -- : (0.000137s) PRAGMA table_info('mentors')
+I, [2021-03-22T14:40:15.593457 #1211]  INFO -- : (0.000108s) PRAGMA table_info('users')
+I, [2021-03-22T14:40:24.909816 #1211]  INFO -- : (0.000158s) SELECT * FROM `users` WHERE (`email` = 'admin@test') LIMIT 1
+I, [2021-03-22T14:40:24.910082 #1211]  INFO -- : (0.000079s) SELECT * FROM `users` WHERE (`email` = 'admin@test') LIMIT 1
+I, [2021-03-22T14:40:24.910400 #1211]  INFO -- : (0.000081s) SELECT * FROM `users` WHERE (`email` = 'admin@test') LIMIT 1
+I, [2021-03-22T14:40:24.910646 #1211]  INFO -- : (0.000100s) SELECT * FROM `admins` WHERE (`email` LIKE '%admin@test%' ESCAPE '\') LIMIT 1
+I, [2021-03-22T14:40:24.910840 #1211]  INFO -- : (0.000078s) SELECT * FROM `admins` WHERE (`email` = 'admin@test') LIMIT 1
+I, [2021-03-22T14:40:27.436226 #1211]  INFO -- : (0.000149s) SELECT * FROM `admins` WHERE `id` = 1
+I, [2021-03-22T14:40:27.436418 #1211]  INFO -- : (0.000083s) SELECT * FROM `admins` WHERE `id` = 1
+I, [2021-03-22T14:40:27.436532 #1211]  INFO -- : (0.000061s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-03-22T14:40:37.219337 #1211]  INFO -- : (0.000151s) SELECT * FROM `users` WHERE (`email` = 'mentee1@test') LIMIT 1
+I, [2021-03-22T14:40:37.219567 #1211]  INFO -- : (0.000077s) SELECT * FROM `users` WHERE (`email` = 'mentee1@test') LIMIT 1
+I, [2021-03-22T14:40:37.220435 #1211]  INFO -- : (0.000090s) SELECT * FROM `users` WHERE (`email` = 'mentee1@test') LIMIT 1
+I, [2021-03-22T14:40:37.220582 #1211]  INFO -- : (0.000072s) SELECT * FROM `users` WHERE (`email` = 'mentee1@test') LIMIT 1
+I, [2021-03-22T14:40:37.220867 #1211]  INFO -- : (0.000121s) SELECT * FROM `mentees` WHERE (`email` LIKE '%mentee1@test%' ESCAPE '\') LIMIT 1
+I, [2021-03-22T14:40:37.221111 #1211]  INFO -- : (0.000097s) SELECT * FROM `mentees` WHERE (`email` = 'mentee1@test') LIMIT 1
+I, [2021-03-22T14:40:37.364238 #1211]  INFO -- : (0.000226s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T14:40:37.364508 #1211]  INFO -- : (0.000137s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T14:40:37.364660 #1211]  INFO -- : (0.000083s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-03-22T14:40:38.968401 #1211]  INFO -- : (0.000169s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T14:40:38.968627 #1211]  INFO -- : (0.000108s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T14:40:38.968761 #1211]  INFO -- : (0.000068s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-03-22T14:40:38.971245 #1211]  INFO -- : (0.000105s) SELECT count(*) AS 'count' FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\')) LIMIT 1
+I, [2021-03-22T14:40:38.971510 #1211]  INFO -- : (0.000146s) SELECT * FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\'))
+I, [2021-03-22T14:40:40.800874 #1211]  INFO -- : (0.000167s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T14:40:40.801082 #1211]  INFO -- : (0.000098s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T14:40:40.801202 #1211]  INFO -- : (0.000062s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-03-22T14:40:48.813913 #1211]  INFO -- : (0.000162s) SELECT * FROM `users` WHERE (`email` = 'mentee2@test') LIMIT 1
+I, [2021-03-22T14:40:54.095745 #1211]  INFO -- : (0.000149s) SELECT * FROM `users` WHERE (`email` = 'mentee2@test') LIMIT 1
+I, [2021-03-22T14:41:03.102080 #1211]  INFO -- : (0.000145s) SELECT * FROM `users` WHERE (`email` = 'mentee2@test') LIMIT 1
+I, [2021-03-22T14:41:03.102299 #1211]  INFO -- : (0.000078s) SELECT * FROM `users` WHERE (`email` = 'mentee2@test') LIMIT 1
+I, [2021-03-22T14:41:03.102720 #1211]  INFO -- : (0.000083s) SELECT * FROM `users` WHERE (`email` = 'mentee2@test') LIMIT 1
+I, [2021-03-22T14:41:03.102867 #1211]  INFO -- : (0.000064s) SELECT * FROM `users` WHERE (`email` = 'mentee2@test') LIMIT 1
+I, [2021-03-22T14:41:03.103129 #1211]  INFO -- : (0.000108s) SELECT * FROM `mentees` WHERE (`email` LIKE '%mentee2@test%' ESCAPE '\') LIMIT 1
+I, [2021-03-22T14:41:03.103338 #1211]  INFO -- : (0.000100s) SELECT * FROM `mentees` WHERE (`email` = 'mentee2@test') LIMIT 1
+I, [2021-03-22T14:41:03.240776 #1211]  INFO -- : (0.000150s) SELECT * FROM `mentees` WHERE `id` = 3
+I, [2021-03-22T14:41:03.241597 #1211]  INFO -- : (0.000723s) SELECT * FROM `mentees` WHERE `id` = 3
+I, [2021-03-22T14:41:03.241753 #1211]  INFO -- : (0.000075s) SELECT * FROM `users` WHERE `id` = 3
+I, [2021-03-22T14:41:09.185147 #1211]  INFO -- : (0.000474s) SELECT * FROM `users` WHERE (`email` = 'mentee1@test') LIMIT 1
+I, [2021-03-22T14:41:09.190869 #1211]  INFO -- : (0.005557s) SELECT * FROM `users` WHERE (`email` = 'mentee1@test') LIMIT 1
+I, [2021-03-22T14:41:09.191177 #1211]  INFO -- : (0.000131s) SELECT * FROM `users` WHERE (`email` = 'mentee1@test') LIMIT 1
+I, [2021-03-22T14:41:09.191372 #1211]  INFO -- : (0.000071s) SELECT * FROM `users` WHERE (`email` = 'mentee1@test') LIMIT 1
+I, [2021-03-22T14:41:09.191637 #1211]  INFO -- : (0.000113s) SELECT * FROM `mentees` WHERE (`email` LIKE '%mentee1@test%' ESCAPE '\') LIMIT 1
+I, [2021-03-22T14:41:09.191917 #1211]  INFO -- : (0.000104s) SELECT * FROM `mentees` WHERE (`email` = 'mentee1@test') LIMIT 1
+I, [2021-03-22T14:41:09.316111 #1211]  INFO -- : (0.000164s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T14:41:09.316308 #1211]  INFO -- : (0.000094s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T14:41:09.316424 #1211]  INFO -- : (0.000063s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-03-22T14:41:16.425532 #1211]  INFO -- : (0.000238s) SELECT * FROM `users` WHERE (`email` = 'mentor1@test') LIMIT 1
+I, [2021-03-22T14:41:16.425883 #1211]  INFO -- : (0.000127s) SELECT * FROM `users` WHERE (`email` = 'mentor1@test') LIMIT 1
+I, [2021-03-22T14:41:16.426182 #1211]  INFO -- : (0.000111s) SELECT * FROM `users` WHERE (`email` = 'mentor1@test') LIMIT 1
+I, [2021-03-22T14:41:16.426392 #1211]  INFO -- : (0.000101s) SELECT * FROM `users` WHERE (`email` = 'mentor1@test') LIMIT 1
+I, [2021-03-22T14:41:16.426888 #1211]  INFO -- : (0.000221s) SELECT * FROM `mentors` WHERE (`email` LIKE '%mentor1@test%' ESCAPE '\') LIMIT 1
+I, [2021-03-22T14:41:16.427260 #1211]  INFO -- : (0.000167s) SELECT * FROM `mentors` WHERE (`email` = 'mentor1@test') LIMIT 1
+I, [2021-03-22T14:41:16.567968 #1211]  INFO -- : (0.000169s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-03-22T14:41:16.568179 #1211]  INFO -- : (0.000104s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-03-22T14:41:16.568300 #1211]  INFO -- : (0.000064s) SELECT * FROM `users` WHERE `id` = 4
+I, [2021-03-22T14:41:22.126311 #1211]  INFO -- : (0.000173s) SELECT * FROM `users` WHERE (`email` = 'mentor2@test') LIMIT 1
+I, [2021-03-22T14:41:22.126562 #1211]  INFO -- : (0.000091s) SELECT * FROM `users` WHERE (`email` = 'mentor2@test') LIMIT 1
+I, [2021-03-22T14:41:22.126742 #1211]  INFO -- : (0.000071s) SELECT * FROM `users` WHERE (`email` = 'mentor2@test') LIMIT 1
+I, [2021-03-22T14:41:22.126885 #1211]  INFO -- : (0.000065s) SELECT * FROM `users` WHERE (`email` = 'mentor2@test') LIMIT 1
+I, [2021-03-22T14:41:22.127161 #1211]  INFO -- : (0.000113s) SELECT * FROM `mentors` WHERE (`email` LIKE '%mentor2@test%' ESCAPE '\') LIMIT 1
+I, [2021-03-22T14:41:22.127383 #1211]  INFO -- : (0.000097s) SELECT * FROM `mentors` WHERE (`email` = 'mentor2@test') LIMIT 1
+I, [2021-03-22T14:41:22.281956 #1211]  INFO -- : (0.000169s) SELECT * FROM `mentors` WHERE `id` = 5
+I, [2021-03-22T14:41:22.282187 #1211]  INFO -- : (0.000114s) SELECT * FROM `mentors` WHERE `id` = 5
+I, [2021-03-22T14:41:22.282321 #1211]  INFO -- : (0.000071s) SELECT * FROM `users` WHERE `id` = 5
+I, [2021-03-22T14:42:22.004971 #1263]  INFO -- : (0.000187s) PRAGMA foreign_keys = 1
+I, [2021-03-22T14:42:22.005064 #1263]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
+I, [2021-03-22T14:42:22.005682 #1263]  INFO -- : (0.000059s) SELECT sqlite_version()
+I, [2021-03-22T14:42:22.005923 #1263]  INFO -- : (0.000105s) PRAGMA table_info('admins')
+I, [2021-03-22T14:42:22.006620 #1263]  INFO -- : (0.000098s) PRAGMA table_info('codes')
+I, [2021-03-22T14:42:22.007365 #1263]  INFO -- : (0.000131s) PRAGMA table_info('mentees')
+I, [2021-03-22T14:42:22.008423 #1263]  INFO -- : (0.000154s) PRAGMA table_info('mentors')
+I, [2021-03-22T14:42:22.009364 #1263]  INFO -- : (0.000092s) PRAGMA table_info('users')
+I, [2021-03-22T14:42:22.444587 #1263]  INFO -- : (0.087686s) DELETE FROM `mentees` WHERE (1 = 1)
+I, [2021-03-22T14:42:22.532237 #1263]  INFO -- : (0.087416s) DELETE FROM `mentors` WHERE (1 = 1)
+I, [2021-03-22T14:42:22.616714 #1263]  INFO -- : (0.084247s) DELETE FROM `admins` WHERE (1 = 1)
+I, [2021-03-22T14:42:22.713344 #1263]  INFO -- : (0.096399s) DELETE FROM `users` WHERE (1 = 1)
+I, [2021-03-22T14:42:22.818103 #1263]  INFO -- : (0.104505s) DELETE FROM `codes` WHERE (1 = 1)
+I, [2021-03-22T14:42:33.937144 #1263]  INFO -- : (0.000157s) SELECT * FROM `users` WHERE (`email` = 'admin@test') LIMIT 1
+I, [2021-03-22T14:42:39.829067 #1263]  INFO -- : (0.000175s) SELECT * FROM `users` WHERE (`email` = 'admin@test') LIMIT 1
+I, [2021-03-22T14:42:44.892859 #1263]  INFO -- : (0.000157s) SELECT * FROM `users` WHERE (`email` = 'admin@test') LIMIT 1
+I, [2021-03-22T14:42:53.750496 #1263]  INFO -- : (0.000136s) SELECT * FROM `users` WHERE (`email` = 'mentee1@test') LIMIT 1
+I, [2021-03-22T14:49:27.779103 #1290]  INFO -- : (0.000198s) PRAGMA foreign_keys = 1
+I, [2021-03-22T14:49:27.779204 #1290]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
+I, [2021-03-22T14:49:27.779868 #1290]  INFO -- : (0.000068s) SELECT sqlite_version()
+I, [2021-03-22T14:49:27.780117 #1290]  INFO -- : (0.000100s) PRAGMA table_info('admins')
+I, [2021-03-22T14:49:27.780854 #1290]  INFO -- : (0.000103s) PRAGMA table_info('codes')
+I, [2021-03-22T14:49:27.781610 #1290]  INFO -- : (0.000143s) PRAGMA table_info('mentees')
+I, [2021-03-22T14:49:27.782671 #1290]  INFO -- : (0.000135s) PRAGMA table_info('mentors')
+I, [2021-03-22T14:49:27.783623 #1290]  INFO -- : (0.000092s) PRAGMA table_info('users')
+I, [2021-03-22T14:49:28.114935 #1290]  INFO -- : (0.000107s) DELETE FROM `mentees` WHERE (1 = 1)
+I, [2021-03-22T14:49:28.115156 #1290]  INFO -- : (0.000066s) DELETE FROM `mentors` WHERE (1 = 1)
+I, [2021-03-22T14:49:28.115348 #1290]  INFO -- : (0.000064s) DELETE FROM `admins` WHERE (1 = 1)
+I, [2021-03-22T14:49:28.115527 #1290]  INFO -- : (0.000062s) DELETE FROM `users` WHERE (1 = 1)
+I, [2021-03-22T14:49:28.230924 #1290]  INFO -- : (0.115277s) DELETE FROM `codes` WHERE (1 = 1)
+I, [2021-03-22T14:49:32.930413 #1290]  INFO -- : (0.000131s) SELECT * FROM `users` WHERE (`email` = 'mentee1@test') LIMIT 1
+I, [2021-03-22T14:50:03.109044 #1290]  INFO -- : (0.000138s) SELECT * FROM `codes`
+I, [2021-03-22T14:50:17.479282 #1290]  INFO -- : (0.000165s) SELECT * FROM `users` WHERE (`email` = 'admin@test') LIMIT 1
+I, [2021-03-22T14:50:35.301954 #1290]  INFO -- : (0.000134s) SELECT * FROM `codes`
+I, [2021-03-22T14:53:37.137076 #1313]  INFO -- : (0.000184s) PRAGMA foreign_keys = 1
+I, [2021-03-22T14:53:37.137170 #1313]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
+I, [2021-03-22T14:53:37.137741 #1313]  INFO -- : (0.000055s) SELECT sqlite_version()
+I, [2021-03-22T14:53:37.137972 #1313]  INFO -- : (0.000098s) PRAGMA table_info('admins')
+I, [2021-03-22T14:53:37.138624 #1313]  INFO -- : (0.000083s) PRAGMA table_info('codes')
+I, [2021-03-22T14:53:37.139360 #1313]  INFO -- : (0.000153s) PRAGMA table_info('mentees')
+I, [2021-03-22T14:53:37.140380 #1313]  INFO -- : (0.000134s) PRAGMA table_info('mentors')
+I, [2021-03-22T14:53:37.141314 #1313]  INFO -- : (0.000089s) PRAGMA table_info('users')
+I, [2021-03-22T14:53:37.476389 #1313]  INFO -- : (0.000098s) DELETE FROM `mentees` WHERE (1 = 1)
+I, [2021-03-22T14:53:37.476582 #1313]  INFO -- : (0.000048s) DELETE FROM `mentors` WHERE (1 = 1)
+I, [2021-03-22T14:53:37.476697 #1313]  INFO -- : (0.000044s) DELETE FROM `admins` WHERE (1 = 1)
+I, [2021-03-22T14:53:37.476802 #1313]  INFO -- : (0.000039s) DELETE FROM `users` WHERE (1 = 1)
+I, [2021-03-22T14:53:37.571138 #1313]  INFO -- : (0.094248s) DELETE FROM `codes` WHERE (1 = 1)
+I, [2021-03-22T14:55:24.497107 #1326]  INFO -- : (0.000190s) PRAGMA foreign_keys = 1
+I, [2021-03-22T14:55:24.497202 #1326]  INFO -- : (0.000015s) PRAGMA case_sensitive_like = 1
+I, [2021-03-22T14:55:24.497794 #1326]  INFO -- : (0.000057s) SELECT sqlite_version()
+I, [2021-03-22T14:55:24.498037 #1326]  INFO -- : (0.000102s) PRAGMA table_info('admins')
+I, [2021-03-22T14:55:24.498690 #1326]  INFO -- : (0.000082s) PRAGMA table_info('codes')
+I, [2021-03-22T14:55:24.499421 #1326]  INFO -- : (0.000150s) PRAGMA table_info('mentees')
+I, [2021-03-22T14:55:24.500441 #1326]  INFO -- : (0.000136s) PRAGMA table_info('mentors')
+I, [2021-03-22T14:55:24.501359 #1326]  INFO -- : (0.000088s) PRAGMA table_info('users')
+I, [2021-03-22T14:55:24.835091 #1326]  INFO -- : (0.000101s) DELETE FROM `mentees` WHERE (1 = 1)
+I, [2021-03-22T14:55:24.835283 #1326]  INFO -- : (0.000048s) DELETE FROM `mentors` WHERE (1 = 1)
+I, [2021-03-22T14:55:24.835393 #1326]  INFO -- : (0.000039s) DELETE FROM `admins` WHERE (1 = 1)
+I, [2021-03-22T14:55:24.835493 #1326]  INFO -- : (0.000037s) DELETE FROM `users` WHERE (1 = 1)
+I, [2021-03-22T14:55:24.934417 #1326]  INFO -- : (0.098839s) DELETE FROM `codes` WHERE (1 = 1)
+I, [2021-03-22T14:57:40.814572 #1329]  INFO -- : (0.000201s) PRAGMA foreign_keys = 1
+I, [2021-03-22T14:57:40.814665 #1329]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
+I, [2021-03-22T14:57:40.815270 #1329]  INFO -- : (0.000057s) SELECT sqlite_version()
+I, [2021-03-22T14:57:40.815500 #1329]  INFO -- : (0.000106s) PRAGMA table_info('admins')
+I, [2021-03-22T14:57:40.816209 #1329]  INFO -- : (0.000097s) PRAGMA table_info('codes')
+I, [2021-03-22T14:57:40.816933 #1329]  INFO -- : (0.000127s) PRAGMA table_info('mentees')
+I, [2021-03-22T14:57:40.817966 #1329]  INFO -- : (0.000154s) PRAGMA table_info('mentors')
+I, [2021-03-22T14:57:40.818889 #1329]  INFO -- : (0.000089s) PRAGMA table_info('users')
+I, [2021-03-22T14:58:39.450144 #1331]  INFO -- : (0.000181s) PRAGMA foreign_keys = 1
+I, [2021-03-22T14:58:39.450226 #1331]  INFO -- : (0.000013s) PRAGMA case_sensitive_like = 1
+I, [2021-03-22T14:58:39.450763 #1331]  INFO -- : (0.000053s) SELECT sqlite_version()
+I, [2021-03-22T14:58:39.450984 #1331]  INFO -- : (0.000097s) PRAGMA table_info('admins')
+I, [2021-03-22T14:58:39.451658 #1331]  INFO -- : (0.000091s) PRAGMA table_info('codes')
+I, [2021-03-22T14:58:39.452587 #1331]  INFO -- : (0.000176s) PRAGMA table_info('mentees')
+I, [2021-03-22T14:58:39.453654 #1331]  INFO -- : (0.000141s) PRAGMA table_info('mentors')
+I, [2021-03-22T14:58:39.454605 #1331]  INFO -- : (0.000090s) PRAGMA table_info('users')
+I, [2021-03-22T14:59:10.438384 #1331]  INFO -- : (0.000050s) SELECT * FROM `codes` WHERE `id` = 1
+I, [2021-03-22T14:59:10.438554 #1331]  INFO -- : (0.000016s) BEGIN
+I, [2021-03-22T14:59:10.438949 #1331]  INFO -- : (0.000204s) UPDATE `codes` SET `used` = 1 WHERE (`id` = 1)
+I, [2021-03-22T14:59:10.558909 #1331]  INFO -- : (0.119880s) COMMIT
+I, [2021-03-22T14:59:10.559036 #1331]  INFO -- : (0.120867s) SELECT * FROM `codes`
+I, [2021-03-22T14:59:10.559183 #1331]  INFO -- : (0.000032s) BEGIN
+I, [2021-03-22T14:59:10.559530 #1331]  INFO -- : (0.000153s) INSERT INTO `users` (`email`, `password`, `user_type`) VALUES ('admin@test', 'admin', 'admin')
+I, [2021-03-22T14:59:10.559747 #1331]  INFO -- : (0.000086s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-03-22T14:59:10.655559 #1331]  INFO -- : (0.095696s) COMMIT
+I, [2021-03-22T14:59:10.655866 #1331]  INFO -- : (0.000035s) BEGIN
+I, [2021-03-22T14:59:10.656197 #1331]  INFO -- : (0.000145s) INSERT INTO `admins` (`first_name`, `surname`, `admin_code`, `email`, `password`) VALUES ('Admin', 'One', 'test', 'admin@test', 'admin')
+I, [2021-03-22T14:59:10.656406 #1331]  INFO -- : (0.000100s) SELECT * FROM `admins` WHERE `id` = 1
+I, [2021-03-22T14:59:10.752010 #1331]  INFO -- : (0.095533s) COMMIT
+I, [2021-03-22T14:59:27.952184 #1331]  INFO -- : (0.000044s) BEGIN
+I, [2021-03-22T14:59:27.952596 #1331]  INFO -- : (0.000216s) INSERT INTO `users` (`email`, `password`, `user_type`) VALUES ('mentee1@test', 'mentee1', 'mentee')
+I, [2021-03-22T14:59:27.952808 #1331]  INFO -- : (0.000089s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-03-22T14:59:28.041571 #1331]  INFO -- : (0.088683s) COMMIT
+I, [2021-03-22T14:59:28.042457 #1331]  INFO -- : (0.000034s) BEGIN
+I, [2021-03-22T14:59:28.042799 #1331]  INFO -- : (0.000164s) INSERT INTO `mentees` (`first_name`, `surname`, `course`, `gender`, `year_of_study`, `email`, `password`) VALUES ('Mentee', 'One', 'Computer Science', 'female', 2, 'mentee1@test', 'mentee1')
+I, [2021-03-22T14:59:28.043026 #1331]  INFO -- : (0.000116s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-03-22T14:59:28.129809 #1331]  INFO -- : (0.086711s) COMMIT
+I, [2021-03-22T14:59:28.130022 #1331]  INFO -- : (0.000030s) BEGIN
+I, [2021-03-22T14:59:28.130303 #1331]  INFO -- : (0.000151s) UPDATE `mentees` SET `id` = 2 WHERE (`id` = 1)
+I, [2021-03-22T14:59:28.216473 #1331]  INFO -- : (0.086091s) COMMIT
+I, [2021-03-22T14:59:41.821965 #1331]  INFO -- : (0.000041s) BEGIN
+I, [2021-03-22T14:59:41.822374 #1331]  INFO -- : (0.000219s) INSERT INTO `users` (`email`, `password`, `user_type`) VALUES ('mentee2@test', 'mentee2', 'mentee')
+I, [2021-03-22T14:59:41.822581 #1331]  INFO -- : (0.000083s) SELECT * FROM `users` WHERE `id` = 3
+I, [2021-03-22T14:59:41.918685 #1331]  INFO -- : (0.096030s) COMMIT
+I, [2021-03-22T14:59:41.918878 #1331]  INFO -- : (0.000029s) BEGIN
+I, [2021-03-22T14:59:41.919173 #1331]  INFO -- : (0.000145s) INSERT INTO `mentees` (`first_name`, `surname`, `course`, `gender`, `year_of_study`, `email`, `password`) VALUES ('Mentee', 'Two', 'Computer Science', 'male', 1, 'mentee2@test', 'mentee2')
+I, [2021-03-22T14:59:41.919391 #1331]  INFO -- : (0.000112s) SELECT * FROM `mentees` WHERE `id` = 3
+I, [2021-03-22T14:59:42.007411 #1331]  INFO -- : (0.087946s) COMMIT
+I, [2021-03-22T15:00:08.201400 #1331]  INFO -- : (0.000042s) BEGIN
+I, [2021-03-22T15:00:08.201812 #1331]  INFO -- : (0.000209s) INSERT INTO `users` (`email`, `password`, `user_type`) VALUES ('mentor1@test', 'mentor1', 'mentor')
+I, [2021-03-22T15:00:08.202030 #1331]  INFO -- : (0.000097s) SELECT * FROM `users` WHERE `id` = 4
+I, [2021-03-22T15:00:08.312474 #1331]  INFO -- : (0.110371s) COMMIT
+I, [2021-03-22T15:00:08.312667 #1331]  INFO -- : (0.000027s) BEGIN
+I, [2021-03-22T15:00:08.313002 #1331]  INFO -- : (0.000158s) INSERT INTO `mentors` (`first_name`, `surname`, `gender`, `industry`, `company`, `sheffield_graduate`, `degree_field`, `email`, `password`) VALUES ('Mentor', 'One', 'female', 'Animal', 'Mentor Company One', 1, 'education', 'mentor1@test', 'mentor1')
+I, [2021-03-22T15:00:08.313234 #1331]  INFO -- : (0.000117s) SELECT * FROM `mentors` WHERE `id` = 1
+I, [2021-03-22T15:00:08.409681 #1331]  INFO -- : (0.096366s) COMMIT
+I, [2021-03-22T15:00:08.409903 #1331]  INFO -- : (0.000030s) BEGIN
+I, [2021-03-22T15:00:08.410232 #1331]  INFO -- : (0.000176s) UPDATE `mentors` SET `id` = 4 WHERE (`id` = 1)
+I, [2021-03-22T15:00:08.521139 #1331]  INFO -- : (0.110818s) COMMIT
+I, [2021-03-22T15:00:35.431395 #1331]  INFO -- : (0.000046s) BEGIN
+I, [2021-03-22T15:00:35.431845 #1331]  INFO -- : (0.000255s) INSERT INTO `users` (`email`, `password`, `user_type`) VALUES ('mentor2@test', 'mentor2', 'mentor')
+I, [2021-03-22T15:00:35.432065 #1331]  INFO -- : (0.000086s) SELECT * FROM `users` WHERE `id` = 5
+I, [2021-03-22T15:00:35.517764 #1331]  INFO -- : (0.085620s) COMMIT
+I, [2021-03-22T15:00:35.517979 #1331]  INFO -- : (0.000035s) BEGIN
+I, [2021-03-22T15:00:35.518299 #1331]  INFO -- : (0.000157s) INSERT INTO `mentors` (`first_name`, `surname`, `gender`, `industry`, `company`, `sheffield_graduate`, `degree_field`, `email`, `password`) VALUES ('Mentor', 'Two', 'male', 'Animal', 'Mentor Company Two', 1, 'hr', 'mentor2@test', 'mentor2')
+I, [2021-03-22T15:00:35.519447 #1331]  INFO -- : (0.001029s) SELECT * FROM `mentors` WHERE `id` = 5
+I, [2021-03-22T15:00:35.613266 #1331]  INFO -- : (0.093725s) COMMIT
+I, [2021-03-22T15:00:43.763749 #1352]  INFO -- : (0.000201s) PRAGMA foreign_keys = 1
+I, [2021-03-22T15:00:43.763881 #1352]  INFO -- : (0.000022s) PRAGMA case_sensitive_like = 1
+I, [2021-03-22T15:00:43.764531 #1352]  INFO -- : (0.000064s) SELECT sqlite_version()
+I, [2021-03-22T15:00:43.764799 #1352]  INFO -- : (0.000107s) PRAGMA table_info('admins')
+I, [2021-03-22T15:00:43.765505 #1352]  INFO -- : (0.000085s) PRAGMA table_info('codes')
+I, [2021-03-22T15:00:43.766312 #1352]  INFO -- : (0.000149s) PRAGMA table_info('mentees')
+I, [2021-03-22T15:00:43.767372 #1352]  INFO -- : (0.000178s) PRAGMA table_info('mentors')
+I, [2021-03-22T15:00:43.768728 #1352]  INFO -- : (0.000109s) PRAGMA table_info('users')
+I, [2021-03-22T15:00:49.716130 #1352]  INFO -- : (0.000166s) SELECT * FROM `users` WHERE (`email` = 'admin@test') LIMIT 1
+I, [2021-03-22T15:00:49.716455 #1352]  INFO -- : (0.000104s) SELECT * FROM `users` WHERE (`email` = 'admin@test') LIMIT 1
+I, [2021-03-22T15:00:49.716826 #1352]  INFO -- : (0.000102s) SELECT * FROM `users` WHERE (`email` = 'admin@test') LIMIT 1
+I, [2021-03-22T15:00:49.717096 #1352]  INFO -- : (0.000111s) SELECT * FROM `admins` WHERE (`email` LIKE '%admin@test%' ESCAPE '\') LIMIT 1
+I, [2021-03-22T15:00:49.717294 #1352]  INFO -- : (0.000079s) SELECT * FROM `admins` WHERE (`email` = 'admin@test') LIMIT 1
+I, [2021-03-22T15:00:49.829290 #1352]  INFO -- : (0.000149s) SELECT * FROM `admins` WHERE `id` = 1
+I, [2021-03-22T15:00:49.829476 #1352]  INFO -- : (0.000076s) SELECT * FROM `admins` WHERE `id` = 1
+I, [2021-03-22T15:00:49.829589 #1352]  INFO -- : (0.000061s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-03-22T15:01:01.223852 #1352]  INFO -- : (0.000829s) SELECT * FROM `users` WHERE (`email` = 'mentor1@test') LIMIT 1
+I, [2021-03-22T15:01:01.224103 #1352]  INFO -- : (0.000090s) SELECT * FROM `users` WHERE (`email` = 'mentor1@test') LIMIT 1
+I, [2021-03-22T15:01:01.224287 #1352]  INFO -- : (0.000070s) SELECT * FROM `users` WHERE (`email` = 'mentor1@test') LIMIT 1
+I, [2021-03-22T15:01:01.224476 #1352]  INFO -- : (0.000088s) SELECT * FROM `users` WHERE (`email` = 'mentor1@test') LIMIT 1
+I, [2021-03-22T15:01:01.224784 #1352]  INFO -- : (0.000126s) SELECT * FROM `mentors` WHERE (`email` LIKE '%mentor1@test%' ESCAPE '\') LIMIT 1
+I, [2021-03-22T15:01:01.225633 #1352]  INFO -- : (0.000708s) SELECT * FROM `mentors` WHERE (`email` = 'mentor1@test') LIMIT 1
+I, [2021-03-22T15:01:01.340554 #1352]  INFO -- : (0.000163s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-03-22T15:01:01.341461 #1352]  INFO -- : (0.000792s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-03-22T15:01:01.341672 #1352]  INFO -- : (0.000112s) SELECT * FROM `users` WHERE `id` = 4
+I, [2021-03-22T15:01:12.207016 #1352]  INFO -- : (0.000148s) SELECT * FROM `users` WHERE (`email` = 'mentor2@test') LIMIT 1
+I, [2021-03-22T15:01:12.207258 #1352]  INFO -- : (0.000086s) SELECT * FROM `users` WHERE (`email` = 'mentor2@test') LIMIT 1
+I, [2021-03-22T15:01:12.207468 #1352]  INFO -- : (0.000074s) SELECT * FROM `users` WHERE (`email` = 'mentor2@test') LIMIT 1
+I, [2021-03-22T15:01:12.208252 #1352]  INFO -- : (0.000698s) SELECT * FROM `users` WHERE (`email` = 'mentor2@test') LIMIT 1
+I, [2021-03-22T15:01:12.208545 #1352]  INFO -- : (0.000120s) SELECT * FROM `mentors` WHERE (`email` LIKE '%mentor2@test%' ESCAPE '\') LIMIT 1
+I, [2021-03-22T15:01:12.208756 #1352]  INFO -- : (0.000095s) SELECT * FROM `mentors` WHERE (`email` = 'mentor2@test') LIMIT 1
+I, [2021-03-22T15:01:12.323040 #1352]  INFO -- : (0.000152s) SELECT * FROM `mentors` WHERE `id` = 5
+I, [2021-03-22T15:01:12.323224 #1352]  INFO -- : (0.000087s) SELECT * FROM `mentors` WHERE `id` = 5
+I, [2021-03-22T15:01:12.323335 #1352]  INFO -- : (0.000061s) SELECT * FROM `users` WHERE `id` = 5
+I, [2021-03-22T15:01:24.069835 #1352]  INFO -- : (0.000172s) SELECT * FROM `users` WHERE (`email` = 'mentee1@test') LIMIT 1
+I, [2021-03-22T15:01:24.070080 #1352]  INFO -- : (0.000085s) SELECT * FROM `users` WHERE (`email` = 'mentee1@test') LIMIT 1
+I, [2021-03-22T15:01:24.070249 #1352]  INFO -- : (0.000068s) SELECT * FROM `users` WHERE (`email` = 'mentee1@test') LIMIT 1
+I, [2021-03-22T15:01:24.070376 #1352]  INFO -- : (0.000060s) SELECT * FROM `users` WHERE (`email` = 'mentee1@test') LIMIT 1
+I, [2021-03-22T15:01:24.070680 #1352]  INFO -- : (0.000129s) SELECT * FROM `mentees` WHERE (`email` LIKE '%mentee1@test%' ESCAPE '\') LIMIT 1
+I, [2021-03-22T15:01:24.070916 #1352]  INFO -- : (0.000097s) SELECT * FROM `mentees` WHERE (`email` = 'mentee1@test') LIMIT 1
+I, [2021-03-22T15:01:24.183582 #1352]  INFO -- : (0.000177s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T15:01:24.183840 #1352]  INFO -- : (0.000142s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T15:01:24.183969 #1352]  INFO -- : (0.000069s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-03-22T15:01:31.378764 #1352]  INFO -- : (0.000147s) SELECT * FROM `users` WHERE (`email` = 'mentee2@test') LIMIT 1
+I, [2021-03-22T15:01:31.378989 #1352]  INFO -- : (0.000077s) SELECT * FROM `users` WHERE (`email` = 'mentee2@test') LIMIT 1
+I, [2021-03-22T15:01:31.379147 #1352]  INFO -- : (0.000063s) SELECT * FROM `users` WHERE (`email` = 'mentee2@test') LIMIT 1
+I, [2021-03-22T15:01:31.379280 #1352]  INFO -- : (0.000067s) SELECT * FROM `users` WHERE (`email` = 'mentee2@test') LIMIT 1
+I, [2021-03-22T15:01:31.379541 #1352]  INFO -- : (0.000109s) SELECT * FROM `mentees` WHERE (`email` LIKE '%mentee2@test%' ESCAPE '\') LIMIT 1
+I, [2021-03-22T15:01:31.379739 #1352]  INFO -- : (0.000089s) SELECT * FROM `mentees` WHERE (`email` = 'mentee2@test') LIMIT 1
+I, [2021-03-22T15:01:31.491891 #1352]  INFO -- : (0.000155s) SELECT * FROM `mentees` WHERE `id` = 3
+I, [2021-03-22T15:01:31.492051 #1352]  INFO -- : (0.000084s) SELECT * FROM `mentees` WHERE `id` = 3
+I, [2021-03-22T15:01:31.492160 #1352]  INFO -- : (0.000060s) SELECT * FROM `users` WHERE `id` = 3
+I, [2021-03-22T15:01:32.498153 #1352]  INFO -- : (0.000170s) SELECT * FROM `mentees` WHERE `id` = 3
+I, [2021-03-22T15:01:32.498391 #1352]  INFO -- : (0.000127s) SELECT * FROM `mentees` WHERE `id` = 3
+I, [2021-03-22T15:01:32.498534 #1352]  INFO -- : (0.000075s) SELECT * FROM `users` WHERE `id` = 3
+I, [2021-03-22T15:01:32.501751 #1352]  INFO -- : (0.000103s) SELECT count(*) AS 'count' FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\')) LIMIT 1
+I, [2021-03-22T15:01:32.503171 #1352]  INFO -- : (0.001273s) SELECT * FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\'))
+I, [2021-03-22T15:01:34.706806 #1352]  INFO -- : (0.000163s) SELECT * FROM `mentees` WHERE `id` = 3
+I, [2021-03-22T15:01:34.707726 #1352]  INFO -- : (0.000815s) SELECT * FROM `mentees` WHERE `id` = 3
+I, [2021-03-22T15:01:34.707920 #1352]  INFO -- : (0.000085s) SELECT * FROM `users` WHERE `id` = 3
+I, [2021-03-22T15:01:40.910283 #1352]  INFO -- : (0.000144s) SELECT * FROM `users` WHERE (`email` = 'mentor1@test') LIMIT 1
+I, [2021-03-22T15:01:40.911360 #1352]  INFO -- : (0.000085s) SELECT * FROM `users` WHERE (`email` = 'mentor1@test') LIMIT 1
+I, [2021-03-22T15:01:40.911639 #1352]  INFO -- : (0.000117s) SELECT * FROM `users` WHERE (`email` = 'mentor1@test') LIMIT 1
+I, [2021-03-22T15:01:40.911827 #1352]  INFO -- : (0.000093s) SELECT * FROM `users` WHERE (`email` = 'mentor1@test') LIMIT 1
+I, [2021-03-22T15:01:40.912098 #1352]  INFO -- : (0.000113s) SELECT * FROM `mentors` WHERE (`email` LIKE '%mentor1@test%' ESCAPE '\') LIMIT 1
+I, [2021-03-22T15:01:40.912334 #1352]  INFO -- : (0.000095s) SELECT * FROM `mentors` WHERE (`email` = 'mentor1@test') LIMIT 1
+I, [2021-03-22T15:01:41.026662 #1352]  INFO -- : (0.000766s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-03-22T15:01:41.026914 #1352]  INFO -- : (0.000129s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-03-22T15:01:41.027039 #1352]  INFO -- : (0.000067s) SELECT * FROM `users` WHERE `id` = 4
+I, [2021-03-22T15:02:01.209249 #1352]  INFO -- : (0.000164s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-03-22T15:02:01.209446 #1352]  INFO -- : (0.000097s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-03-22T15:02:01.209561 #1352]  INFO -- : (0.000062s) SELECT * FROM `users` WHERE `id` = 4
+I, [2021-03-22T15:02:01.209741 #1352]  INFO -- : (0.000017s) BEGIN
+I, [2021-03-22T15:02:01.210143 #1352]  INFO -- : (0.000227s) UPDATE `mentors` SET `biography` = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.' WHERE (`id` = 4)
+I, [2021-03-22T15:02:01.326076 #1352]  INFO -- : (0.115847s) COMMIT
+I, [2021-03-22T15:02:01.462620 #1352]  INFO -- : (0.000292s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-03-22T15:02:01.462945 #1352]  INFO -- : (0.000171s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-03-22T15:02:01.463137 #1352]  INFO -- : (0.000109s) SELECT * FROM `users` WHERE `id` = 4
+I, [2021-03-22T15:02:08.589036 #1352]  INFO -- : (0.000163s) SELECT * FROM `users` WHERE (`email` = 'mentor2@test') LIMIT 1
+I, [2021-03-22T15:02:08.589264 #1352]  INFO -- : (0.000078s) SELECT * FROM `users` WHERE (`email` = 'mentor2@test') LIMIT 1
+I, [2021-03-22T15:02:08.589458 #1352]  INFO -- : (0.000088s) SELECT * FROM `users` WHERE (`email` = 'mentor2@test') LIMIT 1
+I, [2021-03-22T15:02:08.589606 #1352]  INFO -- : (0.000069s) SELECT * FROM `users` WHERE (`email` = 'mentor2@test') LIMIT 1
+I, [2021-03-22T15:02:08.589874 #1352]  INFO -- : (0.000107s) SELECT * FROM `mentors` WHERE (`email` LIKE '%mentor2@test%' ESCAPE '\') LIMIT 1
+I, [2021-03-22T15:02:08.590042 #1352]  INFO -- : (0.000090s) SELECT * FROM `mentors` WHERE (`email` = 'mentor2@test') LIMIT 1
+I, [2021-03-22T15:02:08.732665 #1352]  INFO -- : (0.000235s) SELECT * FROM `mentors` WHERE `id` = 5
+I, [2021-03-22T15:02:08.732983 #1352]  INFO -- : (0.000177s) SELECT * FROM `mentors` WHERE `id` = 5
+I, [2021-03-22T15:02:08.733166 #1352]  INFO -- : (0.000102s) SELECT * FROM `users` WHERE `id` = 5
+I, [2021-03-22T15:02:18.393188 #1352]  INFO -- : (0.000167s) SELECT * FROM `mentors` WHERE `id` = 5
+I, [2021-03-22T15:02:18.393395 #1352]  INFO -- : (0.000098s) SELECT * FROM `mentors` WHERE `id` = 5
+I, [2021-03-22T15:02:18.393510 #1352]  INFO -- : (0.000062s) SELECT * FROM `users` WHERE `id` = 5
+I, [2021-03-22T15:02:18.393672 #1352]  INFO -- : (0.000015s) BEGIN
+I, [2021-03-22T15:02:18.394032 #1352]  INFO -- : (0.000195s) UPDATE `mentors` SET `biography` = 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' WHERE (`id` = 5)
+I, [2021-03-22T15:02:18.477548 #1352]  INFO -- : (0.083437s) COMMIT
+I, [2021-03-22T15:02:18.617504 #1352]  INFO -- : (0.000168s) SELECT * FROM `mentors` WHERE `id` = 5
+I, [2021-03-22T15:02:18.617753 #1352]  INFO -- : (0.000115s) SELECT * FROM `mentors` WHERE `id` = 5
+I, [2021-03-22T15:02:18.617889 #1352]  INFO -- : (0.000071s) SELECT * FROM `users` WHERE `id` = 5
+I, [2021-03-22T20:33:27.228429 #137]  INFO -- : (0.005344s) PRAGMA foreign_keys = 1
+I, [2021-03-22T20:33:27.232558 #137]  INFO -- : (0.000023s) PRAGMA case_sensitive_like = 1
+I, [2021-03-22T20:33:27.233246 #137]  INFO -- : (0.000064s) SELECT sqlite_version()
+I, [2021-03-22T20:33:27.233499 #137]  INFO -- : (0.000102s) PRAGMA table_info('admins')
+I, [2021-03-22T20:33:27.234273 #137]  INFO -- : (0.000085s) PRAGMA table_info('codes')
+I, [2021-03-22T20:33:27.235045 #137]  INFO -- : (0.000147s) PRAGMA table_info('mentees')
+I, [2021-03-22T20:33:27.236169 #137]  INFO -- : (0.000135s) PRAGMA table_info('mentors')
+I, [2021-03-22T20:33:27.237167 #137]  INFO -- : (0.000107s) PRAGMA table_info('users')
+I, [2021-03-22T20:33:52.908191 #137]  INFO -- : (0.000277s) SELECT * FROM `users` WHERE (`email` = 'mentee1@test') LIMIT 1
+I, [2021-03-22T20:33:52.908533 #137]  INFO -- : (0.000125s) SELECT * FROM `users` WHERE (`email` = 'mentee1@test') LIMIT 1
+I, [2021-03-22T20:33:52.908867 #137]  INFO -- : (0.000113s) SELECT * FROM `users` WHERE (`email` = 'mentee1@test') LIMIT 1
+I, [2021-03-22T20:33:52.909044 #137]  INFO -- : (0.000083s) SELECT * FROM `users` WHERE (`email` = 'mentee1@test') LIMIT 1
+I, [2021-03-22T20:33:52.909355 #137]  INFO -- : (0.000123s) SELECT * FROM `mentees` WHERE (`email` LIKE '%mentee1@test%' ESCAPE '\') LIMIT 1
+I, [2021-03-22T20:33:52.909865 #137]  INFO -- : (0.000375s) SELECT * FROM `mentees` WHERE (`email` = 'mentee1@test') LIMIT 1
+I, [2021-03-22T20:33:53.051693 #137]  INFO -- : (0.000248s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T20:33:53.052034 #137]  INFO -- : (0.000163s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T20:33:53.052231 #137]  INFO -- : (0.000104s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-03-22T20:33:57.338094 #137]  INFO -- : (0.001545s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T20:33:57.338453 #137]  INFO -- : (0.000178s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T20:33:57.338646 #137]  INFO -- : (0.000108s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-03-22T20:33:57.347235 #137]  INFO -- : (0.000183s) SELECT count(*) AS 'count' FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\')) LIMIT 1
+I, [2021-03-22T20:33:57.347667 #137]  INFO -- : (0.000241s) SELECT * FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\'))
+I, [2021-03-22T20:39:20.862927 #137]  INFO -- : (0.000175s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T20:39:20.867000 #137]  INFO -- : (0.000139s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T20:39:20.867155 #137]  INFO -- : (0.000066s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-03-22T20:39:20.868358 #137]  INFO -- : (0.000096s) SELECT count(*) AS 'count' FROM `mentors` WHERE ((`gender` LIKE 'male%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\')) LIMIT 1
+I, [2021-03-22T20:39:20.868599 #137]  INFO -- : (0.000120s) SELECT * FROM `mentors` WHERE ((`gender` LIKE 'male%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\'))
+I, [2021-03-22T20:39:25.542861 #137]  INFO -- : (0.000167s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T20:39:25.543094 #137]  INFO -- : (0.000112s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T20:39:25.543231 #137]  INFO -- : (0.000071s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-03-22T20:39:25.544495 #137]  INFO -- : (0.000118s) SELECT count(*) AS 'count' FROM `mentors` WHERE ((`gender` LIKE 'female%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\')) LIMIT 1
+I, [2021-03-22T20:39:25.544759 #137]  INFO -- : (0.000139s) SELECT * FROM `mentors` WHERE ((`gender` LIKE 'female%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\'))
+I, [2021-03-22T20:39:29.426475 #137]  INFO -- : (0.000166s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T20:39:29.426703 #137]  INFO -- : (0.000105s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T20:39:29.426825 #137]  INFO -- : (0.000065s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-03-22T20:39:29.428031 #137]  INFO -- : (0.000100s) SELECT count(*) AS 'count' FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE 'Energy%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\')) LIMIT 1
+I, [2021-03-22T20:39:33.931675 #137]  INFO -- : (0.000168s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T20:39:33.931973 #137]  INFO -- : (0.000121s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T20:39:33.932114 #137]  INFO -- : (0.000073s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-03-22T20:39:33.933279 #137]  INFO -- : (0.000096s) SELECT count(*) AS 'count' FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\')) LIMIT 1
+I, [2021-03-22T20:39:33.934334 #137]  INFO -- : (0.000155s) SELECT * FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\'))
+I, [2021-03-22T20:39:36.736982 #137]  INFO -- : (0.000177s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T20:39:36.737187 #137]  INFO -- : (0.000093s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T20:39:36.737302 #137]  INFO -- : (0.000061s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-03-22T20:39:38.736373 #137]  INFO -- : (0.000277s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T20:39:38.736719 #137]  INFO -- : (0.000171s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T20:39:38.736917 #137]  INFO -- : (0.000113s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-03-22T20:39:41.336776 #137]  INFO -- : (0.001066s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T20:39:41.336994 #137]  INFO -- : (0.000106s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T20:39:41.337107 #137]  INFO -- : (0.000061s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-03-22T20:39:43.105388 #137]  INFO -- : (0.000219s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T20:39:43.105647 #137]  INFO -- : (0.000127s) SELECT * FROM `mentees` WHERE `id` = 2
+I, [2021-03-22T20:39:43.106459 #137]  INFO -- : (0.000735s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-03-22T20:39:43.108067 #137]  INFO -- : (0.000099s) SELECT count(*) AS 'count' FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\')) LIMIT 1
+I, [2021-03-22T20:39:43.108344 #137]  INFO -- : (0.000151s) SELECT * FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\'))
+I, [2021-03-28T13:56:20.685495 #265]  INFO -- : (0.006828s) PRAGMA foreign_keys = 1
+I, [2021-03-28T13:56:20.688719 #265]  INFO -- : (0.000029s) PRAGMA case_sensitive_like = 1
+I, [2021-03-28T13:56:20.689558 #265]  INFO -- : (0.000079s) SELECT sqlite_version()
+I, [2021-03-28T13:56:20.689903 #265]  INFO -- : (0.000153s) PRAGMA table_info('admins')
+I, [2021-03-28T13:56:20.690904 #265]  INFO -- : (0.000119s) PRAGMA table_info('codes')
+I, [2021-03-28T13:56:20.692131 #265]  INFO -- : (0.000223s) PRAGMA table_info('mentees')
+I, [2021-03-28T13:56:20.693687 #265]  INFO -- : (0.000213s) PRAGMA table_info('mentors')
+I, [2021-03-28T13:56:20.695195 #265]  INFO -- : (0.000131s) PRAGMA table_info('users')
+I, [2021-03-28T14:27:04.893687 #296]  INFO -- : (0.000182s) PRAGMA foreign_keys = 1
+I, [2021-03-28T14:27:04.893774 #296]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
+I, [2021-03-28T14:27:04.894318 #296]  INFO -- : (0.000051s) SELECT sqlite_version()
+I, [2021-03-28T14:27:04.894540 #296]  INFO -- : (0.000098s) PRAGMA table_info('admins')
+I, [2021-03-28T14:27:04.895173 #296]  INFO -- : (0.000081s) PRAGMA table_info('codes')
+I, [2021-03-28T14:27:04.895911 #296]  INFO -- : (0.000165s) PRAGMA table_info('mentees')
+I, [2021-03-28T14:27:04.897016 #296]  INFO -- : (0.000207s) PRAGMA table_info('mentors')
+I, [2021-03-28T14:27:04.898074 #296]  INFO -- : (0.000089s) PRAGMA table_info('users')
+I, [2021-03-28T14:29:11.173445 #317]  INFO -- : (0.000243s) PRAGMA foreign_keys = 1
+I, [2021-03-28T14:29:11.173542 #317]  INFO -- : (0.000016s) PRAGMA case_sensitive_like = 1
+I, [2021-03-28T14:29:11.174175 #317]  INFO -- : (0.000055s) SELECT sqlite_version()
+I, [2021-03-28T14:29:11.174414 #317]  INFO -- : (0.000098s) PRAGMA table_info('admins')
+I, [2021-03-28T14:29:11.175113 #317]  INFO -- : (0.000083s) PRAGMA table_info('codes')
+I, [2021-03-28T14:29:11.175877 #317]  INFO -- : (0.000168s) PRAGMA table_info('mentees')
+I, [2021-03-28T14:29:11.176924 #317]  INFO -- : (0.000135s) PRAGMA table_info('mentors')
+I, [2021-03-28T14:29:11.177859 #317]  INFO -- : (0.000090s) PRAGMA table_info('users')
+I, [2021-03-28T14:30:07.731201 #339]  INFO -- : (0.000177s) PRAGMA foreign_keys = 1
+I, [2021-03-28T14:30:07.731292 #339]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
+I, [2021-03-28T14:30:07.732209 #339]  INFO -- : (0.000088s) SELECT sqlite_version()
+I, [2021-03-28T14:30:07.732583 #339]  INFO -- : (0.000157s) PRAGMA table_info('admins')
+I, [2021-03-28T14:30:07.733472 #339]  INFO -- : (0.000090s) PRAGMA table_info('codes')
+I, [2021-03-28T14:30:07.734278 #339]  INFO -- : (0.000148s) PRAGMA table_info('mentees')
+I, [2021-03-28T14:30:07.735600 #339]  INFO -- : (0.000141s) PRAGMA table_info('mentors')
+I, [2021-03-28T14:30:07.736597 #339]  INFO -- : (0.000090s) PRAGMA table_info('users')

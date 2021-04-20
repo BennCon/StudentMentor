@@ -1,37 +1,45 @@
 <%= erb :"commons/header" %>
-
-<form method="post">
+<div id="form-div">
+    
+<form method="post" id="form-style">
+    <div id="mentor-bottom">
+         <h2>Signing up as a </h2> 
+         <h2 id="orange"> MENTEE</h2>
+     </div>
+    <div class="flex-row">
     <p class="label">First name</p>
-    <p class="field"><input type="text" name="first_name" /></p>
-
+    <p class="field"><input type="text" name="first_name" required/></p>
     <p class="label">Surname</p>
-    <p class="field"><input type="text" name="surname" /></p>
-
+    <p class="field"><input type="text" name="surname" required/></p>
+    <p class="label">Username</p>
+    <p class="field"><input type="text" name="username" required/></p>
+    </div>
+    
     <p class="label">Course</p>
-    <p class="field"><input type="text" name="course" /></p>
+    <p class="field"><input type="text" name="course" required/></p>
     
     <p class="label">Gender</p>
-    <select class="field" name="gender">
+    <select class="field" name="gender" required>
       <option value="male">Male</option>
       <option value="female">Female</option>
       <option value="non_binary">Non-binary</option>
     </select>
     
     <p class="label">Year of Study</p>
-    <select class="field" name="year_of_study">
+    <select class="field" name="year_of_study" required>
       <option value="1">1st</option>
       <option value="2">2nd</option>
       <option value="3">3rd</option>
       <option value="4">4th</option>
     </select>
     
+    <div class="flex-row">
     <p class="label">Email</p>
-    <p class="field"><input type="email" name="email" /></p>
-
+    <p class="field"><input type="email" name="email" required/></p>
     <p class="label">Password</p>
-    <p class="field"><input type="password" name="password" /></p>
-
+    <p class="field"><input type="password" name="password" required/></p>
+    </div>
     <button type="submit" id="button" name="mentee_submit"> Submit </button>
 </form>
-
+</div>
 <%= erb :"commons/footer" %>

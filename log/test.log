@@ -1,0 +1,6 @@
+# Logfile created on 2021-03-17 13:52:46 +0000 by logger.rb/66358
+I, [2021-03-17T13:52:46.708830 #368]  INFO -- : (0.000118s) PRAGMA foreign_keys = 1
+I, [2021-03-17T13:52:46.708916 #368]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
+I, [2021-03-17T13:52:46.709490 #368]  INFO -- : (0.000060s) SELECT sqlite_version()
+I, [2021-03-17T13:52:46.709648 #368]  INFO -- : (0.000029s) PRAGMA table_info('admins')
+E, [2021-03-17T13:52:46.709801 #368] ERROR -- : SQLite3::SQLException: no such table: admins: SELECT * FROM `admins` LIMIT 1

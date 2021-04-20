@@ -9,7 +9,7 @@ RSpec.describe "Admin Form" do
         
         it "includes a form" do
             get "/admin-form"
-            expect(last_response.body).to include('<form method="post">')
+            expect(last_response.body).to include('<form method="post" id="form-style">')
         end
     end
 end

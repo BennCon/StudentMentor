@@ -2,6 +2,7 @@ class Mentor < Sequel::Model
     def load(params)
         self.first_name = params.fetch("first_name", "").strip
         self.surname = params.fetch("surname", "").strip
+        self.username = params.fetch("username", "").strip
         self.gender = params.fetch("gender", "").strip
         self.industry = params.fetch("industry", "").strip
         self.company = params.fetch("company", "").strip
@@ -10,6 +11,18 @@ class Mentor < Sequel::Model
         self.email = params.fetch("email", "").strip
         self.password = params.fetch("password", "").strip
     end
+   
+   #Different param set for editing after sign-up
+    def load_edit(params)
+       self.email = params.fetch("email", "").strip
+       self.first_name = params.fetch("first_name", "").strip
+       self.surname = params.fetch("surname", "").strip
+       self.username = params.fetch("username", "").strip
+       self.industry = params.fetch("industry", "").strip
+       self.company = params.fetch("company", "").strip
+       self.biography = params.fetch("biography", "").strip
+    end
+       
     
     def self.id_exists?(id)
         return false if id.nil? # check the id is not nil
@@ -19,7 +32,7 @@ class Mentor < Sequel::Model
     end
     
     def get_id
-       this_mentor = Mentor.first(email:email)
+       this_mentor = Mentor.first(username:username)
        return this_mentor.id
     end
 end

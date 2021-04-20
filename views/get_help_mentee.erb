@@ -1,0 +1,23 @@
+<%= erb :"commons/header" %>
+<div id="page">
+        <aside>
+            <div id="profile">
+                <figure>
+                    <!--this img just for testing-->
+                    <img src="/background.jpeg" alt="personal Id picture">
+                    <figcaption><%= @mentee.email %></figcaption>
+                </figure>
+            </div>
+            <nav class="menu">
+                <li><a href="/my-account-mentee"> > My Account</a></li>
+                <li><a href="/find-mentor"> > Find A Mentor</a></li>
+                <li><a href="/requests-mentee"> > My Requests</a></li>
+                <li class="menu_selected"><a href="/get-help-mentee"> > Get Help</a></li>
+                <li><a href="/index"> > Logout</a></li>
+            </nav>
+        </aside>
+        <main>
+            <h1>Here is the form for getting help, will include an email and an FAQ</h1>
+        </main>
+</div>
+<%= erb :"commons/footer" %>

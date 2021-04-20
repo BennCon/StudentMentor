@@ -1,0 +1,22 @@
+<%= erb :"commons/header" %>
+<div id="page">
+        <aside>
+            <div id="profile">
+                 <figure>
+                    <!--this img just for testing-->
+                    <img src="/background.jpeg" alt="personal Id picture">
+                    <figcaption><%= @mentor.email %></figcaption>
+                </figure>
+            </div>
+            <nav class="menu">
+                <li><a href="/my-account-mentor"> > My Account</a></li>
+                <li><a href="/requests-mentor"> > My Requests</a></li>
+                <li class="menu_selected"><a href="/get-help-mentor"> > Get Help</a></li>
+                <li><a href="/"> > Logout</a></li>
+            </nav>
+        </aside>
+        <main>
+            <h1>Here is the form for getting help, will include an email and an FAQ</h1>
+        </main>
+</div>
+<%= erb :"commons/footer" %>

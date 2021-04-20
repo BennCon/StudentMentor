@@ -1,22 +1,31 @@
 <%= erb :"commons/header" %>
+<div id="form-div">
+    <form method="post" id="form-style">
+        <div id="mentor-bottom">
+             <h2>Signing up as an </h2> 
+             <h2 id="orange"> ADMIN </h2>
+         </div>
+        <div class="flex-row">
+        <p class="label">First name</p>
+        <p class="field"><input type="text" name="first_name" required/></p>
 
-<form method="post">
-    <p class="label">First name</p>
-    <p class="field"><input type="text" name="first_name" /></p>
+        <p class="label">Surname</p>
+        <p class="field"><input type="text" name="surname" required/></p>
+           
+        <p class="label">Username</p>
+        <p class="field"><input type="text" name="username" required/></p>
+        </div>
+       
+        <p class="label">Admin Code</p>
+        <p class="field"><input type="text" name="admin_code" required/></p>
 
-    <p class="label">Surname</p>
-    <p class="field"><input type="text" name="surname" /></p>
-
-    <p class="label">Admin Code</p>
-    <p class="field"><input type="text" name="admin_code" /></p>
-
-    <p class="label">Email</p>
-    <p class="field"><input type="email" name="email" /></p>
-
-    <p class="label">Password</p>
-    <p class="field"><input type="password" name="password" /></p>
-
-    <button type="submit" id="button" name="admin_submit"> Submit </button>
-</form>
-
+        <div class="flex-row">
+        <p class="label">Email</p>
+        <p class="field"><input type="email" name="email" required/></p>
+        <p class="label">Password</p>
+        <p class="field"><input type="password" name="password" required/></p>
+        </div>
+        <button type="submit" id="button" name="admin_submit"> Submit </button>
+    </form>
+</div>
 <%= erb :"commons/footer" %>

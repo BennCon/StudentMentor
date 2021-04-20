@@ -1,10 +1,52 @@
 <%= erb :"commons/header" %>
-    <header>
-        <figure><img src="/university-img.svg" alt="The University of Sheffield logo"></figure>
-    </header>
 <div id="page">
-    <p class="label">First name</p>
-    <p class="field"><input type="text" name="first_name" value="<%= h @admin.first_name %>" /></p>
- 
+        <aside>
+            <div id="profile">
+                <figure>
+                    <!--this img just for testing-->
+                    <img src="/background.jpeg" alt="personal Id picture">
+                    <figcaption>University email</figcaption>
+                </figure>
+            </div>
+            <nav class="menu">
+                <li class="menu_selected"><a href="/my-account-admin"> > My Account</a></li>
+                <li><a href="/"> > Logout</a></li>
+            </nav>
+        </aside>
+        <main>
+            <section id="profile"> 
+                <figure>
+                    <!--this img just for testing-->
+                    <img src="/background.jpeg" alt="personal Id picture">
+                </figure>
+            </section>
+            <section id="information"> 
+                <h2> Basic information</h2>
+                <p> User type: Admin. </p>
+                <p> First name: <strong><%= @admin.first_name %></strong></p>
+                <p> Surname: <strong><%= @admin.surname %></strong></p>
+                <p> Username: <strong><%= @admin.username %></strong></p>
+                <p> Email: <strong><%= @admin.email %></strong></p>
+              
+                <button class="button" name="accEdit">Edit details</button>
+               
+                <form method="post" action="/my-account-admin" id="accDetails" class="accDetails">
+                        <label for="email">Enter your Email</label>
+                        <input type="email" name="email" id="email" value="<%= h @admin.email%>" required>
+                        <label for="first_name">Enter your first name</label>
+                        <input type="name" name="first_name" id="name" value="<%= h @admin.first_name%>" required>
+                        <label for="surname">Enter your surname</label>
+                        <input type="name" name="surname" id="name" value="<%= h @admin.surname%>" required>
+                        <label for="username">Enter a username</label>
+                        <input type="username" name="username" id="username" value="<%= h @admin.username%>" required>
+                        <button type="submit" action="submit" id="button" name="save"> save changes</button>
+                    </form>
+                <script>
+                    var submitButton = document.getElementsByClassName('button')[0]
+                    var accdetails = document.getElementsByClassName('accDetails')[0]
+                    submitButton.addEventListener('click',function(a){accdetails.classList.toggle('active')})
+                </script>
+            </section>
+        </main>
 </div>
 <%= erb :"commons/footer" %>

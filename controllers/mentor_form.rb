@@ -1,6 +1,3 @@
-# I have to add this for tests to work - Charlie
-require 'sinatra'
-
 get "/mentor-form" do
    @user = User.new
    @mentor = Mentor.new
@@ -8,6 +5,7 @@ get "/mentor-form" do
 end
 
 post "/mentor-form" do
+   #Creates instances of both for the 2 databases
    @user = User.new
    @mentor = Mentor.new
    
@@ -23,6 +21,6 @@ post "/mentor-form" do
    
    @user.save_changes
    @mentor.save_changes
-   redirect "/index"
+   redirect "/"
    erb :mentor_form
 end

@@ -1,41 +1,38 @@
-get "/index" do
+get "/" do
+  session.clear
   @user = User.new
   erb :index
 end
 
-post '/index' do
+post '/' do
   @user = User.new
   @user.load(params)
   @error = nil
 
+  #Checks if user is valid, sends them to the correct my-account page
   if @user.exist?
     puts @user.get_type
     session[:logged_in] = true
     if @user.get_type == "admin"
-       email = params.fetch("email", "").strip
-       @admin= Admin.where(Sequel.like(:email, "%#{email}%"))
-       id = @admin.first.get_id
-       redirect "/my-account-admin?id=#{id}"
+       username = params.fetch("username", "").strip
+       @admin= Admin.where(Sequel.like(:username, "%#{username}%"))
+       session[:id] = @admin.first.get_id
+       redirect "/my-account-admin"
     elsif @user.get_type == "mentor"
-       email = params.fetch("email", "").strip
-       @mentor = Mentor.where(Sequel.like(:email, "%#{email}%"))
-       id = @mentor.first.get_id
-       redirect "/my-account-mentor?id=#{id}"
+       username = params.fetch("username", "").strip
+       @mentor = Mentor.where(Sequel.like(:username, "%#{username}%"))
+       session[:id] = @mentor.first.get_id
+       redirect "/my-account-mentor"
     else
-       email = params.fetch("email", "").strip
-       @mentee = Mentee.where(Sequel.like(:email, "%#{email}%"))
-       id = @mentee.first.get_id
-       redirect "/my-account-mentee?id=#{id}"
+       username = params.fetch("username", "").strip
+       @mentee = Mentee.where(Sequel.like(:username, "%#{username}%"))
+       session[:id] = @mentee.first.get_id
+       redirect "/my-account-mentee"
     end
   else
     @error = "Username/Password combination incorrect"
-#     redirect "/index"
   end
 
   erb :index
 end
 
-# get "/logout" do
-#   session.clear
-#   erb :logout
-# end

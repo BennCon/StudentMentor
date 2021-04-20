@@ -1,59 +1,143 @@
 <%= erb :"commons/header" %>
-    <header>
-        <figure><img src="/university-img.svg" alt="The University of Sheffield logo"></figure>
-    </header>
 <div id="page">
         <aside>
             <div id="profile">
                 <figure>
                     <!--this img just for testing-->
                     <img src="/background.jpeg" alt="personal Id picture">
-                    <figcaption>University email</figcaption>
+                    <figcaption><%= @mentee.email %></figcaption>
                 </figure>
             </div>
-            <nav class="menu">
-                <li><a href="my-account-mentee"> My Account</a></li>
-                <li><a href="find-mentor"> Find A Mentor</a></li>
-                <li><a href="requests"> My Requests</a></li>
-                <li><a href="get-help"> Get Help</a></li>
+             <nav class="menu">
+                <li><a href="/my-account-mentee"> > My Account</a></li>
+                <li class="menu_selected"><a href="/find-mentor"> > Find A Mentor</a></li>
+                <li><a href="/requests-mentee"> > My Requests</a></li>
+                <li><a href="/get-help-mentee"> > Get Help</a></li>
+                <li><a href="/"> > Logout</a></li>
             </nav>
         </aside>
         <main>
-            <%= erb :"commons/header" %>
-<header>
- Available Mentors
-    </header>
-<div id="page">
-        <aside>
-            <div id="mentorlist">
-                
-                
-                <main>
-<h1>Mentor Name</h1>
-<p>Mentor Background:</p>
-                    <figure>
-                    <!--this img just for testing-->
-                    <img src="/background.jpeg" alt="mentor picture">
-                </figure>
-<hr>
+            <div id="mentors">
+                <div class="top">
+                    <div id="mentor-bottom">
+                       <h2>Available </h2> 
+                       <h2 id="orange"> Mentors</h2>
+                    </div>
+                    <div class="filter">
+                        <button class="button" id="button-filters" >
+                            Filters
+                        </button>
+                        <form class="accDetails">
+                          <p>Gender</p>
+                          <input type="radio" id="male" name="gender" value="male">
+                          <label for="male">Male</label><br>
+                          <input type="radio" id="female" name="gender" value="female">
+                          <label for="female">Female</label><br>
+                          <input type="radio" id="other" name="gender" value="non_binary">
+                          <label for="non_binary">Non-binary</label> 
+                          <p>Industry</p>
+                          <select class="field" name="industry">
+                            <option value=""></option>
+                            <option value="Aerospace">Aerospace</option>
+                            <option value="Agriculture">Agriculture</option>
+                            <option value="Animal">Animal care</option>
+                            <option value="Automotive">Automotive</option>
+                            <option value="Bio">Bio</option>
+                            <option value="Education">Education</option>
+                            <option value="Energy">Energy</option>
+                            <option value="Eashion">Fashion</option>   
+                            <option value="Einance">Finance</option>
+                            <option value="Food">Food industry</option>
+                            <option value="Government">Government</option>
+                            <option value="Health">Health</option>
+                            <option value="HR">HR</option>
+                            <option value="IT">IT</option>
+                            <option value="Media">Media and Communications</option>
+                            <option value="Pharmacy">Pharmacy</option>
+                            <option value="Retail">Retail</option>
+                            <option value="Sport">Sport</option>  
+                            <option value="Transport">Transport</option>
+                            <option value="Tourism">Tourism</option>
+                         </select>
+                         <p class="label">Degree field</p>
+                         <select class="field" name="degree_field">
+                          <option value=""></option>
+                          <option value="accounting">Accounting</option>
+                          <option value="aerospace">Aerospace</option>
+                          <option value="agriculture">Agriculture</option>
+                          <option value="archaeology">Archaeology</option>
+                          <option value="architecture">Architecture</option>
+                          <option value="biology">Biology</option>
+                          <option value="business">Business</option>
+                          <option value="chemistry">Chemistry</option>
+                          <option value="computer_science">Computer Science</option>
+                          <option value="dentistry">Dentistry</option>
+                          <option value="economics">Economics</option>
+                          <option value="education">Education</option>
+                          <option value="engineering">Engineering</option>
+                          <option value="geography">Geography</option>
+                          <option value="history">History</option>
+                          <option value="health">Health</option>
+                          <option value="hr">HR</option>
+                          <option value="it">IT</option>
+                          <option value="linguistics">Linguistics</option>
+                          <option value="mathematics">Mathematics</option>
+                          <option value="media">Media and Communications</option>
+                          <option value="medicine">Medicine</option>
+                          <option value="pharmacy">Pharmacy</option>
+                          <option value="physics">Physics</option>
+                          <option value="psychology">Psychology</option>
+                          <option value="sport">Sport</option>  
+                         </select>
+                         <p class="label">Sheffield graduate</p>
+                         <input type="radio"  name="sheffield_graduate" value="1">
+                         <label for="yes">Yes</label><br>
+                         <input type="radio" name="sheffield_graduate" value="0">
+                         <label for="no">No</label><br>
+                         <button type="submit" action="submit"> Apply filters </button>
+                       </form>
+                    </div>
+                </div>
+              <% if @mentors.count > 0 %>
+              <div class = "mentorsList">
+                 <% (@mentors).each do |mentor| %>
+                     
+                     <div class="mentor">
+                           <section id="mentor-top">
+                               <form name="myform" action="mailto:<%= h mentor[:email] %>?subject=Test Email&body=You have a request from a Mentee to meet"
+                                  enctype="text/plain" method="post" onsubmit="alert('Email should open now');" >
+                                   <button id="request" type="submit">Request</button>
+                               </form>
+                           </section>
+                           <section id="mentor-bottom">
+                               <aside>
+                                   <div id="profile">
+                                       <figure>
+                                       <img src="/background.jpeg" alt="personal Id picture">
+                                       </figure>
+                                   </div>
+                               </aside>
+                               <main>
+                                <h1> <%= mentor[:first_name] %> <%= mentor[:surname] %> </h1>
+                                <p>Industry: <%= mentor[:industry] %></p>
+                                <p>Degree field: <%= mentor[:degree_field] %></p>
+                                <p><%= mentor[:biography] %></p>
+                               </main>
+                           </section>
+                     </div>   
+              <% end %>
+              </div>
+              <% else %>
+                   <p>Your search revealed no Mentors.</p>
+              <% end %> 
+          </div>
+        </main>
+</div>
 
-<h2>Mentor Name</h2>
-<p>Mentor Background:</p>
-          <figure>
-                    <!--this img just for testing-->
-                    <img src="/background.jpeg" alt="mentor picture">
-                </figure>          
-<hr>
-
-<h3>Mentor Name</h3>
-<p>Mentor Background:</p>
-                    <figure>
-                    <!--this img just for testing-->
-                    <img src="/background.jpeg" alt="mentor picture">
-                </figure>
-
-
-        </main> 
-           </div> 
+<script>
+ var submitButton = document.getElementsByClassName('button')[0]
+ var accdetails = document.getElementsByClassName('accDetails')[0]
+ submitButton.addEventListener('click',function(a){accdetails.classList.toggle('active-form')})
+</script>
                 
 <%= erb :"commons/footer" %>
