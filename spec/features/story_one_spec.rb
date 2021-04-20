@@ -7,8 +7,8 @@ describe "The sign up pages" do
     end
         
     it "Can create mentor accounts" do
-        register_mentor "MentorFirst","Surname","Male","Aerospace","Aerospace","mentortest@test.com"
-        log_in "mentortest@test.com"
+        register_mentor "MentorFirst","Surname","TestMentor","Male","Aerospace","Aerospace","mentortest@test.com"
+        log_in "TestMentor"
         expect(page).to have_content "MentorFirst"
         clear_db
     end
