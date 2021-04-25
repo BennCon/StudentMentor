@@ -16,3 +16,4 @@ require_relative "db/db"
 # App
 require_rel "models"
 require_rel "controllers"
+require_rel "helpers"

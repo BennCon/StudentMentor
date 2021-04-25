@@ -13,6 +13,7 @@ post "/mentor-form" do
    @mentor.load(params)
    @user.user_type = "mentor"
    
+   
    @user.save_changes
    @mentor.save_changes
    
