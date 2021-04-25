@@ -8,12 +8,29 @@
         <div class="flex-row">
         <p class="label">First name</p>
         <p class="field"><input type="text" name="first_name" required/></p>
+       <% if @admin.errors.include?("first_name") %>
+           <% @admin.errors["first_name"].each do |error| %>
+              <p class="error"><strong>First name <%= error %></strong></p>
+           <% end %>
+       <% end %>
 
         <p class="label">Surname</p>
-        <p class="field"><input type="text" name="surname" required/></p>
+        <p class="field"><input type="text" name="surname" /></p>
+       <% if @admin.errors.include?("surname") %>
+           <% @admin.errors["surname"].each do |error| %>
+              <p class="error"><strong>Surname <%= error %></strong></p>
+           <% end %>
+       <% end %>
+
            
         <p class="label">Username</p>
-        <p class="field"><input type="text" name="username" required/></p>
+        <p class="field"><input type="text" name="username" /></p>
+       <% if @admin.errors.include?("username") %>
+           <% @admin.errors["username"].each do |error| %>
+              <p class="error"><strong>Username <%= error %></strong></p>
+           <% end %>
+       <% end %>
+
         </div>
        
         <p class="label">Admin Code</p>
@@ -22,8 +39,20 @@
         <div class="flex-row">
         <p class="label">Email</p>
         <p class="field"><input type="email" name="email" required/></p>
+       <% if @admin.errors.include?("email") %>
+           <% @admin.errors["email"].each do |error| %>
+              <p class="error"><strong>Email <%= error %></strong></p>
+           <% end %>
+       <% end %>
+
         <p class="label">Password</p>
         <p class="field"><input type="password" name="password" required/></p>
+       <% if @admin.errors.include?("password") %>
+           <% @admin.errors["password"].each do |error| %>
+              <p class="error"><strong>Password <%= error %></strong></p>
+           <% end %>
+       <% end %>
+
         </div>
         <button type="submit" id="button" name="admin_submit"> Submit </button>
     </form>

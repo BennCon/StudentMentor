@@ -15,19 +15,21 @@ post "/admin-form" do
    @user.user_type = "admin"
    
    #Checks if admin code is valid
-   if @admin.valid_code?(@admin.admin_code)
-      @user.save_changes
-      @admin.save_changes
+   if @admin.valid?
+      if @admin.valid_code?(@admin.admin_code)
+         @user.save_changes
+         @admin.save_changes
 
-      id = @user.id
-      @admin.id = id
+         id = @user.id
+         @admin.id = id
 
-      @user.save_changes
-      @admin.save_changes
-      redirect "/"
+         @user.save_changes
+         @admin.save_changes
+         redirect "/"
+      end
    end
    
    #Refreshes page if invalid
-   redirect "/admin-form"
+
    erb :admin_form
 end

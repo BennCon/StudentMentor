@@ -15,6 +15,18 @@ class Admin < Sequel::Model
         self.username = params.fetch("username", "").strip
         self.email = params.fetch("email", "").strip
     end
+
+   def validate
+      super
+      errors.add("first_name", "cannot be empty") if !first_name || first_name.empty?
+      errors.add("surname", "cannot be empty") if !surname || surname.empty?
+      errors.add("username", "cannot be empty") if !username || username.empty?
+      errors.add("email", "cannot be empty") if !email || email.empty?
+      errors.add("password", "cannot be empty") if !password || password.empty?
+      errors.add("password", "must contain at least 5 characters") if (password.length < 5)
+#       return unless Validation.email_reg?(email)
+#       errors.add("email", "already reg")
+   end
    
     def get_id
         this_admin = Admin.first(username:username)

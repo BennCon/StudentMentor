@@ -8,10 +8,28 @@
     <div class="flex-row">
     <p class="label">First name</p>
     <p class="field"><input type="text" name="first_name" required/></p>
+    <% if @mentor.errors.include?("first_name") %>
+        <% @mentor.errors["first_name"].each do |error| %>
+           <p class="error"><strong>First name <%= error %></strong></p>
+        <% end %>
+    <% end %>   
+       
     <p class="label">Surname</p>
     <p class="field"><input type="text" name="surname" required/></p>
+    <% if @mentor.errors.include?("surname") %>
+        <% @mentor.errors["surname"].each do |error| %>
+           <p class="error"><strong>Surname <%= error %></strong></p>
+        <% end %>
+    <% end %>      
+       
     <p class="label">Username</p>
     <p class="field"><input type="text" name="username" required/></p>
+    <% if @mentor.errors.include?("username") %>
+        <% @mentor.errors["username"].each do |error| %>
+           <p class="error"><strong>Username <%= error %></strong></p>
+        <% end %>
+    <% end %>          
+       
     </div>
     <p class="label">Gender</p>
     <select class="field" name="gender" required>
@@ -46,6 +64,11 @@
     
     <p class="label">Company</p>
     <p class="field"><input type="text" name="company" required/></p>
+    <% if @mentor.errors.include?("company") %>
+        <% @mentor.errors["company"].each do |error| %>
+           <p class="error"><strong>Company <%= error %></strong></p>
+        <% end %>
+    <% end %>   
      
     <p class="label">Are you a Sheffield graduate?</p>
     <input type="radio"  name="sheffield_graduate" value="1" id="yes" required>
@@ -86,8 +109,20 @@
     <div class="flex-row">
     <p class="label">Email</p>
     <p class="field"><input type="email" name="email" required/></p>
+    <% if @mentor.errors.include?("email") %>
+        <% @mentor.errors["email"].each do |error| %>
+           <p class="error"><strong>Email <%= error %></strong></p>
+        <% end %>
+    <% end %>
+       
     <p class="label">Password</p>
     <p class="field"><input type="password" name="password" required/></p>
+    <% if @mentor.errors.include?("password") %>
+        <% @mentor.errors["password"].each do |error| %>
+           <p class="error"><strong>Password <%= error %></strong></p>
+        <% end %>
+    <% end %>          
+       
     </div>
     <button type="submit" id="button" name="mentor_submit"> Submit </button>
 </form>

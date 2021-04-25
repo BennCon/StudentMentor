@@ -16,6 +16,7 @@ class User < Sequel::Model
      self.email = params.fetch("email", "").strip
   end
    
+   
   def exist?
     other_user = User.first(username: username)
     !other_user.nil? && other_user.password == password
