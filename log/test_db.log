@@ -14451,3 +14451,48 @@ I, [2021-04-27T12:24:44.283885 #778]  INFO -- : (0.000168s) INSERT INTO `mentees
 I, [2021-04-27T12:24:44.284767 #778]  INFO -- : (0.000757s) SELECT * FROM `mentees` WHERE `id` = 12
 I, [2021-04-27T12:24:44.373824 #778]  INFO -- : (0.088960s) COMMIT
 I, [2021-04-27T12:24:54.596222 #778]  INFO -- : (0.000296s) SELECT * FROM `users`
+I, [2021-04-27T12:33:15.693641 #852]  INFO -- : (0.000179s) PRAGMA foreign_keys = 1
+I, [2021-04-27T12:33:15.693725 #852]  INFO -- : (0.000013s) PRAGMA case_sensitive_like = 1
+I, [2021-04-27T12:33:15.694381 #852]  INFO -- : (0.000053s) SELECT sqlite_version()
+I, [2021-04-27T12:33:15.694593 #852]  INFO -- : (0.000102s) PRAGMA table_info('admins')
+I, [2021-04-27T12:33:15.695255 #852]  INFO -- : (0.000094s) PRAGMA table_info('codes')
+I, [2021-04-27T12:33:15.696048 #852]  INFO -- : (0.000133s) PRAGMA table_info('mentees')
+I, [2021-04-27T12:33:15.697196 #852]  INFO -- : (0.000141s) PRAGMA table_info('mentors')
+I, [2021-04-27T12:33:15.698182 #852]  INFO -- : (0.000103s) PRAGMA table_info('users')
+I, [2021-04-27T12:33:47.326571 #852]  INFO -- : (0.000212s) SELECT * FROM `users`
+E, [2021-04-27T12:33:47.326796 #852] ERROR -- : NameError: undefined local variable or method `user' for Validation:Module: SELECT * FROM `users`
+I, [2021-04-27T12:34:21.668077 #875]  INFO -- : (0.000209s) PRAGMA foreign_keys = 1
+I, [2021-04-27T12:34:21.668169 #875]  INFO -- : (0.000015s) PRAGMA case_sensitive_like = 1
+I, [2021-04-27T12:34:21.668835 #875]  INFO -- : (0.000071s) SELECT sqlite_version()
+I, [2021-04-27T12:34:21.669059 #875]  INFO -- : (0.000104s) PRAGMA table_info('admins')
+I, [2021-04-27T12:34:21.669735 #875]  INFO -- : (0.000081s) PRAGMA table_info('codes')
+I, [2021-04-27T12:34:21.670551 #875]  INFO -- : (0.000134s) PRAGMA table_info('mentees')
+I, [2021-04-27T12:34:21.671671 #875]  INFO -- : (0.000142s) PRAGMA table_info('mentors')
+I, [2021-04-27T12:34:21.672681 #875]  INFO -- : (0.000102s) PRAGMA table_info('users')
+I, [2021-04-27T12:34:40.783691 #875]  INFO -- : (0.000210s) SELECT * FROM `users`
+I, [2021-04-27T12:34:40.784631 #875]  INFO -- : (0.000811s) SELECT * FROM `users`
+I, [2021-04-27T12:34:40.784777 #875]  INFO -- : (0.000020s) BEGIN
+I, [2021-04-27T12:34:40.785171 #875]  INFO -- : (0.000206s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('fdg', 'dfgdfg', 'usernameval', 'fgf@dfgdfg', 'dfgdfgdfg', 'mentor')
+I, [2021-04-27T12:34:40.785381 #875]  INFO -- : (0.000076s) SELECT * FROM `users` WHERE `id` = 13
+I, [2021-04-27T12:34:40.881715 #875]  INFO -- : (0.096246s) COMMIT
+I, [2021-04-27T12:34:40.881970 #875]  INFO -- : (0.000032s) BEGIN
+I, [2021-04-27T12:34:40.882328 #875]  INFO -- : (0.000169s) INSERT INTO `mentors` (`first_name`, `surname`, `username`, `gender`, `industry`, `company`, `sheffield_graduate`, `degree_field`, `email`, `password`) VALUES ('fdg', 'dfgdfg', 'usernameval', 'male', 'Aerospace', 'fgdfgdf', 1, 'accounting', 'fgf@dfgdfg', 'dfgdfgdfg')
+I, [2021-04-27T12:34:40.883319 #875]  INFO -- : (0.000141s) SELECT * FROM `mentors` WHERE `id` = 1
+I, [2021-04-27T12:34:40.974619 #875]  INFO -- : (0.091218s) COMMIT
+I, [2021-04-27T12:34:40.974824 #875]  INFO -- : (0.000030s) BEGIN
+I, [2021-04-27T12:34:40.975120 #875]  INFO -- : (0.000155s) UPDATE `mentors` SET `id` = 13 WHERE (`id` = 1)
+I, [2021-04-27T12:34:41.067435 #875]  INFO -- : (0.092238s) COMMIT
+I, [2021-04-27T12:34:53.497069 #875]  INFO -- : (0.000208s) SELECT * FROM `users`
+E, [2021-04-27T12:34:53.497370 #875] ERROR -- : NoMethodError: undefined method `retern' for Validation:Module: SELECT * FROM `users`
+I, [2021-04-27T12:35:05.997115 #896]  INFO -- : (0.000188s) PRAGMA foreign_keys = 1
+I, [2021-04-27T12:35:05.997214 #896]  INFO -- : (0.000015s) PRAGMA case_sensitive_like = 1
+I, [2021-04-27T12:35:05.997961 #896]  INFO -- : (0.000089s) SELECT sqlite_version()
+I, [2021-04-27T12:35:05.998224 #896]  INFO -- : (0.000108s) PRAGMA table_info('admins')
+I, [2021-04-27T12:35:05.998970 #896]  INFO -- : (0.000084s) PRAGMA table_info('codes')
+I, [2021-04-27T12:35:05.999826 #896]  INFO -- : (0.000155s) PRAGMA table_info('mentees')
+I, [2021-04-27T12:35:06.000984 #896]  INFO -- : (0.000143s) PRAGMA table_info('mentors')
+I, [2021-04-27T12:35:06.001977 #896]  INFO -- : (0.000103s) PRAGMA table_info('users')
+I, [2021-04-27T12:35:23.791498 #896]  INFO -- : (0.000211s) SELECT * FROM `users`
+I, [2021-04-27T12:35:23.791734 #896]  INFO -- : (0.000127s) SELECT * FROM `users`
+I, [2021-04-27T12:36:33.824663 #896]  INFO -- : (0.000179s) SELECT * FROM `users`
+I, [2021-04-27T12:36:33.824913 #896]  INFO -- : (0.000138s) SELECT * FROM `users`

@@ -8,6 +8,15 @@ module Validation
       end
       false
    end
+   
+   def self.username_reg?(str)
+      @users.each do |user|
+         if user[:username] == str
+            return true
+         end
+      end
+      false
+   end
 end
    
          
