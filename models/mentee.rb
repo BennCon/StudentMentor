@@ -30,8 +30,7 @@ class Mentee < Sequel::Model
       errors.add("email", "cannot be empty") if !email || email.empty?
       errors.add("password", "cannot be empty") if !password || password.empty?
       errors.add("password", "must contain at least 5 characters") if (password.length < 5)
-#       return unless Validation.email_reg?(email)
-#       errors.add("email", "already reg")
+      errors.add("email", "That email is alrady registered to another account") if Validation.email_reg?(email)
    end
    
     def self.id_exists?(id)

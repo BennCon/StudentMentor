@@ -18,13 +18,13 @@ post "/admin-form" do
    if @admin.valid?
 #      if @admin.valid_code?(@admin.admin_code)
         @user.save_changes
-         @admin.save_changes
+        @admin.save_changes(:validate => false)
 
         id = @user.id
         @admin.id = id
 
         @user.save_changes
-        @admin.save_changes
+        @admin.save_changes(:validate => false)
         redirect "/"
 #      end
   end

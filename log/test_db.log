@@ -14287,3 +14287,167 @@ I, [2021-04-27T10:43:27.702327 #537]  INFO -- : (0.000081s) PRAGMA table_info('c
 I, [2021-04-27T10:43:27.703150 #537]  INFO -- : (0.000139s) PRAGMA table_info('mentees')
 I, [2021-04-27T10:43:27.704281 #537]  INFO -- : (0.000140s) PRAGMA table_info('mentors')
 I, [2021-04-27T10:43:27.705272 #537]  INFO -- : (0.000102s) PRAGMA table_info('users')
+I, [2021-04-27T11:29:37.001701 #599]  INFO -- : (0.000188s) PRAGMA foreign_keys = 1
+I, [2021-04-27T11:29:37.001787 #599]  INFO -- : (0.000013s) PRAGMA case_sensitive_like = 1
+I, [2021-04-27T11:29:37.002417 #599]  INFO -- : (0.000064s) SELECT sqlite_version()
+I, [2021-04-27T11:29:37.002630 #599]  INFO -- : (0.000101s) PRAGMA table_info('admins')
+I, [2021-04-27T11:29:37.003291 #599]  INFO -- : (0.000080s) PRAGMA table_info('codes')
+I, [2021-04-27T11:29:37.004240 #599]  INFO -- : (0.000133s) PRAGMA table_info('mentees')
+I, [2021-04-27T11:29:37.005343 #599]  INFO -- : (0.000138s) PRAGMA table_info('mentors')
+I, [2021-04-27T11:29:37.006329 #599]  INFO -- : (0.000102s) PRAGMA table_info('users')
+I, [2021-04-27T11:30:11.380358 #599]  INFO -- : (0.000189s) SELECT * FROM `users`
+I, [2021-04-27T11:30:11.380563 #599]  INFO -- : (0.000025s) BEGIN
+I, [2021-04-27T11:30:11.380994 #599]  INFO -- : (0.000234s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('Test', 'Mentee', 'menteeTest', 'mentee@test000', 'mentee', 'mentee')
+I, [2021-04-27T11:30:11.381246 #599]  INFO -- : (0.000083s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-04-27T11:30:11.473154 #599]  INFO -- : (0.091799s) COMMIT
+I, [2021-04-27T11:30:11.473610 #599]  INFO -- : (0.000242s) SELECT * FROM `users`
+I, [2021-04-27T11:31:46.517104 #620]  INFO -- : (0.000198s) PRAGMA foreign_keys = 1
+I, [2021-04-27T11:31:46.517189 #620]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
+I, [2021-04-27T11:31:46.517845 #620]  INFO -- : (0.000058s) SELECT sqlite_version()
+I, [2021-04-27T11:31:46.518062 #620]  INFO -- : (0.000103s) PRAGMA table_info('admins')
+I, [2021-04-27T11:31:46.518723 #620]  INFO -- : (0.000079s) PRAGMA table_info('codes')
+I, [2021-04-27T11:31:46.519524 #620]  INFO -- : (0.000131s) PRAGMA table_info('mentees')
+I, [2021-04-27T11:31:46.520649 #620]  INFO -- : (0.000141s) PRAGMA table_info('mentors')
+I, [2021-04-27T11:31:46.521638 #620]  INFO -- : (0.000103s) PRAGMA table_info('users')
+I, [2021-04-27T11:32:10.022257 #620]  INFO -- : (0.000311s) SELECT * FROM `users`
+I, [2021-04-27T11:32:10.022552 #620]  INFO -- : (0.000029s) BEGIN
+I, [2021-04-27T11:32:10.023196 #620]  INFO -- : (0.000342s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('Benjamin', 'Consterdine', 'benconn', 'benjamin.consterdine@gmail111.com', 'qwerty', 'mentee')
+I, [2021-04-27T11:32:10.023537 #620]  INFO -- : (0.000130s) SELECT * FROM `users` WHERE `id` = 3
+I, [2021-04-27T11:32:10.113405 #620]  INFO -- : (0.089766s) COMMIT
+I, [2021-04-27T11:32:10.114988 #620]  INFO -- : (0.001371s) SELECT * FROM `users`
+I, [2021-04-27T11:36:00.890891 #643]  INFO -- : (0.000184s) PRAGMA foreign_keys = 1
+I, [2021-04-27T11:36:00.890996 #643]  INFO -- : (0.000016s) PRAGMA case_sensitive_like = 1
+I, [2021-04-27T11:36:00.891724 #643]  INFO -- : (0.000078s) SELECT sqlite_version()
+I, [2021-04-27T11:36:00.891997 #643]  INFO -- : (0.000111s) PRAGMA table_info('admins')
+I, [2021-04-27T11:36:00.892749 #643]  INFO -- : (0.000081s) PRAGMA table_info('codes')
+I, [2021-04-27T11:36:00.893631 #643]  INFO -- : (0.000133s) PRAGMA table_info('mentees')
+I, [2021-04-27T11:36:00.894775 #643]  INFO -- : (0.000140s) PRAGMA table_info('mentors')
+I, [2021-04-27T11:36:00.895838 #643]  INFO -- : (0.000144s) PRAGMA table_info('users')
+I, [2021-04-27T11:36:33.584965 #643]  INFO -- : (0.000200s) SELECT * FROM `users`
+I, [2021-04-27T11:36:33.585146 #643]  INFO -- : (0.000018s) BEGIN
+I, [2021-04-27T11:36:33.585524 #643]  INFO -- : (0.000202s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('mentee', 'testing', 'menteetesting', 'mentee@test111', 'mentee', 'mentee')
+I, [2021-04-27T11:36:33.585733 #643]  INFO -- : (0.000076s) SELECT * FROM `users` WHERE `id` = 4
+I, [2021-04-27T11:36:33.686986 #643]  INFO -- : (0.101172s) COMMIT
+I, [2021-04-27T11:36:33.687369 #643]  INFO -- : (0.000202s) SELECT * FROM `users`
+I, [2021-04-27T11:38:16.129272 #664]  INFO -- : (0.000185s) PRAGMA foreign_keys = 1
+I, [2021-04-27T11:38:16.129378 #664]  INFO -- : (0.000015s) PRAGMA case_sensitive_like = 1
+I, [2021-04-27T11:38:16.130121 #664]  INFO -- : (0.000072s) SELECT sqlite_version()
+I, [2021-04-27T11:38:16.130395 #664]  INFO -- : (0.000137s) PRAGMA table_info('admins')
+I, [2021-04-27T11:38:16.131289 #664]  INFO -- : (0.000106s) PRAGMA table_info('codes')
+I, [2021-04-27T11:38:16.132166 #664]  INFO -- : (0.000134s) PRAGMA table_info('mentees')
+I, [2021-04-27T11:38:16.133309 #664]  INFO -- : (0.000144s) PRAGMA table_info('mentors')
+I, [2021-04-27T11:38:16.134338 #664]  INFO -- : (0.000104s) PRAGMA table_info('users')
+I, [2021-04-27T11:38:29.724810 #664]  INFO -- : (0.000198s) SELECT * FROM `users`
+I, [2021-04-27T11:38:29.725052 #664]  INFO -- : (0.000026s) BEGIN
+I, [2021-04-27T11:38:29.725484 #664]  INFO -- : (0.000204s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('fgdg', 'dfgdfg', 'dfgdf', 'dfdf@dfd.csdf', 'dsfsdfdf', 'mentee')
+I, [2021-04-27T11:38:29.725724 #664]  INFO -- : (0.000091s) SELECT * FROM `users` WHERE `id` = 5
+I, [2021-04-27T11:38:29.837466 #664]  INFO -- : (0.111662s) COMMIT
+I, [2021-04-27T11:38:29.837873 #664]  INFO -- : (0.000223s) SELECT * FROM `users`
+I, [2021-04-27T11:56:08.395221 #687]  INFO -- : (0.000185s) PRAGMA foreign_keys = 1
+I, [2021-04-27T11:56:08.395323 #687]  INFO -- : (0.000019s) PRAGMA case_sensitive_like = 1
+I, [2021-04-27T11:56:08.396084 #687]  INFO -- : (0.000072s) SELECT sqlite_version()
+I, [2021-04-27T11:56:08.396343 #687]  INFO -- : (0.000109s) PRAGMA table_info('admins')
+I, [2021-04-27T11:56:08.397095 #687]  INFO -- : (0.000082s) PRAGMA table_info('codes')
+I, [2021-04-27T11:56:08.398019 #687]  INFO -- : (0.000134s) PRAGMA table_info('mentees')
+I, [2021-04-27T11:56:08.399213 #687]  INFO -- : (0.000141s) PRAGMA table_info('mentors')
+I, [2021-04-27T11:56:08.400254 #687]  INFO -- : (0.000108s) PRAGMA table_info('users')
+I, [2021-04-27T11:56:18.153355 #687]  INFO -- : (0.000211s) SELECT * FROM `users`
+I, [2021-04-27T11:56:18.153561 #687]  INFO -- : (0.000024s) BEGIN
+I, [2021-04-27T11:56:18.153957 #687]  INFO -- : (0.000193s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('dfgdf', 'dfg', 'dfgdfg', 'fdgdfg@dfsdf', 'dfgdfg', 'mentee')
+I, [2021-04-27T11:56:18.154160 #687]  INFO -- : (0.000077s) SELECT * FROM `users` WHERE `id` = 6
+I, [2021-04-27T11:56:18.250558 #687]  INFO -- : (0.096324s) COMMIT
+I, [2021-04-27T11:56:18.251024 #687]  INFO -- : (0.000268s) SELECT * FROM `users`
+I, [2021-04-27T11:57:26.654791 #708]  INFO -- : (0.000184s) PRAGMA foreign_keys = 1
+I, [2021-04-27T11:57:26.654885 #708]  INFO -- : (0.000015s) PRAGMA case_sensitive_like = 1
+I, [2021-04-27T11:57:26.655531 #708]  INFO -- : (0.000065s) SELECT sqlite_version()
+I, [2021-04-27T11:57:26.655801 #708]  INFO -- : (0.000136s) PRAGMA table_info('admins')
+I, [2021-04-27T11:57:26.656537 #708]  INFO -- : (0.000082s) PRAGMA table_info('codes')
+I, [2021-04-27T11:57:26.657481 #708]  INFO -- : (0.000140s) PRAGMA table_info('mentees')
+I, [2021-04-27T11:57:26.658645 #708]  INFO -- : (0.000143s) PRAGMA table_info('mentors')
+I, [2021-04-27T11:57:26.659679 #708]  INFO -- : (0.000104s) PRAGMA table_info('users')
+I, [2021-04-27T11:57:47.034467 #708]  INFO -- : (0.000047s) BEGIN
+I, [2021-04-27T11:57:47.034935 #708]  INFO -- : (0.000207s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('gtg', 'yhtyt', 'tyt', 'testem@test', 'pop', 'mentee')
+I, [2021-04-27T11:57:47.035188 #708]  INFO -- : (0.000104s) SELECT * FROM `users` WHERE `id` = 7
+I, [2021-04-27T11:57:47.144410 #708]  INFO -- : (0.109136s) COMMIT
+I, [2021-04-27T11:57:47.144894 #708]  INFO -- : (0.000228s) SELECT * FROM `users`
+I, [2021-04-27T12:06:51.957298 #729]  INFO -- : (0.000186s) PRAGMA foreign_keys = 1
+I, [2021-04-27T12:06:51.957396 #729]  INFO -- : (0.000015s) PRAGMA case_sensitive_like = 1
+I, [2021-04-27T12:06:51.958096 #729]  INFO -- : (0.000062s) SELECT sqlite_version()
+I, [2021-04-27T12:06:51.958363 #729]  INFO -- : (0.000108s) PRAGMA table_info('admins')
+I, [2021-04-27T12:06:51.959080 #729]  INFO -- : (0.000082s) PRAGMA table_info('codes')
+I, [2021-04-27T12:06:51.959946 #729]  INFO -- : (0.000139s) PRAGMA table_info('mentees')
+I, [2021-04-27T12:06:51.961106 #729]  INFO -- : (0.000142s) PRAGMA table_info('mentors')
+I, [2021-04-27T12:06:51.962124 #729]  INFO -- : (0.000104s) PRAGMA table_info('users')
+I, [2021-04-27T12:07:03.475176 #729]  INFO -- : (0.000052s) BEGIN
+I, [2021-04-27T12:07:03.475846 #729]  INFO -- : (0.000363s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('fgfg', 'fgfg', 'fgfg', 'benjamin.consterdine@gmail.com', 'pop', 'mentee')
+I, [2021-04-27T12:07:03.476150 #729]  INFO -- : (0.000111s) SELECT * FROM `users` WHERE `id` = 8
+I, [2021-04-27T12:07:03.570108 #729]  INFO -- : (0.093871s) COMMIT
+I, [2021-04-27T12:19:15.726924 #755]  INFO -- : (0.000183s) PRAGMA foreign_keys = 1
+I, [2021-04-27T12:19:15.727013 #755]  INFO -- : (0.000013s) PRAGMA case_sensitive_like = 1
+I, [2021-04-27T12:19:15.727652 #755]  INFO -- : (0.000073s) SELECT sqlite_version()
+I, [2021-04-27T12:19:15.727892 #755]  INFO -- : (0.000104s) PRAGMA table_info('admins')
+I, [2021-04-27T12:19:15.728566 #755]  INFO -- : (0.000080s) PRAGMA table_info('codes')
+I, [2021-04-27T12:19:15.731632 #755]  INFO -- : (0.000132s) PRAGMA table_info('mentees')
+I, [2021-04-27T12:19:15.732772 #755]  INFO -- : (0.000144s) PRAGMA table_info('mentors')
+I, [2021-04-27T12:19:15.733757 #755]  INFO -- : (0.000105s) PRAGMA table_info('users')
+I, [2021-04-27T12:19:31.306034 #756]  INFO -- : (0.000185s) PRAGMA foreign_keys = 1
+I, [2021-04-27T12:19:31.306127 #756]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
+I, [2021-04-27T12:19:31.306814 #756]  INFO -- : (0.000076s) SELECT sqlite_version()
+I, [2021-04-27T12:19:31.307049 #756]  INFO -- : (0.000106s) PRAGMA table_info('admins')
+I, [2021-04-27T12:19:31.307741 #756]  INFO -- : (0.000081s) PRAGMA table_info('codes')
+I, [2021-04-27T12:19:31.308634 #756]  INFO -- : (0.000141s) PRAGMA table_info('mentees')
+I, [2021-04-27T12:19:31.309741 #756]  INFO -- : (0.000141s) PRAGMA table_info('mentors')
+I, [2021-04-27T12:19:31.310730 #756]  INFO -- : (0.000103s) PRAGMA table_info('users')
+I, [2021-04-27T12:21:47.086028 #757]  INFO -- : (0.000184s) PRAGMA foreign_keys = 1
+I, [2021-04-27T12:21:47.086130 #757]  INFO -- : (0.000018s) PRAGMA case_sensitive_like = 1
+I, [2021-04-27T12:21:47.086841 #757]  INFO -- : (0.000076s) SELECT sqlite_version()
+I, [2021-04-27T12:21:47.087095 #757]  INFO -- : (0.000108s) PRAGMA table_info('admins')
+I, [2021-04-27T12:21:47.087830 #757]  INFO -- : (0.000100s) PRAGMA table_info('codes')
+I, [2021-04-27T12:21:47.088660 #757]  INFO -- : (0.000134s) PRAGMA table_info('mentees')
+I, [2021-04-27T12:21:47.089831 #757]  INFO -- : (0.000142s) PRAGMA table_info('mentors')
+I, [2021-04-27T12:21:47.090839 #757]  INFO -- : (0.000103s) PRAGMA table_info('users')
+I, [2021-04-27T12:22:20.461244 #757]  INFO -- : (0.000049s) BEGIN
+I, [2021-04-27T12:22:20.461755 #757]  INFO -- : (0.000228s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('dfdf', 'fdf', 'ddfd', 'pop@pop', 'qwerty', 'mentee')
+I, [2021-04-27T12:22:20.462019 #757]  INFO -- : (0.000107s) SELECT * FROM `users` WHERE `id` = 9
+I, [2021-04-27T12:22:20.555339 #757]  INFO -- : (0.093237s) COMMIT
+I, [2021-04-27T12:22:20.555547 #757]  INFO -- : (0.000032s) BEGIN
+I, [2021-04-27T12:22:20.555895 #757]  INFO -- : (0.000174s) INSERT INTO `mentees` (`first_name`, `surname`, `username`, `course`, `gender`, `year_of_study`, `email`, `password`) VALUES ('dfdf', 'fdf', 'ddfd', 'dfss', 'male', 1, 'pop@pop', 'qwerty')
+I, [2021-04-27T12:22:20.556135 #757]  INFO -- : (0.000119s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-04-27T12:22:20.647299 #757]  INFO -- : (0.091087s) COMMIT
+I, [2021-04-27T12:22:20.647508 #757]  INFO -- : (0.000030s) BEGIN
+I, [2021-04-27T12:22:20.648515 #757]  INFO -- : (0.000184s) UPDATE `mentees` SET `id` = 9 WHERE (`id` = 1)
+I, [2021-04-27T12:22:20.740394 #757]  INFO -- : (0.091787s) COMMIT
+I, [2021-04-27T12:22:39.316675 #757]  INFO -- : (0.000050s) BEGIN
+I, [2021-04-27T12:22:39.317030 #757]  INFO -- : (0.000167s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('hjhgj', 'hgjgh', 'jhgj', 'pop@pop', 'dfgdfgdfg', 'mentee')
+I, [2021-04-27T12:22:39.317239 #757]  INFO -- : (0.000093s) SELECT * FROM `users` WHERE `id` = 10
+I, [2021-04-27T12:22:39.415840 #757]  INFO -- : (0.098526s) COMMIT
+I, [2021-04-27T12:22:39.416108 #757]  INFO -- : (0.000035s) BEGIN
+I, [2021-04-27T12:22:39.416585 #757]  INFO -- : (0.000277s) INSERT INTO `mentees` (`first_name`, `surname`, `username`, `course`, `gender`, `year_of_study`, `email`, `password`) VALUES ('hjhgj', 'hgjgh', 'jhgj', 'ghj', 'male', 1, 'pop@pop', 'dfgdfgdfg')
+I, [2021-04-27T12:22:39.417677 #757]  INFO -- : (0.000903s) SELECT * FROM `mentees` WHERE `id` = 10
+I, [2021-04-27T12:22:39.511061 #757]  INFO -- : (0.093288s) COMMIT
+I, [2021-04-27T12:23:12.856032 #757]  INFO -- : (0.000046s) BEGIN
+I, [2021-04-27T12:23:12.856487 #757]  INFO -- : (0.000256s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('c', 'cvbbfg', 'bbfgb', 'pop@pop', 'fgdfgdfg', 'mentee')
+I, [2021-04-27T12:23:12.856745 #757]  INFO -- : (0.000099s) SELECT * FROM `users` WHERE `id` = 11
+I, [2021-04-27T12:23:12.950975 #757]  INFO -- : (0.094134s) COMMIT
+I, [2021-04-27T12:23:12.951186 #757]  INFO -- : (0.000033s) BEGIN
+I, [2021-04-27T12:23:12.951529 #757]  INFO -- : (0.000177s) INSERT INTO `mentees` (`first_name`, `surname`, `username`, `course`, `gender`, `year_of_study`, `email`, `password`) VALUES ('c', 'cvbbfg', 'bbfgb', 'fghfgh', 'male', 1, 'pop@pop', 'fgdfgdfg')
+I, [2021-04-27T12:23:12.951817 #757]  INFO -- : (0.000145s) SELECT * FROM `mentees` WHERE `id` = 11
+I, [2021-04-27T12:23:13.039795 #757]  INFO -- : (0.087874s) COMMIT
+I, [2021-04-27T12:24:12.421168 #778]  INFO -- : (0.000182s) PRAGMA foreign_keys = 1
+I, [2021-04-27T12:24:12.421273 #778]  INFO -- : (0.000019s) PRAGMA case_sensitive_like = 1
+I, [2021-04-27T12:24:12.421975 #778]  INFO -- : (0.000077s) SELECT sqlite_version()
+I, [2021-04-27T12:24:12.422233 #778]  INFO -- : (0.000108s) PRAGMA table_info('admins')
+I, [2021-04-27T12:24:12.422962 #778]  INFO -- : (0.000082s) PRAGMA table_info('codes')
+I, [2021-04-27T12:24:12.423821 #778]  INFO -- : (0.000151s) PRAGMA table_info('mentees')
+I, [2021-04-27T12:24:12.425083 #778]  INFO -- : (0.000190s) PRAGMA table_info('mentors')
+I, [2021-04-27T12:24:12.426106 #778]  INFO -- : (0.000105s) PRAGMA table_info('users')
+I, [2021-04-27T12:24:44.176233 #778]  INFO -- : (0.000306s) SELECT * FROM `users`
+I, [2021-04-27T12:24:44.176520 #778]  INFO -- : (0.000023s) BEGIN
+I, [2021-04-27T12:24:44.176946 #778]  INFO -- : (0.000215s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('dfsdfsd', 'fsdfsd', 'fsdfsd', 'asdf@asdf', 'dfjkbjdfg', 'mentee')
+I, [2021-04-27T12:24:44.177160 #778]  INFO -- : (0.000079s) SELECT * FROM `users` WHERE `id` = 12
+I, [2021-04-27T12:24:44.283340 #778]  INFO -- : (0.106103s) COMMIT
+I, [2021-04-27T12:24:44.283534 #778]  INFO -- : (0.000031s) BEGIN
+I, [2021-04-27T12:24:44.283885 #778]  INFO -- : (0.000168s) INSERT INTO `mentees` (`first_name`, `surname`, `username`, `course`, `gender`, `year_of_study`, `email`, `password`) VALUES ('dfsdfsd', 'fsdfsd', 'fsdfsd', 'fsdfsdf', 'male', 1, 'asdf@asdf', 'dfjkbjdfg')
+I, [2021-04-27T12:24:44.284767 #778]  INFO -- : (0.000757s) SELECT * FROM `mentees` WHERE `id` = 12
+I, [2021-04-27T12:24:44.373824 #778]  INFO -- : (0.088960s) COMMIT
+I, [2021-04-27T12:24:54.596222 #778]  INFO -- : (0.000296s) SELECT * FROM `users`
