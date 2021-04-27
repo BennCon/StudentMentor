@@ -15,7 +15,7 @@ post "/my-account-admin" do
    @admin.load_edit(params)
    @user.load_edit(params)
 
-   @admin.save_changes
+   @admin.save_changes(:validate => false)
    @user.save_changes
    redirect "/my-account-admin"
    erb :my_account_admin
