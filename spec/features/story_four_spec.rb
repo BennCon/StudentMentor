@@ -3,8 +3,8 @@ require_relative "../../helpers/spec_helper.rb"
 describe "The Filter System" do
     
     it "Filters by gender" do
-        register_mentor "Mister","Planes","Male","Aerospace","Aerospace","planes123@test.com"
-        register_mentor "Miss","Plants","Female","Agriculture","Agriculture","plants123@test.com"
+        register_mentor "Mister","Planes","planes123","Male","Aerospace","Aerospace","planes123@test.com"
+        register_mentor "Miss","Plants","plants123","Female","Agriculture","Agriculture","plants123@test.com"
         
         register_log_in_mentee
         click_link '> Find A Mentor'

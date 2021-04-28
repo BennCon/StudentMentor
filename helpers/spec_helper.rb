@@ -1,6 +1,5 @@
 ENV["APP_ENV"] = "test_db"
 
-
 # Display LOC test coverage
 require "simplecov"
 SimpleCov.start do
@@ -44,19 +43,21 @@ def register_log_in_mentee
     visit "/mentee-form"
     fill_in "first_name", with: "MenteeFirst"
     fill_in "surname", with: "Surname"
+    fill_in "username", with: "Mentee1"
     fill_in "course", with: "COM1001"
     select 'Male', from: "gender"
     select '1st', from: "year_of_study"
     fill_in "email", with: "menteetest@test.com"
     fill_in "password", with: "Testpass"
     click_button "mentee_submit"
-    log_in "menteetest@test.com"
+    log_in "Mentee1"
 end
 
-def register_mentor(first, sur, gender, industry, degree, email)
+def register_mentor(first, sur, username, gender, industry, degree, email)
     visit "/mentor-form"
     fill_in "first_name", with: first
     fill_in "surname", with: sur
+    fill_in "username", with: username
     select gender, from: "gender"
     select industry, from: "industry"
     fill_in "company", with: "Testcompany"
@@ -67,19 +68,20 @@ def register_mentor(first, sur, gender, industry, degree, email)
     click_button "mentor_submit"
 end
 
-def register_admin(code, email)
+def register_admin(username, code, email)
     visit "/admin-form"
     fill_in "first_name", with: "AdminFirst"
     fill_in "surname", with: "Surname"
+    fill_in "username", with: username
     fill_in "admin_code", with: code
     fill_in "email", with: email
     fill_in "password", with: "Testpass"
     click_button "admin_submit"
 end
 
-def log_in(email)
+def log_in(username)
     visit "/"
-    fill_in "email", with: email
+    fill_in "username", with: username
     fill_in "password", with: "Testpass"
     click_button "signin"
 end

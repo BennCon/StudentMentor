@@ -20,6 +20,3 @@ Dir.mkdir(log_path) unless File.exist?(log_path)
 DB = Sequel.sqlite(db, logger: Logger.new(log))
 
 
-
-
-

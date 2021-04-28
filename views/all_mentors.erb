@@ -1,0 +1,64 @@
+<%= erb :"commons/header" %>
+<div id="page">
+        <aside>
+            <div id="profile">
+                <figure>
+                    <!--this img just for testing-->
+                    <img src="/background.jpeg" alt="personal Id picture">
+                    <figcaption>University email</figcaption>
+                </figure>
+            </div>
+            <nav class="menu">
+                <li><a href="/my-account-admin"> > My Account</a></li>
+                <li><a href="/all-mentees"> > All Mentees </a></li>
+                <li class="menu_selected"><a href="/all-mentors"> > All Mentors </a></li>
+                <li><a href="/"> > Logout</a></li>
+            </nav>
+        </aside>
+        <main>
+            <section>
+                <h1>All Mentors</h1>
+                <% if @mentors.count > 0 %>
+                  <table>
+                    <tr>
+                      <th>Id</th>
+                      <th>First name</th>
+                      <th>Surname</th>
+                      <th>Username</th>
+                      <th>Gender</th>
+                      <th>Industry<th>
+                      <th>Company</th>
+                      <th>Sheffield graduate</th>
+                      <th>Degree field</th>
+                      <th>Biography</th>
+                      <th>Email</th>
+                      <th>Password</th>
+                      <th>Number of mentees</th>
+                      <th>Seeking mentee</th>
+                    </tr>
+                  <% @mentors.each do |mentor| %>
+                    <tr>
+                      <td><%=h mentor.id %></td>
+                      <td><%=h mentor.first_name %></td>
+                      <td><%=h mentor.surname%></td>
+                      <td><%=h mentor.username %></td>
+                      <td><%=h mentor.gender %></td>
+                      <td><%=h mentor.industry %></td>
+                      <td><%=h mentor.company %></td>
+                      <td><%=h mentor.sheffield_graduate %></td>
+                      <td><%=h mentor.degree_field %></td>
+                      <td><%=h mentor.biography %></td>
+                      <td><%=h mentor.email %></td>
+                      <td><%=h mentor.password %></td>
+                      <td><%=h mentor.number_of_mentees %></td>
+                      <td><%=h mentor.seeking_mentee %></td>
+                    </tr>
+                  <% end %> 
+                  </table>
+                <% else %>
+                  <p>The database is empty!</p>
+                <% end %>
+            </section>
+        </main>
+</div>
+<%= erb :"commons/footer" %>

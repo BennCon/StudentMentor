@@ -13,14 +13,16 @@ post "/mentor-form" do
    @mentor.load(params)
    @user.user_type = "mentor"
    
-   @user.save_changes
-   @mentor.save_changes
-   
-   id = @user.id
-   @mentor.id = id
-   
-   @user.save_changes
-   @mentor.save_changes
-   redirect "/"
+   if @mentor.valid?
+      @user.save_changes
+      @mentor.save_changes(:validate => false)
+
+      id = @user.id
+      @mentor.id = id
+
+      @user.save_changes
+      @mentor.save_changes(:validate => false)
+      redirect "/"
+   end
    erb :mentor_form
 end

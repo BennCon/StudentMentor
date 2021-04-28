@@ -15,7 +15,7 @@ post "/my-account-mentor" do
     @mentor.load_edit(params)
     @user.load_edit(params)
    
-    @mentor.save_changes
+    @mentor.save_changes(:validate => false)
     @user.save_changes
     redirect "/my-account-mentor"
     erb :my_account_mentor

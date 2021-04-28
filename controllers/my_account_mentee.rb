@@ -15,7 +15,7 @@ post "/my-account-mentee" do
    @mentee.load_edit(params)
    @user.load_edit(params)
 
-   @mentee.save_changes
+   @mentee.save_changes(:validate => false)
    @user.save_changes
    redirect "/my-account-mentee"
    erb :my_account_mentee
