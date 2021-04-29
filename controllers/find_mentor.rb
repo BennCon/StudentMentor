@@ -15,6 +15,11 @@ get "/find-mentor" do
    filters.each do |filter, value|
       @mentors = @mentors.where(Sequel.like(:"#{filter}", "#{value}%"))
    end
-
+   
   erb :find_mentor
+end
+
+get "/runMethod" do
+   id = session[:id]
+   puts id
 end
