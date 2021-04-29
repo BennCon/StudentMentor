@@ -24,14 +24,16 @@ class Mentee < Sequel::Model
    def validate
       super
       errors.add("first_name", "cannot be empty") if !first_name || first_name.empty?
+      errors.add("first_name", "cannot contain a number") if Validation.contains_number?(first_name)
       errors.add("surname", "cannot be empty") if !surname || surname.empty?
+      errors.add("surname", "cannot contain a number") if Validation.contains_number?(surname)
       errors.add("username", "cannot be empty") if !username || username.empty?
       errors.add("course", "cannot be empty") if !course || course.empty?
       errors.add("email", "cannot be empty") if !email || email.empty?
       errors.add("password", "cannot be empty") if !password || password.empty?
       errors.add("password", "must contain at least 5 characters") if (password.length < 5)
-      errors.add("email", "That email is alrady registered to another account") if Validation.email_reg?(email)
-      errors.add("username", "That username is already registered to another account") if Validation.username_reg?(username)
+      errors.add("email", "is alrady registered to another account") if Validation.email_reg?(email)
+      errors.add("username", "is already registered to another account") if Validation.username_reg?(username)
    end
    
     def self.id_exists?(id)

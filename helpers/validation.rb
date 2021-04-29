@@ -17,6 +17,10 @@ module Validation
       end
       false
    end
+   
+   def self.contains_number?(str)
+        return str.count("0-9") > 0
+   end
 end
    
          
