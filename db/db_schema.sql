@@ -11,6 +11,7 @@ CREATE TABLE mentees (
     password TEXT,
     has_contacted INTEGER,
     has_mentor INTEGER,
+    mentor_id INTEGER,
     number_of_rejections INTEGER
 );
 
@@ -55,4 +56,11 @@ CREATE TABLE codes (
    id INTEGER PRIMARY KEY,
    code TEXT,
    used INTEGER
+);
+
+CREATE TABLE requests (
+   id INTEGER PRIMARY KEY,
+   mentee_id INTEGER,
+   mentor_id INTEGER,
+   accepted INTEGER
 );
