@@ -16,7 +16,33 @@
             </nav>
         </aside>
         <main>
-            <h1>Here is the requests details</h1>
+            <h1>Requests:</h1>
+             <% if @requests.count > 0 %>
+              <div class = "mentorsList">
+                 <% (@mentees).each do |mentee| %>
+                     
+                     <div class="mentor">
+                           <section id="mentor-top">
+                           </section>
+                           <section id="mentor-bottom">
+                               <aside>
+                                   <div id="profile">
+                                       <figure>
+                                       <img src="/background.jpeg" alt="personal Id picture">
+                                       </figure>
+                                   </div>
+                               </aside>
+                               <main>
+                                <h1> <%= mentee[:first_name] %> <%= mentee[:surname] %> </h1>
+                                <p><%= mentee[:biography] %></p>
+                               </main>
+                           </section>
+                     </div>   
+              <% end %>
+              </div>
+              <% else %>
+                   <p>No Requests.</p>
+              <% end %> 
         </main>
 </div>
 <%= erb :"commons/footer" %>
