@@ -1,7 +1,7 @@
 require_relative "../../helpers/spec_helper.rb"
 
 describe "An Admin" do
-    it "Should be able to see a list of all mentees" do
+    it "should be able to see a list of all mentees" do
         Code.unrestrict_primary_key
         code = Code.new(id: 65, code: "testcode", used: 0)
         code.save_changes

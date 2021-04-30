@@ -1,7 +1,7 @@
 require_relative "../../helpers/spec_helper.rb"
 
 describe "The edit profile system" do
-    it "Is able to alter a mentee's details" do
+    it "is able to alter a mentee's details" do
         register_mentee "MenteeFirst","MenteeSur","TestMentee","Male","mentee123@test.com"
         log_in "TestMentee"
         click_button "accEdit"
