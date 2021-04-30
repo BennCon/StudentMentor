@@ -108,8 +108,9 @@
                                   enctype="text/plain" method="post" onsubmit="alert('Email should open now');" >
                                    <button id="request" type="submit">Request</button>
                                </form> -->
-                               <form method="get" action="/runMethod" >
+                               <form method="post" action="/runMethod" >
                                    <button id="request" type="submit">Request</button>
+                                   <input type="hidden" id="mentorId" name="mentorId" value=<%= mentor[:id] %> >
                                </form>
                            </section>
                            <section id="mentor-bottom">
