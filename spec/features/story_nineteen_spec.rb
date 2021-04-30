@@ -4,8 +4,7 @@ describe "The help page" do
     it "is accessible to mentees" do
         register_mentee "MenteeFirst","MenteeSur","TestMentee","Male","mentee123@test.com"
         log_in "TestMentee"
-        click_link "> Get Help"
-        expect(page).to have_content "email"
+        expect(page).to have_link("Get Help")
         clear_db
     end
 end
