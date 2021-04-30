@@ -16,5 +16,6 @@ describe "An admin" do
     end
     it "can ban a mentee" do
         #Make admin ban a mentee, then check that the mentee cannot log in TODO
+        clear_db
     end
 end
