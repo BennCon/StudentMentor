@@ -6,7 +6,8 @@ describe "The Filter System" do
         register_mentor "Mister","Planes","planes123","Male","Aerospace","Aerospace","planes123@test.com"
         register_mentor "Miss","Plants","plants123","Female","Agriculture","Agriculture","plants123@test.com"
         
-        register_log_in_mentee
+        register_mentee "MenteeFirst","MenteeSur","TestMentee","Male","mentee123@test.com"
+        log_in "TestMentee"
         click_link '> Find A Mentor'
         click_button "Filters"
         choose "Male"
@@ -16,7 +17,7 @@ describe "The Filter System" do
     end
     
     it "Filters by industry" do
-        register_log_in_mentee
+        log_in "TestMentee"
         click_link '> Find A Mentor'
         click_button "Filters"
         select "Agriculture", from: "industry"
@@ -26,7 +27,7 @@ describe "The Filter System" do
     end
     
     it "Filters by degree field" do
-        register_log_in_mentee
+        log_in "TestMentee"
         click_link '> Find A Mentor'
         click_button "Filters"
         select "Aerospace", from: "degree_field"

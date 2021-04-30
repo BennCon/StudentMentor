@@ -39,15 +39,15 @@ clear_db
 
 # Methods for acceptance testing
 
-def register_log_in_mentee
+def register_mentee(first, sur, username, gender, email)
     visit "/mentee-form"
-    fill_in "first_name", with: "MenteeFirst"
-    fill_in "surname", with: "Surname"
-    fill_in "username", with: "Mentee1"
+    fill_in "first_name", with: first
+    fill_in "surname", with: sur
+    fill_in "username", with: username
     fill_in "course", with: "COM1001"
-    select 'Male', from: "gender"
+    select gender, from: "gender"
     select '1st', from: "year_of_study"
-    fill_in "email", with: "menteetest@test.com"
+    fill_in "email", with: email
     fill_in "password", with: "Testpass"
     click_button "mentee_submit"
     log_in "Mentee1"

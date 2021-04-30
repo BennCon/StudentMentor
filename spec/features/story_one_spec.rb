@@ -2,7 +2,8 @@ require_relative "../../helpers/spec_helper.rb"
 
 describe "The sign up pages" do
     it "Can create mentee accounts" do
-        register_log_in_mentee
+        register_mentee "MenteeFirst","MenteeSur","TestMentee","Male","mentee123@test.com"
+        log_in "TestMentee"
         expect(page).to have_content "MenteeFirst"
     end
         
