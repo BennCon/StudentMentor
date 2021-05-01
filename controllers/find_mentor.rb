@@ -31,6 +31,7 @@ post "/runMethod" do
    request = Request.new
    request.mentee_id = id
    request.mentor_id = mentor_id
+   request.accepted = 0
    request.save_changes
 
      

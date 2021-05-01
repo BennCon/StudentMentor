@@ -23,6 +23,10 @@
                     <% if @mentee_req_ids.include? mentee[:id] %>
                         <div class="mentor">
                               <section id="mentor-top">
+                                 <form method="post" action="/acceptMethod" >
+                                    <button id="request" type="submit">Accept</button>
+                                       <input type="hidden" id="menteeId" name="menteeId" value=<%= mentee[:id] %> >
+                                 </form>
                               </section>
                               <section id="mentor-bottom">
                                   <aside>

@@ -104,10 +104,6 @@
                      
                      <div class="mentor">
                            <section id="mentor-top">
-<!--                                <form name="myform" action="mailto:<%= h mentor[:email] %>?subject=Test Email&body=You have a request from a Mentee to meet"
-                                  enctype="text/plain" method="post" onsubmit="alert('Email should open now');" >
-                                   <button id="request" type="submit">Request</button>
-                               </form> -->
                                <form method="post" action="/runMethod" >
                                    <button id="request" type="submit">Request</button>
                                    <input type="hidden" id="mentorId" name="mentorId" value=<%= mentor[:id] %> >
