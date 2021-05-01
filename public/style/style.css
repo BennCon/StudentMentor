@@ -248,3 +248,27 @@ main {
 .button {
     
 }
+
+/* styling tables*/
+
+#users-table th {
+    color: white;
+    background-color: #2A364F;
+    font-size: small;
+    padding: 20px;
+      border-style: solid;
+    border-collapse:collapse;
+    border-width: 1px;
+    
+}
+#users-table td {
+    color: #2A364F;
+    padding: 20px;
+    border-style: solid;
+    border-collapse:collapse;
+    border-width: 1px;
+}
+
+#users-table{
+   border-collapse: collapse;
+}
