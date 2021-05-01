@@ -20,24 +20,25 @@
              <% if @requests.count > 0 %>
               <div class = "mentorsList">
                  <% (@mentees).each do |mentee| %>
-                     
-                     <div class="mentor">
-                           <section id="mentor-top">
-                           </section>
-                           <section id="mentor-bottom">
-                               <aside>
-                                   <div id="profile">
-                                       <figure>
-                                       <img src="/background.jpeg" alt="personal Id picture">
-                                       </figure>
-                                   </div>
-                               </aside>
-                               <main>
-                                <h1> <%= mentee[:first_name] %> <%= mentee[:surname] %> </h1>
-                                <p><%= mentee[:biography] %></p>
-                               </main>
-                           </section>
-                     </div>   
+                    <% if @mentee_req_ids.include? mentee[:id] %>
+                        <div class="mentor">
+                              <section id="mentor-top">
+                              </section>
+                              <section id="mentor-bottom">
+                                  <aside>
+                                      <div id="profile">
+                                          <figure>
+                                          <img src="/background.jpeg" alt="personal Id picture">
+                                          </figure>
+                                      </div>
+                                  </aside>
+                                  <main>
+                                   <h1> <%= mentee[:first_name] %> <%= mentee[:surname] %> </h1>
+                                   <p><%= mentee[:biography] %></p>
+                                  </main>
+                              </section>
+                        </div>
+                    <% end %>
               <% end %>
               </div>
               <% else %>

@@ -5,16 +5,13 @@ get "/requests-mentor" do
   @user = User[id]
    
   @requests = DB[:requests].where(mentor_id: id)
-  @mentees = DB[:mentees].where(id: ) 
+  @mentees = DB[:mentees] 
    
-  mentee_req_ids = []
+  @mentee_req_ids = []
   @requests.each do |request|
-     mentee_req_ids << request[:mentee_id]
+     @mentee_req_ids << request[:mentee_id]
   end
    
-   
-  puts mentee_req_ids
-
-     
+      
   erb :requests_mentor
 end
