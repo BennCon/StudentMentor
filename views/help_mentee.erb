@@ -1,0 +1,26 @@
+<%= erb :"commons/header" %>
+<div id="page">
+        <aside>
+            <div id="profile">
+                <figure>
+                    <!--this img just for testing-->
+                    <img src="/background.jpeg" alt="personal Id picture">
+                    <figcaption>University email</figcaption>
+                </figure>
+            </div>
+            <nav class="menu">
+                <li class="menu_selected"><a href="/my-account-admin"> > My Account</a></li>
+                <li><a href="/all-mentees"> > All Mentees </a></li>
+                <li><a href="/all-mentors"> > All Mentors </a></li>
+                <li class="menu_selected"><a href="/help-mentee"> > Help Mentees </a></li>
+                <li><a href="/help-mentor"> > Help Mentors </a></li> 
+                <li><a href="/"> > Logout</a></li>
+                
+            </nav>
+        </aside>
+      <main>
+          <h1>FAQ Mentees</h1>
+          <%= erb :"commons/FAQmentee" %>
+    </main>
+</div>
+<%= erb :"commons/footer" %>
