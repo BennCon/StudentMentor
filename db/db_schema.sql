@@ -65,3 +65,10 @@ CREATE TABLE requests (
    mentor_id INTEGER,
    accepted INTEGER
 );
+
+CREATE TABLE questions_answers (
+   id INTEGER PRIMARY KEY,
+   question TEXT,
+   answer TEXT,
+   user_type TEXT
+);
