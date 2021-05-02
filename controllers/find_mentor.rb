@@ -22,11 +22,11 @@ end
 post "/runMethod" do
    requests_db = DB[:requests]
    id = session[:id]
-   puts id
+  
    mentor = Hash.new
    mentor["mentorId"] = params.fetch("mentorId", "").strip
    mentor_id = mentor["mentorId"]
-   puts mentor_id
+
    
    request = Request.new
    request.mentee_id = id

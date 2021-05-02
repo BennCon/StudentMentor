@@ -8,11 +8,15 @@ get "/requests-mentor" do
   @mentees = DB[:mentees] 
    
   @mentee_req_ids = []
+  @mentee_accepted_ids = []
   @requests.each do |request|
      if request[:accepted] == 0
         @mentee_req_ids << request[:mentee_id]
+     elsif request[:accepted] == 1
+        @mentee_accepted_ids << request[:mentee_id]
      end
   end
+   
    
       
   erb :requests_mentor
@@ -22,11 +26,12 @@ post "/acceptMethod" do
    id = session[:id]
    mentee = Hash.new
    mentee["menteeId"] = params.fetch("menteeId", "").strip
-   mentee_id = mentee["menteeId"]
+   mentee_id = mentee["menteeId"].to_i
    
    @requests = DB[:requests].where(mentor_id: id)
    @requests.each do |request|
-      if request[:mentee_id] = mentee_id
+
+      if mentee_id == request[:mentee_id]
          request = Request[request[:id]]
          request[:accepted] = 1
          request.save_changes

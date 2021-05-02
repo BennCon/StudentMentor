@@ -16,7 +16,7 @@
             </nav>
         </aside>
         <main>
-            <h1>Requests:</h1>
+            <h1>Pending Requests:</h1>
              <% if @requests.count > 0 %>
               <div class = "mentorsList">
                  <% (@mentees).each do |mentee| %>
@@ -27,6 +27,35 @@
                                     <button id="request" type="submit">Accept</button>
                                        <input type="hidden" id="menteeId" name="menteeId" value=<%= mentee[:id] %> >
                                  </form>
+                              </section>
+                              <section id="mentor-bottom">
+                                  <aside>
+                                      <div id="profile">
+                                          <figure>
+                                          <img src="/background.jpeg" alt="personal Id picture">
+                                          </figure>
+                                      </div>
+                                  </aside>
+                                  <main>
+                                   <h1> <%= mentee[:first_name] %> <%= mentee[:surname] %> </h1>
+                                   <p><%= mentee[:biography] %></p>
+                                  </main>
+                              </section>
+                        </div>
+                    <% end %>
+              <% end %>
+              </div>
+              <% else %>
+                   <p>No Requests.</p>
+              <% end %>
+           
+           <h1>Accepted Requests:</h1>
+             <% if @requests.count > 0 %>
+              <div class = "mentorsList">
+                 <% (@mentees).each do |mentee| %>
+                    <% if @mentee_accepted_ids.include? mentee[:id] %>
+                        <div class="mentor">
+                              <section id="mentor-top">
                               </section>
                               <section id="mentor-bottom">
                                   <aside>
