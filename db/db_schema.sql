@@ -4,6 +4,7 @@ CREATE TABLE mentees (
     surname TEXT,
     username TEXT,
     gender TEXT,
+    university TEXT,
     course TEXT,
     year_of_study INTEGER,
     biography TEXT,

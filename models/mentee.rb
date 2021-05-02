@@ -4,6 +4,7 @@ class Mentee < Sequel::Model
         self.surname = params.fetch("surname", "").strip
         self.username = params.fetch("username", "").strip
         self.course = params.fetch("course", "").strip
+        self.university = params.fetch("university", "").strip
         self.gender = params.fetch("gender", "").strip
         self.year_of_study = params.fetch("year_of_study", "").strip
         self.email = params.fetch("email", "").strip
