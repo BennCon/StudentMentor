@@ -1,0 +1,65 @@
+<%= erb :"commons/header" %>
+<div id="page">
+        <aside>
+            <div id="profile">
+                <figure>
+                    <!--this img just for testing-->
+                    <img src="/background.jpeg" alt="personal Id picture">
+                    <figcaption>University email</figcaption>
+                </figure>
+            </div>
+            <nav class="menu">
+                <li><a href="/my-account-admin"> > My Account</a></li>
+                <li><a href="/all-mentees"> > All Mentees </a></li>
+                <li><a href="/all-mentors"> > All Mentors </a></li>
+                <li class="menu_selected"><a href="/help-users"> > Help Users </a></li>
+                <li><a href="/"> > Logout</a></li>
+            </nav>
+        </aside>
+        <main>
+            <h1> Help Users </h1>
+            <button class="button1" name="mentee_faq">Mentees</button>
+            <button class="button2" name="mentor_faq">Mentors</button>
+            <button class="button3" name="add_faq">New Q & A</button>
+            
+            <div id="mentee_help">
+                <h2> Mentees </h2>
+                <%= erb :"commons/FAQmentee" %> 
+            </div>
+            <div class="hide" id="mentor_help">
+                <h2> Mentors </h2>
+               <%= erb :"commons/FAQmentor" %> 
+            </div>
+            <form method="post" action="/help-users" class="accDetails" id="faq_form">
+                    <label for="question">Enter a question:</label>
+                    <input type="question" name="question" id="question" required>
+                    <label for="answer">Enter the answer:</label>
+                    <input type="answer" name="answer" id="answer" required>
+                    <label for="user_type">Select the type of user:</label>
+                    <input type="radio"  name="user_type" value="mentee" id="mentee" required>
+                    <label for="mentee">Mentee</label><br>
+                    <input type="radio" name="user_type" value="mentor" id="mentor" required>
+                    <label for="mentor">Mentor</label><br>
+                    <button type="submit" action="submit" id="button" name="save">Add Q & A</button>
+            </form>
+
+            <script>
+                var menteeButton = document.getElementsByClassName('button1')[0]
+                var mentorButton = document.getElementsByClassName('button2')[0]
+                var menteeHelp = document.getElementById('mentee_help')
+                var mentorHelp = document.getElementById('mentor_help')
+                menteeButton.addEventListener('click',function(a){
+                    menteeHelp.style.display = 'block';
+                    mentorHelp.style.display = 'none';
+                })
+                mentorButton.addEventListener('click',function(a){
+                    menteeHelp.style.display = 'none';
+                    mentorHelp.style.display = 'block';
+                })
+                var formButton = document.getElementsByClassName('button3')[0]
+                var faqForm = document.getElementById('faq_form')
+                formButton.addEventListener('click',function(a){faqForm.classList.toggle('active')})
+            </script>
+        </main>
+</div>
+<%= erb :"commons/footer" %> 

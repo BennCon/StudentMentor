@@ -148,7 +148,7 @@ main {
 .active {
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: column;    
     max-width: 50%;
 }
 
@@ -256,7 +256,7 @@ main {
     background-color: #2A364F;
     font-size: small;
     padding: 20px;
-      border-style: solid;
+    border-style: solid;
     border-collapse:collapse;
     border-width: 1px;
     
@@ -272,4 +272,10 @@ main {
 #users-table{
    border-collapse: collapse;
    width: 100%;
+}
+
+/* styling help_users */
+
+.hide {
+    display: none;
 }

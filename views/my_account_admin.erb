@@ -12,8 +12,7 @@
                 <li class="menu_selected"><a href="/my-account-admin"> > My Account</a></li>
                 <li><a href="/all-mentees"> > All Mentees </a></li>
                 <li><a href="/all-mentors"> > All Mentors </a></li>
-                <li><a href="/help-mentee"> > Help Mentees </a></li>
-                <li><a href="/help-mentor"> > Help Mentors </a></li>
+                <li><a href="/help-users"> > Help Users </a> </li>
                 <li><a href="/"> > Logout</a></li>
             </nav>
         </aside>
@@ -44,7 +43,7 @@
                         <label for="username">Enter a username</label>
                         <input type="username" name="username" id="username" value="<%= h @admin.username%>" required>
                         <button type="submit" action="submit" id="button" name="save"> save changes</button>
-                    </form>
+                </form>
                 <script>
                     var submitButton = document.getElementsByClassName('button')[0]
                     var accdetails = document.getElementsByClassName('accDetails')[0]
