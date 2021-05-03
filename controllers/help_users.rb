@@ -6,12 +6,12 @@ get "/help-users" do
   erb :help_users
 end
 
-post '/help-users' do
+post "/help-users" do
    id = session[:id]
-   @faq = Faq.new
+   faq = Questions_answers.new
 
    #Loads the q&a
    faq.load(params)
-   redirect '/help-users'
+   redirect "/help-users"
    erb :help_users
 end
