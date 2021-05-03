@@ -17,20 +17,22 @@
             </nav>
         </aside>
         <main>
-            <h1> Help Users </h1>
-            <button class="button1" name="mentee_faq">Mentees</button>
-            <button class="button2" name="mentor_faq">Mentors</button>
-            <button class="button3" name="add_faq">New Q & A</button>
-            
+            <div>
+             <h2> Help Users </h2>
+            <button class="button1" id="button" name="mentee_faq">Mentees</button>
+            <button class="button2" id="button" name="mentor_faq">Mentors</button>
+            <button class="button3" id="button" name="add_faq">New Q & A</button> 
+            </div>
             <div id="mentee_help">
-                <h2> Mentees </h2>
+                <h3> Mentees </h3>
                 <%= erb :"commons/FAQmentee" %> 
             </div>
             <div class="hide" id="mentor_help">
-                <h2> Mentors </h2>
+                <h3> Mentors </h3>
                <%= erb :"commons/FAQmentor" %> 
             </div>
-            <form method="post" action="/help-users" class="accDetails" id="faq_form">
+            <div>
+                   <form method="post" action="/help-users" class="accDetails" id="faq_form">
                     <label for="question">Enter a question:</label>
                     <input type="question" name="question" id="question" required>
                     <label for="answer">Enter the answer:</label>
@@ -59,7 +61,9 @@
                 var formButton = document.getElementsByClassName('button3')[0]
                 var faqForm = document.getElementById('faq_form')
                 formButton.addEventListener('click',function(a){faqForm.classList.toggle('active')})
-            </script>
+            </script> 
+            </div>
+        
         </main>
 </div>
 <%= erb :"commons/footer" %> 

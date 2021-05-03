@@ -38,7 +38,7 @@
                       <th>Seeking mentee</th>
                     </tr>
                   <% @mentors.each do |mentor| %>
-                    <tr>
+                    <tr id="selectedRow">
                       <td><%=h mentor.id %></td>
                       <td><%=h mentor.first_name %></td>
                       <td><%=h mentor.surname%></td>
@@ -53,6 +53,7 @@
                       <td><%=h mentor.password %></td>
                       <td><%=h mentor.number_of_mentees %></td>
                       <td><%=h mentor.seeking_mentee %></td>
+                      <td></td>
                     </tr>
                   <% end %> 
                   </table>

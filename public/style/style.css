@@ -272,10 +272,17 @@ main {
 #users-table{
    border-collapse: collapse;
    width: 100%;
+   margin-bottom: 20px;
 }
 
+#selectedRow:hover {
+   background-color: #F4F4F4;
+   color:white;
+   transition:0.5s;
+}
 /* styling help_users */
 
 .hide {
     display: none;
 }
+

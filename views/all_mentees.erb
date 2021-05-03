@@ -37,7 +37,7 @@
                       <th>Rejections</th>
                     </tr>
                   <% @mentees.each do |mentee| %>
-                    <tr>
+                    <tr id="selectedRow">
                       <td><%=h mentee.id %></td>
                       <td><%=h mentee.first_name %></td>
                       <td><%=h mentee.surname%></td>
