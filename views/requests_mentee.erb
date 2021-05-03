@@ -17,7 +17,63 @@
             </nav>
         </aside>
         <main>
-            <h1>Here is the requests details</h1>
+            <h1>Pending Requests:</h1>
+             <% if @requests.count > 0 %>
+              <div class = "mentorsList">
+                 <% (@mentors).each do |mentor| %>
+                    <% if @mentor_req_ids.include? mentor[:id] %>
+                        <div class="mentor">
+                              <section id="mentor-top">
+                              </section>
+                              <section id="mentor-bottom">
+                                  <aside>
+                                      <div id="profile">
+                                          <figure>
+                                          <img src="/background.jpeg" alt="personal Id picture">
+                                          </figure>
+                                      </div>
+                                  </aside>
+                                  <main>
+                                   <h1> <%= mentor[:first_name] %> <%= mentor[:surname] %> </h1>
+                                   <p><%= mentor[:biography] %></p>
+                                  </main>
+                              </section>
+                        </div>
+                    <% end %>
+              <% end %>
+              </div>
+              <% else %>
+                   <p>No Requests.</p>
+              <% end %>
+           
+           <h1>Accepted Requests:</h1>
+             <% if @requests.count > 0 %>
+              <div class = "mentorsList">
+                 <% (@mentors).each do |mentor| %>
+                    <% if @mentor_accepted_ids.include? mentor[:id] %>
+                        <div class="mentor">
+                              <section id="mentor-top">
+                              </section>
+                              <section id="mentor-bottom">
+                                  <aside>
+                                      <div id="profile">
+                                          <figure>
+                                          <img src="/background.jpeg" alt="personal Id picture">
+                                          </figure>
+                                      </div>
+                                  </aside>
+                                  <main>
+                                   <h1> <%= mentor[:first_name] %> <%= mentor[:surname] %> </h1>
+                                   <p><%= mentor[:biography] %></p>
+                                  </main>
+                              </section>
+                        </div>
+                    <% end %>
+              <% end %>
+              </div>
+              <% else %>
+                   <p>No Requests.</p>
+              <% end %> 
         </main>
 </div>
 <%= erb :"commons/footer" %>
