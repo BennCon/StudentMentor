@@ -6,9 +6,9 @@ RSpec.describe "Requests Page" do
         before(:all) do
             User.unrestrict_primary_key
             Mentee.unrestrict_primary_key
-            user = User.new(email: "testtest@test.test", password: "test1234", user_type: "mentee", id:9999)
+            user = User.new(password: "test1234", user_type: "mentee", id:9999)
             user.save_changes
-            mentee = Mentee.new(first_name: "A", surname: "B", course: "ABCD", year_of_study: 9999, email: "testtest@test.test", password: "test1234", id:9999)
+            mentee = Mentee.new(username: "user", first_name: "A", surname: "B", course: "ABCD", year_of_study: 9999, email: "testtest@test.test", password: "test1234", id:9999)
             mentee.save_changes
             post "/", "email" => "testtest@test.test", "password" => "test1234"
         end
