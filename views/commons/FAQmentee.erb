@@ -1,10 +1,14 @@
-  <table id="users-table">
-                    <tr>
-                      <th>Question</th>
-                      <th>Answer</th>
-                    </tr>
-                    <tr id="selectedRow">
-                       <td> How do you change password? </td>
-                       <td> Contact the Admin by Email </td>
-                  </tr>
-    </table>
+<table id="users-table">
+    <tr>
+        <th>Question</th>
+        <th>Answer</th>
+    </tr>
+    <% @faqs.each do |faq| %>
+        <% if (faq.user_type == "mentee") || (faq.user_type == "both") %>
+            <tr id="selectedRow">
+                <td> <%=h faq.question %> </td>
+                <td> <%=h faq.answer %> </td>
+            </tr>
+        <% end %>
+    <% end %>
+</table>
