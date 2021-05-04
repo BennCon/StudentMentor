@@ -85,3 +85,28 @@ def log_in(username)
     fill_in "password", with: "Testpass"
     click_button "signin"
 end
+
+def create_admin_model
+    user = User.new(password: "test1234", user_type: "admin", username: "user")
+    user.save_changes(:validate => false)
+    admin = Admin.new(username: "user", first_name: "A", surname: "B", admin_code: "1234", email: "testtest@test.test", password: "test1234")
+    admin.save_changes(:validate => false)
+end
+
+def create_mentor_model
+    User.unrestrict_primary_key
+    Mentor.unrestrict_primary_key
+    user = User.new(first_name: "A", surname: "B", password: "test1234", user_type: "mentor", id:9999, username: "user")
+    user.save_changes(:validate => false)
+    mentor = Mentor.new(first_name: "A", username: "user", surname: "B", industry: "ABCDEF", company:"ABCDE", email: "testtest@test.test", password: "test1234", sheffield_graduate: true, degree_field: "ABCD", id:9999)
+    mentor.save_changes(:validate => false)
+end
+
+def create_mentee_model
+    User.unrestrict_primary_key
+    Mentee.unrestrict_primary_key
+    user = User.new(username: "user", password: "test1234", user_type: "mentee", id:9999)
+    user.save_changes(:validate => false)
+    mentee = Mentee.new(username: "user", first_name: "A", surname: "B", course: "ABCD", year_of_study: 9999, email: "testtest@test.test", password: "test1234", id:9999)
+    mentee.save_changes(:validate => false)
+end
