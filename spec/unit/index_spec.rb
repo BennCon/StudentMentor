@@ -16,10 +16,10 @@ RSpec.describe "Index" do
     describe "Index Form Submission" do
         
         before(:all) do
-            user = User.new(password: "test1234", user_type: "admin")
-            user.save_changes
+            user = User.new(password: "test1234", user_type: "admin", username: "user")
+            user.save_changes(:validate => false)
             admin = Admin.new(username: "user", first_name: "A", surname: "B", admin_code: "1234", email: "testtest@test.test", password: "test1234")
-            admin.save_changes
+            admin.save_changes(:validate => false)
         end
         
         after(:all) do
@@ -30,7 +30,7 @@ RSpec.describe "Index" do
         end
         
         it "Redirects on a success" do
-            post "/", "email" => "testtest@test.test", "password" => "test1234"
+            post "/", "username" => "user", "password" => "test1234"
             expect(last_response).to be_redirect
             expect(last_response.location).to include('/my-account-admin')
         end
