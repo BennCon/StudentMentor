@@ -3,6 +3,9 @@ get "/help-users" do
   id = session[:id]
   @admin = Admin[id] if Admin.id_exists?(id)
   @user = User[id]
+    
+  @faqs = Questions_answers.all
+    
   erb :help_users
 end
 

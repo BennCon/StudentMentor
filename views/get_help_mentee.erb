@@ -13,15 +13,19 @@
                 <li><a href="/find-mentor"> > Find A Mentor</a></li>
                 <li><a href="/requests-mentee"> > My Requests</a></li>
                 <li class="menu_selected"><a href="/get-help-mentee"> > Get Help</a></li>
-                <li><a href="/index"> > Logout</a></li>
+                <li><a href="/"> > Logout</a></li>
             </nav>
         </aside>
-          <main>
-               <div id="mentor-bottom">
-                       <h2>FAQ</h2> 
-                       <h2 id="orange"> Mentees</h2>
-                    </div>
-          <%= erb :"commons/FAQmentee" %>
-    </main>
+        <main>
+          <div id="mentor-bottom">
+              <h2>FAQ</h2> 
+              <h2 id="orange"> Mentees</h2>
+          </div>
+          <% if @faqs.count > 0 %>
+              <%= erb :"commons/FAQmentee" %>
+          <% else %>
+              <p>No questions and answers available at the moment.</p>
+          <% end %>
+        </main>  
 </div>
 <%= erb :"commons/footer" %>
