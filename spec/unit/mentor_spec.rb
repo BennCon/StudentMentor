@@ -11,9 +11,9 @@ RSpec.describe Mentor do
     describe "#self.id_exists?" do
         it "Checks if the mentor id exists" do
             Mentor.unrestrict_primary_key
-            mentor = described_class.new(id: 9127478917489)
+            mentor = described_class.new(first_name: "A", username: "user", surname: "B", industry: "ABCDEF", company:"ABCDE", email: "testtest@test.test", password: "test1234", sheffield_graduate: true, degree_field: "ABCD")
             mentor.save_changes
-            expect(Mentor.id_exists?(9127478917489)).to eq(true)
+            expect(Mentor.id_exists?(1)).to eq(true)
             mentor.delete
         end
     end
@@ -21,9 +21,9 @@ RSpec.describe Mentor do
     describe "#get_id" do
         it "Gets the mentor id" do
             Mentor.unrestrict_primary_key
-            mentor = described_class.new(id: 9127478917489)
+            mentor = described_class.new(first_name: "A", username: "user", surname: "B", industry: "ABCDEF", company:"ABCDE", email: "testtest@test.test", password: "test1234", sheffield_graduate: true, degree_field: "ABCD")
             mentor.save_changes
-            expect(mentor.get_id).to eq(9127478917489)
+            expect(mentor.get_id).to eq(1)
             mentor.delete
         end
     end

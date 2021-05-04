@@ -16,17 +16,11 @@ RSpec.describe "Index" do
     describe "Index Form Submission" do
         
         before(:all) do
-            user = User.new(password: "test1234", user_type: "admin", username: "user")
-            user.save_changes(:validate => false)
-            admin = Admin.new(username: "user", first_name: "A", surname: "B", admin_code: "1234", email: "testtest@test.test", password: "test1234")
-            admin.save_changes(:validate => false)
+            create_admin_model
         end
         
         after(:all) do
-            DB.from("mentees").delete
-            DB.from("mentors").delete
-            DB.from("admins").delete
-            DB.from("users").delete
+            clear_db
         end
         
         it "Redirects on a success" do
@@ -36,11 +30,11 @@ RSpec.describe "Index" do
         end
         
         it "Fails when there's no password" do
-            post "/", "email" => "testtest@test.test"
+            post "/", "username" => "user"
             expect(last_response.body).to include('Username/Password combination incorrect')
         end
         
-        it "Fails when there's no email" do
+        it "Fails when there's no username" do
             post "/", "password" => "test1234"
             expect(last_response.body).to include('Username/Password combination incorrect')
         end
@@ -50,8 +44,8 @@ RSpec.describe "Index" do
             expect(last_response.body).to include('Username/Password combination incorrect')
         end
         
-        it "Fails when a false email is inputted" do
-            post "/", "email" => "test", "password" => "test1234"
+        it "Fails when a false username is inputted" do
+            post "/", "username" => "us3r", "password" => "test1234"
             expect(last_response.body).to include('Username/Password combination incorrect')
         end
     end

@@ -11,9 +11,9 @@ RSpec.describe Mentee do
     describe "#self.id_exists?" do
         it "Checks if the mentee id exists" do
             Mentee.unrestrict_primary_key
-            mentee = described_class.new(id: 9127478917489)
+            mentee = described_class.new(username: "user", first_name: "A", surname: "B", course: "ABCD", year_of_study: 9999, email: "testtest@test.test", password: "test1234", id:9999)
             mentee.save_changes
-            expect(Mentee.id_exists?(9127478917489)).to eq(true)
+            expect(described_class.id_exists?(9999)).to eq(true)
             mentee.delete
         end
     end
@@ -21,9 +21,9 @@ RSpec.describe Mentee do
     describe "#get_id" do
         it "Gets the mentee id" do
             Mentee.unrestrict_primary_key
-            mentee = described_class.new(id: 9127478917489)
+            mentee = described_class.new(username: "user", first_name: "A", surname: "B", course: "ABCD", year_of_study: 9999, email: "testtest@test.test", password: "test1234", id:9999)
             mentee.save_changes
-            expect(mentee.get_id).to eq(9127478917489)
+            expect(mentee.get_id).to eq(9999)
             mentee.delete
         end
     end
