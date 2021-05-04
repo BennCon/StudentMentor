@@ -16,9 +16,9 @@ RSpec.describe "Index" do
     describe "Index Form Submission" do
         
         before(:all) do
-            user = User.new(email: "testtest@test.test", password: "test1234", user_type: "admin")
+            user = User.new(password: "test1234", user_type: "admin")
             user.save_changes
-            admin = Admin.new(first_name: "A", surname: "B", admin_code: "1234", email: "testtest@test.test", password: "test1234")
+            admin = Admin.new(username: "user", first_name: "A", surname: "B", admin_code: "1234", email: "testtest@test.test", password: "test1234")
             admin.save_changes
         end
         

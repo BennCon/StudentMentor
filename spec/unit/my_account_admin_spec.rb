@@ -6,9 +6,9 @@ RSpec.describe "My Account Admin" do
         before(:all) do
             User.unrestrict_primary_key
             Admin.unrestrict_primary_key
-            user = User.new(email: "testtest@test.test", password: "test1234", user_type: "admin", id:9999)
+            user = User.new(password: "test1234", user_type: "admin", id:9999)
             user.save_changes
-            admin = Admin.new(first_name: "Test", surname: "Test", admin_code: "1234", email: "testtest@test.test", password: "test1234", id:9999)
+            admin = Admin.new(username: "user", first_name: "Test", surname: "Test", admin_code: "1234", email: "testtest@test.test", password: "test1234", id:9999)
             admin.save_changes
             post "/", "email" => "testtest@test.test", "password" => "test1234"
         end
