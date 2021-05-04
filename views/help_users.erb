@@ -28,11 +28,19 @@
             </div>
             <div id="mentee_help">
                 <h3> Mentees </h3>
-                <%= erb :"commons/FAQmentee" %> 
+                <% if !@faqs.nil? %>
+                    <%= erb :"commons/FAQmentee" %> 
+                <% else %>
+                    <p>No qestions and answers added yet.</p>
+                <% end %>
             </div>
             <div class="hide" id="mentor_help">
                 <h3> Mentors </h3>
-               <%= erb :"commons/FAQmentor" %> 
+                <% if !@faqs.nil? %>
+                   <%= erb :"commons/FAQmentor" %> 
+                <% else %>
+                    <p>No qestions and answers added yet.</p>
+                <% end %>
             </div>
             <div>
                    <form method="post" action="/help-users" class="accDetails" id="faq_form">
@@ -45,6 +53,8 @@
                     <label for="mentee">Mentee</label><br>
                     <input type="radio" name="user_type" value="mentor" id="mentor" required>
                     <label for="mentor">Mentor</label><br>
+                    <input type="radio" name="user_type" value="both" id="both" required>
+                    <label for="both">Both</label><br>
                     <button type="submit" action="submit" id="button" name="save">Add Q & A</button>
             </form>
 

@@ -3,5 +3,8 @@ get "/get-help-mentee" do
   id = session[:id]
   @mentee = Mentee[id] if Mentee.id_exists?(id)
   @user = User[id]
+  
+  @faqs = Questions_answers.all
+    
   erb :get_help_mentee
 end
