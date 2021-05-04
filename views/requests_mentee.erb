@@ -17,7 +17,10 @@
             </nav>
         </aside>
         <main>
-            <h1>Pending Requests:</h1>
+            <div id="mentor-bottom">
+                       <h2>Pending</h2> 
+                       <h2 id="orange"> Requests:</h2>
+                    </div>
              <% if @requests.count > 0 %>
               <div class = "mentorsList">
                  <% (@mentors).each do |mentor| %>
@@ -35,7 +38,9 @@
                                   </aside>
                                   <main>
                                    <h1> <%= mentor[:first_name] %> <%= mentor[:surname] %> </h1>
-                                   <p><%= mentor[:biography] %></p>
+                                   <p>Industry: <%= mentor[:industry] %></p>
+                                   <p>Degree field: <%= mentor[:degree_field] %></p>
+                                   <p>Bio: <%= mentor[:biography] %></p>
                                   </main>
                               </section>
                         </div>
@@ -46,7 +51,10 @@
                    <p>No Requests.</p>
               <% end %>
            
-           <h1>Accepted Requests:</h1>
+                <div id="mentor-bottom">
+                       <h2>Accepted</h2> 
+                       <h2 id="orange"> Requests:</h2>
+                    </div>
              <% if @requests.count > 0 %>
               <div class = "mentorsList">
                  <% (@mentors).each do |mentor| %>

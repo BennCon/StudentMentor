@@ -16,7 +16,10 @@
             </nav>
         </aside>
         <main>
-            <h1>Pending Requests:</h1>
+           <div id="mentor-bottom">
+                       <h2>Pending</h2> 
+                       <h2 id="orange"> Requests:</h2>
+                    </div>
              <% if @requests.count > 0 %>
               <div class = "mentorsList">
                  <% (@mentees).each do |mentee| %>
@@ -49,7 +52,10 @@
                    <p>No Requests.</p>
               <% end %>
            
-           <h1>Accepted Requests:</h1>
+           <div id="mentor-bottom">
+                       <h2>Accepted</h2> 
+                       <h2 id="orange"> Requests:</h2>
+                    </div>
              <% if @requests.count > 0 %>
               <div class = "mentorsList">
                  <% (@mentees).each do |mentee| %>
