@@ -4,7 +4,9 @@ RSpec.describe Admin do
     describe "#load" do
         it "loads an admin object with information about said admin" do
             admin = described_class.new(first_name: "A", surname: "B", admin_code: "1234", email: "123@AB.CDE", password: "test1234", username:"user")
+            admin.save_changes
             expect(admin.values).to eq({:first_name=>"A", :surname=>"B", :admin_code=>"1234", :email=>"123@AB.CDE", :password=>"test1234", :username=>"user"})
+            admin.delete
         end
     end
     
