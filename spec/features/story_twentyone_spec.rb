@@ -5,17 +5,22 @@ describe "Help Page updates" do
         Code.unrestrict_primary_key
         code = Code.new(id: 55, code: "codetest", used: 0)
         code.save_changes
-        register_admin "TestAdmin","testcode","admintest@test.com"
+        register_admin "TestAdmin","codetest","admintest@test.com"
         log_in "TestAdmin"
-        click_link '> Mentee Help'
-        #Admins need to have access to the help page, when they do
-        #This needs to go to the help page, change it by adding 'test123', then checking that it has been added correctly
+        click_link '> Help Users'
+        expect(page).to have_button('add_faq')
+        click_button 'add_faq'
+        fill_in "question", with: "TestQuestion"
+        fill_in "answer", with: "TestAnswer"
+        choose 'mentee'
+        click_button "save"
     end
     it "can be seen by mentees" do
         register_mentee "MenteeFirst","MenteeSur","TestMentee","Male","mentee123@test.com"
         log_in "TestMentee"
         click_link '> Get Help'
-        expect(page).to have_content("test123")
+        expect(page).to have_content("TestQuestion")
+        expect(page).to have_content("TestAnswer")
         clear_db
     end
 end
