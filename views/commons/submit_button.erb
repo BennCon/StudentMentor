@@ -1,0 +1,10 @@
+    <button type="submit" id="button" name="mentor_submit" onclick="successMessage"> Submit </button>
+    <div id="snackbar">your account has been successfully created.</div> 
+    <script>
+        function successMessage() {
+          var x = document.getElementById("snackbar");
+          x.className = "show";
+          // After 3 seconds, hide snackbar again
+          setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+        }
+    </script>
