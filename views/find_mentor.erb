@@ -101,30 +101,31 @@
               <% if @mentors.count > 0 %>
               <div class = "mentorsList">
                  <% (@mentors).each do |mentor| %>
-                     
-                     <div class="mentor">
-                           <section id="mentor-top">
-                               <form method="post" action="/runMethod" >
-                                   <button id="request" type="submit">Request</button>
-                                   <input type="hidden" id="mentorId" name="mentorId" value=<%= mentor[:id] %> >
-                               </form>
-                           </section>
-                           <section id="mentor-bottom">
-                               <aside>
-                                   <div id="profile">
-                                       <figure>
-                                       <img src="/background.jpeg" alt="personal Id picture">
-                                       </figure>
-                                   </div>
-                               </aside>
-                               <main>
-                                <h1> <%= mentor[:first_name] %> <%= mentor[:surname] %> </h1>
-                                <p>Industry: <%= mentor[:industry] %></p>
-                                <p>Degree field: <%= mentor[:degree_field] %></p>
-                                <p>Bio: <%= mentor[:biography] %></p>
-                               </main>
-                           </section>
-                     </div>   
+                    <% if !@already_req.include? mentor[:id] %>
+                        <div class="mentor">
+                              <section id="mentor-top">
+                                  <form method="post" action="/runMethod" >
+                                      <button id="request" type="submit">Request</button>
+                                      <input type="hidden" id="mentorId" name="mentorId" value=<%= mentor[:id] %> >
+                                  </form>
+                              </section>
+                              <section id="mentor-bottom">
+                                  <aside>
+                                      <div id="profile">
+                                          <figure>
+                                          <img src="/background.jpeg" alt="personal Id picture">
+                                          </figure>
+                                      </div>
+                                  </aside>
+                                  <main>
+                                   <h1> <%= mentor[:first_name] %> <%= mentor[:surname] %> </h1>
+                                   <p>Industry: <%= mentor[:industry] %></p>
+                                   <p>Degree field: <%= mentor[:degree_field] %></p>
+                                   <p>Bio: <%= mentor[:biography] %></p>
+                                  </main>
+                              </section>
+                        </div>
+                 <% end %>
               <% end %>
               </div>
               <% else %>

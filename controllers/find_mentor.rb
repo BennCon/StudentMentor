@@ -12,9 +12,18 @@ get "/find-mentor" do
    filters["sheffield_graduate"] = params.fetch("sheffield_graduate", "").strip
     
    @mentors = DB[:mentors]
+   
+   @requests = DB[:requests].where(mentee_id: id)
+   @already_req = []
+   @requests.each do |request|
+      @already_req << request[:mentor_id]
+   end
+   
    filters.each do |filter, value|
       @mentors = @mentors.where(Sequel.like(:"#{filter}", "#{value}%"))
    end
+   
+
    
   erb :find_mentor
 end
