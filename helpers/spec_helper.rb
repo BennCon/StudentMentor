@@ -32,6 +32,8 @@ def clear_db
     DB.from("admins").delete
     DB.from("users").delete
     DB.from("codes").delete
+    DB.from("requests").delete
+    DB.from("questions_answers").delete
 end
 
 # Clear the database so it is ready for testing
