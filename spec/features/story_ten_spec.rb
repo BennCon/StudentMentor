@@ -12,5 +12,6 @@ describe "A mentor" do
         click_link "> My Requests"
         expect(page).to have_button('Decline')
         #Click button then check that this removes any mention of a request
+        clear_db
     end
 end
