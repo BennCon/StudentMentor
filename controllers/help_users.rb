@@ -15,6 +15,7 @@ post "/help-users" do
 
    #Loads the q&a
    faq.load(params)
+   faq.save_changes
    redirect "/help-users"
    erb :help_users
 end
