@@ -22356,3 +22356,1614 @@ I, [2021-05-06T14:01:51.732169 #136]  INFO -- : (0.119722s) COMMIT
 I, [2021-05-06T14:01:51.732999 #136]  INFO -- : (0.000036s) BEGIN
 I, [2021-05-06T14:01:51.733359 #136]  INFO -- : (0.000177s) UPDATE `mentors` SET `id` = 11 WHERE (`id` = 9)
 I, [2021-05-06T14:01:51.850704 #136]  INFO -- : (0.117265s) COMMIT
+I, [2021-05-06T16:25:24.544310 #203]  INFO -- : (0.000254s) PRAGMA foreign_keys = 1
+I, [2021-05-06T16:25:24.556309 #203]  INFO -- : (0.000030s) PRAGMA case_sensitive_like = 1
+I, [2021-05-06T16:25:24.560993 #203]  INFO -- : (0.000106s) SELECT sqlite_version()
+I, [2021-05-06T16:25:24.561387 #203]  INFO -- : (0.000201s) PRAGMA table_info('admins')
+I, [2021-05-06T16:25:24.568986 #203]  INFO -- : (0.000144s) PRAGMA table_info('codes')
+I, [2021-05-06T16:25:24.569896 #203]  INFO -- : (0.000171s) PRAGMA table_info('questions_answers')
+I, [2021-05-06T16:25:24.574165 #203]  INFO -- : (0.000318s) PRAGMA table_info('mentees')
+I, [2021-05-06T16:25:24.581093 #203]  INFO -- : (0.000301s) PRAGMA table_info('mentors')
+I, [2021-05-06T16:25:24.603669 #203]  INFO -- : (0.000165s) PRAGMA table_info('requests')
+I, [2021-05-06T16:25:24.625416 #203]  INFO -- : (0.000239s) PRAGMA table_info('users')
+I, [2021-05-06T16:25:25.347876 #203]  INFO -- : (0.128625s) DELETE FROM `mentees` WHERE (1 = 1)
+I, [2021-05-06T16:25:25.460687 #203]  INFO -- : (0.112553s) DELETE FROM `mentors` WHERE (1 = 1)
+I, [2021-05-06T16:25:25.575246 #203]  INFO -- : (0.114308s) DELETE FROM `admins` WHERE (1 = 1)
+I, [2021-05-06T16:25:25.679935 #203]  INFO -- : (0.104437s) DELETE FROM `users` WHERE (1 = 1)
+I, [2021-05-06T16:25:25.680254 #203]  INFO -- : (0.000093s) DELETE FROM `codes` WHERE (1 = 1)
+I, [2021-05-06T16:25:25.787082 #203]  INFO -- : (0.106684s) DELETE FROM `requests` WHERE (1 = 1)
+I, [2021-05-06T16:25:25.888636 #203]  INFO -- : (0.101285s) DELETE FROM `questions_answers` WHERE (1 = 1)
+I, [2021-05-06T16:25:26.140318 #203]  INFO -- : (0.000144s) SELECT * FROM `users`
+I, [2021-05-06T16:25:26.140501 #203]  INFO -- : (0.000071s) SELECT * FROM `users`
+I, [2021-05-06T16:25:26.140643 #203]  INFO -- : (0.000019s) BEGIN
+I, [2021-05-06T16:25:26.140978 #203]  INFO -- : (0.000135s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('MenteeFirst', 'MenteeSur', 'TestMentee', 'mentee123@test.com', 'Testpass', 'mentee')
+I, [2021-05-06T16:25:26.141194 #203]  INFO -- : (0.000085s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:26.246598 #203]  INFO -- : (0.105309s) COMMIT
+I, [2021-05-06T16:25:26.246822 #203]  INFO -- : (0.000035s) BEGIN
+I, [2021-05-06T16:25:26.247193 #203]  INFO -- : (0.000154s) INSERT INTO `mentees` (`first_name`, `surname`, `username`, `course`, `university`, `gender`, `year_of_study`, `email`, `password`) VALUES ('MenteeFirst', 'MenteeSur', 'TestMentee', 'COM1001', 'Aga Khan University', 'male', 1, 'mentee123@test.com', 'Testpass')
+I, [2021-05-06T16:25:26.247462 #203]  INFO -- : (0.000138s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:26.358864 #203]  INFO -- : (0.111322s) COMMIT
+I, [2021-05-06T16:25:26.366585 #203]  INFO -- : (0.000144s) SELECT * FROM `users` WHERE (`username` = 'Mentee1') LIMIT 1
+I, [2021-05-06T16:25:26.367374 #203]  INFO -- : (0.000025s) BEGIN
+I, [2021-05-06T16:25:26.367696 #203]  INFO -- : (0.000143s) INSERT INTO `codes` (`id`, `code`, `used`) VALUES (45, 'qwerty', 0)
+I, [2021-05-06T16:25:26.367881 #203]  INFO -- : (0.000073s) SELECT * FROM `codes` WHERE `id` = 45
+I, [2021-05-06T16:25:26.477859 #203]  INFO -- : (0.109884s) COMMIT
+I, [2021-05-06T16:25:26.490569 #203]  INFO -- : (0.000161s) SELECT * FROM `users`
+I, [2021-05-06T16:25:26.490753 #203]  INFO -- : (0.000084s) SELECT * FROM `users`
+I, [2021-05-06T16:25:26.490873 #203]  INFO -- : (0.000017s) BEGIN
+I, [2021-05-06T16:25:26.491168 #203]  INFO -- : (0.000139s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('AdminFirst', 'Surname', 'TestAdmin', 'admintest@test.com', 'Testpass', 'admin')
+I, [2021-05-06T16:25:26.491382 #203]  INFO -- : (0.000087s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-05-06T16:25:26.603660 #203]  INFO -- : (0.112186s) COMMIT
+I, [2021-05-06T16:25:26.603881 #203]  INFO -- : (0.000037s) BEGIN
+I, [2021-05-06T16:25:26.604217 #203]  INFO -- : (0.000142s) INSERT INTO `admins` (`first_name`, `surname`, `username`, `admin_code`, `email`, `password`) VALUES ('AdminFirst', 'Surname', 'TestAdmin', 'qwerty', 'admintest@test.com', 'Testpass')
+I, [2021-05-06T16:25:26.604455 #203]  INFO -- : (0.000106s) SELECT * FROM `admins` WHERE `id` = 1
+I, [2021-05-06T16:25:26.729261 #203]  INFO -- : (0.124724s) COMMIT
+I, [2021-05-06T16:25:26.729518 #203]  INFO -- : (0.000036s) BEGIN
+I, [2021-05-06T16:25:26.729893 #203]  INFO -- : (0.000206s) UPDATE `admins` SET `id` = 2 WHERE (`id` = 1)
+I, [2021-05-06T16:25:26.833131 #203]  INFO -- : (0.103146s) COMMIT
+I, [2021-05-06T16:25:26.839895 #203]  INFO -- : (0.000160s) SELECT * FROM `users` WHERE (`username` = 'TestAdmin') LIMIT 1
+I, [2021-05-06T16:25:26.840232 #203]  INFO -- : (0.000096s) SELECT * FROM `users` WHERE (`username` = 'TestAdmin') LIMIT 1
+I, [2021-05-06T16:25:26.840429 #203]  INFO -- : (0.000082s) SELECT * FROM `users` WHERE (`username` = 'TestAdmin') LIMIT 1
+I, [2021-05-06T16:25:26.840678 #203]  INFO -- : (0.000092s) SELECT * FROM `admins` WHERE (`username` LIKE '%TestAdmin%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T16:25:26.840912 #203]  INFO -- : (0.000105s) SELECT * FROM `admins` WHERE (`username` = 'TestAdmin') LIMIT 1
+I, [2021-05-06T16:25:26.841772 #203]  INFO -- : (0.000099s) SELECT * FROM `admins` WHERE `id` = 2
+I, [2021-05-06T16:25:26.841928 #203]  INFO -- : (0.000077s) SELECT * FROM `admins` WHERE `id` = 2
+I, [2021-05-06T16:25:26.842052 #203]  INFO -- : (0.000072s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-05-06T16:25:26.847320 #203]  INFO -- : (0.000132s) SELECT * FROM `mentees`
+I, [2021-05-06T16:25:26.898360 #203]  INFO -- : (0.000161s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:26.898581 #203]  INFO -- : (0.000088s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:26.898765 #203]  INFO -- : (0.000079s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:26.898914 #203]  INFO -- : (0.000073s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:26.899203 #203]  INFO -- : (0.000116s) SELECT * FROM `mentees` WHERE (`username` LIKE '%TestMentee%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T16:25:26.899462 #203]  INFO -- : (0.000124s) SELECT * FROM `mentees` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:26.900345 #203]  INFO -- : (0.000119s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:26.900508 #203]  INFO -- : (0.000097s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:26.900632 #203]  INFO -- : (0.000072s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:26.933216 #203]  INFO -- : (0.000143s) SELECT * FROM `users`
+I, [2021-05-06T16:25:26.933392 #203]  INFO -- : (0.000089s) SELECT * FROM `users`
+I, [2021-05-06T16:25:26.933517 #203]  INFO -- : (0.000018s) BEGIN
+I, [2021-05-06T16:25:26.933829 #203]  INFO -- : (0.000144s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('Mister', 'Planes', 'planes123', 'planes123@test.com', 'Testpass', 'mentor')
+I, [2021-05-06T16:25:26.934028 #203]  INFO -- : (0.000077s) SELECT * FROM `users` WHERE `id` = 3
+I, [2021-05-06T16:25:27.053412 #203]  INFO -- : (0.119301s) COMMIT
+I, [2021-05-06T16:25:27.053645 #203]  INFO -- : (0.000039s) BEGIN
+I, [2021-05-06T16:25:27.054062 #203]  INFO -- : (0.000161s) INSERT INTO `mentors` (`first_name`, `surname`, `username`, `gender`, `industry`, `company`, `sheffield_graduate`, `degree_field`, `email`, `password`) VALUES ('Mister', 'Planes', 'planes123', 'male', 'Aerospace', 'Testcompany', 1, 'aerospace', 'planes123@test.com', 'Testpass')
+I, [2021-05-06T16:25:27.054340 #203]  INFO -- : (0.000145s) SELECT * FROM `mentors` WHERE `id` = 1
+I, [2021-05-06T16:25:27.164046 #203]  INFO -- : (0.109625s) COMMIT
+I, [2021-05-06T16:25:27.164291 #203]  INFO -- : (0.000036s) BEGIN
+I, [2021-05-06T16:25:27.164644 #203]  INFO -- : (0.000183s) UPDATE `mentors` SET `id` = 3 WHERE (`id` = 1)
+I, [2021-05-06T16:25:27.270694 #203]  INFO -- : (0.105969s) COMMIT
+I, [2021-05-06T16:25:27.284990 #203]  INFO -- : (0.000175s) SELECT * FROM `users`
+I, [2021-05-06T16:25:27.285214 #203]  INFO -- : (0.000102s) SELECT * FROM `users`
+I, [2021-05-06T16:25:27.285336 #203]  INFO -- : (0.000016s) BEGIN
+I, [2021-05-06T16:25:27.285641 #203]  INFO -- : (0.000143s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('Miss', 'Plants', 'plants123', 'plants123@test.com', 'Testpass', 'mentor')
+I, [2021-05-06T16:25:27.285873 #203]  INFO -- : (0.000107s) SELECT * FROM `users` WHERE `id` = 4
+I, [2021-05-06T16:25:27.394928 #203]  INFO -- : (0.108970s) COMMIT
+I, [2021-05-06T16:25:27.395147 #203]  INFO -- : (0.000036s) BEGIN
+I, [2021-05-06T16:25:27.395490 #203]  INFO -- : (0.000154s) INSERT INTO `mentors` (`first_name`, `surname`, `username`, `gender`, `industry`, `company`, `sheffield_graduate`, `degree_field`, `email`, `password`) VALUES ('Miss', 'Plants', 'plants123', 'female', 'Agriculture', 'Testcompany', 1, 'agriculture', 'plants123@test.com', 'Testpass')
+I, [2021-05-06T16:25:27.395753 #203]  INFO -- : (0.000133s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-05-06T16:25:27.511657 #203]  INFO -- : (0.115815s) COMMIT
+I, [2021-05-06T16:25:27.535788 #203]  INFO -- : (0.000228s) SELECT * FROM `users`
+I, [2021-05-06T16:25:27.536073 #203]  INFO -- : (0.000140s) SELECT * FROM `users`
+I, [2021-05-06T16:25:27.549883 #203]  INFO -- : (0.000195s) SELECT * FROM `users` WHERE (`username` = 'Mentee1') LIMIT 1
+I, [2021-05-06T16:25:27.558300 #203]  INFO -- : (0.000138s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:27.558529 #203]  INFO -- : (0.000099s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:27.558733 #203]  INFO -- : (0.000086s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:27.558889 #203]  INFO -- : (0.000076s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:27.559240 #203]  INFO -- : (0.000133s) SELECT * FROM `mentees` WHERE (`username` LIKE '%TestMentee%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T16:25:27.559492 #203]  INFO -- : (0.000108s) SELECT * FROM `mentees` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:27.560378 #203]  INFO -- : (0.000123s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:27.560546 #203]  INFO -- : (0.000103s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:27.560673 #203]  INFO -- : (0.000075s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:27.562808 #203]  INFO -- : (0.000145s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:27.563003 #203]  INFO -- : (0.000105s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:27.563135 #203]  INFO -- : (0.000077s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:27.563368 #203]  INFO -- : (0.000065s) SELECT * FROM `requests` WHERE (`mentee_id` = 1)
+I, [2021-05-06T16:25:27.570456 #203]  INFO -- : (0.000135s) SELECT count(*) AS 'count' FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\')) LIMIT 1
+I, [2021-05-06T16:25:27.570751 #203]  INFO -- : (0.000149s) SELECT * FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\'))
+I, [2021-05-06T16:25:27.583795 #203]  INFO -- : (0.000142s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:27.584021 #203]  INFO -- : (0.000098s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:27.587358 #203]  INFO -- : (0.000214s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:27.587560 #203]  INFO -- : (0.000084s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:27.587868 #203]  INFO -- : (0.000130s) SELECT * FROM `mentees` WHERE (`username` LIKE '%TestMentee%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T16:25:27.588167 #203]  INFO -- : (0.000121s) SELECT * FROM `mentees` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:27.589090 #203]  INFO -- : (0.000121s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:27.589255 #203]  INFO -- : (0.000101s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:27.589383 #203]  INFO -- : (0.000076s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:27.591453 #203]  INFO -- : (0.000128s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:27.591625 #203]  INFO -- : (0.000106s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:27.591754 #203]  INFO -- : (0.000076s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:27.591950 #203]  INFO -- : (0.000064s) SELECT * FROM `requests` WHERE (`mentee_id` = 1)
+I, [2021-05-06T16:25:27.592337 #203]  INFO -- : (0.000086s) SELECT count(*) AS 'count' FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\')) LIMIT 1
+I, [2021-05-06T16:25:27.592595 #203]  INFO -- : (0.000152s) SELECT * FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\'))
+I, [2021-05-06T16:25:27.599334 #203]  INFO -- : (0.000129s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:27.599522 #203]  INFO -- : (0.000102s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:27.599648 #203]  INFO -- : (0.000073s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:27.599824 #203]  INFO -- : (0.000059s) SELECT * FROM `requests` WHERE (`mentee_id` = 1)
+I, [2021-05-06T16:25:27.600209 #203]  INFO -- : (0.000101s) SELECT count(*) AS 'count' FROM `mentors` WHERE ((`gender` LIKE 'male%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\')) LIMIT 1
+I, [2021-05-06T16:25:27.600438 #203]  INFO -- : (0.000123s) SELECT * FROM `mentors` WHERE ((`gender` LIKE 'male%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\'))
+I, [2021-05-06T16:25:27.612204 #203]  INFO -- : (0.000113s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:27.612392 #203]  INFO -- : (0.000081s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:27.612578 #203]  INFO -- : (0.000081s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:27.612732 #203]  INFO -- : (0.000079s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:27.613034 #203]  INFO -- : (0.000124s) SELECT * FROM `mentees` WHERE (`username` LIKE '%TestMentee%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T16:25:27.613234 #203]  INFO -- : (0.000108s) SELECT * FROM `mentees` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:27.614137 #203]  INFO -- : (0.000122s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:27.614305 #203]  INFO -- : (0.000103s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:27.614427 #203]  INFO -- : (0.000071s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:27.619294 #203]  INFO -- : (0.000139s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:27.619469 #203]  INFO -- : (0.000099s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:27.619594 #203]  INFO -- : (0.000072s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:27.619795 #203]  INFO -- : (0.000063s) SELECT * FROM `requests` WHERE (`mentee_id` = 1)
+I, [2021-05-06T16:25:27.620181 #203]  INFO -- : (0.000084s) SELECT count(*) AS 'count' FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\')) LIMIT 1
+I, [2021-05-06T16:25:27.620422 #203]  INFO -- : (0.000137s) SELECT * FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\'))
+I, [2021-05-06T16:25:27.627047 #203]  INFO -- : (0.000130s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:27.627217 #203]  INFO -- : (0.000099s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:27.627341 #203]  INFO -- : (0.000071s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:27.627517 #203]  INFO -- : (0.000060s) SELECT * FROM `requests` WHERE (`mentee_id` = 1)
+I, [2021-05-06T16:25:27.627883 #203]  INFO -- : (0.000083s) SELECT count(*) AS 'count' FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE 'Agriculture%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\')) LIMIT 1
+I, [2021-05-06T16:25:27.628099 #203]  INFO -- : (0.000117s) SELECT * FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE 'Agriculture%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\'))
+I, [2021-05-06T16:25:27.639844 #203]  INFO -- : (0.000113s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:27.640035 #203]  INFO -- : (0.000083s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:27.640217 #203]  INFO -- : (0.000079s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:27.640384 #203]  INFO -- : (0.000075s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:27.640656 #203]  INFO -- : (0.000120s) SELECT * FROM `mentees` WHERE (`username` LIKE '%TestMentee%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T16:25:27.640846 #203]  INFO -- : (0.000102s) SELECT * FROM `mentees` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:27.641680 #203]  INFO -- : (0.000120s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:27.641868 #203]  INFO -- : (0.000123s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:27.641995 #203]  INFO -- : (0.000073s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:27.646714 #203]  INFO -- : (0.000130s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:27.646883 #203]  INFO -- : (0.000101s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:27.647008 #203]  INFO -- : (0.000073s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:27.647196 #203]  INFO -- : (0.000061s) SELECT * FROM `requests` WHERE (`mentee_id` = 1)
+I, [2021-05-06T16:25:27.647570 #203]  INFO -- : (0.000084s) SELECT count(*) AS 'count' FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\')) LIMIT 1
+I, [2021-05-06T16:25:27.647805 #203]  INFO -- : (0.000134s) SELECT * FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\'))
+I, [2021-05-06T16:25:27.654315 #203]  INFO -- : (0.000127s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:27.654481 #203]  INFO -- : (0.000100s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:27.654604 #203]  INFO -- : (0.000071s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:27.654776 #203]  INFO -- : (0.000059s) SELECT * FROM `requests` WHERE (`mentee_id` = 1)
+I, [2021-05-06T16:25:27.655159 #203]  INFO -- : (0.000086s) SELECT count(*) AS 'count' FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE 'aerospace%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\')) LIMIT 1
+I, [2021-05-06T16:25:27.655379 #203]  INFO -- : (0.000117s) SELECT * FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE 'aerospace%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\'))
+I, [2021-05-06T16:25:27.686378 #203]  INFO -- : (0.000153s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:27.686597 #203]  INFO -- : (0.000090s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:27.686790 #203]  INFO -- : (0.000085s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:27.686953 #203]  INFO -- : (0.000083s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:27.687515 #203]  INFO -- : (0.000392s) SELECT * FROM `mentees` WHERE (`username` LIKE '%TestMentee%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T16:25:27.687734 #203]  INFO -- : (0.000115s) SELECT * FROM `mentees` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:27.689681 #203]  INFO -- : (0.000124s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:27.689866 #203]  INFO -- : (0.000117s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:27.690856 #203]  INFO -- : (0.000932s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:27.700345 #203]  INFO -- : (0.000148s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:27.700534 #203]  INFO -- : (0.000111s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:27.700662 #203]  INFO -- : (0.000078s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:27.700907 #203]  INFO -- : (0.000073s) SELECT * FROM `requests` WHERE (`mentee_id` = 1)
+I, [2021-05-06T16:25:27.701315 #203]  INFO -- : (0.000087s) SELECT count(*) AS 'count' FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\')) LIMIT 1
+I, [2021-05-06T16:25:27.701575 #203]  INFO -- : (0.000140s) SELECT * FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\'))
+I, [2021-05-06T16:25:27.708443 #203]  INFO -- : (0.000135s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:27.708618 #203]  INFO -- : (0.000102s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:27.708748 #203]  INFO -- : (0.000077s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:27.708931 #203]  INFO -- : (0.000061s) SELECT * FROM `requests` WHERE (`mentee_id` = 1)
+I, [2021-05-06T16:25:27.709301 #203]  INFO -- : (0.000081s) SELECT count(*) AS 'count' FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE 'Tourism%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\')) LIMIT 1
+I, [2021-05-06T16:25:27.735165 #203]  INFO -- : (0.000135s) SELECT * FROM `users`
+I, [2021-05-06T16:25:27.735335 #203]  INFO -- : (0.000081s) SELECT * FROM `users`
+I, [2021-05-06T16:25:27.740514 #203]  INFO -- : (0.000100s) SELECT * FROM `users` WHERE (`username` = 'Mentee1') LIMIT 1
+I, [2021-05-06T16:25:27.745481 #203]  INFO -- : (0.000112s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:27.745665 #203]  INFO -- : (0.000080s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:27.745871 #203]  INFO -- : (0.000102s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:27.746029 #203]  INFO -- : (0.000076s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:27.746312 #203]  INFO -- : (0.000117s) SELECT * FROM `mentees` WHERE (`username` LIKE '%TestMentee%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T16:25:27.746500 #203]  INFO -- : (0.000101s) SELECT * FROM `mentees` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:27.747304 #203]  INFO -- : (0.000117s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:27.747465 #203]  INFO -- : (0.000097s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:27.747588 #203]  INFO -- : (0.000072s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:27.753156 #203]  INFO -- : (0.000153s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:27.753331 #203]  INFO -- : (0.000102s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:27.753459 #203]  INFO -- : (0.000074s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:27.753673 #203]  INFO -- : (0.000018s) BEGIN
+I, [2021-05-06T16:25:27.754126 #203]  INFO -- : (0.000212s) UPDATE `mentees` SET `biography` = '', `email` = 'newmenteetest@test.com' WHERE (`id` = 1)
+I, [2021-05-06T16:25:27.857967 #203]  INFO -- : (0.103748s) COMMIT
+I, [2021-05-06T16:25:27.858251 #203]  INFO -- : (0.000042s) BEGIN
+I, [2021-05-06T16:25:27.858692 #203]  INFO -- : (0.000181s) UPDATE `users` SET `email` = 'newmenteetest@test.com' WHERE (`id` = 1)
+I, [2021-05-06T16:25:27.978648 #203]  INFO -- : (0.119856s) COMMIT
+I, [2021-05-06T16:25:27.980467 #203]  INFO -- : (0.000260s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:27.980794 #203]  INFO -- : (0.000199s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:27.981010 #203]  INFO -- : (0.000124s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:28.101384 #203]  INFO -- : (0.109418s) DELETE FROM `mentees` WHERE (1 = 1)
+I, [2021-05-06T16:25:28.221327 #203]  INFO -- : (0.119677s) DELETE FROM `mentors` WHERE (1 = 1)
+I, [2021-05-06T16:25:28.337167 #203]  INFO -- : (0.115571s) DELETE FROM `admins` WHERE (1 = 1)
+I, [2021-05-06T16:25:28.456843 #203]  INFO -- : (0.119397s) DELETE FROM `users` WHERE (1 = 1)
+I, [2021-05-06T16:25:28.568853 #203]  INFO -- : (0.111700s) DELETE FROM `codes` WHERE (1 = 1)
+I, [2021-05-06T16:25:28.569242 #203]  INFO -- : (0.000103s) DELETE FROM `requests` WHERE (1 = 1)
+I, [2021-05-06T16:25:28.569410 #203]  INFO -- : (0.000053s) DELETE FROM `questions_answers` WHERE (1 = 1)
+I, [2021-05-06T16:25:28.589562 #203]  INFO -- : (0.000165s) SELECT * FROM `users`
+I, [2021-05-06T16:25:28.589751 #203]  INFO -- : (0.000081s) SELECT * FROM `users`
+I, [2021-05-06T16:25:28.589931 #203]  INFO -- : (0.000021s) BEGIN
+I, [2021-05-06T16:25:28.590305 #203]  INFO -- : (0.000160s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('MenteeFirst', 'MenteeSur', 'TestMentee', 'mentee123@test.com', 'Testpass', 'mentee')
+I, [2021-05-06T16:25:28.590566 #203]  INFO -- : (0.000105s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:28.705032 #203]  INFO -- : (0.114369s) COMMIT
+I, [2021-05-06T16:25:28.705338 #203]  INFO -- : (0.000049s) BEGIN
+I, [2021-05-06T16:25:28.705852 #203]  INFO -- : (0.000235s) INSERT INTO `mentees` (`first_name`, `surname`, `username`, `course`, `university`, `gender`, `year_of_study`, `email`, `password`) VALUES ('MenteeFirst', 'MenteeSur', 'TestMentee', 'COM1001', 'Aga Khan University', 'male', 1, 'mentee123@test.com', 'Testpass')
+I, [2021-05-06T16:25:28.706250 #203]  INFO -- : (0.000205s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:28.822569 #203]  INFO -- : (0.116206s) COMMIT
+I, [2021-05-06T16:25:28.832766 #203]  INFO -- : (0.000196s) SELECT * FROM `users` WHERE (`username` = 'Mentee1') LIMIT 1
+I, [2021-05-06T16:25:28.841061 #203]  INFO -- : (0.000196s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:28.841343 #203]  INFO -- : (0.000122s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:28.841600 #203]  INFO -- : (0.000117s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:28.841836 #203]  INFO -- : (0.000128s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:28.842296 #203]  INFO -- : (0.000192s) SELECT * FROM `mentees` WHERE (`username` LIKE '%TestMentee%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T16:25:28.842619 #203]  INFO -- : (0.000166s) SELECT * FROM `mentees` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:28.843936 #203]  INFO -- : (0.000183s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:28.844180 #203]  INFO -- : (0.000154s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:28.844366 #203]  INFO -- : (0.000113s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:28.970672 #203]  INFO -- : (0.123765s) DELETE FROM `mentees` WHERE (1 = 1)
+I, [2021-05-06T16:25:28.971049 #203]  INFO -- : (0.000103s) DELETE FROM `mentors` WHERE (1 = 1)
+I, [2021-05-06T16:25:28.971269 #203]  INFO -- : (0.000063s) DELETE FROM `admins` WHERE (1 = 1)
+I, [2021-05-06T16:25:29.086988 #203]  INFO -- : (0.115567s) DELETE FROM `users` WHERE (1 = 1)
+I, [2021-05-06T16:25:29.087338 #203]  INFO -- : (0.000095s) DELETE FROM `codes` WHERE (1 = 1)
+I, [2021-05-06T16:25:29.087529 #203]  INFO -- : (0.000064s) DELETE FROM `requests` WHERE (1 = 1)
+I, [2021-05-06T16:25:29.087688 #203]  INFO -- : (0.000051s) DELETE FROM `questions_answers` WHERE (1 = 1)
+I, [2021-05-06T16:25:29.111868 #203]  INFO -- : (0.000171s) SELECT * FROM `users`
+I, [2021-05-06T16:25:29.112076 #203]  INFO -- : (0.000091s) SELECT * FROM `users`
+I, [2021-05-06T16:25:29.112235 #203]  INFO -- : (0.000020s) BEGIN
+I, [2021-05-06T16:25:29.112548 #203]  INFO -- : (0.000138s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('MenteeFirst', 'MenteeSur', 'TestMentee', 'mentee123@test.com', 'Testpass', 'mentee')
+I, [2021-05-06T16:25:29.112776 #203]  INFO -- : (0.000084s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:29.288589 #203]  INFO -- : (0.175724s) COMMIT
+I, [2021-05-06T16:25:29.288822 #203]  INFO -- : (0.000037s) BEGIN
+I, [2021-05-06T16:25:29.289209 #203]  INFO -- : (0.000181s) INSERT INTO `mentees` (`first_name`, `surname`, `username`, `course`, `university`, `gender`, `year_of_study`, `email`, `password`) VALUES ('MenteeFirst', 'MenteeSur', 'TestMentee', 'COM1001', 'Aga Khan University', 'male', 1, 'mentee123@test.com', 'Testpass')
+I, [2021-05-06T16:25:29.289515 #203]  INFO -- : (0.000141s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:29.426435 #203]  INFO -- : (0.136815s) COMMIT
+I, [2021-05-06T16:25:29.437184 #203]  INFO -- : (0.000204s) SELECT * FROM `users` WHERE (`username` = 'Mentee1') LIMIT 1
+I, [2021-05-06T16:25:29.446643 #203]  INFO -- : (0.000220s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:29.447004 #203]  INFO -- : (0.000146s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:29.447293 #203]  INFO -- : (0.000127s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:29.447532 #203]  INFO -- : (0.000118s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:29.447999 #203]  INFO -- : (0.000197s) SELECT * FROM `mentees` WHERE (`username` LIKE '%TestMentee%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T16:25:29.448316 #203]  INFO -- : (0.000175s) SELECT * FROM `mentees` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:29.449844 #203]  INFO -- : (0.000212s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:29.450103 #203]  INFO -- : (0.000165s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:29.450307 #203]  INFO -- : (0.000120s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:29.482064 #203]  INFO -- : (0.000228s) SELECT * FROM `users`
+I, [2021-05-06T16:25:29.482338 #203]  INFO -- : (0.000138s) SELECT * FROM `users`
+I, [2021-05-06T16:25:29.482521 #203]  INFO -- : (0.000028s) BEGIN
+I, [2021-05-06T16:25:29.482977 #203]  INFO -- : (0.000202s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('MentorFirst', 'Surname', 'TestMentor', 'mentortest@test.com', 'Testpass', 'mentor')
+I, [2021-05-06T16:25:29.483291 #203]  INFO -- : (0.000120s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-05-06T16:25:29.589855 #203]  INFO -- : (0.106413s) COMMIT
+I, [2021-05-06T16:25:29.590096 #203]  INFO -- : (0.000042s) BEGIN
+I, [2021-05-06T16:25:29.590490 #203]  INFO -- : (0.000183s) INSERT INTO `mentors` (`first_name`, `surname`, `username`, `gender`, `industry`, `company`, `sheffield_graduate`, `degree_field`, `email`, `password`) VALUES ('MentorFirst', 'Surname', 'TestMentor', 'male', 'Aerospace', 'Testcompany', 1, 'aerospace', 'mentortest@test.com', 'Testpass')
+I, [2021-05-06T16:25:29.590763 #203]  INFO -- : (0.000133s) SELECT * FROM `mentors` WHERE `id` = 1
+I, [2021-05-06T16:25:29.702168 #203]  INFO -- : (0.111311s) COMMIT
+I, [2021-05-06T16:25:29.702466 #203]  INFO -- : (0.000043s) BEGIN
+I, [2021-05-06T16:25:29.702855 #203]  INFO -- : (0.000172s) UPDATE `mentors` SET `id` = 2 WHERE (`id` = 1)
+I, [2021-05-06T16:25:29.846226 #203]  INFO -- : (0.143261s) COMMIT
+I, [2021-05-06T16:25:29.852918 #203]  INFO -- : (0.000165s) SELECT * FROM `users` WHERE (`username` = 'TestMentor') LIMIT 1
+I, [2021-05-06T16:25:29.853143 #203]  INFO -- : (0.000089s) SELECT * FROM `users` WHERE (`username` = 'TestMentor') LIMIT 1
+I, [2021-05-06T16:25:29.853342 #203]  INFO -- : (0.000098s) SELECT * FROM `users` WHERE (`username` = 'TestMentor') LIMIT 1
+I, [2021-05-06T16:25:29.853495 #203]  INFO -- : (0.000075s) SELECT * FROM `users` WHERE (`username` = 'TestMentor') LIMIT 1
+I, [2021-05-06T16:25:29.853843 #203]  INFO -- : (0.000157s) SELECT * FROM `mentors` WHERE (`username` LIKE '%TestMentor%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T16:25:29.854100 #203]  INFO -- : (0.000108s) SELECT * FROM `mentors` WHERE (`username` = 'TestMentor') LIMIT 1
+I, [2021-05-06T16:25:29.855071 #203]  INFO -- : (0.000127s) SELECT * FROM `mentors` WHERE `id` = 2
+I, [2021-05-06T16:25:29.855234 #203]  INFO -- : (0.000096s) SELECT * FROM `mentors` WHERE `id` = 2
+I, [2021-05-06T16:25:29.855357 #203]  INFO -- : (0.000072s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-05-06T16:25:30.090946 #203]  INFO -- : (0.218396s) DELETE FROM `mentees` WHERE (1 = 1)
+I, [2021-05-06T16:25:30.211021 #203]  INFO -- : (0.119804s) DELETE FROM `mentors` WHERE (1 = 1)
+I, [2021-05-06T16:25:30.211389 #203]  INFO -- : (0.000100s) DELETE FROM `admins` WHERE (1 = 1)
+I, [2021-05-06T16:25:30.327369 #203]  INFO -- : (0.115824s) DELETE FROM `users` WHERE (1 = 1)
+I, [2021-05-06T16:25:30.327690 #203]  INFO -- : (0.000090s) DELETE FROM `codes` WHERE (1 = 1)
+I, [2021-05-06T16:25:30.327829 #203]  INFO -- : (0.000041s) DELETE FROM `requests` WHERE (1 = 1)
+I, [2021-05-06T16:25:30.327942 #203]  INFO -- : (0.000036s) DELETE FROM `questions_answers` WHERE (1 = 1)
+I, [2021-05-06T16:25:30.364053 #203]  INFO -- : (0.000051s) BEGIN
+I, [2021-05-06T16:25:30.364519 #203]  INFO -- : (0.000220s) INSERT INTO `codes` (`id`, `code`, `used`) VALUES (75, 'something123', 0)
+I, [2021-05-06T16:25:30.364767 #203]  INFO -- : (0.000094s) SELECT * FROM `codes` WHERE `id` = 75
+I, [2021-05-06T16:25:30.497902 #203]  INFO -- : (0.133034s) COMMIT
+I, [2021-05-06T16:25:30.510407 #203]  INFO -- : (0.000140s) SELECT * FROM `users`
+I, [2021-05-06T16:25:30.510564 #203]  INFO -- : (0.000066s) SELECT * FROM `users`
+I, [2021-05-06T16:25:30.510675 #203]  INFO -- : (0.000016s) BEGIN
+I, [2021-05-06T16:25:30.510966 #203]  INFO -- : (0.000137s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('AdminFirst', 'Surname', 'admin1', 'admin1@test.com', 'Testpass', 'admin')
+I, [2021-05-06T16:25:30.511173 #203]  INFO -- : (0.000086s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:30.613883 #203]  INFO -- : (0.102625s) COMMIT
+I, [2021-05-06T16:25:30.615692 #203]  INFO -- : (0.000050s) BEGIN
+I, [2021-05-06T16:25:30.616148 #203]  INFO -- : (0.000190s) INSERT INTO `admins` (`first_name`, `surname`, `username`, `admin_code`, `email`, `password`) VALUES ('AdminFirst', 'Surname', 'admin1', 'something123', 'admin1@test.com', 'Testpass')
+I, [2021-05-06T16:25:30.616450 #203]  INFO -- : (0.000137s) SELECT * FROM `admins` WHERE `id` = 1
+I, [2021-05-06T16:25:30.711325 #203]  INFO -- : (0.094783s) COMMIT
+I, [2021-05-06T16:25:30.740835 #203]  INFO -- : (0.000163s) SELECT * FROM `users`
+I, [2021-05-06T16:25:30.741013 #203]  INFO -- : (0.000080s) SELECT * FROM `users`
+I, [2021-05-06T16:25:30.741130 #203]  INFO -- : (0.000017s) BEGIN
+I, [2021-05-06T16:25:30.741422 #203]  INFO -- : (0.000134s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('AdminFirst', 'Surname', 'admin2', 'admin2test@test.com', 'Testpass', 'admin')
+I, [2021-05-06T16:25:30.741622 #203]  INFO -- : (0.000077s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-05-06T16:25:30.855770 #203]  INFO -- : (0.114063s) COMMIT
+I, [2021-05-06T16:25:30.856034 #203]  INFO -- : (0.000041s) BEGIN
+I, [2021-05-06T16:25:30.856428 #203]  INFO -- : (0.000171s) INSERT INTO `admins` (`first_name`, `surname`, `username`, `admin_code`, `email`, `password`) VALUES ('AdminFirst', 'Surname', 'admin2', 'something123', 'admin2test@test.com', 'Testpass')
+I, [2021-05-06T16:25:30.856715 #203]  INFO -- : (0.000133s) SELECT * FROM `admins` WHERE `id` = 2
+I, [2021-05-06T16:25:30.961646 #203]  INFO -- : (0.103942s) COMMIT
+I, [2021-05-06T16:25:30.987810 #203]  INFO -- : (0.000221s) SELECT * FROM `users`
+I, [2021-05-06T16:25:30.988071 #203]  INFO -- : (0.000136s) SELECT * FROM `users`
+I, [2021-05-06T16:25:30.988217 #203]  INFO -- : (0.000021s) BEGIN
+I, [2021-05-06T16:25:30.988610 #203]  INFO -- : (0.000177s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('AdminFirst', 'Surname', 'admin3', 'admin3test@test.com', 'Testpass', 'admin')
+I, [2021-05-06T16:25:30.988873 #203]  INFO -- : (0.000104s) SELECT * FROM `users` WHERE `id` = 3
+I, [2021-05-06T16:25:31.109978 #203]  INFO -- : (0.121012s) COMMIT
+I, [2021-05-06T16:25:31.110215 #203]  INFO -- : (0.000039s) BEGIN
+I, [2021-05-06T16:25:31.110581 #203]  INFO -- : (0.000174s) INSERT INTO `admins` (`first_name`, `surname`, `username`, `admin_code`, `email`, `password`) VALUES ('AdminFirst', 'Surname', 'admin3', 'different', 'admin3test@test.com', 'Testpass')
+I, [2021-05-06T16:25:31.110847 #203]  INFO -- : (0.000115s) SELECT * FROM `admins` WHERE `id` = 3
+I, [2021-05-06T16:25:31.212931 #203]  INFO -- : (0.101987s) COMMIT
+I, [2021-05-06T16:25:31.233430 #203]  INFO -- : (0.000205s) SELECT * FROM `users`
+I, [2021-05-06T16:25:31.233684 #203]  INFO -- : (0.000140s) SELECT * FROM `users`
+I, [2021-05-06T16:25:31.233872 #203]  INFO -- : (0.000026s) BEGIN
+I, [2021-05-06T16:25:31.234256 #203]  INFO -- : (0.000173s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('MenteeFirst', 'MenteeSur', 'TestMentee', 'mentee123@test.com', 'Testpass', 'mentee')
+I, [2021-05-06T16:25:31.234504 #203]  INFO -- : (0.000096s) SELECT * FROM `users` WHERE `id` = 4
+I, [2021-05-06T16:25:31.338744 #203]  INFO -- : (0.104145s) COMMIT
+I, [2021-05-06T16:25:31.338998 #203]  INFO -- : (0.000042s) BEGIN
+I, [2021-05-06T16:25:31.339371 #203]  INFO -- : (0.000166s) INSERT INTO `mentees` (`first_name`, `surname`, `username`, `course`, `university`, `gender`, `year_of_study`, `email`, `password`) VALUES ('MenteeFirst', 'MenteeSur', 'TestMentee', 'COM1001', 'Aga Khan University', 'male', 1, 'mentee123@test.com', 'Testpass')
+I, [2021-05-06T16:25:31.339700 #203]  INFO -- : (0.000161s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:31.442837 #203]  INFO -- : (0.103027s) COMMIT
+I, [2021-05-06T16:25:31.443092 #203]  INFO -- : (0.000037s) BEGIN
+I, [2021-05-06T16:25:31.443480 #203]  INFO -- : (0.000209s) UPDATE `mentees` SET `id` = 4 WHERE (`id` = 1)
+I, [2021-05-06T16:25:31.567990 #203]  INFO -- : (0.124393s) COMMIT
+I, [2021-05-06T16:25:31.579979 #203]  INFO -- : (0.000228s) SELECT * FROM `users` WHERE (`username` = 'Mentee1') LIMIT 1
+I, [2021-05-06T16:25:31.592170 #203]  INFO -- : (0.000170s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:31.592440 #203]  INFO -- : (0.000105s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:31.592663 #203]  INFO -- : (0.000102s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:31.592850 #203]  INFO -- : (0.000088s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:31.593188 #203]  INFO -- : (0.000137s) SELECT * FROM `mentees` WHERE (`username` LIKE '%TestMentee%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T16:25:31.593417 #203]  INFO -- : (0.000122s) SELECT * FROM `mentees` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:31.594520 #203]  INFO -- : (0.000181s) SELECT * FROM `mentees` WHERE `id` = 4
+I, [2021-05-06T16:25:31.594715 #203]  INFO -- : (0.000117s) SELECT * FROM `mentees` WHERE `id` = 4
+I, [2021-05-06T16:25:31.594867 #203]  INFO -- : (0.000086s) SELECT * FROM `users` WHERE `id` = 4
+I, [2021-05-06T16:25:31.597140 #203]  INFO -- : (0.000129s) SELECT * FROM `mentees` WHERE `id` = 4
+I, [2021-05-06T16:25:31.597328 #203]  INFO -- : (0.000109s) SELECT * FROM `mentees` WHERE `id` = 4
+I, [2021-05-06T16:25:31.597471 #203]  INFO -- : (0.000080s) SELECT * FROM `users` WHERE `id` = 4
+I, [2021-05-06T16:25:31.597628 #203]  INFO -- : (0.000060s) SELECT * FROM `questions_answers`
+I, [2021-05-06T16:25:31.613275 #203]  INFO -- : (0.000160s) SELECT * FROM `users`
+I, [2021-05-06T16:25:31.613493 #203]  INFO -- : (0.000112s) SELECT * FROM `users`
+I, [2021-05-06T16:25:31.618879 #203]  INFO -- : (0.000113s) SELECT * FROM `users` WHERE (`username` = 'Mentee1') LIMIT 1
+I, [2021-05-06T16:25:31.634758 #203]  INFO -- : (0.000162s) SELECT * FROM `users`
+I, [2021-05-06T16:25:31.634965 #203]  INFO -- : (0.000112s) SELECT * FROM `users`
+I, [2021-05-06T16:25:31.635097 #203]  INFO -- : (0.000019s) BEGIN
+I, [2021-05-06T16:25:31.635428 #203]  INFO -- : (0.000160s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('MentorFirst', 'Surname', 'TestMentor', 'mentortest@test.com', 'Testpass', 'mentor')
+I, [2021-05-06T16:25:31.635648 #203]  INFO -- : (0.000076s) SELECT * FROM `users` WHERE `id` = 5
+I, [2021-05-06T16:25:31.743255 #203]  INFO -- : (0.107502s) COMMIT
+I, [2021-05-06T16:25:31.743526 #203]  INFO -- : (0.000043s) BEGIN
+I, [2021-05-06T16:25:31.743981 #203]  INFO -- : (0.000188s) INSERT INTO `mentors` (`first_name`, `surname`, `username`, `gender`, `industry`, `company`, `sheffield_graduate`, `degree_field`, `email`, `password`) VALUES ('MentorFirst', 'Surname', 'TestMentor', 'male', 'Aerospace', 'Testcompany', 1, 'aerospace', 'mentortest@test.com', 'Testpass')
+I, [2021-05-06T16:25:31.744320 #203]  INFO -- : (0.000182s) SELECT * FROM `mentors` WHERE `id` = 1
+I, [2021-05-06T16:25:31.853232 #203]  INFO -- : (0.108821s) COMMIT
+I, [2021-05-06T16:25:31.853482 #203]  INFO -- : (0.000036s) BEGIN
+I, [2021-05-06T16:25:31.853839 #203]  INFO -- : (0.000191s) UPDATE `mentors` SET `id` = 5 WHERE (`id` = 1)
+I, [2021-05-06T16:25:32.005444 #203]  INFO -- : (0.151511s) COMMIT
+I, [2021-05-06T16:25:32.012053 #203]  INFO -- : (0.000158s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:32.012292 #203]  INFO -- : (0.000096s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:32.012491 #203]  INFO -- : (0.000084s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:32.012657 #203]  INFO -- : (0.000078s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:32.012972 #203]  INFO -- : (0.000125s) SELECT * FROM `mentees` WHERE (`username` LIKE '%TestMentee%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T16:25:32.013188 #203]  INFO -- : (0.000113s) SELECT * FROM `mentees` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:32.014060 #203]  INFO -- : (0.000121s) SELECT * FROM `mentees` WHERE `id` = 4
+I, [2021-05-06T16:25:32.014237 #203]  INFO -- : (0.000107s) SELECT * FROM `mentees` WHERE `id` = 4
+I, [2021-05-06T16:25:32.014380 #203]  INFO -- : (0.000080s) SELECT * FROM `users` WHERE `id` = 4
+I, [2021-05-06T16:25:32.016441 #203]  INFO -- : (0.000138s) SELECT * FROM `mentees` WHERE `id` = 4
+I, [2021-05-06T16:25:32.016627 #203]  INFO -- : (0.000109s) SELECT * FROM `mentees` WHERE `id` = 4
+I, [2021-05-06T16:25:32.016769 #203]  INFO -- : (0.000081s) SELECT * FROM `users` WHERE `id` = 4
+I, [2021-05-06T16:25:32.016978 #203]  INFO -- : (0.000063s) SELECT * FROM `requests` WHERE (`mentee_id` = 4)
+I, [2021-05-06T16:25:32.017386 #203]  INFO -- : (0.000087s) SELECT count(*) AS 'count' FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\')) LIMIT 1
+I, [2021-05-06T16:25:32.017629 #203]  INFO -- : (0.000125s) SELECT * FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\'))
+I, [2021-05-06T16:25:32.021869 #203]  INFO -- : (0.000028s) BEGIN
+I, [2021-05-06T16:25:32.022225 #203]  INFO -- : (0.000174s) INSERT INTO `requests` (`mentee_id`, `mentor_id`, `accepted`) VALUES (4, 5, 0)
+I, [2021-05-06T16:25:32.022406 #203]  INFO -- : (0.000068s) SELECT * FROM `requests` WHERE `id` = 1
+I, [2021-05-06T16:25:32.171094 #203]  INFO -- : (0.148602s) COMMIT
+I, [2021-05-06T16:25:32.172437 #203]  INFO -- : (0.000185s) SELECT * FROM `mentees` WHERE `id` = 4
+I, [2021-05-06T16:25:32.172632 #203]  INFO -- : (0.000111s) SELECT * FROM `mentees` WHERE `id` = 4
+I, [2021-05-06T16:25:32.172770 #203]  INFO -- : (0.000078s) SELECT * FROM `users` WHERE `id` = 4
+I, [2021-05-06T16:25:32.173021 #203]  INFO -- : (0.000086s) SELECT * FROM `requests` WHERE (`mentee_id` = 4)
+I, [2021-05-06T16:25:32.173465 #203]  INFO -- : (0.000090s) SELECT count(*) AS 'count' FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\')) LIMIT 1
+I, [2021-05-06T16:25:32.173690 #203]  INFO -- : (0.000117s) SELECT * FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\'))
+I, [2021-05-06T16:25:32.185393 #203]  INFO -- : (0.000146s) SELECT * FROM `users` WHERE (`username` = 'TestMentor') LIMIT 1
+I, [2021-05-06T16:25:32.185611 #203]  INFO -- : (0.000090s) SELECT * FROM `users` WHERE (`username` = 'TestMentor') LIMIT 1
+I, [2021-05-06T16:25:32.185828 #203]  INFO -- : (0.000113s) SELECT * FROM `users` WHERE (`username` = 'TestMentor') LIMIT 1
+I, [2021-05-06T16:25:32.185989 #203]  INFO -- : (0.000081s) SELECT * FROM `users` WHERE (`username` = 'TestMentor') LIMIT 1
+I, [2021-05-06T16:25:32.186273 #203]  INFO -- : (0.000118s) SELECT * FROM `mentors` WHERE (`username` LIKE '%TestMentor%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T16:25:32.186501 #203]  INFO -- : (0.000104s) SELECT * FROM `mentors` WHERE (`username` = 'TestMentor') LIMIT 1
+I, [2021-05-06T16:25:32.187391 #203]  INFO -- : (0.000118s) SELECT * FROM `mentors` WHERE `id` = 5
+I, [2021-05-06T16:25:32.187550 #203]  INFO -- : (0.000095s) SELECT * FROM `mentors` WHERE `id` = 5
+I, [2021-05-06T16:25:32.187674 #203]  INFO -- : (0.000074s) SELECT * FROM `users` WHERE `id` = 5
+I, [2021-05-06T16:25:32.189893 #203]  INFO -- : (0.000169s) SELECT * FROM `mentors` WHERE `id` = 5
+I, [2021-05-06T16:25:32.190064 #203]  INFO -- : (0.000106s) SELECT * FROM `mentors` WHERE `id` = 5
+I, [2021-05-06T16:25:32.190194 #203]  INFO -- : (0.000076s) SELECT * FROM `users` WHERE `id` = 5
+I, [2021-05-06T16:25:32.190380 #203]  INFO -- : (0.000072s) SELECT * FROM `requests` WHERE (`mentor_id` = 5)
+I, [2021-05-06T16:25:32.223234 #203]  INFO -- : (0.000103s) SELECT count(*) AS 'count' FROM `requests` WHERE (`mentor_id` = 5) LIMIT 1
+I, [2021-05-06T16:25:32.223452 #203]  INFO -- : (0.000123s) SELECT * FROM `mentees`
+I, [2021-05-06T16:25:32.223566 #203]  INFO -- : (0.000058s) SELECT count(*) AS 'count' FROM `requests` WHERE (`mentor_id` = 5) LIMIT 1
+I, [2021-05-06T16:25:32.223714 #203]  INFO -- : (0.000100s) SELECT * FROM `mentees`
+I, [2021-05-06T16:25:32.226815 #203]  INFO -- : (0.000025s) BEGIN
+I, [2021-05-06T16:25:32.227166 #203]  INFO -- : (0.000187s) INSERT INTO `codes` (`id`, `code`, `used`) VALUES (55, 'codetest', 0)
+I, [2021-05-06T16:25:32.227345 #203]  INFO -- : (0.000063s) SELECT * FROM `codes` WHERE `id` = 55
+I, [2021-05-06T16:25:32.342662 #203]  INFO -- : (0.115236s) COMMIT
+I, [2021-05-06T16:25:32.351404 #203]  INFO -- : (0.000191s) SELECT * FROM `users`
+I, [2021-05-06T16:25:32.351610 #203]  INFO -- : (0.000110s) SELECT * FROM `users`
+I, [2021-05-06T16:25:32.351730 #203]  INFO -- : (0.000017s) BEGIN
+I, [2021-05-06T16:25:32.352027 #203]  INFO -- : (0.000140s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('AdminFirst', 'Surname', 'TestAdmin', 'admintest@test.com', 'Testpass', 'admin')
+I, [2021-05-06T16:25:32.352233 #203]  INFO -- : (0.000082s) SELECT * FROM `users` WHERE `id` = 6
+I, [2021-05-06T16:25:32.483616 #203]  INFO -- : (0.131296s) COMMIT
+I, [2021-05-06T16:25:32.483884 #203]  INFO -- : (0.000043s) BEGIN
+I, [2021-05-06T16:25:32.484272 #203]  INFO -- : (0.000166s) INSERT INTO `admins` (`first_name`, `surname`, `username`, `admin_code`, `email`, `password`) VALUES ('AdminFirst', 'Surname', 'TestAdmin', 'testcode', 'admintest@test.com', 'Testpass')
+I, [2021-05-06T16:25:32.484557 #203]  INFO -- : (0.000134s) SELECT * FROM `admins` WHERE `id` = 4
+I, [2021-05-06T16:25:32.590789 #203]  INFO -- : (0.106141s) COMMIT
+I, [2021-05-06T16:25:32.591090 #203]  INFO -- : (0.000040s) BEGIN
+I, [2021-05-06T16:25:32.591492 #203]  INFO -- : (0.000205s) UPDATE `admins` SET `id` = 6 WHERE (`id` = 4)
+I, [2021-05-06T16:25:32.694107 #203]  INFO -- : (0.102521s) COMMIT
+I, [2021-05-06T16:25:32.708042 #203]  INFO -- : (0.000173s) SELECT * FROM `users`
+I, [2021-05-06T16:25:32.708226 #203]  INFO -- : (0.000101s) SELECT * FROM `users`
+I, [2021-05-06T16:25:32.717258 #203]  INFO -- : (0.000119s) SELECT * FROM `users` WHERE (`username` = 'Mentee1') LIMIT 1
+I, [2021-05-06T16:25:32.722521 #203]  INFO -- : (0.000122s) SELECT * FROM `users` WHERE (`username` = 'TestAdmin') LIMIT 1
+I, [2021-05-06T16:25:32.722734 #203]  INFO -- : (0.000086s) SELECT * FROM `users` WHERE (`username` = 'TestAdmin') LIMIT 1
+I, [2021-05-06T16:25:32.722920 #203]  INFO -- : (0.000085s) SELECT * FROM `users` WHERE (`username` = 'TestAdmin') LIMIT 1
+I, [2021-05-06T16:25:32.723216 #203]  INFO -- : (0.000099s) SELECT * FROM `admins` WHERE (`username` LIKE '%TestAdmin%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T16:25:32.723432 #203]  INFO -- : (0.000082s) SELECT * FROM `admins` WHERE (`username` = 'TestAdmin') LIMIT 1
+I, [2021-05-06T16:25:32.724218 #203]  INFO -- : (0.000094s) SELECT * FROM `admins` WHERE `id` = 6
+I, [2021-05-06T16:25:32.724354 #203]  INFO -- : (0.000072s) SELECT * FROM `admins` WHERE `id` = 6
+I, [2021-05-06T16:25:32.724472 #203]  INFO -- : (0.000068s) SELECT * FROM `users` WHERE `id` = 6
+I, [2021-05-06T16:25:32.726345 #203]  INFO -- : (0.000121s) SELECT * FROM `mentees`
+I, [2021-05-06T16:25:32.829855 #203]  INFO -- : (0.100185s) DELETE FROM `mentees` WHERE (1 = 1)
+I, [2021-05-06T16:25:32.944503 #203]  INFO -- : (0.114400s) DELETE FROM `mentors` WHERE (1 = 1)
+I, [2021-05-06T16:25:33.052427 #203]  INFO -- : (0.107688s) DELETE FROM `admins` WHERE (1 = 1)
+I, [2021-05-06T16:25:33.169307 #203]  INFO -- : (0.116650s) DELETE FROM `users` WHERE (1 = 1)
+I, [2021-05-06T16:25:33.272893 #203]  INFO -- : (0.103337s) DELETE FROM `codes` WHERE (1 = 1)
+I, [2021-05-06T16:25:33.380130 #203]  INFO -- : (0.106977s) DELETE FROM `requests` WHERE (1 = 1)
+I, [2021-05-06T16:25:33.380457 #203]  INFO -- : (0.000090s) DELETE FROM `questions_answers` WHERE (1 = 1)
+I, [2021-05-06T16:25:33.399450 #203]  INFO -- : (0.000134s) SELECT * FROM `users`
+I, [2021-05-06T16:25:33.399634 #203]  INFO -- : (0.000076s) SELECT * FROM `users`
+I, [2021-05-06T16:25:33.399771 #203]  INFO -- : (0.000023s) BEGIN
+I, [2021-05-06T16:25:33.403852 #203]  INFO -- : (0.003896s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('MentorFirst', 'Surname', 'TestMentor', 'mentortest@test.com', 'Testpass', 'mentor')
+I, [2021-05-06T16:25:33.404234 #203]  INFO -- : (0.000221s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:33.508712 #203]  INFO -- : (0.104373s) COMMIT
+I, [2021-05-06T16:25:33.508949 #203]  INFO -- : (0.000042s) BEGIN
+I, [2021-05-06T16:25:33.509341 #203]  INFO -- : (0.000169s) INSERT INTO `mentors` (`first_name`, `surname`, `username`, `gender`, `industry`, `company`, `sheffield_graduate`, `degree_field`, `email`, `password`) VALUES ('MentorFirst', 'Surname', 'TestMentor', 'male', 'Aerospace', 'Testcompany', 1, 'aerospace', 'mentortest@test.com', 'Testpass')
+I, [2021-05-06T16:25:33.509641 #203]  INFO -- : (0.000157s) SELECT * FROM `mentors` WHERE `id` = 1
+I, [2021-05-06T16:25:33.623684 #203]  INFO -- : (0.113951s) COMMIT
+I, [2021-05-06T16:25:33.630733 #203]  INFO -- : (0.000169s) SELECT * FROM `users` WHERE (`username` = 'TestMentor') LIMIT 1
+I, [2021-05-06T16:25:33.630948 #203]  INFO -- : (0.000089s) SELECT * FROM `users` WHERE (`username` = 'TestMentor') LIMIT 1
+I, [2021-05-06T16:25:33.631146 #203]  INFO -- : (0.000094s) SELECT * FROM `users` WHERE (`username` = 'TestMentor') LIMIT 1
+I, [2021-05-06T16:25:33.631302 #203]  INFO -- : (0.000078s) SELECT * FROM `users` WHERE (`username` = 'TestMentor') LIMIT 1
+I, [2021-05-06T16:25:33.631595 #203]  INFO -- : (0.000121s) SELECT * FROM `mentors` WHERE (`username` LIKE '%TestMentor%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T16:25:33.631874 #203]  INFO -- : (0.000110s) SELECT * FROM `mentors` WHERE (`username` = 'TestMentor') LIMIT 1
+I, [2021-05-06T16:25:33.632746 #203]  INFO -- : (0.000121s) SELECT * FROM `mentors` WHERE `id` = 1
+I, [2021-05-06T16:25:33.632909 #203]  INFO -- : (0.000096s) SELECT * FROM `mentors` WHERE `id` = 1
+I, [2021-05-06T16:25:33.633051 #203]  INFO -- : (0.000080s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:33.639086 #203]  INFO -- : (0.000127s) SELECT * FROM `mentors` WHERE `id` = 1
+I, [2021-05-06T16:25:33.639251 #203]  INFO -- : (0.000095s) SELECT * FROM `mentors` WHERE `id` = 1
+I, [2021-05-06T16:25:33.639376 #203]  INFO -- : (0.000073s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:33.639588 #203]  INFO -- : (0.000017s) BEGIN
+I, [2021-05-06T16:25:33.639880 #203]  INFO -- : (0.000133s) UPDATE `mentors` SET `biography` = 'Lorem Ipsum' WHERE (`id` = 1)
+I, [2021-05-06T16:25:33.762060 #203]  INFO -- : (0.122100s) COMMIT
+I, [2021-05-06T16:25:33.763265 #203]  INFO -- : (0.000176s) SELECT * FROM `mentors` WHERE `id` = 1
+I, [2021-05-06T16:25:33.763445 #203]  INFO -- : (0.000101s) SELECT * FROM `mentors` WHERE `id` = 1
+I, [2021-05-06T16:25:33.763571 #203]  INFO -- : (0.000075s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:33.767201 #203]  INFO -- : (0.000070s) DELETE FROM `mentees` WHERE (1 = 1)
+I, [2021-05-06T16:25:33.869436 #203]  INFO -- : (0.102092s) DELETE FROM `mentors` WHERE (1 = 1)
+I, [2021-05-06T16:25:33.869754 #203]  INFO -- : (0.000086s) DELETE FROM `admins` WHERE (1 = 1)
+I, [2021-05-06T16:25:33.963143 #203]  INFO -- : (0.093228s) DELETE FROM `users` WHERE (1 = 1)
+I, [2021-05-06T16:25:33.963620 #203]  INFO -- : (0.000101s) DELETE FROM `codes` WHERE (1 = 1)
+I, [2021-05-06T16:25:33.963787 #203]  INFO -- : (0.000049s) DELETE FROM `requests` WHERE (1 = 1)
+I, [2021-05-06T16:25:33.963929 #203]  INFO -- : (0.000043s) DELETE FROM `questions_answers` WHERE (1 = 1)
+I, [2021-05-06T16:25:33.964820 #203]  INFO -- : (0.000035s) BEGIN
+I, [2021-05-06T16:25:33.965194 #203]  INFO -- : (0.000159s) INSERT INTO `codes` (`id`, `code`, `used`) VALUES (65, 'testcode', 0)
+I, [2021-05-06T16:25:33.965478 #203]  INFO -- : (0.000106s) SELECT * FROM `codes` WHERE `id` = 65
+I, [2021-05-06T16:25:34.061378 #203]  INFO -- : (0.095810s) COMMIT
+I, [2021-05-06T16:25:34.069860 #203]  INFO -- : (0.000155s) SELECT * FROM `users`
+I, [2021-05-06T16:25:34.073282 #203]  INFO -- : (0.003325s) SELECT * FROM `users`
+I, [2021-05-06T16:25:34.073441 #203]  INFO -- : (0.000022s) BEGIN
+I, [2021-05-06T16:25:34.073827 #203]  INFO -- : (0.000159s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('AdminFirst', 'Surname', 'TestAdmin', 'admintest@test.com', 'Testpass', 'admin')
+I, [2021-05-06T16:25:34.074080 #203]  INFO -- : (0.000128s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:34.174866 #203]  INFO -- : (0.100702s) COMMIT
+I, [2021-05-06T16:25:34.175096 #203]  INFO -- : (0.000038s) BEGIN
+I, [2021-05-06T16:25:34.175486 #203]  INFO -- : (0.000196s) INSERT INTO `admins` (`first_name`, `surname`, `username`, `admin_code`, `email`, `password`) VALUES ('AdminFirst', 'Surname', 'TestAdmin', 'testcode', 'admintest@test.com', 'Testpass')
+I, [2021-05-06T16:25:34.175781 #203]  INFO -- : (0.000146s) SELECT * FROM `admins` WHERE `id` = 1
+I, [2021-05-06T16:25:34.289464 #203]  INFO -- : (0.113581s) COMMIT
+I, [2021-05-06T16:25:34.308814 #203]  INFO -- : (0.000153s) SELECT * FROM `users`
+I, [2021-05-06T16:25:34.309021 #203]  INFO -- : (0.000114s) SELECT * FROM `users`
+I, [2021-05-06T16:25:34.309169 #203]  INFO -- : (0.000019s) BEGIN
+I, [2021-05-06T16:25:34.309481 #203]  INFO -- : (0.000142s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('MenteeOne', 'SurOne', 'TestMentee1', 'mentee123@test.com', 'Testpass', 'mentee')
+I, [2021-05-06T16:25:34.309690 #203]  INFO -- : (0.000079s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-05-06T16:25:34.426859 #203]  INFO -- : (0.117074s) COMMIT
+I, [2021-05-06T16:25:34.427151 #203]  INFO -- : (0.000049s) BEGIN
+I, [2021-05-06T16:25:34.427619 #203]  INFO -- : (0.000202s) INSERT INTO `mentees` (`first_name`, `surname`, `username`, `course`, `university`, `gender`, `year_of_study`, `email`, `password`) VALUES ('MenteeOne', 'SurOne', 'TestMentee1', 'COM1001', 'Aga Khan University', 'male', 1, 'mentee123@test.com', 'Testpass')
+I, [2021-05-06T16:25:34.427980 #203]  INFO -- : (0.000185s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:34.543607 #203]  INFO -- : (0.115519s) COMMIT
+I, [2021-05-06T16:25:34.543917 #203]  INFO -- : (0.000044s) BEGIN
+I, [2021-05-06T16:25:34.544363 #203]  INFO -- : (0.000217s) UPDATE `mentees` SET `id` = 2 WHERE (`id` = 1)
+I, [2021-05-06T16:25:34.659620 #203]  INFO -- : (0.115144s) COMMIT
+I, [2021-05-06T16:25:34.668067 #203]  INFO -- : (0.000191s) SELECT * FROM `users` WHERE (`username` = 'Mentee1') LIMIT 1
+I, [2021-05-06T16:25:34.685718 #203]  INFO -- : (0.000189s) SELECT * FROM `users`
+I, [2021-05-06T16:25:34.685930 #203]  INFO -- : (0.000102s) SELECT * FROM `users`
+I, [2021-05-06T16:25:34.686070 #203]  INFO -- : (0.000017s) BEGIN
+I, [2021-05-06T16:25:34.686356 #203]  INFO -- : (0.000135s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('MenteeTwo', 'SurTwo', 'TestMentee2', 'mentee456@test.com', 'Testpass', 'mentee')
+I, [2021-05-06T16:25:34.686550 #203]  INFO -- : (0.000079s) SELECT * FROM `users` WHERE `id` = 3
+I, [2021-05-06T16:25:34.802180 #203]  INFO -- : (0.115549s) COMMIT
+I, [2021-05-06T16:25:34.802417 #203]  INFO -- : (0.000050s) BEGIN
+I, [2021-05-06T16:25:34.802762 #203]  INFO -- : (0.000151s) INSERT INTO `mentees` (`first_name`, `surname`, `username`, `course`, `university`, `gender`, `year_of_study`, `email`, `password`) VALUES ('MenteeTwo', 'SurTwo', 'TestMentee2', 'COM1001', 'Aga Khan University', 'female', 1, 'mentee456@test.com', 'Testpass')
+I, [2021-05-06T16:25:34.803043 #203]  INFO -- : (0.000146s) SELECT * FROM `mentees` WHERE `id` = 3
+I, [2021-05-06T16:25:34.899890 #203]  INFO -- : (0.096760s) COMMIT
+I, [2021-05-06T16:25:34.907024 #203]  INFO -- : (0.000150s) SELECT * FROM `users` WHERE (`username` = 'Mentee1') LIMIT 1
+I, [2021-05-06T16:25:34.912374 #203]  INFO -- : (0.000130s) SELECT * FROM `users` WHERE (`username` = 'TestAdmin') LIMIT 1
+I, [2021-05-06T16:25:34.912583 #203]  INFO -- : (0.000092s) SELECT * FROM `users` WHERE (`username` = 'TestAdmin') LIMIT 1
+I, [2021-05-06T16:25:34.912801 #203]  INFO -- : (0.000090s) SELECT * FROM `users` WHERE (`username` = 'TestAdmin') LIMIT 1
+I, [2021-05-06T16:25:34.913085 #203]  INFO -- : (0.000094s) SELECT * FROM `admins` WHERE (`username` LIKE '%TestAdmin%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T16:25:34.913364 #203]  INFO -- : (0.000088s) SELECT * FROM `admins` WHERE (`username` = 'TestAdmin') LIMIT 1
+I, [2021-05-06T16:25:34.914194 #203]  INFO -- : (0.000096s) SELECT * FROM `admins` WHERE `id` = 1
+I, [2021-05-06T16:25:34.914332 #203]  INFO -- : (0.000074s) SELECT * FROM `admins` WHERE `id` = 1
+I, [2021-05-06T16:25:34.914454 #203]  INFO -- : (0.000071s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:34.916326 #203]  INFO -- : (0.000143s) SELECT * FROM `mentees`
+I, [2021-05-06T16:25:35.021731 #203]  INFO -- : (0.101002s) DELETE FROM `mentees` WHERE (1 = 1)
+I, [2021-05-06T16:25:35.022074 #203]  INFO -- : (0.000088s) DELETE FROM `mentors` WHERE (1 = 1)
+I, [2021-05-06T16:25:35.137754 #203]  INFO -- : (0.115535s) DELETE FROM `admins` WHERE (1 = 1)
+I, [2021-05-06T16:25:35.254526 #203]  INFO -- : (0.116489s) DELETE FROM `users` WHERE (1 = 1)
+I, [2021-05-06T16:25:35.366088 #203]  INFO -- : (0.111212s) DELETE FROM `codes` WHERE (1 = 1)
+I, [2021-05-06T16:25:35.366563 #203]  INFO -- : (0.000130s) DELETE FROM `requests` WHERE (1 = 1)
+I, [2021-05-06T16:25:35.366873 #203]  INFO -- : (0.000085s) DELETE FROM `questions_answers` WHERE (1 = 1)
+I, [2021-05-06T16:25:35.393863 #203]  INFO -- : (0.000180s) SELECT * FROM `users`
+I, [2021-05-06T16:25:35.394033 #203]  INFO -- : (0.000080s) SELECT * FROM `users`
+I, [2021-05-06T16:25:35.394169 #203]  INFO -- : (0.000017s) BEGIN
+I, [2021-05-06T16:25:35.394454 #203]  INFO -- : (0.000128s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('MenteeFirst', 'MenteeSur', 'TestMentee', 'mentee123@test.com', 'Testpass', 'mentee')
+I, [2021-05-06T16:25:35.394661 #203]  INFO -- : (0.000085s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:35.512194 #203]  INFO -- : (0.117449s) COMMIT
+I, [2021-05-06T16:25:35.512425 #203]  INFO -- : (0.000039s) BEGIN
+I, [2021-05-06T16:25:35.512813 #203]  INFO -- : (0.000183s) INSERT INTO `mentees` (`first_name`, `surname`, `username`, `course`, `university`, `gender`, `year_of_study`, `email`, `password`) VALUES ('MenteeFirst', 'MenteeSur', 'TestMentee', 'COM1001', 'Aga Khan University', 'male', 1, 'mentee123@test.com', 'Testpass')
+I, [2021-05-06T16:25:35.513113 #203]  INFO -- : (0.000144s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:35.657058 #203]  INFO -- : (0.143857s) COMMIT
+I, [2021-05-06T16:25:35.663877 #203]  INFO -- : (0.000132s) SELECT * FROM `users` WHERE (`username` = 'Mentee1') LIMIT 1
+I, [2021-05-06T16:25:35.676040 #203]  INFO -- : (0.000152s) SELECT * FROM `users`
+I, [2021-05-06T16:25:35.676197 #203]  INFO -- : (0.000080s) SELECT * FROM `users`
+I, [2021-05-06T16:25:35.676309 #203]  INFO -- : (0.000016s) BEGIN
+I, [2021-05-06T16:25:35.676593 #203]  INFO -- : (0.000134s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('MentorFirst', 'Surname', 'TestMentor', 'mentortest@test.com', 'Testpass', 'mentor')
+I, [2021-05-06T16:25:35.676787 #203]  INFO -- : (0.000078s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-05-06T16:25:35.867456 #203]  INFO -- : (0.190593s) COMMIT
+I, [2021-05-06T16:25:35.867680 #203]  INFO -- : (0.000037s) BEGIN
+I, [2021-05-06T16:25:35.868055 #203]  INFO -- : (0.000164s) INSERT INTO `mentors` (`first_name`, `surname`, `username`, `gender`, `industry`, `company`, `sheffield_graduate`, `degree_field`, `email`, `password`) VALUES ('MentorFirst', 'Surname', 'TestMentor', 'male', 'Aerospace', 'Testcompany', 1, 'aerospace', 'mentortest@test.com', 'Testpass')
+I, [2021-05-06T16:25:35.868349 #203]  INFO -- : (0.000143s) SELECT * FROM `mentors` WHERE `id` = 1
+I, [2021-05-06T16:25:35.955140 #203]  INFO -- : (0.086699s) COMMIT
+I, [2021-05-06T16:25:35.955362 #203]  INFO -- : (0.000030s) BEGIN
+I, [2021-05-06T16:25:35.955828 #203]  INFO -- : (0.000295s) UPDATE `mentors` SET `id` = 2 WHERE (`id` = 1)
+I, [2021-05-06T16:25:36.160422 #203]  INFO -- : (0.204482s) COMMIT
+I, [2021-05-06T16:25:36.178581 #203]  INFO -- : (0.000253s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:36.178926 #203]  INFO -- : (0.000145s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:36.179223 #203]  INFO -- : (0.000136s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:36.179473 #203]  INFO -- : (0.000129s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:36.180000 #203]  INFO -- : (0.000221s) SELECT * FROM `mentees` WHERE (`username` LIKE '%TestMentee%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T16:25:36.180341 #203]  INFO -- : (0.000188s) SELECT * FROM `mentees` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:36.181869 #203]  INFO -- : (0.000242s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:36.182152 #203]  INFO -- : (0.000181s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:36.182359 #203]  INFO -- : (0.000125s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:36.186003 #203]  INFO -- : (0.000244s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:36.186321 #203]  INFO -- : (0.000214s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:36.186539 #203]  INFO -- : (0.000131s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:36.186868 #203]  INFO -- : (0.000102s) SELECT * FROM `requests` WHERE (`mentee_id` = 1)
+I, [2021-05-06T16:25:36.187562 #203]  INFO -- : (0.000138s) SELECT count(*) AS 'count' FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\')) LIMIT 1
+I, [2021-05-06T16:25:36.187954 #203]  INFO -- : (0.000214s) SELECT * FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\'))
+I, [2021-05-06T16:25:36.194696 #203]  INFO -- : (0.000036s) BEGIN
+I, [2021-05-06T16:25:36.195149 #203]  INFO -- : (0.000212s) INSERT INTO `requests` (`mentee_id`, `mentor_id`, `accepted`) VALUES (1, 2, 0)
+I, [2021-05-06T16:25:36.195464 #203]  INFO -- : (0.000132s) SELECT * FROM `requests` WHERE `id` = 1
+I, [2021-05-06T16:25:36.299516 #203]  INFO -- : (0.103948s) COMMIT
+I, [2021-05-06T16:25:36.300728 #203]  INFO -- : (0.000229s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:36.300912 #203]  INFO -- : (0.000107s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:36.301043 #203]  INFO -- : (0.000076s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:36.301266 #203]  INFO -- : (0.000074s) SELECT * FROM `requests` WHERE (`mentee_id` = 1)
+I, [2021-05-06T16:25:36.301676 #203]  INFO -- : (0.000087s) SELECT count(*) AS 'count' FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\')) LIMIT 1
+I, [2021-05-06T16:25:36.301935 #203]  INFO -- : (0.000155s) SELECT * FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\'))
+I, [2021-05-06T16:25:36.309285 #203]  INFO -- : (0.000111s) SELECT * FROM `users` WHERE (`username` = 'TestMentor') LIMIT 1
+I, [2021-05-06T16:25:36.309490 #203]  INFO -- : (0.000087s) SELECT * FROM `users` WHERE (`username` = 'TestMentor') LIMIT 1
+I, [2021-05-06T16:25:36.309684 #203]  INFO -- : (0.000083s) SELECT * FROM `users` WHERE (`username` = 'TestMentor') LIMIT 1
+I, [2021-05-06T16:25:36.309854 #203]  INFO -- : (0.000090s) SELECT * FROM `users` WHERE (`username` = 'TestMentor') LIMIT 1
+I, [2021-05-06T16:25:36.310178 #203]  INFO -- : (0.000126s) SELECT * FROM `mentors` WHERE (`username` LIKE '%TestMentor%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T16:25:36.310379 #203]  INFO -- : (0.000103s) SELECT * FROM `mentors` WHERE (`username` = 'TestMentor') LIMIT 1
+I, [2021-05-06T16:25:36.311226 #203]  INFO -- : (0.000115s) SELECT * FROM `mentors` WHERE `id` = 2
+I, [2021-05-06T16:25:36.311386 #203]  INFO -- : (0.000096s) SELECT * FROM `mentors` WHERE `id` = 2
+I, [2021-05-06T16:25:36.311510 #203]  INFO -- : (0.000072s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-05-06T16:25:36.313544 #203]  INFO -- : (0.000118s) SELECT * FROM `mentors` WHERE `id` = 2
+I, [2021-05-06T16:25:36.313706 #203]  INFO -- : (0.000094s) SELECT * FROM `mentors` WHERE `id` = 2
+I, [2021-05-06T16:25:36.313851 #203]  INFO -- : (0.000093s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-05-06T16:25:36.314041 #203]  INFO -- : (0.000073s) SELECT * FROM `requests` WHERE (`mentor_id` = 2)
+I, [2021-05-06T16:25:36.314326 #203]  INFO -- : (0.000070s) SELECT count(*) AS 'count' FROM `requests` WHERE (`mentor_id` = 2) LIMIT 1
+I, [2021-05-06T16:25:36.314486 #203]  INFO -- : (0.000102s) SELECT * FROM `mentees`
+I, [2021-05-06T16:25:36.314587 #203]  INFO -- : (0.000052s) SELECT count(*) AS 'count' FROM `requests` WHERE (`mentor_id` = 2) LIMIT 1
+I, [2021-05-06T16:25:36.314720 #203]  INFO -- : (0.000090s) SELECT * FROM `mentees`
+I, [2021-05-06T16:25:36.317514 #203]  INFO -- : (0.000025s) BEGIN
+I, [2021-05-06T16:25:36.317830 #203]  INFO -- : (0.000130s) INSERT INTO `codes` (`id`, `code`, `used`) VALUES (55, 'codetest', 0)
+I, [2021-05-06T16:25:36.318009 #203]  INFO -- : (0.000061s) SELECT * FROM `codes` WHERE `id` = 55
+I, [2021-05-06T16:25:36.400066 #203]  INFO -- : (0.081974s) COMMIT
+I, [2021-05-06T16:25:36.420846 #203]  INFO -- : (0.000246s) SELECT * FROM `users`
+I, [2021-05-06T16:25:36.421128 #203]  INFO -- : (0.000155s) SELECT * FROM `users`
+I, [2021-05-06T16:25:36.421308 #203]  INFO -- : (0.000025s) BEGIN
+I, [2021-05-06T16:25:36.421765 #203]  INFO -- : (0.000204s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('AdminFirst', 'Surname', 'TestAdmin', 'admintest@test.com', 'Testpass', 'admin')
+I, [2021-05-06T16:25:36.422109 #203]  INFO -- : (0.000139s) SELECT * FROM `users` WHERE `id` = 3
+I, [2021-05-06T16:25:36.507010 #203]  INFO -- : (0.084780s) COMMIT
+I, [2021-05-06T16:25:36.507337 #203]  INFO -- : (0.000053s) BEGIN
+I, [2021-05-06T16:25:36.507872 #203]  INFO -- : (0.000220s) INSERT INTO `admins` (`first_name`, `surname`, `username`, `admin_code`, `email`, `password`) VALUES ('AdminFirst', 'Surname', 'TestAdmin', 'codetest', 'admintest@test.com', 'Testpass')
+I, [2021-05-06T16:25:36.508271 #203]  INFO -- : (0.000184s) SELECT * FROM `admins` WHERE `id` = 1
+I, [2021-05-06T16:25:36.596197 #203]  INFO -- : (0.087821s) COMMIT
+I, [2021-05-06T16:25:36.596462 #203]  INFO -- : (0.000034s) BEGIN
+I, [2021-05-06T16:25:36.596784 #203]  INFO -- : (0.000156s) UPDATE `admins` SET `id` = 3 WHERE (`id` = 1)
+I, [2021-05-06T16:25:36.697745 #203]  INFO -- : (0.100879s) COMMIT
+I, [2021-05-06T16:25:36.704322 #203]  INFO -- : (0.000153s) SELECT * FROM `users` WHERE (`username` = 'TestAdmin') LIMIT 1
+I, [2021-05-06T16:25:36.704529 #203]  INFO -- : (0.000087s) SELECT * FROM `users` WHERE (`username` = 'TestAdmin') LIMIT 1
+I, [2021-05-06T16:25:36.704735 #203]  INFO -- : (0.000089s) SELECT * FROM `users` WHERE (`username` = 'TestAdmin') LIMIT 1
+I, [2021-05-06T16:25:36.705006 #203]  INFO -- : (0.000093s) SELECT * FROM `admins` WHERE (`username` LIKE '%TestAdmin%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T16:25:36.705173 #203]  INFO -- : (0.000079s) SELECT * FROM `admins` WHERE (`username` = 'TestAdmin') LIMIT 1
+I, [2021-05-06T16:25:36.706019 #203]  INFO -- : (0.000098s) SELECT * FROM `admins` WHERE `id` = 3
+I, [2021-05-06T16:25:36.706155 #203]  INFO -- : (0.000074s) SELECT * FROM `admins` WHERE `id` = 3
+I, [2021-05-06T16:25:36.706277 #203]  INFO -- : (0.000071s) SELECT * FROM `users` WHERE `id` = 3
+I, [2021-05-06T16:25:36.708189 #203]  INFO -- : (0.000097s) SELECT * FROM `admins` WHERE `id` = 3
+I, [2021-05-06T16:25:36.708330 #203]  INFO -- : (0.000075s) SELECT * FROM `admins` WHERE `id` = 3
+I, [2021-05-06T16:25:36.708450 #203]  INFO -- : (0.000070s) SELECT * FROM `users` WHERE `id` = 3
+I, [2021-05-06T16:25:36.708554 #203]  INFO -- : (0.000052s) SELECT * FROM `questions_answers`
+I, [2021-05-06T16:25:36.721264 #203]  INFO -- : (0.000024s) BEGIN
+I, [2021-05-06T16:25:36.721573 #203]  INFO -- : (0.000125s) INSERT INTO `questions_answers` (`question`, `answer`, `user_type`) VALUES ('TestQuestion', 'TestAnswer', 'mentee')
+I, [2021-05-06T16:25:36.721749 #203]  INFO -- : (0.000068s) SELECT * FROM `questions_answers` WHERE `id` = 1
+I, [2021-05-06T16:25:36.809343 #203]  INFO -- : (0.087520s) COMMIT
+I, [2021-05-06T16:25:36.810547 #203]  INFO -- : (0.000145s) SELECT * FROM `admins` WHERE `id` = 3
+I, [2021-05-06T16:25:36.810699 #203]  INFO -- : (0.000077s) SELECT * FROM `admins` WHERE `id` = 3
+I, [2021-05-06T16:25:36.810824 #203]  INFO -- : (0.000072s) SELECT * FROM `users` WHERE `id` = 3
+I, [2021-05-06T16:25:36.810940 #203]  INFO -- : (0.000066s) SELECT * FROM `questions_answers`
+I, [2021-05-06T16:25:36.828788 #203]  INFO -- : (0.000135s) SELECT * FROM `users`
+I, [2021-05-06T16:25:36.828959 #203]  INFO -- : (0.000081s) SELECT * FROM `users`
+I, [2021-05-06T16:25:36.834123 #203]  INFO -- : (0.000103s) SELECT * FROM `users` WHERE (`username` = 'Mentee1') LIMIT 1
+I, [2021-05-06T16:25:36.839116 #203]  INFO -- : (0.000116s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:36.839309 #203]  INFO -- : (0.000083s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:36.839498 #203]  INFO -- : (0.000090s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:36.839647 #203]  INFO -- : (0.000074s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:36.839935 #203]  INFO -- : (0.000117s) SELECT * FROM `mentees` WHERE (`username` LIKE '%TestMentee%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T16:25:36.840126 #203]  INFO -- : (0.000104s) SELECT * FROM `mentees` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:36.840936 #203]  INFO -- : (0.000122s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:36.841095 #203]  INFO -- : (0.000096s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:36.841217 #203]  INFO -- : (0.000071s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:36.843139 #203]  INFO -- : (0.000118s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:36.843315 #203]  INFO -- : (0.000098s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:36.843437 #203]  INFO -- : (0.000071s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:36.843551 #203]  INFO -- : (0.000064s) SELECT * FROM `questions_answers`
+I, [2021-05-06T16:25:36.941834 #203]  INFO -- : (0.092202s) DELETE FROM `mentees` WHERE (1 = 1)
+I, [2021-05-06T16:25:37.076629 #203]  INFO -- : (0.134519s) DELETE FROM `mentors` WHERE (1 = 1)
+I, [2021-05-06T16:25:37.155327 #203]  INFO -- : (0.078395s) DELETE FROM `admins` WHERE (1 = 1)
+I, [2021-05-06T16:25:37.235502 #203]  INFO -- : (0.079874s) DELETE FROM `users` WHERE (1 = 1)
+I, [2021-05-06T16:25:37.322190 #203]  INFO -- : (0.086396s) DELETE FROM `codes` WHERE (1 = 1)
+I, [2021-05-06T16:25:37.397528 #203]  INFO -- : (0.075104s) DELETE FROM `requests` WHERE (1 = 1)
+I, [2021-05-06T16:25:37.478955 #203]  INFO -- : (0.081066s) DELETE FROM `questions_answers` WHERE (1 = 1)
+I, [2021-05-06T16:25:37.492983 #203]  INFO -- : (0.000128s) SELECT * FROM `users`
+I, [2021-05-06T16:25:37.493117 #203]  INFO -- : (0.000061s) SELECT * FROM `users`
+I, [2021-05-06T16:25:37.493258 #203]  INFO -- : (0.000018s) BEGIN
+I, [2021-05-06T16:25:37.493539 #203]  INFO -- : (0.000122s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('MenteeFirst', 'MenteeSur', 'TestMentee', 'mentee123@test.com', 'Testpass', 'mentee')
+I, [2021-05-06T16:25:37.493734 #203]  INFO -- : (0.000081s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:37.581920 #203]  INFO -- : (0.088117s) COMMIT
+I, [2021-05-06T16:25:37.582143 #203]  INFO -- : (0.000048s) BEGIN
+I, [2021-05-06T16:25:37.582524 #203]  INFO -- : (0.000166s) INSERT INTO `mentees` (`first_name`, `surname`, `username`, `course`, `university`, `gender`, `year_of_study`, `email`, `password`) VALUES ('MenteeFirst', 'MenteeSur', 'TestMentee', 'COM1001', 'Aga Khan University', 'male', 1, 'mentee123@test.com', 'Testpass')
+I, [2021-05-06T16:25:37.582797 #203]  INFO -- : (0.000130s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:37.761793 #203]  INFO -- : (0.178902s) COMMIT
+I, [2021-05-06T16:25:37.770049 #203]  INFO -- : (0.000145s) SELECT * FROM `users` WHERE (`username` = 'Mentee1') LIMIT 1
+I, [2021-05-06T16:25:37.775233 #203]  INFO -- : (0.000139s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:37.775426 #203]  INFO -- : (0.000083s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:37.775633 #203]  INFO -- : (0.000084s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:37.775789 #203]  INFO -- : (0.000076s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:37.776137 #203]  INFO -- : (0.000133s) SELECT * FROM `mentees` WHERE (`username` LIKE '%TestMentee%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T16:25:37.776339 #203]  INFO -- : (0.000105s) SELECT * FROM `mentees` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-06T16:25:37.777211 #203]  INFO -- : (0.000122s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:37.777378 #203]  INFO -- : (0.000101s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:37.777506 #203]  INFO -- : (0.000075s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:37.786819 #203]  INFO -- : (0.000168s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:37.787004 #203]  INFO -- : (0.000110s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:37.787137 #203]  INFO -- : (0.000077s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:37.787338 #203]  INFO -- : (0.000017s) BEGIN
+I, [2021-05-06T16:25:37.787698 #203]  INFO -- : (0.000188s) UPDATE `mentees` SET `biography` = 'Lorem Ipsum' WHERE (`id` = 1)
+I, [2021-05-06T16:25:37.909415 #203]  INFO -- : (0.121634s) COMMIT
+I, [2021-05-06T16:25:37.910666 #203]  INFO -- : (0.000188s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:37.910862 #203]  INFO -- : (0.000118s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:37.911011 #203]  INFO -- : (0.000081s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:38.022419 #203]  INFO -- : (0.108032s) DELETE FROM `mentees` WHERE (1 = 1)
+I, [2021-05-06T16:25:38.022771 #203]  INFO -- : (0.000097s) DELETE FROM `mentors` WHERE (1 = 1)
+I, [2021-05-06T16:25:38.022930 #203]  INFO -- : (0.000048s) DELETE FROM `admins` WHERE (1 = 1)
+I, [2021-05-06T16:25:38.126144 #203]  INFO -- : (0.103099s) DELETE FROM `users` WHERE (1 = 1)
+I, [2021-05-06T16:25:38.126427 #203]  INFO -- : (0.000078s) DELETE FROM `codes` WHERE (1 = 1)
+I, [2021-05-06T16:25:38.126564 #203]  INFO -- : (0.000043s) DELETE FROM `requests` WHERE (1 = 1)
+I, [2021-05-06T16:25:38.126680 #203]  INFO -- : (0.000039s) DELETE FROM `questions_answers` WHERE (1 = 1)
+I, [2021-05-06T16:25:38.140402 #203]  INFO -- : (0.000119s) SELECT * FROM `users`
+I, [2021-05-06T16:25:38.140542 #203]  INFO -- : (0.000063s) SELECT * FROM `users`
+I, [2021-05-06T16:25:38.140635 #203]  INFO -- : (0.000016s) BEGIN
+I, [2021-05-06T16:25:38.140913 #203]  INFO -- : (0.000126s) INSERT INTO `admins` (`first_name`, `surname`, `admin_code`, `email`, `password`, `username`) VALUES ('A', 'B', '1234', '123@AB.CDE', 'test1234', 'user')
+I, [2021-05-06T16:25:38.141107 #203]  INFO -- : (0.000081s) SELECT * FROM `admins` WHERE `id` = 1
+I, [2021-05-06T16:25:38.248099 #203]  INFO -- : (0.106919s) COMMIT
+I, [2021-05-06T16:25:38.353599 #203]  INFO -- : (0.105292s) DELETE FROM `admins` WHERE `id` = 1
+I, [2021-05-06T16:25:38.354358 #203]  INFO -- : (0.000145s) SELECT * FROM `users`
+I, [2021-05-06T16:25:38.354517 #203]  INFO -- : (0.000083s) SELECT * FROM `users`
+I, [2021-05-06T16:25:38.354615 #203]  INFO -- : (0.000017s) BEGIN
+I, [2021-05-06T16:25:38.354899 #203]  INFO -- : (0.000124s) INSERT INTO `admins` (`username`, `first_name`, `surname`, `admin_code`, `email`, `password`) VALUES ('user', 'A', 'B', '1234', 'testtest@test.test', 'test1234')
+I, [2021-05-06T16:25:38.355096 #203]  INFO -- : (0.000080s) SELECT * FROM `admins` WHERE `id` = 1
+I, [2021-05-06T16:25:38.470436 #203]  INFO -- : (0.115264s) COMMIT
+I, [2021-05-06T16:25:38.470747 #203]  INFO -- : (0.000157s) SELECT * FROM `admins` WHERE `id` = 1
+I, [2021-05-06T16:25:38.579373 #203]  INFO -- : (0.108501s) DELETE FROM `admins` WHERE `id` = 1
+I, [2021-05-06T16:25:38.580117 #203]  INFO -- : (0.000143s) SELECT * FROM `users`
+I, [2021-05-06T16:25:38.580276 #203]  INFO -- : (0.000072s) SELECT * FROM `users`
+I, [2021-05-06T16:25:38.580381 #203]  INFO -- : (0.000018s) BEGIN
+I, [2021-05-06T16:25:38.580695 #203]  INFO -- : (0.000144s) INSERT INTO `admins` (`username`, `first_name`, `surname`, `admin_code`, `email`, `password`) VALUES ('user', 'A', 'B', '1234', 'testtest@test.test', 'test1234')
+I, [2021-05-06T16:25:38.580912 #203]  INFO -- : (0.000085s) SELECT * FROM `admins` WHERE `id` = 1
+I, [2021-05-06T16:25:38.686210 #203]  INFO -- : (0.105218s) COMMIT
+I, [2021-05-06T16:25:38.686571 #203]  INFO -- : (0.000146s) SELECT * FROM `admins` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:38.809101 #203]  INFO -- : (0.122401s) DELETE FROM `admins` WHERE `id` = 1
+I, [2021-05-06T16:25:38.809873 #203]  INFO -- : (0.000035s) BEGIN
+I, [2021-05-06T16:25:38.810223 #203]  INFO -- : (0.000159s) INSERT INTO `users` (`first_name`, `surname`, `password`, `user_type`, `id`, `username`) VALUES ('A', 'B', 'test1234', 'mentor', 9999, 'user')
+I, [2021-05-06T16:25:38.810451 #203]  INFO -- : (0.000097s) SELECT * FROM `users` WHERE `id` = 9999
+I, [2021-05-06T16:25:38.921318 #203]  INFO -- : (0.110784s) COMMIT
+I, [2021-05-06T16:25:38.922157 #203]  INFO -- : (0.000050s) BEGIN
+I, [2021-05-06T16:25:38.922709 #203]  INFO -- : (0.000234s) INSERT INTO `mentors` (`first_name`, `username`, `surname`, `industry`, `company`, `email`, `password`, `sheffield_graduate`, `degree_field`, `id`) VALUES ('A', 'user', 'B', 'ABCDEF', 'ABCDE', 'testtest@test.test', 'test1234', 1, 'ABCD', 9999)
+I, [2021-05-06T16:25:38.923091 #203]  INFO -- : (0.000186s) SELECT * FROM `mentors` WHERE `id` = 9999
+I, [2021-05-06T16:25:39.034126 #203]  INFO -- : (0.110905s) COMMIT
+I, [2021-05-06T16:25:39.035588 #203]  INFO -- : (0.000219s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:39.035858 #203]  INFO -- : (0.000116s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:39.036131 #203]  INFO -- : (0.000114s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:39.036338 #203]  INFO -- : (0.000109s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:39.036811 #203]  INFO -- : (0.000177s) SELECT * FROM `mentors` WHERE (`username` LIKE '%user%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T16:25:39.037074 #203]  INFO -- : (0.000145s) SELECT * FROM `mentors` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:39.038604 #203]  INFO -- : (0.000107s) SELECT * FROM `mentees`
+I, [2021-05-06T16:25:39.039796 #203]  INFO -- : (0.000102s) SELECT * FROM `mentees`
+I, [2021-05-06T16:25:39.042339 #203]  INFO -- : (0.000084s) DELETE FROM `mentees` WHERE (1 = 1)
+I, [2021-05-06T16:25:39.166538 #203]  INFO -- : (0.123908s) DELETE FROM `mentors` WHERE (1 = 1)
+I, [2021-05-06T16:25:39.166869 #203]  INFO -- : (0.000102s) DELETE FROM `admins` WHERE (1 = 1)
+I, [2021-05-06T16:25:39.274779 #203]  INFO -- : (0.107773s) DELETE FROM `users` WHERE (1 = 1)
+I, [2021-05-06T16:25:39.275274 #203]  INFO -- : (0.000128s) DELETE FROM `codes` WHERE (1 = 1)
+I, [2021-05-06T16:25:39.275568 #203]  INFO -- : (0.000080s) DELETE FROM `requests` WHERE (1 = 1)
+I, [2021-05-06T16:25:39.275807 #203]  INFO -- : (0.000071s) DELETE FROM `questions_answers` WHERE (1 = 1)
+I, [2021-05-06T16:25:39.276587 #203]  INFO -- : (0.000041s) BEGIN
+I, [2021-05-06T16:25:39.277065 #203]  INFO -- : (0.000218s) INSERT INTO `users` (`username`, `password`, `user_type`, `id`) VALUES ('user', 'test1234', 'mentee', 9999)
+I, [2021-05-06T16:25:39.277453 #203]  INFO -- : (0.000195s) SELECT * FROM `users` WHERE `id` = 9999
+I, [2021-05-06T16:25:39.391919 #203]  INFO -- : (0.114336s) COMMIT
+I, [2021-05-06T16:25:39.392527 #203]  INFO -- : (0.000040s) BEGIN
+I, [2021-05-06T16:25:39.392935 #203]  INFO -- : (0.000177s) INSERT INTO `mentees` (`username`, `first_name`, `surname`, `course`, `year_of_study`, `email`, `password`, `id`) VALUES ('user', 'A', 'B', 'ABCD', 9999, 'testtest@test.test', 'test1234', 9999)
+I, [2021-05-06T16:25:39.393259 #203]  INFO -- : (0.000171s) SELECT * FROM `mentees` WHERE `id` = 9999
+I, [2021-05-06T16:25:39.496533 #203]  INFO -- : (0.103176s) COMMIT
+I, [2021-05-06T16:25:39.497985 #203]  INFO -- : (0.000243s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:39.498244 #203]  INFO -- : (0.000111s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:39.498479 #203]  INFO -- : (0.000106s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:39.498684 #203]  INFO -- : (0.000095s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:39.499067 #203]  INFO -- : (0.000158s) SELECT * FROM `mentees` WHERE (`username` LIKE '%user%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T16:25:39.499316 #203]  INFO -- : (0.000139s) SELECT * FROM `mentees` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:39.500980 #203]  INFO -- : (0.000136s) SELECT * FROM `mentors`
+I, [2021-05-06T16:25:39.506428 #203]  INFO -- : (0.000137s) SELECT * FROM `mentors`
+I, [2021-05-06T16:25:39.629644 #203]  INFO -- : (0.122357s) DELETE FROM `mentees` WHERE (1 = 1)
+I, [2021-05-06T16:25:39.629992 #203]  INFO -- : (0.000089s) DELETE FROM `mentors` WHERE (1 = 1)
+I, [2021-05-06T16:25:39.630168 #203]  INFO -- : (0.000046s) DELETE FROM `admins` WHERE (1 = 1)
+I, [2021-05-06T16:25:39.750492 #203]  INFO -- : (0.120191s) DELETE FROM `users` WHERE (1 = 1)
+I, [2021-05-06T16:25:39.750799 #203]  INFO -- : (0.000084s) DELETE FROM `codes` WHERE (1 = 1)
+I, [2021-05-06T16:25:39.750940 #203]  INFO -- : (0.000042s) DELETE FROM `requests` WHERE (1 = 1)
+I, [2021-05-06T16:25:39.751076 #203]  INFO -- : (0.000045s) DELETE FROM `questions_answers` WHERE (1 = 1)
+I, [2021-05-06T16:25:39.751732 #203]  INFO -- : (0.000029s) BEGIN
+I, [2021-05-06T16:25:39.752030 #203]  INFO -- : (0.000128s) INSERT INTO `questions_answers` (`question`, `answer`, `user_type`) VALUES ('How do you do x?', 'You have to do Y.', 'mentee')
+I, [2021-05-06T16:25:39.752239 #203]  INFO -- : (0.000090s) SELECT * FROM `questions_answers` WHERE `id` = 1
+I, [2021-05-06T16:25:39.843159 #203]  INFO -- : (0.090838s) COMMIT
+I, [2021-05-06T16:25:39.934928 #203]  INFO -- : (0.091544s) DELETE FROM `questions_answers` WHERE `id` = 1
+I, [2021-05-06T16:25:39.935652 #203]  INFO -- : (0.000041s) BEGIN
+I, [2021-05-06T16:25:39.935975 #203]  INFO -- : (0.000141s) INSERT INTO `users` (`username`, `password`, `user_type`, `id`) VALUES ('user', 'test1234', 'mentee', 9999)
+I, [2021-05-06T16:25:39.936206 #203]  INFO -- : (0.000101s) SELECT * FROM `users` WHERE `id` = 9999
+I, [2021-05-06T16:25:40.051078 #203]  INFO -- : (0.114793s) COMMIT
+I, [2021-05-06T16:25:40.051562 #203]  INFO -- : (0.000038s) BEGIN
+I, [2021-05-06T16:25:40.051890 #203]  INFO -- : (0.000145s) INSERT INTO `mentees` (`username`, `first_name`, `surname`, `course`, `year_of_study`, `email`, `password`, `id`) VALUES ('user', 'A', 'B', 'ABCD', 9999, 'testtest@test.test', 'test1234', 9999)
+I, [2021-05-06T16:25:40.052148 #203]  INFO -- : (0.000132s) SELECT * FROM `mentees` WHERE `id` = 9999
+I, [2021-05-06T16:25:40.160212 #203]  INFO -- : (0.107984s) COMMIT
+I, [2021-05-06T16:25:40.161355 #203]  INFO -- : (0.000162s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:40.161582 #203]  INFO -- : (0.000090s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:40.161785 #203]  INFO -- : (0.000084s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:40.161992 #203]  INFO -- : (0.000084s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:40.162329 #203]  INFO -- : (0.000125s) SELECT * FROM `mentees` WHERE (`username` LIKE '%user%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T16:25:40.162543 #203]  INFO -- : (0.000108s) SELECT * FROM `mentees` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:40.163815 #203]  INFO -- : (0.000123s) SELECT * FROM `mentees` WHERE `id` = 9999
+I, [2021-05-06T16:25:40.164016 #203]  INFO -- : (0.000123s) SELECT * FROM `mentees` WHERE `id` = 9999
+I, [2021-05-06T16:25:40.164165 #203]  INFO -- : (0.000081s) SELECT * FROM `users` WHERE `id` = 9999
+I, [2021-05-06T16:25:40.164382 #203]  INFO -- : (0.000066s) SELECT * FROM `requests` WHERE (`mentee_id` = 9999)
+I, [2021-05-06T16:25:40.168339 #203]  INFO -- : (0.000103s) SELECT count(*) AS 'count' FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\')) LIMIT 1
+I, [2021-05-06T16:25:40.169577 #203]  INFO -- : (0.000130s) SELECT * FROM `mentees` WHERE `id` = 9999
+I, [2021-05-06T16:25:40.169764 #203]  INFO -- : (0.000112s) SELECT * FROM `mentees` WHERE `id` = 9999
+I, [2021-05-06T16:25:40.169935 #203]  INFO -- : (0.000090s) SELECT * FROM `users` WHERE `id` = 9999
+I, [2021-05-06T16:25:40.170140 #203]  INFO -- : (0.000067s) SELECT * FROM `requests` WHERE (`mentee_id` = 9999)
+I, [2021-05-06T16:25:40.170525 #203]  INFO -- : (0.000082s) SELECT count(*) AS 'count' FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\')) LIMIT 1
+I, [2021-05-06T16:25:40.283200 #203]  INFO -- : (0.112097s) DELETE FROM `mentees` WHERE (1 = 1)
+I, [2021-05-06T16:25:40.283516 #203]  INFO -- : (0.000088s) DELETE FROM `mentors` WHERE (1 = 1)
+I, [2021-05-06T16:25:40.283696 #203]  INFO -- : (0.000050s) DELETE FROM `admins` WHERE (1 = 1)
+I, [2021-05-06T16:25:40.394873 #203]  INFO -- : (0.111056s) DELETE FROM `users` WHERE (1 = 1)
+I, [2021-05-06T16:25:40.395189 #203]  INFO -- : (0.000090s) DELETE FROM `codes` WHERE (1 = 1)
+I, [2021-05-06T16:25:40.395334 #203]  INFO -- : (0.000043s) DELETE FROM `requests` WHERE (1 = 1)
+I, [2021-05-06T16:25:40.395464 #203]  INFO -- : (0.000040s) DELETE FROM `questions_answers` WHERE (1 = 1)
+I, [2021-05-06T16:25:40.395959 #203]  INFO -- : (0.000027s) BEGIN
+I, [2021-05-06T16:25:40.396258 #203]  INFO -- : (0.000132s) INSERT INTO `users` (`username`, `password`, `user_type`, `id`) VALUES ('user', 'test1234', 'mentee', 9999)
+I, [2021-05-06T16:25:40.396477 #203]  INFO -- : (0.000106s) SELECT * FROM `users` WHERE `id` = 9999
+I, [2021-05-06T16:25:40.555400 #203]  INFO -- : (0.158835s) COMMIT
+I, [2021-05-06T16:25:40.556096 #203]  INFO -- : (0.000049s) BEGIN
+I, [2021-05-06T16:25:40.556602 #203]  INFO -- : (0.000223s) INSERT INTO `mentees` (`username`, `first_name`, `surname`, `course`, `year_of_study`, `email`, `password`, `id`) VALUES ('user', 'A', 'B', 'ABCD', 9999, 'testtest@test.test', 'test1234', 9999)
+I, [2021-05-06T16:25:40.556995 #203]  INFO -- : (0.000211s) SELECT * FROM `mentees` WHERE `id` = 9999
+I, [2021-05-06T16:25:40.657114 #203]  INFO -- : (0.100010s) COMMIT
+I, [2021-05-06T16:25:40.658314 #203]  INFO -- : (0.000174s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:40.658526 #203]  INFO -- : (0.000095s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:40.658738 #203]  INFO -- : (0.000104s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:40.658901 #203]  INFO -- : (0.000083s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:40.659231 #203]  INFO -- : (0.000138s) SELECT * FROM `mentees` WHERE (`username` LIKE '%user%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T16:25:40.659450 #203]  INFO -- : (0.000124s) SELECT * FROM `mentees` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:40.660757 #203]  INFO -- : (0.000139s) SELECT * FROM `mentees` WHERE `id` = 9999
+I, [2021-05-06T16:25:40.660937 #203]  INFO -- : (0.000111s) SELECT * FROM `mentees` WHERE `id` = 9999
+I, [2021-05-06T16:25:40.661071 #203]  INFO -- : (0.000079s) SELECT * FROM `users` WHERE `id` = 9999
+I, [2021-05-06T16:25:40.661180 #203]  INFO -- : (0.000056s) SELECT * FROM `questions_answers`
+I, [2021-05-06T16:25:40.662401 #203]  INFO -- : (0.000128s) SELECT * FROM `mentees` WHERE `id` = 9999
+I, [2021-05-06T16:25:40.662573 #203]  INFO -- : (0.000105s) SELECT * FROM `mentees` WHERE `id` = 9999
+I, [2021-05-06T16:25:40.662700 #203]  INFO -- : (0.000075s) SELECT * FROM `users` WHERE `id` = 9999
+I, [2021-05-06T16:25:40.662804 #203]  INFO -- : (0.000054s) SELECT * FROM `questions_answers`
+I, [2021-05-06T16:25:40.764550 #203]  INFO -- : (0.101128s) DELETE FROM `mentees` WHERE (1 = 1)
+I, [2021-05-06T16:25:40.764874 #203]  INFO -- : (0.000091s) DELETE FROM `mentors` WHERE (1 = 1)
+I, [2021-05-06T16:25:40.765015 #203]  INFO -- : (0.000042s) DELETE FROM `admins` WHERE (1 = 1)
+I, [2021-05-06T16:25:40.866346 #203]  INFO -- : (0.101213s) DELETE FROM `users` WHERE (1 = 1)
+I, [2021-05-06T16:25:40.866794 #203]  INFO -- : (0.000121s) DELETE FROM `codes` WHERE (1 = 1)
+I, [2021-05-06T16:25:40.867016 #203]  INFO -- : (0.000069s) DELETE FROM `requests` WHERE (1 = 1)
+I, [2021-05-06T16:25:40.867207 #203]  INFO -- : (0.000059s) DELETE FROM `questions_answers` WHERE (1 = 1)
+I, [2021-05-06T16:25:40.868099 #203]  INFO -- : (0.000051s) BEGIN
+I, [2021-05-06T16:25:40.868629 #203]  INFO -- : (0.000231s) INSERT INTO `users` (`first_name`, `surname`, `password`, `user_type`, `id`, `username`) VALUES ('A', 'B', 'test1234', 'mentor', 9999, 'user')
+I, [2021-05-06T16:25:40.869012 #203]  INFO -- : (0.000183s) SELECT * FROM `users` WHERE `id` = 9999
+I, [2021-05-06T16:25:40.979238 #203]  INFO -- : (0.110090s) COMMIT
+I, [2021-05-06T16:25:40.979992 #203]  INFO -- : (0.000042s) BEGIN
+I, [2021-05-06T16:25:40.980453 #203]  INFO -- : (0.000191s) INSERT INTO `mentors` (`first_name`, `username`, `surname`, `industry`, `company`, `email`, `password`, `sheffield_graduate`, `degree_field`, `id`) VALUES ('A', 'user', 'B', 'ABCDEF', 'ABCDE', 'testtest@test.test', 'test1234', 1, 'ABCD', 9999)
+I, [2021-05-06T16:25:40.980794 #203]  INFO -- : (0.000183s) SELECT * FROM `mentors` WHERE `id` = 9999
+I, [2021-05-06T16:25:41.107058 #203]  INFO -- : (0.126153s) COMMIT
+I, [2021-05-06T16:25:41.108682 #203]  INFO -- : (0.000231s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:41.109035 #203]  INFO -- : (0.000156s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:41.109350 #203]  INFO -- : (0.000142s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:41.109609 #203]  INFO -- : (0.000134s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:41.110111 #203]  INFO -- : (0.000198s) SELECT * FROM `mentors` WHERE (`username` LIKE '%user%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T16:25:41.110428 #203]  INFO -- : (0.000175s) SELECT * FROM `mentors` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:41.112327 #203]  INFO -- : (0.000189s) SELECT * FROM `mentors` WHERE `id` = 9999
+I, [2021-05-06T16:25:41.112581 #203]  INFO -- : (0.000159s) SELECT * FROM `mentors` WHERE `id` = 9999
+I, [2021-05-06T16:25:41.112786 #203]  INFO -- : (0.000121s) SELECT * FROM `users` WHERE `id` = 9999
+I, [2021-05-06T16:25:41.112950 #203]  INFO -- : (0.000086s) SELECT * FROM `questions_answers`
+I, [2021-05-06T16:25:41.115203 #203]  INFO -- : (0.000127s) SELECT * FROM `mentors` WHERE `id` = 9999
+I, [2021-05-06T16:25:41.115371 #203]  INFO -- : (0.000102s) SELECT * FROM `mentors` WHERE `id` = 9999
+I, [2021-05-06T16:25:41.115497 #203]  INFO -- : (0.000072s) SELECT * FROM `users` WHERE `id` = 9999
+I, [2021-05-06T16:25:41.115597 #203]  INFO -- : (0.000051s) SELECT * FROM `questions_answers`
+I, [2021-05-06T16:25:41.116243 #203]  INFO -- : (0.000060s) DELETE FROM `mentees` WHERE (1 = 1)
+I, [2021-05-06T16:25:41.230106 #203]  INFO -- : (0.113729s) DELETE FROM `mentors` WHERE (1 = 1)
+I, [2021-05-06T16:25:41.230553 #203]  INFO -- : (0.000124s) DELETE FROM `admins` WHERE (1 = 1)
+I, [2021-05-06T16:25:41.344063 #203]  INFO -- : (0.113302s) DELETE FROM `users` WHERE (1 = 1)
+I, [2021-05-06T16:25:41.344404 #203]  INFO -- : (0.000093s) DELETE FROM `codes` WHERE (1 = 1)
+I, [2021-05-06T16:25:41.344633 #203]  INFO -- : (0.000070s) DELETE FROM `requests` WHERE (1 = 1)
+I, [2021-05-06T16:25:41.344805 #203]  INFO -- : (0.000048s) DELETE FROM `questions_answers` WHERE (1 = 1)
+I, [2021-05-06T16:25:41.345313 #203]  INFO -- : (0.000030s) BEGIN
+I, [2021-05-06T16:25:41.345638 #203]  INFO -- : (0.000150s) INSERT INTO `users` (`username`, `password`, `user_type`, `id`) VALUES ('user', 'test1234', 'mentee', 9999)
+I, [2021-05-06T16:25:41.345895 #203]  INFO -- : (0.000126s) SELECT * FROM `users` WHERE `id` = 9999
+I, [2021-05-06T16:25:41.448823 #203]  INFO -- : (0.102836s) COMMIT
+I, [2021-05-06T16:25:41.449340 #203]  INFO -- : (0.000050s) BEGIN
+I, [2021-05-06T16:25:41.449685 #203]  INFO -- : (0.000159s) INSERT INTO `mentees` (`username`, `first_name`, `surname`, `course`, `year_of_study`, `email`, `password`, `id`) VALUES ('user', 'A', 'B', 'ABCD', 9999, 'testtest@test.test', 'test1234', 9999)
+I, [2021-05-06T16:25:41.449989 #203]  INFO -- : (0.000147s) SELECT * FROM `mentees` WHERE `id` = 9999
+I, [2021-05-06T16:25:41.563788 #203]  INFO -- : (0.113717s) COMMIT
+I, [2021-05-06T16:25:41.564883 #203]  INFO -- : (0.000157s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:41.565087 #203]  INFO -- : (0.000086s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:41.565277 #203]  INFO -- : (0.000085s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:41.565436 #203]  INFO -- : (0.000077s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:41.565745 #203]  INFO -- : (0.000126s) SELECT * FROM `mentees` WHERE (`username` LIKE '%user%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T16:25:41.567051 #203]  INFO -- : (0.000144s) SELECT * FROM `mentees` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:41.569120 #203]  INFO -- : (0.000086s) SELECT * FROM `admins` WHERE `id` = 9999
+I, [2021-05-06T16:25:41.570279 #203]  INFO -- : (0.001085s) SELECT * FROM `users` WHERE `id` = 9999
+I, [2021-05-06T16:25:41.570429 #203]  INFO -- : (0.000065s) SELECT * FROM `questions_answers`
+I, [2021-05-06T16:25:41.572328 #203]  INFO -- : (0.000082s) SELECT * FROM `admins` WHERE `id` = 9999
+I, [2021-05-06T16:25:41.573290 #203]  INFO -- : (0.000895s) SELECT * FROM `users` WHERE `id` = 9999
+I, [2021-05-06T16:25:41.573419 #203]  INFO -- : (0.000062s) SELECT * FROM `questions_answers`
+I, [2021-05-06T16:25:41.682560 #203]  INFO -- : (0.107536s) DELETE FROM `mentees` WHERE (1 = 1)
+I, [2021-05-06T16:25:41.682841 #203]  INFO -- : (0.000078s) DELETE FROM `mentors` WHERE (1 = 1)
+I, [2021-05-06T16:25:41.682999 #203]  INFO -- : (0.000046s) DELETE FROM `admins` WHERE (1 = 1)
+I, [2021-05-06T16:25:41.786478 #203]  INFO -- : (0.103362s) DELETE FROM `users` WHERE (1 = 1)
+I, [2021-05-06T16:25:41.786759 #203]  INFO -- : (0.000078s) DELETE FROM `codes` WHERE (1 = 1)
+I, [2021-05-06T16:25:41.786914 #203]  INFO -- : (0.000044s) DELETE FROM `requests` WHERE (1 = 1)
+I, [2021-05-06T16:25:41.788034 #203]  INFO -- : (0.000059s) DELETE FROM `questions_answers` WHERE (1 = 1)
+I, [2021-05-06T16:25:41.790136 #203]  INFO -- : (0.000112s) SELECT * FROM `users` WHERE (`username` = '') LIMIT 1
+I, [2021-05-06T16:25:41.793107 #203]  INFO -- : (0.000095s) SELECT * FROM `users` WHERE (`username` = '') LIMIT 1
+I, [2021-05-06T16:25:41.794868 #203]  INFO -- : (0.000023s) BEGIN
+I, [2021-05-06T16:25:41.795190 #203]  INFO -- : (0.000141s) INSERT INTO `users` (`password`, `user_type`, `username`) VALUES ('test1234', 'admin', 'user')
+I, [2021-05-06T16:25:41.795392 #203]  INFO -- : (0.000081s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:41.905772 #203]  INFO -- : (0.110296s) COMMIT
+I, [2021-05-06T16:25:41.906073 #203]  INFO -- : (0.000029s) BEGIN
+I, [2021-05-06T16:25:41.906394 #203]  INFO -- : (0.000146s) INSERT INTO `admins` (`username`, `first_name`, `surname`, `admin_code`, `email`, `password`) VALUES ('user', 'A', 'B', '1234', 'testtest@test.test', 'test1234')
+I, [2021-05-06T16:25:41.906623 #203]  INFO -- : (0.000099s) SELECT * FROM `admins` WHERE `id` = 1
+I, [2021-05-06T16:25:42.039862 #203]  INFO -- : (0.133160s) COMMIT
+I, [2021-05-06T16:25:42.042191 #203]  INFO -- : (0.000150s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:42.042416 #203]  INFO -- : (0.000093s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:42.042615 #203]  INFO -- : (0.000084s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:42.043677 #203]  INFO -- : (0.000875s) SELECT * FROM `admins` WHERE (`username` LIKE '%user%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T16:25:42.043899 #203]  INFO -- : (0.000098s) SELECT * FROM `admins` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:42.046059 #203]  INFO -- : (0.000107s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:42.049172 #203]  INFO -- : (0.000093s) SELECT * FROM `users` WHERE (`username` = '') LIMIT 1
+I, [2021-05-06T16:25:42.051904 #203]  INFO -- : (0.000089s) SELECT * FROM `users` WHERE (`username` = '') LIMIT 1
+I, [2021-05-06T16:25:42.054896 #203]  INFO -- : (0.000095s) SELECT * FROM `users` WHERE (`username` = 'us3r') LIMIT 1
+I, [2021-05-06T16:25:42.056585 #203]  INFO -- : (0.000064s) DELETE FROM `mentees` WHERE (1 = 1)
+I, [2021-05-06T16:25:42.056753 #203]  INFO -- : (0.000046s) DELETE FROM `mentors` WHERE (1 = 1)
+I, [2021-05-06T16:25:42.198618 #203]  INFO -- : (0.141728s) DELETE FROM `admins` WHERE (1 = 1)
+I, [2021-05-06T16:25:42.307528 #203]  INFO -- : (0.108676s) DELETE FROM `users` WHERE (1 = 1)
+I, [2021-05-06T16:25:42.307810 #203]  INFO -- : (0.000079s) DELETE FROM `codes` WHERE (1 = 1)
+I, [2021-05-06T16:25:42.308977 #203]  INFO -- : (0.000069s) DELETE FROM `requests` WHERE (1 = 1)
+I, [2021-05-06T16:25:42.309155 #203]  INFO -- : (0.000042s) DELETE FROM `questions_answers` WHERE (1 = 1)
+I, [2021-05-06T16:25:42.316636 #203]  INFO -- : (0.000112s) SELECT * FROM `users`
+I, [2021-05-06T16:25:42.316774 #203]  INFO -- : (0.000065s) SELECT * FROM `users`
+I, [2021-05-06T16:25:42.316894 #203]  INFO -- : (0.000016s) BEGIN
+I, [2021-05-06T16:25:42.317179 #203]  INFO -- : (0.000122s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('A', 'B', 'user', 'testtest@test.test', 'test1234', 'mentee')
+I, [2021-05-06T16:25:42.317372 #203]  INFO -- : (0.000082s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:42.427079 #203]  INFO -- : (0.109621s) COMMIT
+I, [2021-05-06T16:25:42.427304 #203]  INFO -- : (0.000035s) BEGIN
+I, [2021-05-06T16:25:42.428510 #203]  INFO -- : (0.001012s) INSERT INTO `mentees` (`first_name`, `surname`, `username`, `course`, `university`, `gender`, `year_of_study`, `email`, `password`) VALUES ('A', 'B', 'user', 'test', 'University of Sheffield', 'male', 1, 'testtest@test.test', 'test1234')
+I, [2021-05-06T16:25:42.428850 #203]  INFO -- : (0.000152s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:42.533098 #203]  INFO -- : (0.104164s) COMMIT
+I, [2021-05-06T16:25:42.540220 #203]  INFO -- : (0.000146s) SELECT * FROM `users`
+I, [2021-05-06T16:25:42.540385 #203]  INFO -- : (0.000082s) SELECT * FROM `users`
+I, [2021-05-06T16:25:42.542020 #203]  INFO -- : (0.000112s) SELECT * FROM `users`
+I, [2021-05-06T16:25:42.542170 #203]  INFO -- : (0.000077s) SELECT * FROM `users`
+I, [2021-05-06T16:25:42.543109 #203]  INFO -- : (0.000022s) BEGIN
+I, [2021-05-06T16:25:42.543431 #203]  INFO -- : (0.000141s) INSERT INTO `users` (`username`, `password`, `user_type`, `id`) VALUES ('user', 'test1234', 'mentee', 9999)
+I, [2021-05-06T16:25:42.543632 #203]  INFO -- : (0.000080s) SELECT * FROM `users` WHERE `id` = 9999
+I, [2021-05-06T16:25:42.662872 #203]  INFO -- : (0.119162s) COMMIT
+I, [2021-05-06T16:25:42.663357 #203]  INFO -- : (0.000035s) BEGIN
+I, [2021-05-06T16:25:42.663708 #203]  INFO -- : (0.000160s) INSERT INTO `mentees` (`username`, `first_name`, `surname`, `course`, `year_of_study`, `email`, `password`, `id`) VALUES ('user', 'A', 'B', 'ABCD', 9999, 'testtest@test.test', 'test1234', 9999)
+I, [2021-05-06T16:25:42.663998 #203]  INFO -- : (0.000153s) SELECT * FROM `mentees` WHERE `id` = 9999
+I, [2021-05-06T16:25:42.764933 #203]  INFO -- : (0.100854s) COMMIT
+I, [2021-05-06T16:25:42.766235 #203]  INFO -- : (0.000152s) SELECT * FROM `users`
+I, [2021-05-06T16:25:42.766420 #203]  INFO -- : (0.000090s) SELECT * FROM `users`
+I, [2021-05-06T16:25:42.767721 #203]  INFO -- : (0.000026s) BEGIN
+E, [2021-05-06T16:25:42.767983 #203] ERROR -- : SQLite3::ConstraintException: UNIQUE constraint failed: users.id: INSERT INTO `users` (`username`, `password`, `user_type`, `id`) VALUES ('user', 'test1234', 'mentee', 9999)
+I, [2021-05-06T16:25:42.768145 #203]  INFO -- : (0.000019s) ROLLBACK
+I, [2021-05-06T16:25:42.888547 #203]  INFO -- : (0.120041s) DELETE FROM `mentees` WHERE (1 = 1)
+I, [2021-05-06T16:25:42.888898 #203]  INFO -- : (0.000092s) DELETE FROM `mentors` WHERE (1 = 1)
+I, [2021-05-06T16:25:42.889047 #203]  INFO -- : (0.000044s) DELETE FROM `admins` WHERE (1 = 1)
+I, [2021-05-06T16:25:43.001076 #203]  INFO -- : (0.111919s) DELETE FROM `users` WHERE (1 = 1)
+I, [2021-05-06T16:25:43.001453 #203]  INFO -- : (0.000108s) DELETE FROM `codes` WHERE (1 = 1)
+I, [2021-05-06T16:25:43.001614 #203]  INFO -- : (0.000049s) DELETE FROM `requests` WHERE (1 = 1)
+I, [2021-05-06T16:25:43.001755 #203]  INFO -- : (0.000045s) DELETE FROM `questions_answers` WHERE (1 = 1)
+I, [2021-05-06T16:25:43.002827 #203]  INFO -- : (0.000152s) SELECT * FROM `users`
+I, [2021-05-06T16:25:43.002996 #203]  INFO -- : (0.000084s) SELECT * FROM `users`
+I, [2021-05-06T16:25:43.003112 #203]  INFO -- : (0.000020s) BEGIN
+I, [2021-05-06T16:25:43.003550 #203]  INFO -- : (0.000164s) INSERT INTO `mentees` (`university`, `number_of_rejections`, `mentor_id`, `has_mentor`, `has_contacted`, `gender`, `biography`, `username`, `first_name`, `surname`, `course`, `year_of_study`, `email`, `password`) VALUES ('University of Sheffield', 2, 1, 1, 1, 'male', 'I enjoy football', 'user', 'A', 'B', 'ABCD', 9999, '123@AB.CDE', 'pass1234')
+I, [2021-05-06T16:25:43.003848 #203]  INFO -- : (0.000157s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:43.120797 #203]  INFO -- : (0.116853s) COMMIT
+I, [2021-05-06T16:25:43.224551 #203]  INFO -- : (0.103495s) DELETE FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:43.225513 #203]  INFO -- : (0.000171s) SELECT * FROM `users`
+I, [2021-05-06T16:25:43.225674 #203]  INFO -- : (0.000080s) SELECT * FROM `users`
+I, [2021-05-06T16:25:43.225788 #203]  INFO -- : (0.000020s) BEGIN
+I, [2021-05-06T16:25:43.226227 #203]  INFO -- : (0.000162s) INSERT INTO `mentees` (`university`, `number_of_rejections`, `mentor_id`, `has_mentor`, `has_contacted`, `gender`, `biography`, `username`, `first_name`, `surname`, `course`, `year_of_study`, `email`, `password`) VALUES ('University of Sheffield', 2, 1, 1, 1, 'male', 'I enjoy football', 'user', 'A', 'B', 'ABCD', 9999, '123@AB.CDE', 'pass1234')
+I, [2021-05-06T16:25:43.226533 #203]  INFO -- : (0.000158s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:43.337512 #203]  INFO -- : (0.110895s) COMMIT
+I, [2021-05-06T16:25:43.337957 #203]  INFO -- : (0.000273s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:43.438046 #203]  INFO -- : (0.099946s) DELETE FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:43.439053 #203]  INFO -- : (0.000166s) SELECT * FROM `users`
+I, [2021-05-06T16:25:43.439215 #203]  INFO -- : (0.000075s) SELECT * FROM `users`
+I, [2021-05-06T16:25:43.439338 #203]  INFO -- : (0.000018s) BEGIN
+I, [2021-05-06T16:25:43.439695 #203]  INFO -- : (0.000162s) INSERT INTO `mentees` (`university`, `number_of_rejections`, `mentor_id`, `has_mentor`, `has_contacted`, `gender`, `biography`, `username`, `first_name`, `surname`, `course`, `year_of_study`, `email`, `password`) VALUES ('University of Sheffield', 2, 1, 1, 1, 'male', 'I enjoy football', 'user', 'A', 'B', 'ABCD', 9999, '123@AB.CDE', 'pass1234')
+I, [2021-05-06T16:25:43.439951 #203]  INFO -- : (0.000124s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:43.554058 #203]  INFO -- : (0.114019s) COMMIT
+I, [2021-05-06T16:25:43.554497 #203]  INFO -- : (0.000201s) SELECT * FROM `mentees` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:43.662992 #203]  INFO -- : (0.108350s) DELETE FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:43.666871 #203]  INFO -- : (0.000130s) SELECT * FROM `users`
+I, [2021-05-06T16:25:43.667018 #203]  INFO -- : (0.000068s) SELECT * FROM `users`
+I, [2021-05-06T16:25:43.667131 #203]  INFO -- : (0.000017s) BEGIN
+I, [2021-05-06T16:25:43.667425 #203]  INFO -- : (0.000128s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('A', 'B', 'user', 'testtest@test.test', 'test1234', 'mentor')
+I, [2021-05-06T16:25:43.667658 #203]  INFO -- : (0.000089s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:43.788497 #203]  INFO -- : (0.120746s) COMMIT
+I, [2021-05-06T16:25:43.788759 #203]  INFO -- : (0.000043s) BEGIN
+I, [2021-05-06T16:25:43.789215 #203]  INFO -- : (0.000212s) INSERT INTO `mentors` (`first_name`, `surname`, `username`, `gender`, `industry`, `company`, `sheffield_graduate`, `degree_field`, `email`, `password`) VALUES ('A', 'B', 'user', 'male', 'ABCDEF', 'ABCDE', 1, 'ABCD', 'testtest@test.test', 'test1234')
+I, [2021-05-06T16:25:43.789564 #203]  INFO -- : (0.000186s) SELECT * FROM `mentors` WHERE `id` = 1
+I, [2021-05-06T16:25:43.914312 #203]  INFO -- : (0.124657s) COMMIT
+I, [2021-05-06T16:25:43.916402 #203]  INFO -- : (0.000156s) SELECT * FROM `users`
+I, [2021-05-06T16:25:43.916568 #203]  INFO -- : (0.000083s) SELECT * FROM `users`
+I, [2021-05-06T16:25:43.918213 #203]  INFO -- : (0.000107s) SELECT * FROM `users`
+I, [2021-05-06T16:25:43.918354 #203]  INFO -- : (0.000075s) SELECT * FROM `users`
+I, [2021-05-06T16:25:43.919376 #203]  INFO -- : (0.000028s) BEGIN
+I, [2021-05-06T16:25:43.919698 #203]  INFO -- : (0.000141s) INSERT INTO `users` (`first_name`, `surname`, `password`, `user_type`, `id`, `username`) VALUES ('A', 'B', 'test1234', 'mentor', 9999, 'user')
+I, [2021-05-06T16:25:43.919899 #203]  INFO -- : (0.000078s) SELECT * FROM `users` WHERE `id` = 9999
+I, [2021-05-06T16:25:44.027200 #203]  INFO -- : (0.107229s) COMMIT
+I, [2021-05-06T16:25:44.027720 #203]  INFO -- : (0.000028s) BEGIN
+I, [2021-05-06T16:25:44.028068 #203]  INFO -- : (0.000148s) INSERT INTO `mentors` (`first_name`, `username`, `surname`, `industry`, `company`, `email`, `password`, `sheffield_graduate`, `degree_field`, `id`) VALUES ('A', 'user', 'B', 'ABCDEF', 'ABCDE', 'testtest@test.test', 'test1234', 1, 'ABCD', 9999)
+I, [2021-05-06T16:25:44.028315 #203]  INFO -- : (0.000123s) SELECT * FROM `mentors` WHERE `id` = 9999
+I, [2021-05-06T16:25:44.128190 #203]  INFO -- : (0.099797s) COMMIT
+I, [2021-05-06T16:25:44.129432 #203]  INFO -- : (0.000147s) SELECT * FROM `users`
+I, [2021-05-06T16:25:44.129604 #203]  INFO -- : (0.000091s) SELECT * FROM `users`
+I, [2021-05-06T16:25:44.130884 #203]  INFO -- : (0.000028s) BEGIN
+E, [2021-05-06T16:25:44.131176 #203] ERROR -- : SQLite3::ConstraintException: UNIQUE constraint failed: users.id: INSERT INTO `users` (`first_name`, `surname`, `password`, `user_type`, `id`, `username`) VALUES ('A', 'B', 'test1234', 'mentor', 9999, 'user')
+I, [2021-05-06T16:25:44.131331 #203]  INFO -- : (0.000019s) ROLLBACK
+I, [2021-05-06T16:25:44.131719 #203]  INFO -- : (0.000064s) DELETE FROM `mentees` WHERE (1 = 1)
+I, [2021-05-06T16:25:44.238880 #203]  INFO -- : (0.107036s) DELETE FROM `mentors` WHERE (1 = 1)
+I, [2021-05-06T16:25:44.239143 #203]  INFO -- : (0.000074s) DELETE FROM `admins` WHERE (1 = 1)
+I, [2021-05-06T16:25:44.362555 #203]  INFO -- : (0.123289s) DELETE FROM `users` WHERE (1 = 1)
+I, [2021-05-06T16:25:44.362882 #203]  INFO -- : (0.000092s) DELETE FROM `codes` WHERE (1 = 1)
+I, [2021-05-06T16:25:44.363047 #203]  INFO -- : (0.000046s) DELETE FROM `requests` WHERE (1 = 1)
+I, [2021-05-06T16:25:44.363198 #203]  INFO -- : (0.000042s) DELETE FROM `questions_answers` WHERE (1 = 1)
+I, [2021-05-06T16:25:44.364008 #203]  INFO -- : (0.000117s) SELECT * FROM `users`
+I, [2021-05-06T16:25:44.364145 #203]  INFO -- : (0.000068s) SELECT * FROM `users`
+I, [2021-05-06T16:25:44.364244 #203]  INFO -- : (0.000017s) BEGIN
+I, [2021-05-06T16:25:44.364575 #203]  INFO -- : (0.000135s) INSERT INTO `mentors` (`seeking_mentee`, `number_of_mentees`, `gender`, `biography`, `username`, `first_name`, `surname`, `industry`, `company`, `email`, `password`, `sheffield_graduate`, `degree_field`) VALUES (1, 0, 'male', 'I am from sheffield', 'user', 'A', 'B', 'ABCDE', 'ABCDE', '123@AB.CDE', 'pass1234', 1, 'ABCDE')
+I, [2021-05-06T16:25:44.364801 #203]  INFO -- : (0.000112s) SELECT * FROM `mentors` WHERE `id` = 1
+I, [2021-05-06T16:25:44.475950 #203]  INFO -- : (0.111068s) COMMIT
+I, [2021-05-06T16:25:44.605347 #203]  INFO -- : (0.129158s) DELETE FROM `mentors` WHERE `id` = 1
+I, [2021-05-06T16:25:44.606238 #203]  INFO -- : (0.000155s) SELECT * FROM `users`
+I, [2021-05-06T16:25:44.606400 #203]  INFO -- : (0.000082s) SELECT * FROM `users`
+I, [2021-05-06T16:25:44.606507 #203]  INFO -- : (0.000018s) BEGIN
+I, [2021-05-06T16:25:44.606851 #203]  INFO -- : (0.000149s) INSERT INTO `mentors` (`seeking_mentee`, `number_of_mentees`, `gender`, `biography`, `username`, `first_name`, `surname`, `industry`, `company`, `email`, `password`, `sheffield_graduate`, `degree_field`) VALUES (1, 0, 'male', 'I am from sheffield', 'user', 'A', 'B', 'ABCDE', 'ABCDE', '123@AB.CDE', 'pass1234', 1, 'ABCDE')
+I, [2021-05-06T16:25:44.607122 #203]  INFO -- : (0.000127s) SELECT * FROM `mentors` WHERE `id` = 1
+I, [2021-05-06T16:25:44.743081 #203]  INFO -- : (0.135870s) COMMIT
+I, [2021-05-06T16:25:44.743589 #203]  INFO -- : (0.000290s) SELECT * FROM `mentors` WHERE `id` = 1
+I, [2021-05-06T16:25:44.846347 #203]  INFO -- : (0.102575s) DELETE FROM `mentors` WHERE `id` = 1
+I, [2021-05-06T16:25:44.847616 #203]  INFO -- : (0.000197s) SELECT * FROM `users`
+I, [2021-05-06T16:25:44.847829 #203]  INFO -- : (0.000104s) SELECT * FROM `users`
+I, [2021-05-06T16:25:44.847966 #203]  INFO -- : (0.000023s) BEGIN
+I, [2021-05-06T16:25:44.848413 #203]  INFO -- : (0.000183s) INSERT INTO `mentors` (`seeking_mentee`, `number_of_mentees`, `gender`, `biography`, `username`, `first_name`, `surname`, `industry`, `company`, `email`, `password`, `sheffield_graduate`, `degree_field`) VALUES (1, 0, 'male', 'I am from sheffield', 'user', 'A', 'B', 'ABCDE', 'ABCDE', '123@AB.CDE', 'pass1234', 1, 'ABCDE')
+I, [2021-05-06T16:25:44.848785 #203]  INFO -- : (0.000168s) SELECT * FROM `mentors` WHERE `id` = 1
+I, [2021-05-06T16:25:44.951364 #203]  INFO -- : (0.102476s) COMMIT
+I, [2021-05-06T16:25:44.951807 #203]  INFO -- : (0.000200s) SELECT * FROM `mentors` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:45.051695 #203]  INFO -- : (0.099755s) DELETE FROM `mentors` WHERE `id` = 1
+I, [2021-05-06T16:25:45.052274 #203]  INFO -- : (0.000035s) BEGIN
+I, [2021-05-06T16:25:45.052585 #203]  INFO -- : (0.000136s) INSERT INTO `users` (`password`, `user_type`, `username`) VALUES ('test1234', 'admin', 'user')
+I, [2021-05-06T16:25:45.052816 #203]  INFO -- : (0.000104s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:45.166565 #203]  INFO -- : (0.113672s) COMMIT
+I, [2021-05-06T16:25:45.166861 #203]  INFO -- : (0.000034s) BEGIN
+I, [2021-05-06T16:25:45.167188 #203]  INFO -- : (0.000146s) INSERT INTO `admins` (`username`, `first_name`, `surname`, `admin_code`, `email`, `password`) VALUES ('user', 'A', 'B', '1234', 'testtest@test.test', 'test1234')
+I, [2021-05-06T16:25:45.167440 #203]  INFO -- : (0.000109s) SELECT * FROM `admins` WHERE `id` = 1
+I, [2021-05-06T16:25:45.261136 #203]  INFO -- : (0.093612s) COMMIT
+I, [2021-05-06T16:25:45.262226 #203]  INFO -- : (0.000151s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:45.262417 #203]  INFO -- : (0.000082s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:45.262603 #203]  INFO -- : (0.000083s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:45.262876 #203]  INFO -- : (0.000091s) SELECT * FROM `admins` WHERE (`username` LIKE '%user%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T16:25:45.263048 #203]  INFO -- : (0.000079s) SELECT * FROM `admins` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:45.264284 #203]  INFO -- : (0.000101s) SELECT * FROM `admins` WHERE `id` = 1
+I, [2021-05-06T16:25:45.264426 #203]  INFO -- : (0.000075s) SELECT * FROM `admins` WHERE `id` = 1
+I, [2021-05-06T16:25:45.264547 #203]  INFO -- : (0.000070s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:45.265649 #203]  INFO -- : (0.000095s) SELECT * FROM `admins` WHERE `id` = 1
+I, [2021-05-06T16:25:45.265787 #203]  INFO -- : (0.000074s) SELECT * FROM `admins` WHERE `id` = 1
+I, [2021-05-06T16:25:45.265927 #203]  INFO -- : (0.000073s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:45.266578 #203]  INFO -- : (0.000060s) DELETE FROM `mentees` WHERE (1 = 1)
+I, [2021-05-06T16:25:45.266723 #203]  INFO -- : (0.000041s) DELETE FROM `mentors` WHERE (1 = 1)
+I, [2021-05-06T16:25:45.387389 #203]  INFO -- : (0.120554s) DELETE FROM `admins` WHERE (1 = 1)
+I, [2021-05-06T16:25:45.487249 #203]  INFO -- : (0.099638s) DELETE FROM `users` WHERE (1 = 1)
+I, [2021-05-06T16:25:45.487557 #203]  INFO -- : (0.000087s) DELETE FROM `codes` WHERE (1 = 1)
+I, [2021-05-06T16:25:45.487691 #203]  INFO -- : (0.000041s) DELETE FROM `requests` WHERE (1 = 1)
+I, [2021-05-06T16:25:45.487805 #203]  INFO -- : (0.000036s) DELETE FROM `questions_answers` WHERE (1 = 1)
+I, [2021-05-06T16:25:45.488065 #203]  INFO -- : (0.000023s) BEGIN
+I, [2021-05-06T16:25:45.488348 #203]  INFO -- : (0.000128s) INSERT INTO `users` (`password`, `user_type`, `username`) VALUES ('test1234', 'admin', 'user')
+I, [2021-05-06T16:25:45.488564 #203]  INFO -- : (0.000100s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:45.581484 #203]  INFO -- : (0.092840s) COMMIT
+I, [2021-05-06T16:25:45.581786 #203]  INFO -- : (0.000036s) BEGIN
+I, [2021-05-06T16:25:45.582133 #203]  INFO -- : (0.000143s) INSERT INTO `admins` (`username`, `first_name`, `surname`, `admin_code`, `email`, `password`) VALUES ('user', 'A', 'B', '1234', 'testtest@test.test', 'test1234')
+I, [2021-05-06T16:25:45.582360 #203]  INFO -- : (0.000104s) SELECT * FROM `admins` WHERE `id` = 1
+I, [2021-05-06T16:25:45.684089 #203]  INFO -- : (0.101652s) COMMIT
+I, [2021-05-06T16:25:45.685186 #203]  INFO -- : (0.000159s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:45.685397 #203]  INFO -- : (0.000086s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:45.685581 #203]  INFO -- : (0.000081s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:45.686016 #203]  INFO -- : (0.000251s) SELECT * FROM `admins` WHERE (`username` LIKE '%user%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T16:25:45.686216 #203]  INFO -- : (0.000086s) SELECT * FROM `admins` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:45.687559 #203]  INFO -- : (0.000101s) SELECT * FROM `admins` WHERE `id` = 1
+I, [2021-05-06T16:25:45.687707 #203]  INFO -- : (0.000077s) SELECT * FROM `admins` WHERE `id` = 1
+I, [2021-05-06T16:25:45.687833 #203]  INFO -- : (0.000073s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:45.688026 #203]  INFO -- : (0.000016s) BEGIN
+I, [2021-05-06T16:25:45.688333 #203]  INFO -- : (0.000133s) UPDATE `admins` SET `first_name` = 'X', `surname` = 'Y', `username` = 'user123', `email` = 'testtest123@test.test' WHERE (`id` = 1)
+I, [2021-05-06T16:25:45.805594 #203]  INFO -- : (0.117181s) COMMIT
+I, [2021-05-06T16:25:45.805853 #203]  INFO -- : (0.000060s) BEGIN
+I, [2021-05-06T16:25:45.806236 #203]  INFO -- : (0.000158s) UPDATE `users` SET `first_name` = 'X', `surname` = 'Y', `username` = 'user123', `email` = 'testtest123@test.test' WHERE (`id` = 1)
+I, [2021-05-06T16:25:45.904913 #203]  INFO -- : (0.098595s) COMMIT
+I, [2021-05-06T16:25:45.906658 #203]  INFO -- : (0.000156s) SELECT * FROM `admins` WHERE `id` = 1
+I, [2021-05-06T16:25:45.906819 #203]  INFO -- : (0.000080s) SELECT * FROM `admins` WHERE `id` = 1
+I, [2021-05-06T16:25:45.906947 #203]  INFO -- : (0.000075s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:45.907434 #203]  INFO -- : (0.000106s) SELECT * FROM `admins` WHERE `id` = 1
+I, [2021-05-06T16:25:45.907593 #203]  INFO -- : (0.000075s) SELECT * FROM `admins` WHERE `id` = 1
+I, [2021-05-06T16:25:45.907717 #203]  INFO -- : (0.000067s) SELECT * FROM `admins` WHERE `id` = 1
+I, [2021-05-06T16:25:45.907836 #203]  INFO -- : (0.000067s) SELECT * FROM `admins` WHERE `id` = 1
+I, [2021-05-06T16:25:45.908190 #203]  INFO -- : (0.000062s) DELETE FROM `mentees` WHERE (1 = 1)
+I, [2021-05-06T16:25:45.908325 #203]  INFO -- : (0.000039s) DELETE FROM `mentors` WHERE (1 = 1)
+I, [2021-05-06T16:25:46.014231 #203]  INFO -- : (0.105805s) DELETE FROM `admins` WHERE (1 = 1)
+I, [2021-05-06T16:25:46.135023 #203]  INFO -- : (0.120549s) DELETE FROM `users` WHERE (1 = 1)
+I, [2021-05-06T16:25:46.135337 #203]  INFO -- : (0.000089s) DELETE FROM `codes` WHERE (1 = 1)
+I, [2021-05-06T16:25:46.135495 #203]  INFO -- : (0.000043s) DELETE FROM `requests` WHERE (1 = 1)
+I, [2021-05-06T16:25:46.135612 #203]  INFO -- : (0.000038s) DELETE FROM `questions_answers` WHERE (1 = 1)
+I, [2021-05-06T16:25:46.136122 #203]  INFO -- : (0.000034s) BEGIN
+I, [2021-05-06T16:25:46.136433 #203]  INFO -- : (0.000140s) INSERT INTO `users` (`username`, `password`, `user_type`, `id`) VALUES ('user', 'test1234', 'mentee', 9999)
+I, [2021-05-06T16:25:46.136651 #203]  INFO -- : (0.000100s) SELECT * FROM `users` WHERE `id` = 9999
+I, [2021-05-06T16:25:46.276711 #203]  INFO -- : (0.139980s) COMMIT
+I, [2021-05-06T16:25:46.277306 #203]  INFO -- : (0.000043s) BEGIN
+I, [2021-05-06T16:25:46.277721 #203]  INFO -- : (0.000172s) INSERT INTO `mentees` (`username`, `first_name`, `surname`, `course`, `year_of_study`, `email`, `password`, `id`) VALUES ('user', 'A', 'B', 'ABCD', 9999, 'testtest@test.test', 'test1234', 9999)
+I, [2021-05-06T16:25:46.278069 #203]  INFO -- : (0.000172s) SELECT * FROM `mentees` WHERE `id` = 9999
+I, [2021-05-06T16:25:46.380603 #203]  INFO -- : (0.102442s) COMMIT
+I, [2021-05-06T16:25:46.385784 #203]  INFO -- : (0.000191s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:46.386067 #203]  INFO -- : (0.000117s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:46.386289 #203]  INFO -- : (0.000103s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:46.386495 #203]  INFO -- : (0.000099s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:46.386875 #203]  INFO -- : (0.000163s) SELECT * FROM `mentees` WHERE (`username` LIKE '%user%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T16:25:46.387154 #203]  INFO -- : (0.000170s) SELECT * FROM `mentees` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:46.388762 #203]  INFO -- : (0.000174s) SELECT * FROM `mentees` WHERE `id` = 9999
+I, [2021-05-06T16:25:46.388979 #203]  INFO -- : (0.000137s) SELECT * FROM `mentees` WHERE `id` = 9999
+I, [2021-05-06T16:25:46.389139 #203]  INFO -- : (0.000095s) SELECT * FROM `users` WHERE `id` = 9999
+I, [2021-05-06T16:25:46.390729 #203]  INFO -- : (0.000167s) SELECT * FROM `mentees` WHERE `id` = 9999
+I, [2021-05-06T16:25:46.390948 #203]  INFO -- : (0.000138s) SELECT * FROM `mentees` WHERE `id` = 9999
+I, [2021-05-06T16:25:46.391106 #203]  INFO -- : (0.000096s) SELECT * FROM `users` WHERE `id` = 9999
+I, [2021-05-06T16:25:46.499046 #203]  INFO -- : (0.107127s) DELETE FROM `mentees` WHERE (1 = 1)
+I, [2021-05-06T16:25:46.499414 #203]  INFO -- : (0.000101s) DELETE FROM `mentors` WHERE (1 = 1)
+I, [2021-05-06T16:25:46.499570 #203]  INFO -- : (0.000047s) DELETE FROM `admins` WHERE (1 = 1)
+I, [2021-05-06T16:25:46.602667 #203]  INFO -- : (0.102976s) DELETE FROM `users` WHERE (1 = 1)
+I, [2021-05-06T16:25:46.602967 #203]  INFO -- : (0.000085s) DELETE FROM `codes` WHERE (1 = 1)
+I, [2021-05-06T16:25:46.603106 #203]  INFO -- : (0.000042s) DELETE FROM `requests` WHERE (1 = 1)
+I, [2021-05-06T16:25:46.603223 #203]  INFO -- : (0.000039s) DELETE FROM `questions_answers` WHERE (1 = 1)
+I, [2021-05-06T16:25:46.603649 #203]  INFO -- : (0.000027s) BEGIN
+I, [2021-05-06T16:25:46.603954 #203]  INFO -- : (0.000140s) INSERT INTO `users` (`username`, `password`, `user_type`, `id`) VALUES ('user', 'test1234', 'mentee', 9999)
+I, [2021-05-06T16:25:46.604185 #203]  INFO -- : (0.000115s) SELECT * FROM `users` WHERE `id` = 9999
+I, [2021-05-06T16:25:46.720497 #203]  INFO -- : (0.116227s) COMMIT
+I, [2021-05-06T16:25:46.721113 #203]  INFO -- : (0.000040s) BEGIN
+I, [2021-05-06T16:25:46.721537 #203]  INFO -- : (0.000191s) INSERT INTO `mentees` (`username`, `first_name`, `surname`, `course`, `year_of_study`, `email`, `password`, `id`) VALUES ('user', 'A', 'B', 'ABCD', 9999, 'testtest@test.test', 'test1234', 9999)
+I, [2021-05-06T16:25:46.721910 #203]  INFO -- : (0.000220s) SELECT * FROM `mentees` WHERE `id` = 9999
+I, [2021-05-06T16:25:46.834174 #203]  INFO -- : (0.112168s) COMMIT
+I, [2021-05-06T16:25:46.835551 #203]  INFO -- : (0.000203s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:46.835831 #203]  INFO -- : (0.000137s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:46.836066 #203]  INFO -- : (0.000107s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:46.836266 #203]  INFO -- : (0.000105s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:46.836731 #203]  INFO -- : (0.000184s) SELECT * FROM `mentees` WHERE (`username` LIKE '%user%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T16:25:46.837002 #203]  INFO -- : (0.000151s) SELECT * FROM `mentees` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:46.838972 #203]  INFO -- : (0.000174s) SELECT * FROM `mentees` WHERE `id` = 9999
+I, [2021-05-06T16:25:46.839185 #203]  INFO -- : (0.000133s) SELECT * FROM `mentees` WHERE `id` = 9999
+I, [2021-05-06T16:25:46.839345 #203]  INFO -- : (0.000097s) SELECT * FROM `users` WHERE `id` = 9999
+I, [2021-05-06T16:25:46.839623 #203]  INFO -- : (0.000021s) BEGIN
+I, [2021-05-06T16:25:46.840044 #203]  INFO -- : (0.000176s) UPDATE `mentees` SET `first_name` = 'X', `surname` = 'Y', `username` = 'user123', `course` = 'Maths', `year_of_study` = 1, `biography` = 'i love playing cricket', `email` = 'testtest123@test.test' WHERE (`id` = 9999)
+I, [2021-05-06T16:25:46.950220 #203]  INFO -- : (0.110090s) COMMIT
+I, [2021-05-06T16:25:46.950453 #203]  INFO -- : (0.000030s) BEGIN
+I, [2021-05-06T16:25:46.950822 #203]  INFO -- : (0.000152s) UPDATE `users` SET `first_name` = 'X', `surname` = 'Y', `username` = 'user123', `email` = 'testtest123@test.test' WHERE (`id` = 9999)
+I, [2021-05-06T16:25:47.054240 #203]  INFO -- : (0.103338s) COMMIT
+I, [2021-05-06T16:25:47.055949 #203]  INFO -- : (0.000184s) SELECT * FROM `mentees` WHERE `id` = 9999
+I, [2021-05-06T16:25:47.056143 #203]  INFO -- : (0.000114s) SELECT * FROM `mentees` WHERE `id` = 9999
+I, [2021-05-06T16:25:47.056275 #203]  INFO -- : (0.000076s) SELECT * FROM `users` WHERE `id` = 9999
+I, [2021-05-06T16:25:47.056789 #203]  INFO -- : (0.000109s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:25:47.157003 #203]  INFO -- : (0.099869s) DELETE FROM `mentees` WHERE (1 = 1)
+I, [2021-05-06T16:25:47.157283 #203]  INFO -- : (0.000080s) DELETE FROM `mentors` WHERE (1 = 1)
+I, [2021-05-06T16:25:47.157444 #203]  INFO -- : (0.000046s) DELETE FROM `admins` WHERE (1 = 1)
+I, [2021-05-06T16:25:47.256698 #203]  INFO -- : (0.099135s) DELETE FROM `users` WHERE (1 = 1)
+I, [2021-05-06T16:25:47.257008 #203]  INFO -- : (0.000088s) DELETE FROM `codes` WHERE (1 = 1)
+I, [2021-05-06T16:25:47.257166 #203]  INFO -- : (0.000049s) DELETE FROM `requests` WHERE (1 = 1)
+I, [2021-05-06T16:25:47.257306 #203]  INFO -- : (0.000043s) DELETE FROM `questions_answers` WHERE (1 = 1)
+I, [2021-05-06T16:25:47.257994 #203]  INFO -- : (0.000037s) BEGIN
+I, [2021-05-06T16:25:47.258389 #203]  INFO -- : (0.000180s) INSERT INTO `users` (`first_name`, `surname`, `password`, `user_type`, `id`, `username`) VALUES ('A', 'B', 'test1234', 'mentor', 9999, 'user')
+I, [2021-05-06T16:25:47.258655 #203]  INFO -- : (0.000129s) SELECT * FROM `users` WHERE `id` = 9999
+I, [2021-05-06T16:25:47.378153 #203]  INFO -- : (0.119411s) COMMIT
+I, [2021-05-06T16:25:47.378838 #203]  INFO -- : (0.000036s) BEGIN
+I, [2021-05-06T16:25:47.379244 #203]  INFO -- : (0.000173s) INSERT INTO `mentors` (`first_name`, `username`, `surname`, `industry`, `company`, `email`, `password`, `sheffield_graduate`, `degree_field`, `id`) VALUES ('A', 'user', 'B', 'ABCDEF', 'ABCDE', 'testtest@test.test', 'test1234', 1, 'ABCD', 9999)
+I, [2021-05-06T16:25:47.379563 #203]  INFO -- : (0.000173s) SELECT * FROM `mentors` WHERE `id` = 9999
+I, [2021-05-06T16:25:47.487330 #203]  INFO -- : (0.107682s) COMMIT
+I, [2021-05-06T16:25:47.488600 #203]  INFO -- : (0.000183s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:47.488837 #203]  INFO -- : (0.000109s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:47.489063 #203]  INFO -- : (0.000103s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:47.489247 #203]  INFO -- : (0.000095s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:47.489628 #203]  INFO -- : (0.000161s) SELECT * FROM `mentors` WHERE (`username` LIKE '%user%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T16:25:47.489925 #203]  INFO -- : (0.000184s) SELECT * FROM `mentors` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:47.491626 #203]  INFO -- : (0.000168s) SELECT * FROM `mentors` WHERE `id` = 9999
+I, [2021-05-06T16:25:47.491848 #203]  INFO -- : (0.000129s) SELECT * FROM `mentors` WHERE `id` = 9999
+I, [2021-05-06T16:25:47.492006 #203]  INFO -- : (0.000095s) SELECT * FROM `users` WHERE `id` = 9999
+I, [2021-05-06T16:25:47.493490 #203]  INFO -- : (0.000159s) SELECT * FROM `mentors` WHERE `id` = 9999
+I, [2021-05-06T16:25:47.493695 #203]  INFO -- : (0.000129s) SELECT * FROM `mentors` WHERE `id` = 9999
+I, [2021-05-06T16:25:47.493870 #203]  INFO -- : (0.000113s) SELECT * FROM `users` WHERE `id` = 9999
+I, [2021-05-06T16:25:47.494685 #203]  INFO -- : (0.000070s) DELETE FROM `mentees` WHERE (1 = 1)
+I, [2021-05-06T16:25:47.598933 #203]  INFO -- : (0.104105s) DELETE FROM `mentors` WHERE (1 = 1)
+I, [2021-05-06T16:25:47.599209 #203]  INFO -- : (0.000077s) DELETE FROM `admins` WHERE (1 = 1)
+I, [2021-05-06T16:25:47.705012 #203]  INFO -- : (0.105674s) DELETE FROM `users` WHERE (1 = 1)
+I, [2021-05-06T16:25:47.705286 #203]  INFO -- : (0.000076s) DELETE FROM `codes` WHERE (1 = 1)
+I, [2021-05-06T16:25:47.705461 #203]  INFO -- : (0.000048s) DELETE FROM `requests` WHERE (1 = 1)
+I, [2021-05-06T16:25:47.705599 #203]  INFO -- : (0.000042s) DELETE FROM `questions_answers` WHERE (1 = 1)
+I, [2021-05-06T16:25:47.706062 #203]  INFO -- : (0.000029s) BEGIN
+I, [2021-05-06T16:25:47.706384 #203]  INFO -- : (0.000146s) INSERT INTO `users` (`first_name`, `surname`, `password`, `user_type`, `id`, `username`) VALUES ('A', 'B', 'test1234', 'mentor', 9999, 'user')
+I, [2021-05-06T16:25:47.706601 #203]  INFO -- : (0.000096s) SELECT * FROM `users` WHERE `id` = 9999
+I, [2021-05-06T16:25:47.810918 #203]  INFO -- : (0.104228s) COMMIT
+I, [2021-05-06T16:25:47.811484 #203]  INFO -- : (0.000034s) BEGIN
+I, [2021-05-06T16:25:47.811845 #203]  INFO -- : (0.000164s) INSERT INTO `mentors` (`first_name`, `username`, `surname`, `industry`, `company`, `email`, `password`, `sheffield_graduate`, `degree_field`, `id`) VALUES ('A', 'user', 'B', 'ABCDEF', 'ABCDE', 'testtest@test.test', 'test1234', 1, 'ABCD', 9999)
+I, [2021-05-06T16:25:47.812098 #203]  INFO -- : (0.000132s) SELECT * FROM `mentors` WHERE `id` = 9999
+I, [2021-05-06T16:25:47.912713 #203]  INFO -- : (0.100539s) COMMIT
+I, [2021-05-06T16:25:47.913829 #203]  INFO -- : (0.000151s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:47.914062 #203]  INFO -- : (0.000096s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:47.914248 #203]  INFO -- : (0.000079s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:47.914402 #203]  INFO -- : (0.000078s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:47.914725 #203]  INFO -- : (0.000143s) SELECT * FROM `mentors` WHERE (`username` LIKE '%user%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T16:25:47.914936 #203]  INFO -- : (0.000108s) SELECT * FROM `mentors` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:47.916360 #203]  INFO -- : (0.000124s) SELECT * FROM `mentors` WHERE `id` = 9999
+I, [2021-05-06T16:25:47.916526 #203]  INFO -- : (0.000098s) SELECT * FROM `mentors` WHERE `id` = 9999
+I, [2021-05-06T16:25:47.916655 #203]  INFO -- : (0.000074s) SELECT * FROM `users` WHERE `id` = 9999
+I, [2021-05-06T16:25:47.916858 #203]  INFO -- : (0.000017s) BEGIN
+I, [2021-05-06T16:25:47.917179 #203]  INFO -- : (0.000136s) UPDATE `mentors` SET `first_name` = 'X', `surname` = 'Y', `username` = 'user123', `industry` = 'Engineering', `company` = 'products INC', `biography` = 'i love playing cricket', `email` = 'testtest123@test.test' WHERE (`id` = 9999)
+I, [2021-05-06T16:25:48.023617 #203]  INFO -- : (0.106361s) COMMIT
+I, [2021-05-06T16:25:48.023838 #203]  INFO -- : (0.000032s) BEGIN
+I, [2021-05-06T16:25:48.024259 #203]  INFO -- : (0.000179s) UPDATE `users` SET `first_name` = 'X', `surname` = 'Y', `username` = 'user123', `email` = 'testtest123@test.test' WHERE (`id` = 9999)
+I, [2021-05-06T16:25:48.123096 #203]  INFO -- : (0.098752s) COMMIT
+I, [2021-05-06T16:25:48.125150 #203]  INFO -- : (0.000211s) SELECT * FROM `mentors` WHERE `id` = 9999
+I, [2021-05-06T16:25:48.125372 #203]  INFO -- : (0.000133s) SELECT * FROM `mentors` WHERE `id` = 9999
+I, [2021-05-06T16:25:48.125529 #203]  INFO -- : (0.000094s) SELECT * FROM `users` WHERE `id` = 9999
+I, [2021-05-06T16:25:48.126222 #203]  INFO -- : (0.000135s) SELECT * FROM `mentors` WHERE `id` = 1
+I, [2021-05-06T16:25:48.126706 #203]  INFO -- : (0.000072s) DELETE FROM `mentees` WHERE (1 = 1)
+I, [2021-05-06T16:25:48.237311 #203]  INFO -- : (0.110459s) DELETE FROM `mentors` WHERE (1 = 1)
+I, [2021-05-06T16:25:48.237599 #203]  INFO -- : (0.000082s) DELETE FROM `admins` WHERE (1 = 1)
+I, [2021-05-06T16:25:48.340354 #203]  INFO -- : (0.102639s) DELETE FROM `users` WHERE (1 = 1)
+I, [2021-05-06T16:25:48.340649 #203]  INFO -- : (0.000079s) DELETE FROM `codes` WHERE (1 = 1)
+I, [2021-05-06T16:25:48.340791 #203]  INFO -- : (0.000042s) DELETE FROM `requests` WHERE (1 = 1)
+I, [2021-05-06T16:25:48.340937 #203]  INFO -- : (0.000057s) DELETE FROM `questions_answers` WHERE (1 = 1)
+I, [2021-05-06T16:25:48.341449 #203]  INFO -- : (0.000026s) BEGIN
+I, [2021-05-06T16:25:48.341747 #203]  INFO -- : (0.000134s) INSERT INTO `users` (`username`, `password`, `user_type`, `id`) VALUES ('user', 'test1234', 'mentee', 9999)
+I, [2021-05-06T16:25:48.342015 #203]  INFO -- : (0.000115s) SELECT * FROM `users` WHERE `id` = 9999
+I, [2021-05-06T16:25:48.457085 #203]  INFO -- : (0.114994s) COMMIT
+I, [2021-05-06T16:25:48.457531 #203]  INFO -- : (0.000035s) BEGIN
+I, [2021-05-06T16:25:48.457901 #203]  INFO -- : (0.000178s) INSERT INTO `mentees` (`username`, `first_name`, `surname`, `course`, `year_of_study`, `email`, `password`, `id`) VALUES ('user', 'A', 'B', 'ABCD', 9999, 'testtest@test.test', 'test1234', 9999)
+I, [2021-05-06T16:25:48.458184 #203]  INFO -- : (0.000146s) SELECT * FROM `mentees` WHERE `id` = 9999
+I, [2021-05-06T16:25:48.557490 #203]  INFO -- : (0.099218s) COMMIT
+I, [2021-05-06T16:25:48.558591 #203]  INFO -- : (0.000153s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:48.558798 #203]  INFO -- : (0.000087s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:48.559063 #203]  INFO -- : (0.000132s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:48.559234 #203]  INFO -- : (0.000079s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:48.559536 #203]  INFO -- : (0.000125s) SELECT * FROM `mentees` WHERE (`username` LIKE '%user%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T16:25:48.559734 #203]  INFO -- : (0.000106s) SELECT * FROM `mentees` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:48.561114 #203]  INFO -- : (0.000147s) SELECT * FROM `mentees` WHERE `id` = 9999
+I, [2021-05-06T16:25:48.561282 #203]  INFO -- : (0.000101s) SELECT * FROM `mentees` WHERE `id` = 9999
+I, [2021-05-06T16:25:48.561411 #203]  INFO -- : (0.000076s) SELECT * FROM `users` WHERE `id` = 9999
+I, [2021-05-06T16:25:48.561600 #203]  INFO -- : (0.000062s) SELECT * FROM `requests` WHERE (`mentee_id` = 9999)
+I, [2021-05-06T16:25:48.565537 #203]  INFO -- : (0.000078s) SELECT count(*) AS 'count' FROM `requests` WHERE (`mentee_id` = 9999) LIMIT 1
+I, [2021-05-06T16:25:48.565660 #203]  INFO -- : (0.000055s) SELECT count(*) AS 'count' FROM `requests` WHERE (`mentee_id` = 9999) LIMIT 1
+I, [2021-05-06T16:25:48.566835 #203]  INFO -- : (0.000123s) SELECT * FROM `mentees` WHERE `id` = 9999
+I, [2021-05-06T16:25:48.566998 #203]  INFO -- : (0.000098s) SELECT * FROM `mentees` WHERE `id` = 9999
+I, [2021-05-06T16:25:48.567119 #203]  INFO -- : (0.000070s) SELECT * FROM `users` WHERE `id` = 9999
+I, [2021-05-06T16:25:48.567285 #203]  INFO -- : (0.000058s) SELECT * FROM `requests` WHERE (`mentee_id` = 9999)
+I, [2021-05-06T16:25:48.567532 #203]  INFO -- : (0.000060s) SELECT count(*) AS 'count' FROM `requests` WHERE (`mentee_id` = 9999) LIMIT 1
+I, [2021-05-06T16:25:48.567638 #203]  INFO -- : (0.000050s) SELECT count(*) AS 'count' FROM `requests` WHERE (`mentee_id` = 9999) LIMIT 1
+I, [2021-05-06T16:25:48.668699 #203]  INFO -- : (0.100518s) DELETE FROM `mentees` WHERE (1 = 1)
+I, [2021-05-06T16:25:48.668994 #203]  INFO -- : (0.000081s) DELETE FROM `mentors` WHERE (1 = 1)
+I, [2021-05-06T16:25:48.669127 #203]  INFO -- : (0.000039s) DELETE FROM `admins` WHERE (1 = 1)
+I, [2021-05-06T16:25:48.771014 #203]  INFO -- : (0.101779s) DELETE FROM `users` WHERE (1 = 1)
+I, [2021-05-06T16:25:48.771477 #203]  INFO -- : (0.000122s) DELETE FROM `codes` WHERE (1 = 1)
+I, [2021-05-06T16:25:48.771746 #203]  INFO -- : (0.000078s) DELETE FROM `requests` WHERE (1 = 1)
+I, [2021-05-06T16:25:48.771996 #203]  INFO -- : (0.000076s) DELETE FROM `questions_answers` WHERE (1 = 1)
+I, [2021-05-06T16:25:48.772815 #203]  INFO -- : (0.000045s) BEGIN
+I, [2021-05-06T16:25:48.773296 #203]  INFO -- : (0.000213s) INSERT INTO `users` (`first_name`, `surname`, `password`, `user_type`, `id`, `username`) VALUES ('A', 'B', 'test1234', 'mentor', 9999, 'user')
+I, [2021-05-06T16:25:48.773644 #203]  INFO -- : (0.000159s) SELECT * FROM `users` WHERE `id` = 9999
+I, [2021-05-06T16:25:48.878464 #203]  INFO -- : (0.104702s) COMMIT
+I, [2021-05-06T16:25:48.879164 #203]  INFO -- : (0.000036s) BEGIN
+I, [2021-05-06T16:25:48.879576 #203]  INFO -- : (0.000175s) INSERT INTO `mentors` (`first_name`, `username`, `surname`, `industry`, `company`, `email`, `password`, `sheffield_graduate`, `degree_field`, `id`) VALUES ('A', 'user', 'B', 'ABCDEF', 'ABCDE', 'testtest@test.test', 'test1234', 1, 'ABCD', 9999)
+I, [2021-05-06T16:25:48.879889 #203]  INFO -- : (0.000166s) SELECT * FROM `mentors` WHERE `id` = 9999
+I, [2021-05-06T16:25:48.990679 #203]  INFO -- : (0.110706s) COMMIT
+I, [2021-05-06T16:25:48.991795 #203]  INFO -- : (0.000151s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:48.992023 #203]  INFO -- : (0.000093s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:48.992254 #203]  INFO -- : (0.000114s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:48.992429 #203]  INFO -- : (0.000082s) SELECT * FROM `users` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:48.992744 #203]  INFO -- : (0.000126s) SELECT * FROM `mentors` WHERE (`username` LIKE '%user%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T16:25:48.992958 #203]  INFO -- : (0.000108s) SELECT * FROM `mentors` WHERE (`username` = 'user') LIMIT 1
+I, [2021-05-06T16:25:48.994318 #203]  INFO -- : (0.000122s) SELECT * FROM `mentors` WHERE `id` = 9999
+I, [2021-05-06T16:25:48.994518 #203]  INFO -- : (0.000126s) SELECT * FROM `mentors` WHERE `id` = 9999
+I, [2021-05-06T16:25:48.994664 #203]  INFO -- : (0.000082s) SELECT * FROM `users` WHERE `id` = 9999
+I, [2021-05-06T16:25:48.994870 #203]  INFO -- : (0.000066s) SELECT * FROM `requests` WHERE (`mentor_id` = 9999)
+I, [2021-05-06T16:25:48.995174 #203]  INFO -- : (0.000067s) SELECT count(*) AS 'count' FROM `requests` WHERE (`mentor_id` = 9999) LIMIT 1
+I, [2021-05-06T16:25:48.995301 #203]  INFO -- : (0.000059s) SELECT count(*) AS 'count' FROM `requests` WHERE (`mentor_id` = 9999) LIMIT 1
+I, [2021-05-06T16:25:48.996468 #203]  INFO -- : (0.000118s) SELECT * FROM `mentors` WHERE `id` = 9999
+I, [2021-05-06T16:25:48.996648 #203]  INFO -- : (0.000107s) SELECT * FROM `mentors` WHERE `id` = 9999
+I, [2021-05-06T16:25:48.996793 #203]  INFO -- : (0.000084s) SELECT * FROM `users` WHERE `id` = 9999
+I, [2021-05-06T16:25:48.996978 #203]  INFO -- : (0.000064s) SELECT * FROM `requests` WHERE (`mentor_id` = 9999)
+I, [2021-05-06T16:25:48.997249 #203]  INFO -- : (0.000065s) SELECT count(*) AS 'count' FROM `requests` WHERE (`mentor_id` = 9999) LIMIT 1
+I, [2021-05-06T16:25:48.997372 #203]  INFO -- : (0.000058s) SELECT count(*) AS 'count' FROM `requests` WHERE (`mentor_id` = 9999) LIMIT 1
+I, [2021-05-06T16:25:48.997987 #203]  INFO -- : (0.000059s) DELETE FROM `mentees` WHERE (1 = 1)
+I, [2021-05-06T16:25:49.111158 #203]  INFO -- : (0.113023s) DELETE FROM `mentors` WHERE (1 = 1)
+I, [2021-05-06T16:25:49.111485 #203]  INFO -- : (0.000086s) DELETE FROM `admins` WHERE (1 = 1)
+I, [2021-05-06T16:25:49.226580 #203]  INFO -- : (0.114101s) DELETE FROM `users` WHERE (1 = 1)
+I, [2021-05-06T16:25:49.226860 #203]  INFO -- : (0.000078s) DELETE FROM `codes` WHERE (1 = 1)
+I, [2021-05-06T16:25:49.226999 #203]  INFO -- : (0.000041s) DELETE FROM `requests` WHERE (1 = 1)
+I, [2021-05-06T16:25:49.227115 #203]  INFO -- : (0.000038s) DELETE FROM `questions_answers` WHERE (1 = 1)
+I, [2021-05-06T16:25:49.227644 #203]  INFO -- : (0.000026s) BEGIN
+I, [2021-05-06T16:25:49.227956 #203]  INFO -- : (0.000135s) INSERT INTO `users` (`email`, `password`, `first_name`, `surname`, `user_type`, `username`) VALUES ('123@AB.CDE', 'pass', 'A', 'B', 'mentee', 'user')
+I, [2021-05-06T16:25:49.228200 #203]  INFO -- : (0.000107s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:49.326965 #203]  INFO -- : (0.098690s) COMMIT
+I, [2021-05-06T16:25:49.433946 #203]  INFO -- : (0.106785s) DELETE FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:49.434534 #203]  INFO -- : (0.000033s) BEGIN
+I, [2021-05-06T16:25:49.434842 #203]  INFO -- : (0.000138s) INSERT INTO `users` (`email`, `password`) VALUES ('123@AB.CDE', 'pass')
+I, [2021-05-06T16:25:49.435086 #203]  INFO -- : (0.000109s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:49.544668 #203]  INFO -- : (0.109508s) COMMIT
+I, [2021-05-06T16:25:49.545069 #203]  INFO -- : (0.000175s) SELECT * FROM `users` WHERE (`username` IS NULL) LIMIT 1
+I, [2021-05-06T16:25:49.656770 #203]  INFO -- : (0.111570s) DELETE FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:49.657396 #203]  INFO -- : (0.000036s) BEGIN
+I, [2021-05-06T16:25:49.657725 #203]  INFO -- : (0.000144s) INSERT INTO `users` (`email`, `password`, `user_type`) VALUES ('123@AB.CDE', 'pass', 'admin')
+I, [2021-05-06T16:25:49.658008 #203]  INFO -- : (0.000127s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:25:49.801395 #203]  INFO -- : (0.143303s) COMMIT
+I, [2021-05-06T16:25:49.801877 #203]  INFO -- : (0.000228s) SELECT * FROM `users` WHERE (`username` IS NULL) LIMIT 1
+I, [2021-05-06T16:25:49.915936 #203]  INFO -- : (0.113911s) DELETE FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:29:47.443425 #204]  INFO -- : (0.000181s) PRAGMA foreign_keys = 1
+I, [2021-05-06T16:29:47.443518 #204]  INFO -- : (0.000013s) PRAGMA case_sensitive_like = 1
+I, [2021-05-06T16:29:47.444188 #204]  INFO -- : (0.000056s) SELECT sqlite_version()
+I, [2021-05-06T16:29:47.444408 #204]  INFO -- : (0.000100s) PRAGMA table_info('admins')
+I, [2021-05-06T16:29:47.445083 #204]  INFO -- : (0.000078s) PRAGMA table_info('codes')
+I, [2021-05-06T16:29:47.445643 #204]  INFO -- : (0.000080s) PRAGMA table_info('questions_answers')
+I, [2021-05-06T16:29:47.446496 #204]  INFO -- : (0.000155s) PRAGMA table_info('mentees')
+I, [2021-05-06T16:29:47.447639 #204]  INFO -- : (0.000139s) PRAGMA table_info('mentors')
+I, [2021-05-06T16:29:47.448488 #204]  INFO -- : (0.000114s) PRAGMA table_info('requests')
+I, [2021-05-06T16:29:47.449213 #204]  INFO -- : (0.000102s) PRAGMA table_info('users')
+I, [2021-05-06T16:30:01.705764 #204]  INFO -- : (0.000136s) SELECT * FROM `users`
+I, [2021-05-06T16:30:01.706212 #204]  INFO -- : (0.000080s) SELECT * FROM `users`
+I, [2021-05-06T16:30:01.706320 #204]  INFO -- : (0.000015s) BEGIN
+I, [2021-05-06T16:30:01.706682 #204]  INFO -- : (0.000203s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('Ana', 'Camarasan', 'adminos', 'anacamarasanasdadsa@hotmail.com', 'admonos', 'admin')
+I, [2021-05-06T16:30:01.706878 #204]  INFO -- : (0.000076s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-06T16:30:01.812108 #204]  INFO -- : (0.105156s) COMMIT
+I, [2021-05-06T16:30:01.812314 #204]  INFO -- : (0.000033s) BEGIN
+I, [2021-05-06T16:30:01.813221 #204]  INFO -- : (0.000180s) INSERT INTO `admins` (`first_name`, `surname`, `username`, `admin_code`, `email`, `password`) VALUES ('Ana', 'Camarasan', 'adminos', 'asd', 'anacamarasanasdadsa@hotmail.com', 'admonos')
+I, [2021-05-06T16:30:01.813446 #204]  INFO -- : (0.000098s) SELECT * FROM `admins` WHERE `id` = 1
+I, [2021-05-06T16:30:01.926659 #204]  INFO -- : (0.113126s) COMMIT
+I, [2021-05-06T16:30:15.944860 #204]  INFO -- : (0.000634s) SELECT * FROM `users` WHERE (`username` = 'adminos') LIMIT 1
+I, [2021-05-06T16:30:24.415246 #204]  INFO -- : (0.000223s) SELECT * FROM `users` WHERE (`username` = 'adminos') LIMIT 1
+I, [2021-05-06T16:30:29.153905 #204]  INFO -- : (0.000209s) SELECT * FROM `users` WHERE (`username` = 'adminos') LIMIT 1
+I, [2021-05-06T16:30:43.201854 #204]  INFO -- : (0.000206s) SELECT * FROM `users`
+I, [2021-05-06T16:30:43.202061 #204]  INFO -- : (0.000101s) SELECT * FROM `users`
+I, [2021-05-06T16:30:43.202180 #204]  INFO -- : (0.000016s) BEGIN
+I, [2021-05-06T16:30:43.202527 #204]  INFO -- : (0.000206s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('Ana', 'Camarasan', 'adminos1', 'anacamarasaasdasn@hotmail.com', 'adminos1', 'admin')
+I, [2021-05-06T16:30:43.202723 #204]  INFO -- : (0.000073s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-05-06T16:30:43.306708 #204]  INFO -- : (0.103900s) COMMIT
+I, [2021-05-06T16:30:43.306927 #204]  INFO -- : (0.000035s) BEGIN
+I, [2021-05-06T16:30:43.307262 #204]  INFO -- : (0.000166s) INSERT INTO `admins` (`first_name`, `surname`, `username`, `admin_code`, `email`, `password`) VALUES ('Ana', 'Camarasan', 'adminos1', 'dad', 'anacamarasaasdasn@hotmail.com', 'adminos1')
+I, [2021-05-06T16:30:43.307516 #204]  INFO -- : (0.000114s) SELECT * FROM `admins` WHERE `id` = 2
+I, [2021-05-06T16:30:43.447669 #204]  INFO -- : (0.140073s) COMMIT
+I, [2021-05-06T16:30:52.020553 #204]  INFO -- : (0.000161s) SELECT * FROM `users` WHERE (`username` = 'adminos1') LIMIT 1
+I, [2021-05-06T16:30:52.020770 #204]  INFO -- : (0.000080s) SELECT * FROM `users` WHERE (`username` = 'adminos1') LIMIT 1
+I, [2021-05-06T16:30:52.020939 #204]  INFO -- : (0.000071s) SELECT * FROM `users` WHERE (`username` = 'adminos1') LIMIT 1
+I, [2021-05-06T16:30:52.022156 #204]  INFO -- : (0.001055s) SELECT * FROM `admins` WHERE (`username` LIKE '%adminos1%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T16:30:52.022385 #204]  INFO -- : (0.000090s) SELECT * FROM `admins` WHERE (`username` = 'adminos1') LIMIT 1
+I, [2021-05-06T16:30:52.129333 #204]  INFO -- : (0.000128s) SELECT * FROM `admins` WHERE `id` = 2
+I, [2021-05-06T16:30:52.129488 #204]  INFO -- : (0.000069s) SELECT * FROM `admins` WHERE `id` = 2
+I, [2021-05-06T16:30:52.130548 #204]  INFO -- : (0.000097s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-05-06T16:30:56.259987 #204]  INFO -- : (0.000154s) SELECT * FROM `mentees`
+I, [2021-05-06T16:30:58.507210 #204]  INFO -- : (0.000231s) SELECT * FROM `mentors`
+I, [2021-05-06T16:31:01.597687 #204]  INFO -- : (0.000147s) SELECT * FROM `mentors`
+I, [2021-05-06T16:31:02.132664 #204]  INFO -- : (0.000156s) SELECT * FROM `mentees`
+I, [2021-05-06T16:31:18.265964 #204]  INFO -- : (0.000194s) SELECT * FROM `users`
+I, [2021-05-06T16:31:18.266141 #204]  INFO -- : (0.000081s) SELECT * FROM `users`
+I, [2021-05-06T16:31:18.266255 #204]  INFO -- : (0.000014s) BEGIN
+I, [2021-05-06T16:31:18.266586 #204]  INFO -- : (0.000185s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('Ana', 'Camarasan', 'mentios', 'anacamadasarasan@hotmail.com', 'mentios', 'mentee')
+I, [2021-05-06T16:31:18.266771 #204]  INFO -- : (0.000074s) SELECT * FROM `users` WHERE `id` = 3
+I, [2021-05-06T16:31:18.375134 #204]  INFO -- : (0.108292s) COMMIT
+I, [2021-05-06T16:31:18.375320 #204]  INFO -- : (0.000031s) BEGIN
+I, [2021-05-06T16:31:18.375660 #204]  INFO -- : (0.000162s) INSERT INTO `mentees` (`first_name`, `surname`, `username`, `course`, `university`, `gender`, `year_of_study`, `email`, `password`) VALUES ('Ana', 'Camarasan', 'mentios', 'Computer', 'Aga Khan University', 'male', 1, 'anacamadasarasan@hotmail.com', 'mentios')
+I, [2021-05-06T16:31:18.375883 #204]  INFO -- : (0.000116s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-06T16:31:18.494817 #204]  INFO -- : (0.118863s) COMMIT
+I, [2021-05-06T16:31:18.495029 #204]  INFO -- : (0.000030s) BEGIN
+I, [2021-05-06T16:31:18.495334 #204]  INFO -- : (0.000164s) UPDATE `mentees` SET `id` = 3 WHERE (`id` = 1)
+I, [2021-05-06T16:31:18.604786 #204]  INFO -- : (0.109362s) COMMIT
+I, [2021-05-06T16:31:29.990801 #204]  INFO -- : (0.000161s) SELECT * FROM `users` WHERE (`username` = 'adminos1') LIMIT 1
+I, [2021-05-06T16:31:29.991034 #204]  INFO -- : (0.000086s) SELECT * FROM `users` WHERE (`username` = 'adminos1') LIMIT 1
+I, [2021-05-06T16:31:29.991268 #204]  INFO -- : (0.000120s) SELECT * FROM `users` WHERE (`username` = 'adminos1') LIMIT 1
+I, [2021-05-06T16:31:29.991555 #204]  INFO -- : (0.000091s) SELECT * FROM `admins` WHERE (`username` LIKE '%adminos1%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T16:31:29.991763 #204]  INFO -- : (0.000077s) SELECT * FROM `admins` WHERE (`username` = 'adminos1') LIMIT 1
+I, [2021-05-06T16:31:30.124277 #204]  INFO -- : (0.000158s) SELECT * FROM `admins` WHERE `id` = 2
+I, [2021-05-06T16:31:30.124453 #204]  INFO -- : (0.000077s) SELECT * FROM `admins` WHERE `id` = 2
+I, [2021-05-06T16:31:30.124570 #204]  INFO -- : (0.000068s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-05-06T16:31:31.731052 #204]  INFO -- : (0.000189s) SELECT * FROM `mentees`
+I, [2021-05-06T17:54:16.108975 #135]  INFO -- : (0.000306s) PRAGMA foreign_keys = 1
+I, [2021-05-06T17:54:16.112133 #135]  INFO -- : (0.000051s) PRAGMA case_sensitive_like = 1
+I, [2021-05-06T17:54:16.116528 #135]  INFO -- : (0.000120s) SELECT sqlite_version()
+I, [2021-05-06T17:54:16.116946 #135]  INFO -- : (0.000181s) PRAGMA table_info('admins')
+I, [2021-05-06T17:54:16.118195 #135]  INFO -- : (0.000138s) PRAGMA table_info('codes')
+I, [2021-05-06T17:54:16.119143 #135]  INFO -- : (0.000134s) PRAGMA table_info('questions_answers')
+I, [2021-05-06T17:54:16.123834 #135]  INFO -- : (0.000277s) PRAGMA table_info('mentees')
+I, [2021-05-06T17:54:16.125893 #135]  INFO -- : (0.000262s) PRAGMA table_info('mentors')
+I, [2021-05-06T17:54:16.126916 #135]  INFO -- : (0.000095s) PRAGMA table_info('requests')
+I, [2021-05-06T17:54:16.127653 #135]  INFO -- : (0.000103s) PRAGMA table_info('users')
+I, [2021-05-06T17:57:19.290721 #135]  INFO -- : (0.000275s) SELECT * FROM `users`
+I, [2021-05-06T17:57:19.290913 #135]  INFO -- : (0.000091s) SELECT * FROM `users`
+I, [2021-05-06T17:57:19.291022 #135]  INFO -- : (0.000015s) BEGIN
+I, [2021-05-06T17:57:19.291380 #135]  INFO -- : (0.000198s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('Ana', 'Camarasan', 'mentorino', 'anacamarasan@hotmail.com', 'mentorino', 'mentor')
+I, [2021-05-06T17:57:19.292377 #135]  INFO -- : (0.000087s) SELECT * FROM `users` WHERE `id` = 4
+I, [2021-05-06T17:57:19.419332 #135]  INFO -- : (0.126866s) COMMIT
+I, [2021-05-06T17:57:19.419537 #135]  INFO -- : (0.000033s) BEGIN
+I, [2021-05-06T17:57:19.419883 #135]  INFO -- : (0.000160s) INSERT INTO `mentors` (`first_name`, `surname`, `username`, `gender`, `industry`, `company`, `sheffield_graduate`, `degree_field`, `email`, `password`) VALUES ('Ana', 'Camarasan', 'mentorino', 'female', 'IT', 'Ana', 1, 'it', 'anacamarasan@hotmail.com', 'mentorino')
+I, [2021-05-06T17:57:19.420124 #135]  INFO -- : (0.000130s) SELECT * FROM `mentors` WHERE `id` = 1
+I, [2021-05-06T17:57:19.534629 #135]  INFO -- : (0.114426s) COMMIT
+I, [2021-05-06T17:57:19.534863 #135]  INFO -- : (0.000032s) BEGIN
+I, [2021-05-06T17:57:19.535684 #135]  INFO -- : (0.000174s) UPDATE `mentors` SET `id` = 4 WHERE (`id` = 1)
+I, [2021-05-06T17:57:19.648972 #135]  INFO -- : (0.113203s) COMMIT
+I, [2021-05-06T17:57:37.109154 #135]  INFO -- : (0.000203s) SELECT * FROM `users` WHERE (`username` = 'mentorino') LIMIT 1
+I, [2021-05-06T17:57:37.109435 #135]  INFO -- : (0.000090s) SELECT * FROM `users` WHERE (`username` = 'mentorino') LIMIT 1
+I, [2021-05-06T17:57:37.109717 #135]  INFO -- : (0.000089s) SELECT * FROM `users` WHERE (`username` = 'mentorino') LIMIT 1
+I, [2021-05-06T17:57:37.110620 #135]  INFO -- : (0.000822s) SELECT * FROM `users` WHERE (`username` = 'mentorino') LIMIT 1
+I, [2021-05-06T17:57:37.110928 #135]  INFO -- : (0.000126s) SELECT * FROM `mentors` WHERE (`username` LIKE '%mentorino%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T17:57:37.111147 #135]  INFO -- : (0.000099s) SELECT * FROM `mentors` WHERE (`username` = 'mentorino') LIMIT 1
+I, [2021-05-06T17:57:37.266209 #135]  INFO -- : (0.000193s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-05-06T17:57:37.266419 #135]  INFO -- : (0.000100s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-05-06T17:57:37.266544 #135]  INFO -- : (0.000070s) SELECT * FROM `users` WHERE `id` = 4
+I, [2021-05-06T18:01:45.952415 #135]  INFO -- : (0.000177s) SELECT * FROM `users`
+I, [2021-05-06T18:01:45.952633 #135]  INFO -- : (0.000092s) SELECT * FROM `users`
+I, [2021-05-06T18:01:45.952758 #135]  INFO -- : (0.000013s) BEGIN
+I, [2021-05-06T18:01:45.953115 #135]  INFO -- : (0.000215s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('Hossein', 'tajdini', 'hossseintaj', 'hosseintaj@icloud.com', 'Hosseintjdn', 'mentee')
+I, [2021-05-06T18:01:45.953313 #135]  INFO -- : (0.000079s) SELECT * FROM `users` WHERE `id` = 5
+I, [2021-05-06T18:01:46.075431 #135]  INFO -- : (0.122040s) COMMIT
+I, [2021-05-06T18:01:46.075635 #135]  INFO -- : (0.000033s) BEGIN
+I, [2021-05-06T18:01:46.075997 #135]  INFO -- : (0.000175s) INSERT INTO `mentees` (`first_name`, `surname`, `username`, `course`, `university`, `gender`, `year_of_study`, `email`, `password`) VALUES ('Hossein', 'tajdini', 'hossseintaj', 'Medicine', 'University of Sheffield', 'male', 1, 'hosseintaj@icloud.com', 'Hosseintjdn')
+I, [2021-05-06T18:01:46.076262 #135]  INFO -- : (0.000124s) SELECT * FROM `mentees` WHERE `id` = 4
+I, [2021-05-06T18:01:46.206997 #135]  INFO -- : (0.130646s) COMMIT
+I, [2021-05-06T18:01:46.207270 #135]  INFO -- : (0.000034s) BEGIN
+I, [2021-05-06T18:01:46.207589 #135]  INFO -- : (0.000177s) UPDATE `mentees` SET `id` = 5 WHERE (`id` = 4)
+I, [2021-05-06T18:01:46.331098 #135]  INFO -- : (0.123430s) COMMIT
+I, [2021-05-06T18:02:02.392418 #135]  INFO -- : (0.000180s) SELECT * FROM `users` WHERE (`username` = 'hossseintaj') LIMIT 1
+I, [2021-05-06T18:02:02.392667 #135]  INFO -- : (0.000090s) SELECT * FROM `users` WHERE (`username` = 'hossseintaj') LIMIT 1
+I, [2021-05-06T18:02:02.392842 #135]  INFO -- : (0.000074s) SELECT * FROM `users` WHERE (`username` = 'hossseintaj') LIMIT 1
+I, [2021-05-06T18:02:02.392981 #135]  INFO -- : (0.000073s) SELECT * FROM `users` WHERE (`username` = 'hossseintaj') LIMIT 1
+I, [2021-05-06T18:02:02.393281 #135]  INFO -- : (0.000136s) SELECT * FROM `mentees` WHERE (`username` LIKE '%hossseintaj%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T18:02:02.393502 #135]  INFO -- : (0.000096s) SELECT * FROM `mentees` WHERE (`username` = 'hossseintaj') LIMIT 1
+I, [2021-05-06T18:02:02.499199 #135]  INFO -- : (0.000181s) SELECT * FROM `mentees` WHERE `id` = 5
+I, [2021-05-06T18:02:02.499435 #135]  INFO -- : (0.000112s) SELECT * FROM `mentees` WHERE `id` = 5
+I, [2021-05-06T18:02:02.499574 #135]  INFO -- : (0.000075s) SELECT * FROM `users` WHERE `id` = 5
+I, [2021-05-06T18:03:54.284534 #135]  INFO -- : (0.000180s) SELECT * FROM `mentees` WHERE `id` = 5
+I, [2021-05-06T18:03:54.284762 #135]  INFO -- : (0.000101s) SELECT * FROM `mentees` WHERE `id` = 5
+I, [2021-05-06T18:03:54.284885 #135]  INFO -- : (0.000069s) SELECT * FROM `users` WHERE `id` = 5
+I, [2021-05-06T18:03:54.285076 #135]  INFO -- : (0.000015s) BEGIN
+I, [2021-05-06T18:03:54.285454 #135]  INFO -- : (0.000198s) UPDATE `mentees` SET `biography` = 'tpogjretgsrklthjetiwrlggmerkl,hiugiu,' WHERE (`id` = 5)
+I, [2021-05-06T18:03:54.392594 #135]  INFO -- : (0.107060s) COMMIT
+I, [2021-05-06T18:03:54.509940 #135]  INFO -- : (0.000215s) SELECT * FROM `mentees` WHERE `id` = 5
+I, [2021-05-06T18:03:54.510154 #135]  INFO -- : (0.000105s) SELECT * FROM `mentees` WHERE `id` = 5
+I, [2021-05-06T18:03:54.510272 #135]  INFO -- : (0.000067s) SELECT * FROM `users` WHERE `id` = 5
+I, [2021-05-06T18:04:01.206969 #135]  INFO -- : (0.000198s) SELECT * FROM `mentees` WHERE `id` = 5
+I, [2021-05-06T18:04:01.207219 #135]  INFO -- : (0.000124s) SELECT * FROM `mentees` WHERE `id` = 5
+I, [2021-05-06T18:04:01.207381 #135]  INFO -- : (0.000084s) SELECT * FROM `users` WHERE `id` = 5
+I, [2021-05-06T18:04:01.207646 #135]  INFO -- : (0.000086s) SELECT * FROM `requests` WHERE (`mentee_id` = 5)
+I, [2021-05-06T18:04:01.211469 #135]  INFO -- : (0.000126s) SELECT count(*) AS 'count' FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\')) LIMIT 1
+I, [2021-05-06T18:04:01.211702 #135]  INFO -- : (0.000120s) SELECT * FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\'))
+I, [2021-05-06T18:04:05.731885 #135]  INFO -- : (0.000056s) BEGIN
+I, [2021-05-06T18:04:05.732248 #135]  INFO -- : (0.000162s) INSERT INTO `requests` (`mentee_id`, `mentor_id`, `accepted`) VALUES (5, 4, 0)
+I, [2021-05-06T18:04:05.732445 #135]  INFO -- : (0.000079s) SELECT * FROM `requests` WHERE `id` = 1
+I, [2021-05-06T18:04:05.873011 #135]  INFO -- : (0.140490s) COMMIT
+I, [2021-05-06T18:04:06.073508 #135]  INFO -- : (0.000204s) SELECT * FROM `mentees` WHERE `id` = 5
+I, [2021-05-06T18:04:06.073719 #135]  INFO -- : (0.000101s) SELECT * FROM `mentees` WHERE `id` = 5
+I, [2021-05-06T18:04:06.073885 #135]  INFO -- : (0.000096s) SELECT * FROM `users` WHERE `id` = 5
+I, [2021-05-06T18:04:06.074093 #135]  INFO -- : (0.000070s) SELECT * FROM `requests` WHERE (`mentee_id` = 5)
+I, [2021-05-06T18:04:06.075194 #135]  INFO -- : (0.000113s) SELECT count(*) AS 'count' FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\')) LIMIT 1
+I, [2021-05-06T18:04:06.075411 #135]  INFO -- : (0.000114s) SELECT * FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\'))
+I, [2021-05-06T18:04:14.051494 #135]  INFO -- : (0.000179s) SELECT * FROM `mentees` WHERE `id` = 5
+I, [2021-05-06T18:04:14.051717 #135]  INFO -- : (0.000106s) SELECT * FROM `mentees` WHERE `id` = 5
+I, [2021-05-06T18:04:14.051852 #135]  INFO -- : (0.000081s) SELECT * FROM `users` WHERE `id` = 5
+I, [2021-05-06T18:04:14.052050 #135]  INFO -- : (0.000070s) SELECT * FROM `requests` WHERE (`mentee_id` = 5)
+I, [2021-05-06T18:04:14.055773 #135]  INFO -- : (0.000093s) SELECT count(*) AS 'count' FROM `requests` WHERE (`mentee_id` = 5) LIMIT 1
+I, [2021-05-06T18:04:14.055956 #135]  INFO -- : (0.000095s) SELECT * FROM `mentors`
+I, [2021-05-06T18:04:14.056056 #135]  INFO -- : (0.000052s) SELECT count(*) AS 'count' FROM `requests` WHERE (`mentee_id` = 5) LIMIT 1
+I, [2021-05-06T18:04:14.056194 #135]  INFO -- : (0.000097s) SELECT * FROM `mentors`
+I, [2021-05-06T18:04:19.355246 #135]  INFO -- : (0.000179s) SELECT * FROM `mentees` WHERE `id` = 5
+I, [2021-05-06T18:04:19.355456 #135]  INFO -- : (0.000099s) SELECT * FROM `mentees` WHERE `id` = 5
+I, [2021-05-06T18:04:19.355576 #135]  INFO -- : (0.000069s) SELECT * FROM `users` WHERE `id` = 5
+I, [2021-05-06T18:04:19.355739 #135]  INFO -- : (0.000076s) SELECT * FROM `questions_answers`
+I, [2021-05-06T18:04:36.304004 #135]  INFO -- : (0.000168s) SELECT * FROM `mentees` WHERE `id` = 5
+I, [2021-05-06T18:04:36.304204 #135]  INFO -- : (0.000100s) SELECT * FROM `mentees` WHERE `id` = 5
+I, [2021-05-06T18:04:36.304325 #135]  INFO -- : (0.000070s) SELECT * FROM `users` WHERE `id` = 5
+I, [2021-05-06T18:04:58.916394 #135]  INFO -- : (0.000202s) SELECT * FROM `users` WHERE (`username` = 'mentorino') LIMIT 1
+I, [2021-05-06T18:04:58.916651 #135]  INFO -- : (0.000091s) SELECT * FROM `users` WHERE (`username` = 'mentorino') LIMIT 1
+I, [2021-05-06T18:04:58.916872 #135]  INFO -- : (0.000102s) SELECT * FROM `users` WHERE (`username` = 'mentorino') LIMIT 1
+I, [2021-05-06T18:04:58.917041 #135]  INFO -- : (0.000077s) SELECT * FROM `users` WHERE (`username` = 'mentorino') LIMIT 1
+I, [2021-05-06T18:04:58.917360 #135]  INFO -- : (0.000142s) SELECT * FROM `mentors` WHERE (`username` LIKE '%mentorino%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T18:04:58.917597 #135]  INFO -- : (0.000100s) SELECT * FROM `mentors` WHERE (`username` = 'mentorino') LIMIT 1
+I, [2021-05-06T18:04:59.040765 #135]  INFO -- : (0.000170s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-05-06T18:04:59.040968 #135]  INFO -- : (0.000097s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-05-06T18:04:59.041097 #135]  INFO -- : (0.000076s) SELECT * FROM `users` WHERE `id` = 4
+I, [2021-05-06T18:05:02.444239 #135]  INFO -- : (0.000243s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-05-06T18:05:02.444537 #135]  INFO -- : (0.000154s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-05-06T18:05:02.444763 #135]  INFO -- : (0.000143s) SELECT * FROM `users` WHERE `id` = 4
+I, [2021-05-06T18:05:02.445072 #135]  INFO -- : (0.000117s) SELECT * FROM `requests` WHERE (`mentor_id` = 4)
+I, [2021-05-06T18:05:02.451801 #135]  INFO -- : (0.000126s) SELECT count(*) AS 'count' FROM `requests` WHERE (`mentor_id` = 4) LIMIT 1
+I, [2021-05-06T18:05:02.452093 #135]  INFO -- : (0.000174s) SELECT * FROM `mentees`
+I, [2021-05-06T18:05:02.452272 #135]  INFO -- : (0.000100s) SELECT count(*) AS 'count' FROM `requests` WHERE (`mentor_id` = 4) LIMIT 1
+I, [2021-05-06T18:05:02.452511 #135]  INFO -- : (0.000174s) SELECT * FROM `mentees`
+I, [2021-05-06T18:05:12.109447 #135]  INFO -- : (0.000061s) SELECT * FROM `requests` WHERE `id` = 1
+I, [2021-05-06T18:05:12.109632 #135]  INFO -- : (0.000016s) BEGIN
+I, [2021-05-06T18:05:12.110013 #135]  INFO -- : (0.000229s) UPDATE `requests` SET `accepted` = 1 WHERE (`id` = 1)
+I, [2021-05-06T18:05:12.223543 #135]  INFO -- : (0.113443s) COMMIT
+I, [2021-05-06T18:05:12.223658 #135]  INFO -- : (0.114450s) SELECT * FROM `requests` WHERE (`mentor_id` = 4)
+I, [2021-05-06T18:05:12.374028 #135]  INFO -- : (0.000174s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-05-06T18:05:12.374240 #135]  INFO -- : (0.000098s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-05-06T18:05:12.374391 #135]  INFO -- : (0.000098s) SELECT * FROM `users` WHERE `id` = 4
+I, [2021-05-06T18:05:12.374592 #135]  INFO -- : (0.000070s) SELECT * FROM `requests` WHERE (`mentor_id` = 4)
+I, [2021-05-06T18:05:12.375626 #135]  INFO -- : (0.000087s) SELECT count(*) AS 'count' FROM `requests` WHERE (`mentor_id` = 4) LIMIT 1
+I, [2021-05-06T18:05:12.375797 #135]  INFO -- : (0.000101s) SELECT * FROM `mentees`
+I, [2021-05-06T18:05:12.375896 #135]  INFO -- : (0.000051s) SELECT count(*) AS 'count' FROM `requests` WHERE (`mentor_id` = 4) LIMIT 1
+I, [2021-05-06T18:05:12.376048 #135]  INFO -- : (0.000111s) SELECT * FROM `mentees`
+I, [2021-05-06T18:05:15.838855 #135]  INFO -- : (0.000266s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-05-06T18:05:15.839213 #135]  INFO -- : (0.000191s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-05-06T18:05:15.839472 #135]  INFO -- : (0.000158s) SELECT * FROM `users` WHERE `id` = 4
+I, [2021-05-06T18:05:15.839688 #135]  INFO -- : (0.000119s) SELECT * FROM `questions_answers`
+I, [2021-05-06T18:05:19.127016 #135]  INFO -- : (0.000285s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-05-06T18:05:19.127334 #135]  INFO -- : (0.000167s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-05-06T18:05:19.127524 #135]  INFO -- : (0.000111s) SELECT * FROM `users` WHERE `id` = 4
+I, [2021-05-06T18:06:20.802705 #135]  INFO -- : (0.000169s) SELECT * FROM `users` WHERE (`username` = 'hossseintaj') LIMIT 1
+I, [2021-05-06T18:06:20.802938 #135]  INFO -- : (0.000088s) SELECT * FROM `users` WHERE (`username` = 'hossseintaj') LIMIT 1
+I, [2021-05-06T18:06:20.803160 #135]  INFO -- : (0.000091s) SELECT * FROM `users` WHERE (`username` = 'hossseintaj') LIMIT 1
+I, [2021-05-06T18:06:20.803320 #135]  INFO -- : (0.000075s) SELECT * FROM `users` WHERE (`username` = 'hossseintaj') LIMIT 1
+I, [2021-05-06T18:06:20.803660 #135]  INFO -- : (0.000126s) SELECT * FROM `mentees` WHERE (`username` LIKE '%hossseintaj%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T18:06:20.803900 #135]  INFO -- : (0.000105s) SELECT * FROM `mentees` WHERE (`username` = 'hossseintaj') LIMIT 1
+I, [2021-05-06T18:06:21.019670 #135]  INFO -- : (0.000178s) SELECT * FROM `mentees` WHERE `id` = 5
+I, [2021-05-06T18:06:21.019875 #135]  INFO -- : (0.000100s) SELECT * FROM `mentees` WHERE `id` = 5
+I, [2021-05-06T18:06:21.019998 #135]  INFO -- : (0.000070s) SELECT * FROM `users` WHERE `id` = 5
+I, [2021-05-06T18:06:24.546583 #135]  INFO -- : (0.000179s) SELECT * FROM `mentees` WHERE `id` = 5
+I, [2021-05-06T18:06:24.546795 #135]  INFO -- : (0.000104s) SELECT * FROM `mentees` WHERE `id` = 5
+I, [2021-05-06T18:06:24.546928 #135]  INFO -- : (0.000080s) SELECT * FROM `users` WHERE `id` = 5
+I, [2021-05-06T18:06:24.547133 #135]  INFO -- : (0.000072s) SELECT * FROM `requests` WHERE (`mentee_id` = 5)
+I, [2021-05-06T18:06:24.548126 #135]  INFO -- : (0.000087s) SELECT count(*) AS 'count' FROM `requests` WHERE (`mentee_id` = 5) LIMIT 1
+I, [2021-05-06T18:06:24.548286 #135]  INFO -- : (0.000091s) SELECT * FROM `mentors`
+I, [2021-05-06T18:06:24.548400 #135]  INFO -- : (0.000067s) SELECT count(*) AS 'count' FROM `requests` WHERE (`mentee_id` = 5) LIMIT 1
+I, [2021-05-06T18:06:24.548524 #135]  INFO -- : (0.000082s) SELECT * FROM `mentors`
+I, [2021-05-06T18:10:06.165771 #135]  INFO -- : (0.000164s) SELECT * FROM `users` WHERE (`username` = 'adminos1') LIMIT 1
+I, [2021-05-06T18:10:06.166072 #135]  INFO -- : (0.000099s) SELECT * FROM `users` WHERE (`username` = 'adminos1') LIMIT 1
+I, [2021-05-06T18:10:06.166293 #135]  INFO -- : (0.000082s) SELECT * FROM `users` WHERE (`username` = 'adminos1') LIMIT 1
+I, [2021-05-06T18:10:06.166565 #135]  INFO -- : (0.000095s) SELECT * FROM `admins` WHERE (`username` LIKE '%adminos1%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T18:10:06.166780 #135]  INFO -- : (0.000078s) SELECT * FROM `admins` WHERE (`username` = 'adminos1') LIMIT 1
+I, [2021-05-06T18:10:06.283527 #135]  INFO -- : (0.000153s) SELECT * FROM `admins` WHERE `id` = 2
+I, [2021-05-06T18:10:06.283722 #135]  INFO -- : (0.000081s) SELECT * FROM `admins` WHERE `id` = 2
+I, [2021-05-06T18:10:06.283843 #135]  INFO -- : (0.000068s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-05-06T18:10:12.409668 #135]  INFO -- : (0.000189s) SELECT * FROM `mentees`
+I, [2021-05-06T18:10:43.553276 #135]  INFO -- : (0.000177s) SELECT * FROM `mentors`
+I, [2021-05-06T18:10:45.544485 #135]  INFO -- : (0.000182s) SELECT * FROM `mentees`
+I, [2021-05-06T18:10:49.747097 #135]  INFO -- : (0.000169s) SELECT * FROM `mentors`
+I, [2021-05-06T18:10:50.496314 #135]  INFO -- : (0.000150s) SELECT * FROM `admins` WHERE `id` = 2
+I, [2021-05-06T18:10:50.496559 #135]  INFO -- : (0.000111s) SELECT * FROM `admins` WHERE `id` = 2
+I, [2021-05-06T18:10:50.496743 #135]  INFO -- : (0.000104s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-05-06T18:10:50.496902 #135]  INFO -- : (0.000083s) SELECT * FROM `questions_answers`
+I, [2021-05-06T18:11:06.316007 #135]  INFO -- : (0.000047s) BEGIN
+I, [2021-05-06T18:11:06.316625 #135]  INFO -- : (0.000329s) INSERT INTO `questions_answers` (`question`, `answer`, `user_type`) VALUES ('haosdjadjas', 'sakdladjpasdjaspasjdjaspdoajspdpasjdaspd', 'both')
+I, [2021-05-06T18:11:06.316918 #135]  INFO -- : (0.000119s) SELECT * FROM `questions_answers` WHERE `id` = 1
+I, [2021-05-06T18:11:06.437390 #135]  INFO -- : (0.120359s) COMMIT
+I, [2021-05-06T18:11:06.556537 #135]  INFO -- : (0.000153s) SELECT * FROM `admins` WHERE `id` = 2
+I, [2021-05-06T18:11:06.556739 #135]  INFO -- : (0.000087s) SELECT * FROM `admins` WHERE `id` = 2
+I, [2021-05-06T18:11:06.556874 #135]  INFO -- : (0.000073s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-05-06T18:11:06.556999 #135]  INFO -- : (0.000068s) SELECT * FROM `questions_answers`
+I, [2021-05-06T18:11:22.854376 #135]  INFO -- : (0.000234s) SELECT * FROM `users` WHERE (`username` = 'mentorino') LIMIT 1
+I, [2021-05-06T18:11:22.854714 #135]  INFO -- : (0.000137s) SELECT * FROM `users` WHERE (`username` = 'mentorino') LIMIT 1
+I, [2021-05-06T18:11:22.854969 #135]  INFO -- : (0.000111s) SELECT * FROM `users` WHERE (`username` = 'mentorino') LIMIT 1
+I, [2021-05-06T18:11:22.855174 #135]  INFO -- : (0.000106s) SELECT * FROM `users` WHERE (`username` = 'mentorino') LIMIT 1
+I, [2021-05-06T18:11:22.855567 #135]  INFO -- : (0.000173s) SELECT * FROM `mentors` WHERE (`username` LIKE '%mentorino%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T18:11:22.855962 #135]  INFO -- : (0.000161s) SELECT * FROM `mentors` WHERE (`username` = 'mentorino') LIMIT 1
+I, [2021-05-06T18:11:22.962302 #135]  INFO -- : (0.000247s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-05-06T18:11:22.962618 #135]  INFO -- : (0.000172s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-05-06T18:11:22.962813 #135]  INFO -- : (0.000112s) SELECT * FROM `users` WHERE `id` = 4
+I, [2021-05-06T18:11:25.551184 #135]  INFO -- : (0.000178s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-05-06T18:11:25.551388 #135]  INFO -- : (0.000100s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-05-06T18:11:25.551512 #135]  INFO -- : (0.000072s) SELECT * FROM `users` WHERE `id` = 4
+I, [2021-05-06T18:11:25.551626 #135]  INFO -- : (0.000063s) SELECT * FROM `questions_answers`
+I, [2021-05-06T18:15:41.275894 #163]  INFO -- : (0.000226s) PRAGMA foreign_keys = 1
+I, [2021-05-06T18:15:41.276023 #163]  INFO -- : (0.000017s) PRAGMA case_sensitive_like = 1
+I, [2021-05-06T18:15:41.276850 #163]  INFO -- : (0.000078s) SELECT sqlite_version()
+I, [2021-05-06T18:15:41.277122 #163]  INFO -- : (0.000125s) PRAGMA table_info('admins')
+I, [2021-05-06T18:15:41.278083 #163]  INFO -- : (0.000106s) PRAGMA table_info('codes')
+I, [2021-05-06T18:15:41.278777 #163]  INFO -- : (0.000124s) PRAGMA table_info('questions_answers')
+I, [2021-05-06T18:15:41.279698 #163]  INFO -- : (0.000166s) PRAGMA table_info('mentees')
+I, [2021-05-06T18:15:41.280921 #163]  INFO -- : (0.000148s) PRAGMA table_info('mentors')
+I, [2021-05-06T18:15:41.281846 #163]  INFO -- : (0.000110s) PRAGMA table_info('requests')
+I, [2021-05-06T18:15:41.282585 #163]  INFO -- : (0.000101s) PRAGMA table_info('users')
+I, [2021-05-06T18:16:03.212987 #163]  INFO -- : (0.000175s) SELECT * FROM `users` WHERE (`username` = 'hossseintaj') LIMIT 1
+I, [2021-05-06T18:16:03.213265 #163]  INFO -- : (0.000091s) SELECT * FROM `users` WHERE (`username` = 'hossseintaj') LIMIT 1
+I, [2021-05-06T18:16:03.213550 #163]  INFO -- : (0.000088s) SELECT * FROM `users` WHERE (`username` = 'hossseintaj') LIMIT 1
+I, [2021-05-06T18:16:03.213700 #163]  INFO -- : (0.000075s) SELECT * FROM `users` WHERE (`username` = 'hossseintaj') LIMIT 1
+I, [2021-05-06T18:16:03.213981 #163]  INFO -- : (0.000124s) SELECT * FROM `mentees` WHERE (`username` LIKE '%hossseintaj%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T18:16:03.214195 #163]  INFO -- : (0.000097s) SELECT * FROM `mentees` WHERE (`username` = 'hossseintaj') LIMIT 1
+I, [2021-05-06T18:16:03.337517 #163]  INFO -- : (0.000202s) SELECT * FROM `mentees` WHERE `id` = 5
+I, [2021-05-06T18:16:03.337749 #163]  INFO -- : (0.000115s) SELECT * FROM `mentees` WHERE `id` = 5
+I, [2021-05-06T18:16:03.337938 #163]  INFO -- : (0.000097s) SELECT * FROM `users` WHERE `id` = 5
+I, [2021-05-06T18:16:07.116703 #163]  INFO -- : (0.000208s) SELECT * FROM `mentees` WHERE `id` = 5
+I, [2021-05-06T18:16:07.116960 #163]  INFO -- : (0.000135s) SELECT * FROM `mentees` WHERE `id` = 5
+I, [2021-05-06T18:16:07.117109 #163]  INFO -- : (0.000083s) SELECT * FROM `users` WHERE `id` = 5
+I, [2021-05-06T18:16:07.118106 #163]  INFO -- : (0.000117s) SELECT * FROM `requests` WHERE (`mentee_id` = 5)
+I, [2021-05-06T18:16:07.119881 #163]  INFO -- : (0.000077s) SELECT count(*) AS 'count' FROM `requests` WHERE (`mentee_id` = 5) LIMIT 1
+I, [2021-05-06T18:16:07.120774 #163]  INFO -- : (0.000806s) SELECT * FROM `mentors`
+I, [2021-05-06T18:16:07.120909 #163]  INFO -- : (0.000068s) SELECT count(*) AS 'count' FROM `requests` WHERE (`mentee_id` = 5) LIMIT 1
+I, [2021-05-06T18:16:07.121054 #163]  INFO -- : (0.000096s) SELECT * FROM `mentors`
+I, [2021-05-06T18:16:41.885004 #163]  INFO -- : (0.000169s) SELECT * FROM `users` WHERE (`username` = 'mentorino') LIMIT 1
+I, [2021-05-06T18:16:41.885958 #163]  INFO -- : (0.000767s) SELECT * FROM `users` WHERE (`username` = 'mentorino') LIMIT 1
+I, [2021-05-06T18:16:41.886185 #163]  INFO -- : (0.000089s) SELECT * FROM `users` WHERE (`username` = 'mentorino') LIMIT 1
+I, [2021-05-06T18:16:41.886347 #163]  INFO -- : (0.000077s) SELECT * FROM `users` WHERE (`username` = 'mentorino') LIMIT 1
+I, [2021-05-06T18:16:41.886650 #163]  INFO -- : (0.000124s) SELECT * FROM `mentors` WHERE (`username` LIKE '%mentorino%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T18:16:41.887689 #163]  INFO -- : (0.000127s) SELECT * FROM `mentors` WHERE (`username` = 'mentorino') LIMIT 1
+I, [2021-05-06T18:16:42.116280 #163]  INFO -- : (0.000181s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-05-06T18:16:42.117203 #163]  INFO -- : (0.000807s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-05-06T18:16:42.117374 #163]  INFO -- : (0.000092s) SELECT * FROM `users` WHERE `id` = 4
+I, [2021-05-06T18:16:43.885268 #163]  INFO -- : (0.000191s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-05-06T18:16:43.885480 #163]  INFO -- : (0.000099s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-05-06T18:16:43.885606 #163]  INFO -- : (0.000071s) SELECT * FROM `users` WHERE `id` = 4
+I, [2021-05-06T18:16:43.885861 #163]  INFO -- : (0.000108s) SELECT * FROM `requests` WHERE (`mentor_id` = 4)
+I, [2021-05-06T18:16:43.887735 #163]  INFO -- : (0.000093s) SELECT count(*) AS 'count' FROM `requests` WHERE (`mentor_id` = 4) LIMIT 1
+I, [2021-05-06T18:16:43.887943 #163]  INFO -- : (0.000124s) SELECT * FROM `mentees`
+I, [2021-05-06T18:16:43.888071 #163]  INFO -- : (0.000058s) SELECT count(*) AS 'count' FROM `requests` WHERE (`mentor_id` = 4) LIMIT 1
+I, [2021-05-06T18:16:43.888222 #163]  INFO -- : (0.000106s) SELECT * FROM `mentees`
+I, [2021-05-06T18:18:35.770948 #163]  INFO -- : (0.000168s) SELECT * FROM `users` WHERE (`username` = 'mentorino') LIMIT 1
+I, [2021-05-06T18:18:35.771219 #163]  INFO -- : (0.000110s) SELECT * FROM `users` WHERE (`username` = 'mentorino') LIMIT 1
+I, [2021-05-06T18:18:35.771417 #163]  INFO -- : (0.000081s) SELECT * FROM `users` WHERE (`username` = 'mentorino') LIMIT 1
+I, [2021-05-06T18:18:35.771586 #163]  INFO -- : (0.000087s) SELECT * FROM `users` WHERE (`username` = 'mentorino') LIMIT 1
+I, [2021-05-06T18:18:35.771924 #163]  INFO -- : (0.000162s) SELECT * FROM `mentors` WHERE (`username` LIKE '%mentorino%' ESCAPE '\') LIMIT 1
+I, [2021-05-06T18:18:35.772170 #163]  INFO -- : (0.000104s) SELECT * FROM `mentors` WHERE (`username` = 'mentorino') LIMIT 1
+I, [2021-05-06T18:18:35.874208 #163]  INFO -- : (0.000181s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-05-06T18:18:35.874431 #163]  INFO -- : (0.000116s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-05-06T18:18:35.874581 #163]  INFO -- : (0.000090s) SELECT * FROM `users` WHERE `id` = 4
+I, [2021-05-06T18:18:42.852671 #163]  INFO -- : (0.000193s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-05-06T18:18:42.852881 #163]  INFO -- : (0.000102s) SELECT * FROM `mentors` WHERE `id` = 4
+I, [2021-05-06T18:18:42.853000 #163]  INFO -- : (0.000067s) SELECT * FROM `users` WHERE `id` = 4
+I, [2021-05-06T18:18:42.853202 #163]  INFO -- : (0.000070s) SELECT * FROM `requests` WHERE (`mentor_id` = 4)
+I, [2021-05-06T18:18:42.857581 #163]  INFO -- : (0.000105s) SELECT count(*) AS 'count' FROM `requests` WHERE (`mentor_id` = 4) LIMIT 1
+I, [2021-05-06T18:18:42.857764 #163]  INFO -- : (0.000102s) SELECT * FROM `mentees`
+I, [2021-05-06T18:18:42.857891 #163]  INFO -- : (0.000054s) SELECT count(*) AS 'count' FROM `requests` WHERE (`mentor_id` = 4) LIMIT 1
+I, [2021-05-06T18:18:42.858047 #163]  INFO -- : (0.000105s) SELECT * FROM `mentees`
