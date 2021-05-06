@@ -31,6 +31,12 @@
                                        <input type="hidden" id="menteeId" name="menteeId" value=<%= mentee[:id] %> >
                                        <input type="hidden" id="menteeEmail" name="menteeEmail" value=<%= mentee[:email] %> >
                                  </form>
+                                 <form method="post" action="/rejectMethod" >
+                                    <button id="request" type="submit">Reject</button>
+                                    <input type="hidden" id="menteeId" name="menteeId" value=<%= mentee[:id] %> >
+                                    <input type="hidden" id="menteeEmail" name="menteeEmail" value=<%= mentee[:email] %> >
+                                 </form>
+                                 
                               </section>
                               <section id="mentor-bottom">
                                   <aside>

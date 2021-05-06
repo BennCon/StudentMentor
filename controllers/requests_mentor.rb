@@ -66,3 +66,25 @@ post "/acceptMethod" do
    
    redirect "/requests-mentor"
 end
+
+post "/rejectMethod" do
+   id = session[:id]
+   mentee = Hash.new
+   mentee["menteeId"] = params.fetch("menteeId", "").strip
+   mentee_id = mentee["menteeId"].to_i
+   mentee = Mentee[mentee_id]
+   mentee[:number_of_rejections] += 1
+   mentee.save_changes(:validate => false) 
+   
+   @requests = DB[:requests].where(mentor_id: id)
+   @requests.each do |request|
+      if request[:mentee_id] == mentee_id
+         request = Request[request[:id]]
+         request[:accepted] = 2
+         request.save_changes
+      end
+   end
+
+   
+   redirect "/requests-mentor"
+end
