@@ -31,4 +31,10 @@ To test user accounts, follow these test codes:
 - For admin:
     Username: adminTest1
     Password: admin 
+Once on the my account page, as a mentor or mentee :
+- Account details can be edited via the edit button and submitted and saved via the save button once edited. 
+-Mentee and mentor have a separate page to view and amend account details.
+# Support 
+To access help as a mentee or mentor  
+- Fill in the FAQ form for each to ask for assistance regarding any query whether technical or theoretical and press submit.
     
