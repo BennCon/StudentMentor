@@ -1,7 +1,7 @@
 require_relative "../../helpers/spec_helper"
 
-RSpec.describe "Requests Page" do
-    describe "GET /requests-mentor" do
+RSpec.describe "All Mentees" do
+    describe "GET /all-mentees" do
         
         before(:all) do
             create_mentor_model
@@ -13,16 +13,13 @@ RSpec.describe "Requests Page" do
         end
         
         it "has a status code of 200 (OK)" do
-            get "/requests-mentor"
+            get "/all-mentees"
             expect(last_response.status).to eq(200)
         end
         
-        it "Displays requests" do
-            get "/requests-mentor"
-            expect(last_response.body).to include('requests')
+        it "displays a list of all the mentees" do
+            get "/all-mentees"
+            expect(last_response.body).to include('<table id="users-table">').or include('<p>The database is empty!</p>')
         end
-    end
-    
-    describe "POST /acceptMethod" do
     end
 end
