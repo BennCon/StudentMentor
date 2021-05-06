@@ -16,7 +16,8 @@ To stop the application (in the terminal):
 - press Ctrl-C
 
 To access the web page type in the browser the following link:
-- http://piano-baboon-4567.codio.io
+- http://piano-baboon-4567.codio.io 
+- The link will only work when the ruby app is run in the client demo project
 
 To run all automated tests, run:
 - rspec spec 
