@@ -35,13 +35,37 @@ post "/runMethod" do
    mentor = Hash.new
    mentor["mentorId"] = params.fetch("mentorId", "").strip
    mentor_id = mentor["mentorId"]
-
+    
    
    request = Request.new
    request.mentee_id = id
    request.mentor_id = mentor_id
    request.accepted = 0
    request.save_changes
+    
+   require "net/http"
+
+    def send_mail(email, subject, body)
+      response = Net::HTTP.post_form(URI("http://www.dcs.shef.ac.uk/cgi-intranet/public/FormMail.php"),
+                                     "recipients" => email,
+                                     "subject" => subject,
+                                     "body" => body)
+      response.is_a? Net::HTTPSuccess
+    end
+
+    mentor["mentorEmail"] = params.fetch("mentorId", "").strip
+    email = mentor["mentorEmail"]
+
+    subject = "New request"
+
+    body = "You have a new mentee request. Go check it on the website."
+
+    puts "Sending email..."
+    if send_mail(email, subject, body)
+      puts "Email sent ok."
+    else
+      puts "Send failed."
+    end
 
      
    redirect "/find-mentor"
