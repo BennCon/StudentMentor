@@ -28,13 +28,15 @@ post "/acceptMethod" do
    mentee["menteeId"] = params.fetch("menteeId", "").strip
    mentee_id = mentee["menteeId"].to_i
    
-   @requests = DB[:requests].where(mentor_id: id)
+   @requests = DB[:requests]
    @requests.each do |request|
-
-      if mentee_id == request[:mentee_id]
+      if request[:mentee_id] == mentee_id && request[:mentor_id] == id
          request = Request[request[:id]]
          request[:accepted] = 1
          request.save_changes
+      elsif request[:mentee_id] == mentee_id
+         request = Request[request[:id]]
+         request.delete
       end
    end
    
