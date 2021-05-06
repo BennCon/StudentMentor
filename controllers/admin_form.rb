@@ -25,7 +25,7 @@ post "/admin-form" do
 
         @user.save_changes
         @admin.save_changes(:validate => false)
-        redirect "/"
+        redirect "/success"
 #      end
   end
    #Refreshes page if invalid

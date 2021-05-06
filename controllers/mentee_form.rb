@@ -22,7 +22,7 @@ post "/mentee-form" do
 
       @user.save_changes
       @mentee.save_changes(:validate => false)
-      redirect "/"
+      redirect "/success"
    end
    erb :mentee_form
 end

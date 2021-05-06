@@ -22,7 +22,7 @@ post "/mentor-form" do
 
       @user.save_changes
       @mentor.save_changes(:validate => false)
-      redirect "/"
+      redirect "/success"
    end
    erb :mentor_form
 end
