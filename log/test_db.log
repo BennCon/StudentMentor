@@ -26051,3 +26051,113 @@ I, [2021-05-07T12:28:35.692690 #615]  INFO -- : (0.000168s) SELECT * FROM `mento
 I, [2021-05-07T12:28:35.813170 #615]  INFO -- : (0.000153s) SELECT * FROM `mentors` WHERE `id` = 13
 I, [2021-05-07T12:28:35.813379 #615]  INFO -- : (0.000102s) SELECT * FROM `mentors` WHERE `id` = 13
 I, [2021-05-07T12:28:35.813502 #615]  INFO -- : (0.000070s) SELECT * FROM `users` WHERE `id` = 13
+I, [2021-05-07T12:29:58.252478 #646]  INFO -- : (0.000195s) PRAGMA foreign_keys = 1
+I, [2021-05-07T12:29:58.252575 #646]  INFO -- : (0.000015s) PRAGMA case_sensitive_like = 1
+I, [2021-05-07T12:29:58.253324 #646]  INFO -- : (0.000061s) SELECT sqlite_version()
+I, [2021-05-07T12:29:58.253569 #646]  INFO -- : (0.000110s) PRAGMA table_info('admins')
+I, [2021-05-07T12:29:58.254293 #646]  INFO -- : (0.000102s) PRAGMA table_info('codes')
+I, [2021-05-07T12:29:58.254885 #646]  INFO -- : (0.000100s) PRAGMA table_info('questions_answers')
+I, [2021-05-07T12:29:58.255805 #646]  INFO -- : (0.000188s) PRAGMA table_info('mentees')
+I, [2021-05-07T12:29:58.257018 #646]  INFO -- : (0.000145s) PRAGMA table_info('mentors')
+I, [2021-05-07T12:29:58.257880 #646]  INFO -- : (0.000089s) PRAGMA table_info('requests')
+I, [2021-05-07T12:29:58.258639 #646]  INFO -- : (0.000103s) PRAGMA table_info('users')
+I, [2021-05-07T12:30:06.324637 #646]  INFO -- : (0.000287s) SELECT * FROM `users` WHERE (`username` = 'adminTest1') LIMIT 1
+I, [2021-05-07T12:30:06.325096 #646]  INFO -- : (0.000155s) SELECT * FROM `users` WHERE (`username` = 'adminTest1') LIMIT 1
+I, [2021-05-07T12:30:06.325554 #646]  INFO -- : (0.000146s) SELECT * FROM `users` WHERE (`username` = 'adminTest1') LIMIT 1
+I, [2021-05-07T12:30:06.325934 #646]  INFO -- : (0.000155s) SELECT * FROM `admins` WHERE (`username` LIKE '%adminTest1%' ESCAPE '\') LIMIT 1
+I, [2021-05-07T12:30:06.326253 #646]  INFO -- : (0.000135s) SELECT * FROM `admins` WHERE (`username` = 'adminTest1') LIMIT 1
+I, [2021-05-07T12:30:06.424122 #646]  INFO -- : (0.000250s) SELECT * FROM `admins` WHERE `id` = 10
+I, [2021-05-07T12:30:06.424422 #646]  INFO -- : (0.000128s) SELECT * FROM `admins` WHERE `id` = 10
+I, [2021-05-07T12:30:06.424628 #646]  INFO -- : (0.000124s) SELECT * FROM `users` WHERE `id` = 10
+I, [2021-05-07T12:30:08.086916 #646]  INFO -- : (0.000207s) SELECT * FROM `mentors`
+I, [2021-05-07T12:35:14.238759 #667]  INFO -- : (0.000192s) PRAGMA foreign_keys = 1
+I, [2021-05-07T12:35:14.238859 #667]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
+I, [2021-05-07T12:35:14.239645 #667]  INFO -- : (0.000060s) SELECT sqlite_version()
+I, [2021-05-07T12:35:14.239985 #667]  INFO -- : (0.000149s) PRAGMA table_info('admins')
+I, [2021-05-07T12:35:14.240792 #667]  INFO -- : (0.000115s) PRAGMA table_info('codes')
+I, [2021-05-07T12:35:14.241515 #667]  INFO -- : (0.000120s) PRAGMA table_info('questions_answers')
+I, [2021-05-07T12:35:14.242675 #667]  INFO -- : (0.000213s) PRAGMA table_info('mentees')
+I, [2021-05-07T12:35:14.244034 #667]  INFO -- : (0.000164s) PRAGMA table_info('mentors')
+I, [2021-05-07T12:35:14.245116 #667]  INFO -- : (0.000124s) PRAGMA table_info('requests')
+I, [2021-05-07T12:35:14.246033 #667]  INFO -- : (0.000141s) PRAGMA table_info('users')
+I, [2021-05-07T12:35:26.561466 #667]  INFO -- : (0.000169s) SELECT * FROM `users` WHERE (`username` = 'adminTest1') LIMIT 1
+I, [2021-05-07T12:35:26.561753 #667]  INFO -- : (0.000096s) SELECT * FROM `users` WHERE (`username` = 'adminTest1') LIMIT 1
+I, [2021-05-07T12:35:26.562026 #667]  INFO -- : (0.000088s) SELECT * FROM `users` WHERE (`username` = 'adminTest1') LIMIT 1
+I, [2021-05-07T12:35:26.562267 #667]  INFO -- : (0.000103s) SELECT * FROM `admins` WHERE (`username` LIKE '%adminTest1%' ESCAPE '\') LIMIT 1
+I, [2021-05-07T12:35:26.562492 #667]  INFO -- : (0.000085s) SELECT * FROM `admins` WHERE (`username` = 'adminTest1') LIMIT 1
+I, [2021-05-07T12:35:26.678784 #667]  INFO -- : (0.000152s) SELECT * FROM `admins` WHERE `id` = 10
+I, [2021-05-07T12:35:26.678990 #667]  INFO -- : (0.000095s) SELECT * FROM `admins` WHERE `id` = 10
+I, [2021-05-07T12:35:26.679135 #667]  INFO -- : (0.000080s) SELECT * FROM `users` WHERE `id` = 10
+I, [2021-05-07T12:35:29.020272 #667]  INFO -- : (0.000208s) SELECT * FROM `mentees`
+I, [2021-05-07T12:35:32.403276 #667]  INFO -- : (0.000205s) SELECT * FROM `mentors`
+I, [2021-05-07T12:41:11.557421 #689]  INFO -- : (0.000191s) PRAGMA foreign_keys = 1
+I, [2021-05-07T12:41:11.557509 #689]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
+I, [2021-05-07T12:41:11.558215 #689]  INFO -- : (0.000054s) SELECT sqlite_version()
+I, [2021-05-07T12:41:11.558440 #689]  INFO -- : (0.000105s) PRAGMA table_info('admins')
+I, [2021-05-07T12:41:11.559124 #689]  INFO -- : (0.000103s) PRAGMA table_info('codes')
+I, [2021-05-07T12:41:11.559712 #689]  INFO -- : (0.000087s) PRAGMA table_info('questions_answers')
+I, [2021-05-07T12:41:11.560619 #689]  INFO -- : (0.000164s) PRAGMA table_info('mentees')
+I, [2021-05-07T12:41:11.561835 #689]  INFO -- : (0.000150s) PRAGMA table_info('mentors')
+I, [2021-05-07T12:41:11.562682 #689]  INFO -- : (0.000089s) PRAGMA table_info('requests')
+I, [2021-05-07T12:41:11.563434 #689]  INFO -- : (0.000104s) PRAGMA table_info('users')
+I, [2021-05-07T12:41:17.691466 #689]  INFO -- : (0.000177s) SELECT * FROM `users` WHERE (`username` = 'adminTest1') LIMIT 1
+I, [2021-05-07T12:41:17.691814 #689]  INFO -- : (0.000119s) SELECT * FROM `users` WHERE (`username` = 'adminTest1') LIMIT 1
+I, [2021-05-07T12:41:17.692115 #689]  INFO -- : (0.000093s) SELECT * FROM `users` WHERE (`username` = 'adminTest1') LIMIT 1
+I, [2021-05-07T12:41:17.692365 #689]  INFO -- : (0.000097s) SELECT * FROM `admins` WHERE (`username` LIKE '%adminTest1%' ESCAPE '\') LIMIT 1
+I, [2021-05-07T12:41:17.692576 #689]  INFO -- : (0.000085s) SELECT * FROM `admins` WHERE (`username` = 'adminTest1') LIMIT 1
+I, [2021-05-07T12:41:17.832244 #689]  INFO -- : (0.000152s) SELECT * FROM `admins` WHERE `id` = 10
+I, [2021-05-07T12:41:17.832457 #689]  INFO -- : (0.000101s) SELECT * FROM `admins` WHERE `id` = 10
+I, [2021-05-07T12:41:17.834727 #689]  INFO -- : (0.000118s) SELECT * FROM `users` WHERE `id` = 10
+I, [2021-05-07T12:41:19.240510 #689]  INFO -- : (0.000958s) SELECT * FROM `mentors`
+I, [2021-05-07T12:41:32.511065 #710]  INFO -- : (0.000185s) PRAGMA foreign_keys = 1
+I, [2021-05-07T12:41:32.511151 #710]  INFO -- : (0.000013s) PRAGMA case_sensitive_like = 1
+I, [2021-05-07T12:41:32.511866 #710]  INFO -- : (0.000070s) SELECT sqlite_version()
+I, [2021-05-07T12:41:32.512096 #710]  INFO -- : (0.000109s) PRAGMA table_info('admins')
+I, [2021-05-07T12:41:32.512780 #710]  INFO -- : (0.000102s) PRAGMA table_info('codes')
+I, [2021-05-07T12:41:32.513358 #710]  INFO -- : (0.000103s) PRAGMA table_info('questions_answers')
+I, [2021-05-07T12:41:32.514230 #710]  INFO -- : (0.000161s) PRAGMA table_info('mentees')
+I, [2021-05-07T12:41:32.515416 #710]  INFO -- : (0.000146s) PRAGMA table_info('mentors')
+I, [2021-05-07T12:41:32.516314 #710]  INFO -- : (0.000088s) PRAGMA table_info('requests')
+I, [2021-05-07T12:41:32.517070 #710]  INFO -- : (0.000102s) PRAGMA table_info('users')
+I, [2021-05-07T12:41:37.281839 #710]  INFO -- : (0.000170s) SELECT * FROM `users` WHERE (`username` = 'adminTest1') LIMIT 1
+I, [2021-05-07T12:41:37.282118 #710]  INFO -- : (0.000093s) SELECT * FROM `users` WHERE (`username` = 'adminTest1') LIMIT 1
+I, [2021-05-07T12:41:37.282386 #710]  INFO -- : (0.000085s) SELECT * FROM `users` WHERE (`username` = 'adminTest1') LIMIT 1
+I, [2021-05-07T12:41:37.282613 #710]  INFO -- : (0.000090s) SELECT * FROM `admins` WHERE (`username` LIKE '%adminTest1%' ESCAPE '\') LIMIT 1
+I, [2021-05-07T12:41:37.282847 #710]  INFO -- : (0.000086s) SELECT * FROM `admins` WHERE (`username` = 'adminTest1') LIMIT 1
+I, [2021-05-07T12:41:37.400095 #710]  INFO -- : (0.000142s) SELECT * FROM `admins` WHERE `id` = 10
+I, [2021-05-07T12:41:37.400300 #710]  INFO -- : (0.000100s) SELECT * FROM `admins` WHERE `id` = 10
+I, [2021-05-07T12:41:37.400444 #710]  INFO -- : (0.000080s) SELECT * FROM `users` WHERE `id` = 10
+I, [2021-05-07T12:41:38.697938 #710]  INFO -- : (0.000204s) SELECT * FROM `mentors`
+I, [2021-05-07T12:41:46.949965 #710]  INFO -- : (0.000226s) SELECT * FROM `mentees`
+I, [2021-05-07T12:42:00.946165 #710]  INFO -- : (0.000158s) SELECT * FROM `users` WHERE (`username` = 'adminTest1') LIMIT 1
+I, [2021-05-07T12:42:00.946392 #710]  INFO -- : (0.000087s) SELECT * FROM `users` WHERE (`username` = 'adminTest1') LIMIT 1
+I, [2021-05-07T12:42:00.946597 #710]  INFO -- : (0.000084s) SELECT * FROM `users` WHERE (`username` = 'adminTest1') LIMIT 1
+I, [2021-05-07T12:42:00.947516 #710]  INFO -- : (0.000760s) SELECT * FROM `admins` WHERE (`username` LIKE '%adminTest1%' ESCAPE '\') LIMIT 1
+I, [2021-05-07T12:42:00.947775 #710]  INFO -- : (0.000090s) SELECT * FROM `admins` WHERE (`username` = 'adminTest1') LIMIT 1
+I, [2021-05-07T12:42:01.067278 #710]  INFO -- : (0.000162s) SELECT * FROM `admins` WHERE `id` = 10
+I, [2021-05-07T12:42:01.067470 #710]  INFO -- : (0.000095s) SELECT * FROM `admins` WHERE `id` = 10
+I, [2021-05-07T12:42:01.067608 #710]  INFO -- : (0.000079s) SELECT * FROM `users` WHERE `id` = 10
+I, [2021-05-07T12:42:02.011636 #710]  INFO -- : (0.000214s) SELECT * FROM `mentees`
+I, [2021-05-07T12:42:06.156266 #710]  INFO -- : (0.000203s) SELECT * FROM `mentors`
+I, [2021-05-07T12:42:28.233031 #710]  INFO -- : (0.000201s) SELECT * FROM `users`
+I, [2021-05-07T12:42:28.233305 #710]  INFO -- : (0.000155s) SELECT * FROM `users`
+I, [2021-05-07T12:42:28.233459 #710]  INFO -- : (0.000019s) BEGIN
+I, [2021-05-07T12:42:28.233867 #710]  INFO -- : (0.000230s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('Mentee', 'Test', 'menteeTest1', 'mentee@test1', 'mentee', 'mentee')
+I, [2021-05-07T12:42:28.234082 #710]  INFO -- : (0.000076s) SELECT * FROM `users` WHERE `id` = 14
+I, [2021-05-07T12:42:28.345215 #710]  INFO -- : (0.111057s) COMMIT
+I, [2021-05-07T12:42:28.345420 #710]  INFO -- : (0.000031s) BEGIN
+I, [2021-05-07T12:42:28.345757 #710]  INFO -- : (0.000160s) INSERT INTO `mentees` (`first_name`, `surname`, `username`, `course`, `university`, `gender`, `year_of_study`, `email`, `password`) VALUES ('Mentee', 'Test', 'menteeTest1', 'Computer Science', 'Aga Khan University', 'male', 1, 'mentee@test1', 'mentee')
+I, [2021-05-07T12:42:28.345999 #710]  INFO -- : (0.000123s) SELECT * FROM `mentees` WHERE `id` = 12
+I, [2021-05-07T12:42:28.447447 #710]  INFO -- : (0.101350s) COMMIT
+I, [2021-05-07T12:42:28.447832 #710]  INFO -- : (0.000076s) BEGIN
+I, [2021-05-07T12:42:28.448370 #710]  INFO -- : (0.000294s) UPDATE `mentees` SET `id` = 14 WHERE (`id` = 12)
+I, [2021-05-07T12:42:28.545785 #710]  INFO -- : (0.097309s) COMMIT
+I, [2021-05-07T12:42:33.687910 #710]  INFO -- : (0.000179s) SELECT * FROM `users` WHERE (`username` = 'adminTest1') LIMIT 1
+I, [2021-05-07T12:42:33.688154 #710]  INFO -- : (0.000096s) SELECT * FROM `users` WHERE (`username` = 'adminTest1') LIMIT 1
+I, [2021-05-07T12:42:33.688351 #710]  INFO -- : (0.000084s) SELECT * FROM `users` WHERE (`username` = 'adminTest1') LIMIT 1
+I, [2021-05-07T12:42:33.688623 #710]  INFO -- : (0.000096s) SELECT * FROM `admins` WHERE (`username` LIKE '%adminTest1%' ESCAPE '\') LIMIT 1
+I, [2021-05-07T12:42:33.689699 #710]  INFO -- : (0.000100s) SELECT * FROM `admins` WHERE (`username` = 'adminTest1') LIMIT 1
+I, [2021-05-07T12:42:33.795659 #710]  INFO -- : (0.000125s) SELECT * FROM `admins` WHERE `id` = 10
+I, [2021-05-07T12:42:33.795852 #710]  INFO -- : (0.000104s) SELECT * FROM `admins` WHERE `id` = 10
+I, [2021-05-07T12:42:33.795974 #710]  INFO -- : (0.000069s) SELECT * FROM `users` WHERE `id` = 10
+I, [2021-05-07T12:42:34.836638 #710]  INFO -- : (0.000216s) SELECT * FROM `mentees`
