@@ -5,6 +5,7 @@ get "/get-help-mentor" do
   @user = User[id]
   
   @faqs = Questions_answers.all
+  @admins = Admin.all
     
   erb :get_help_mentee
 end

@@ -16,6 +16,14 @@
             </nav>
         </aside>
         <main>
+          <div>
+              <h2>If you need any help contact one of the following admins by email</h2>
+              <% if @admins.count > 0 %>
+                  <%= erb :"commons/admin_emails" %>
+              <% else %>
+                  <p>No admins available at the moment.</p>
+              <% end %>    
+          </div>
           <div id="mentor-bottom">
               <h2>FAQ</h2> 
               <h2 id="orange"> Mentors</h2>
