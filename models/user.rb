@@ -26,4 +26,11 @@ class User < Sequel::Model
      other_user = User.first(username:username)
      return other_user.user_type
   end
+    
+  def self.username_exists?(username)
+        return false if username.nil? # check the username is not nil
+        return false if User[username].nil? # check the database has a record with this username
+
+        true # all checks are ok - the username exists
+  end
 end

@@ -25674,3 +25674,13 @@ I, [2021-05-06T22:24:43.756696 #708]  INFO -- : (0.000077s) SELECT count(*) AS '
 I, [2021-05-06T22:24:43.756894 #708]  INFO -- : (0.000129s) SELECT * FROM `mentees`
 I, [2021-05-06T22:24:43.757009 #708]  INFO -- : (0.000058s) SELECT count(*) AS 'count' FROM `requests` WHERE (`mentor_id` = 13) LIMIT 1
 I, [2021-05-06T22:24:43.757202 #708]  INFO -- : (0.000143s) SELECT * FROM `mentees`
+I, [2021-05-07T11:19:10.026017 #269]  INFO -- : (0.000218s) PRAGMA foreign_keys = 1
+I, [2021-05-07T11:19:10.026166 #269]  INFO -- : (0.000019s) PRAGMA case_sensitive_like = 1
+I, [2021-05-07T11:19:10.030539 #269]  INFO -- : (0.000079s) SELECT sqlite_version()
+I, [2021-05-07T11:19:10.030793 #269]  INFO -- : (0.000110s) PRAGMA table_info('admins')
+I, [2021-05-07T11:19:10.031585 #269]  INFO -- : (0.000108s) PRAGMA table_info('codes')
+I, [2021-05-07T11:19:10.032242 #269]  INFO -- : (0.000106s) PRAGMA table_info('questions_answers')
+I, [2021-05-07T11:19:10.037101 #269]  INFO -- : (0.000169s) PRAGMA table_info('mentees')
+I, [2021-05-07T11:19:10.042029 #269]  INFO -- : (0.000175s) PRAGMA table_info('mentors')
+I, [2021-05-07T11:19:10.042933 #269]  INFO -- : (0.000091s) PRAGMA table_info('requests')
+I, [2021-05-07T11:19:10.043693 #269]  INFO -- : (0.000132s) PRAGMA table_info('users')

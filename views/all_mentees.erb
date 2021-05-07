@@ -22,6 +22,21 @@
                        <h2>All</h2> 
                        <h2 id="orange"> Mentees</h2>
                     </div>
+                    <button class="button4" id="button" name="change_passw">Change password</button>
+                    <div>
+                        <form method="post" action="/change-password" class="accDetails" id="change_form">
+                                <label for="username">Enter the username:</label>
+                                <input type="username" name="username" id="username" required>
+                                <label for="password">Enter new password:</label>
+                                <input type="password" name="password" id="password" required>
+                                <button type="submit" action="submit" id="button" name="save">Save changes</button>
+                        </form>
+                    </div>
+                    <script>
+                        var changeButton = document.getElementsByClassName('button4')[0]
+                        var changeForm = document.getElementById('change_form')
+                        changeButton.addEventListener('click',function(a){changeForm.classList.toggle('active')})
+                    </script> 
                 <% if @mentees.count > 0 %>
                   <table id="users-table">
                     <tr>
