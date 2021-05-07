@@ -9,12 +9,16 @@ describe "A user" do
         register_admin "TestAdmin","qwerty","admintest@test.com"
         log_in "TestAdmin"
         click_link "> All Mentees"
-        expect(page).to have_button('change')
+        expect(page).to have_button('change_passw')
         #Change the mentees password to 'newtestpass' for the next test
+        click_button 'change_passw'
+        fill_in "id", with: "1"
+        fill_in "password", with: "newtestpass"
+        click_button 'save'
     end
     it "can only log in with a changed password" do
         log_in "TestMentee"
-        expect(page).to have_content("Incorrect")
+        expect(page).to have_content("incorrect")
         fill_in "username", with: "TestMentee"
         fill_in "password", with: "newtestpass"
         click_button "signin"

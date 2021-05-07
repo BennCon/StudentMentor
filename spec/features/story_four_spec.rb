@@ -51,7 +51,7 @@ describe "The Filter System" do
         click_button "Apply filters"
         expect(page).not_to have_content "Mister"
         expect(page).not_to have_content "Miss"
-        expect(page).to have_content "No Mentors"
+        expect(page).to have_content "no Mentors"
         clear_db
     end
 end
