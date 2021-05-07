@@ -1,18 +1,18 @@
 post "/change-password" do 
        
    user_data = Hash.new
-   user_data["username"] = params.fetch("username", "").strip
-   username = user_data["username"]
+   user_data["id"] = params.fetch("id", "").strip
+   id = user_data["id"]
    user_data["password"] = params.fetch("password", "").strip 
    password = user_data["password"]
     
-    
-   user = User[username] if User.username_exists?(username)
+
+   user = User[id] if User.id_exists?(id)
    
-   if user.get_type == "mentee" 
-        mentee = Mentee[username]
-        mentee.load_edit(params)
-        user.load_edit(params)
+   if user[:user_type] == "mentee"
+        mentee = Mentee[id]
+        mentee.load_passw_change(params)
+        user.load_passw_change(params)
 
         mentee.save_changes(:validate => false)
         user.save_changes
@@ -20,11 +20,11 @@ post "/change-password" do
         erb :all_mentees
    end
     
-   if user.get_type == "mentor" 
-        mentor = Mentor[username]
-        mentor.load_edit(params)
-        user.load_edit(params)
-
+   if user[:user_type] == "mentor" 
+        mentor = Mentor[id]
+        mentor.load_passw_change(params)
+        user.load_passw_change(params)
+        
         mentor.save_changes(:validate => false)
         user.save_changes
         redirect "/all-mentors"

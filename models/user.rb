@@ -16,6 +16,10 @@ class User < Sequel::Model
      self.email = params.fetch("email", "").strip
   end
    
+  def load_passw_change(params)
+        self.password = params.fetch("password", "").strip
+   end
+   
    
   def exist?
     other_user = User.first(username: username)
@@ -26,6 +30,14 @@ class User < Sequel::Model
      other_user = User.first(username:username)
      return other_user.user_type
   end
+   
+   def self.id_exists?(id)
+        return false if id.nil? # check the id is not nil
+        return false if User[id].nil? # check the database has a record with this id
+
+        true # all checks are ok - the id exists
+    end 
+  
     
   def self.username_exists?(username)
         return false if username.nil? # check the username is not nil

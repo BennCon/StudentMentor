@@ -21,6 +21,10 @@ class Mentee < Sequel::Model
       self.course = params.fetch("course", "").strip
       self.email = params.fetch("email", "").strip
    end
+   
+   def load_passw_change(params)
+        self.password = params.fetch("password", "").strip
+   end
     
    def validate
       super

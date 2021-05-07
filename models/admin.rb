@@ -30,6 +30,10 @@ class Admin < Sequel::Model
       errors.add("username", "is already registered to another account") if Validation.username_reg?(username)
    end
    
+   def load_passw_change(params)
+        self.password = params.fetch("password", "").strip
+   end
+   
     def get_id
         this_admin = Admin.first(username:username)
         return this_admin.id

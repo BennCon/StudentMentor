@@ -23,6 +23,11 @@ class Mentor < Sequel::Model
        self.biography = params.fetch("biography", "").strip
     end
    
+    def load_passw_change(params)
+        self.password = params.fetch("password", "").strip
+   end   
+
+   
    def validate
       super
       errors.add("first_name", "cannot be empty") if !first_name || first_name.empty?
