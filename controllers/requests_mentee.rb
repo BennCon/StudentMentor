@@ -19,3 +19,22 @@ get "/requests-mentee" do
     
   erb :requests_mentee
 end
+
+post "/deleteMethod" do
+   id = session[:id]
+   mentor = Hash.new
+   mentor["mentorId"] = params.fetch("mentorId", "").strip
+   mentor_id = mentor["mentorId"].to_i
+   mentor = Mentor[mentor_id]
+   mentor.save_changes(:validate => false) 
+   
+   @requests = DB[:requests].where(mentee_id: id)
+   @requests.each do |request|
+      if request[:mentor_id] == mentor_id
+         request = Request[request[:id]]
+         request.delete
+      end
+   end
+   
+   redirect "/requests-mentee"
+end

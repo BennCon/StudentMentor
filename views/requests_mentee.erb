@@ -58,6 +58,11 @@
                <% if @mentor_accepted_ids.include? mentor[:id] %>
                   <div class="mentor">
                      <section id="mentor-top">
+                        <form method="post" action="/deleteMethod" >
+                           <button id="request" type="submit">Delete</button>
+                           <input type="hidden" id="mentorId" name="mentorId" value=<%= mentor[:id] %> >
+                           <input type="hidden" id="mentorEmail" name="mentorEmail" value=<%= mentor[:email] %> >
+                        </form>
                      </section>
                      <section id="mentor-bottom">
                         <aside>
