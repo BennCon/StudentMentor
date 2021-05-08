@@ -36,5 +36,5 @@ Once on the my account page, as a mentor or mentee :
 -Mentee and mentor have a separate page to view and amend account details.
 # Support 
 To access help as a mentee or mentor  
-- Fill in the FAQ form for each to ask for assistance regarding any query whether technical or theoretical and press submit.
+- Contact the admin for any queries whether technical or theoretical via the emails provided. You can also refer to the FAQ table provided.
     
