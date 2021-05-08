@@ -5,7 +5,7 @@
                 <figure>
                     <!--this img just for testing-->
                     <img src="/background.jpeg" alt="personal Id picture">
-                    <figcaption><%= @mentee.email %></figcaption>
+<!--                     <figcaption><%= @mentee.email %></figcaption> -->
                 </figure>
             </div>
             <nav class="menu">
@@ -16,73 +16,70 @@
                 <li><a href="/"> > Logout</a></li>
             </nav>
         </aside>
-        <main>
+      <main>
+         <% if @mentor_req_ids.count > 0 %>
             <div id="mentor-bottom">
-                       <h2>Pending</h2> 
-                       <h2 id="orange"> Requests:</h2>
-                    </div>
-             <% if @requests.count > 0 %>
-              <div class = "mentorsList">
-                 <% (@mentors).each do |mentor| %>
-                    <% if @mentor_req_ids.include? mentor[:id] %>
-                        <div class="mentor">
-                              <section id="mentor-top">
-                              </section>
-                              <section id="mentor-bottom">
-                                  <aside>
-                                      <div id="profile">
-                                          <figure>
-                                          <img src="/background.jpeg" alt="personal Id picture">
-                                          </figure>
-                                      </div>
-                                  </aside>
-                                  <main>
-                                   <h1> <%= mentor[:first_name] %> <%= mentor[:surname] %> </h1>
-                                   <p>Industry: <%= mentor[:industry] %></p>
-                                   <p>Degree field: <%= mentor[:degree_field] %></p>
-                                   <p>Bio: <%= mentor[:biography] %></p>
-                                  </main>
-                              </section>
-                        </div>
-                    <% end %>
-              <% end %>
-              </div>
-              <% else %>
-                   <p>No Requests.</p>
-              <% end %>
-           
-                <div id="mentor-bottom">
-                       <h2>Accepted</h2> 
-                       <h2 id="orange"> Requests:</h2>
-                    </div>
-             <% if @requests.count > 0 %>
-              <div class = "mentorsList">
-                 <% (@mentors).each do |mentor| %>
-                    <% if @mentor_accepted_ids.include? mentor[:id] %>
-                        <div class="mentor">
-                              <section id="mentor-top">
-                              </section>
-                              <section id="mentor-bottom">
-                                  <aside>
-                                      <div id="profile">
-                                          <figure>
-                                          <img src="/background.jpeg" alt="personal Id picture">
-                                          </figure>
-                                      </div>
-                                  </aside>
-                                  <main>
-                                   <h1> <%= mentor[:first_name] %> <%= mentor[:surname] %> </h1>
-                                   <p><%= mentor[:biography] %></p>
-                                   <p><%= mentor[:email] %></p> 
-                                  </main>
-                              </section>
-                        </div>
-                    <% end %>
-              <% end %>
-              </div>
-              <% else %>
-                   <p>No Requests.</p>
-              <% end %> 
-        </main>
+               <h2>Pending</h2> 
+               <h2 id="orange"> Requests:</h2>
+            </div>          
+            <div class = "mentorsList">
+               <% (@mentors).each do |mentor| %>
+                  <% if @mentor_req_ids.include? mentor[:id] %>
+                     <div class="mentor">
+                        <section id="mentor-top">
+                        </section>
+                        <section id="mentor-bottom">
+                           <aside>
+                              <div id="profile">
+                                 <figure>
+                                    <img src="/background.jpeg" alt="personal Id picture">
+                                 </figure>
+                              </div>
+                           </aside>
+                           <main>
+                              <h1> <%= mentor[:first_name] %> <%= mentor[:surname] %> </h1>
+                              <p>Industry: <%= mentor[:industry] %></p>
+                              <p>Degree field: <%= mentor[:degree_field] %></p>
+                              <p>Bio: <%= mentor[:biography] %></p>
+                           </main>
+                        </section>
+                     </div>
+                  <% end %>
+            <% end %>
+         </div>
+         
+      <% elsif @mentor_accepted_ids.count > 0 %>
+         <div id="mentor-bottom">
+            <h2>Accepted</h2> 
+            <h2 id="orange"> Requests:</h2>
+         </div>
+         <div class = "mentorsList">
+            <% (@mentors).each do |mentor| %>
+               <% if @mentor_accepted_ids.include? mentor[:id] %>
+                  <div class="mentor">
+                     <section id="mentor-top">
+                     </section>
+                     <section id="mentor-bottom">
+                        <aside>
+                           <div id="profile">
+                              <figure>
+                                 <img src="/background.jpeg" alt="personal Id picture">
+                              </figure>
+                           </div>
+                        </aside>
+                        <main>
+                           <h1> <%= mentor[:first_name] %> <%= mentor[:surname] %> </h1>
+                           <p><%= mentor[:biography] %></p>
+                           <p><%= mentor[:email] %></p> 
+                        </main>
+                     </section>
+                  </div>
+               <% end %>
+            <% end %>
+         </div>
+      <% else %>
+         <p>No Requests.</p>
+      <% end %> 
+   </main>
 </div>
 <%= erb :"commons/footer" %>
