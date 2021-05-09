@@ -3,10 +3,10 @@ get "/requests-mentee" do
   id = session[:id]
   @mentee = Mentee[id] if Mentee.id_exists?(id)
   @user = User[id]
-   
   @requests = DB[:requests].where(mentee_id: id)
   @mentors = DB[:mentors] 
    
+  #Gets details of requests, separating pending and accepted 
   @mentor_req_ids = []
   @mentor_accepted_ids = []
   @requests.each do |request|
@@ -27,7 +27,7 @@ post "/deleteMethod" do
    mentee[:mentor_id] = 0
    mentee.save_changes(:validate => false)
    
-   
+   #Updates deleted mentor's DB entries
    mentor = Hash.new
    mentor["mentorId"] = params.fetch("mentorId", "").strip
    mentor_id = mentor["mentorId"].to_i
@@ -35,6 +35,7 @@ post "/deleteMethod" do
    mentor[:number_of_mentees] -= 1
    mentor.save_changes(:validate => false) 
    
+   #Updates details of the request
    @requests = DB[:requests].where(mentee_id: id)
    @requests.each do |request|
       if request[:mentor_id] == mentor_id

@@ -3,10 +3,10 @@ get "/requests-mentor" do
   id = session[:id]
   @mentor = Mentor[id] if Mentor.id_exists?(id)
   @user = User[id]
-   
   @requests = DB[:requests].where(mentor_id: id)
   @mentees = DB[:mentees] 
    
+  #Gets details of requests, separting into pending and accepted
   @mentee_req_ids = []
   @mentee_accepted_ids = []
   @requests.each do |request|
@@ -17,12 +17,11 @@ get "/requests-mentor" do
      end
   end
    
-   
-      
   erb :requests_mentor
 end
 
 post "/acceptMethod" do
+   #Updates mentee's DB details
    id = session[:id]
    mentee = Hash.new
    mentee["menteeId"] = params.fetch("menteeId", "").strip
@@ -32,10 +31,12 @@ post "/acceptMethod" do
    mentee[:mentor_id] = id
    mentee.save_changes(:validate => false)
    
+   #Updates mentor's DB details
    mentor = Mentor[id]
    mentor[:number_of_mentees] += 1
    mentor.save_changes(:validate => false)
 
+   #Updates request DB 
    @requests = DB[:requests]
    @requests.each do |request|
       if request[:mentee_id] == mentee_id && request[:mentor_id] == id
@@ -48,6 +49,7 @@ post "/acceptMethod" do
       end
    end
    
+   #Sends notification email to mentee
    require "net/http"
 
     def send_mail(email, subject, body)
@@ -72,6 +74,7 @@ post "/acceptMethod" do
 end
 
 post "/rejectMethod" do
+   #Updates mentee's DB details
    id = session[:id]
    mentee = Hash.new
    mentee["menteeId"] = params.fetch("menteeId", "").strip
@@ -80,6 +83,7 @@ post "/rejectMethod" do
    mentee[:number_of_rejections] += 1
    mentee.save_changes(:validate => false) 
    
+   #Updates request DB 
    @requests = DB[:requests].where(mentor_id: id)
    @requests.each do |request|
       if request[:mentee_id] == mentee_id
@@ -89,6 +93,5 @@ post "/rejectMethod" do
       end
    end
 
-   
    redirect "/requests-mentor"
 end
