@@ -17,6 +17,8 @@ post "/mentor-form" do
       @user.save_changes
       @mentor.save_changes(:validate => false)
 
+      @mentor.number_of_mentees = 0
+      @mentor.seeking_mentee = 1
       id = @user.id
       @mentor.id = id
 

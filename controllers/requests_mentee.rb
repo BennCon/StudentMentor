@@ -22,10 +22,17 @@ end
 
 post "/deleteMethod" do
    id = session[:id]
+   mentee = Mentee[id]
+   mentee[:has_mentor] = 0
+   mentee[:mentor_id] = 0
+   mentee.save_changes(:validate => false)
+   
+   
    mentor = Hash.new
    mentor["mentorId"] = params.fetch("mentorId", "").strip
    mentor_id = mentor["mentorId"].to_i
    mentor = Mentor[mentor_id]
+   mentor[:number_of_mentees] -= 1
    mentor.save_changes(:validate => false) 
    
    @requests = DB[:requests].where(mentee_id: id)

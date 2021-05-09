@@ -17,6 +17,10 @@ post "/mentee-form" do
       @user.save_changes
       @mentee.save_changes(:validate => false)
 
+      @mentee.number_of_rejections = 0
+      @mentee.has_contacted = 0
+      @mentee.has_mentor = 0
+      @mentee.mentor_id = 0
       id = @user.id
       @mentee.id = id
 

@@ -27,7 +27,15 @@ post "/acceptMethod" do
    mentee = Hash.new
    mentee["menteeId"] = params.fetch("menteeId", "").strip
    mentee_id = mentee["menteeId"].to_i
+   mentee = Mentee[mentee_id]
+   mentee[:has_mentor] = 1
+   mentee[:mentor_id] = id
+   mentee.save_changes(:validate => false)
    
+   mentor = Mentor[id]
+   mentor[:number_of_mentees] += 1
+   mentor.save_changes(:validate => false)
+
    @requests = DB[:requests]
    @requests.each do |request|
       if request[:mentee_id] == mentee_id && request[:mentor_id] == id

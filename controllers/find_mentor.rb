@@ -35,7 +35,10 @@ post "/runMethod" do
    mentor = Hash.new
    mentor["mentorId"] = params.fetch("mentorId", "").strip
    mentor_id = mentor["mentorId"]
-    
+   
+   mentee = Mentee[id]
+   mentee[:has_contacted] = 1
+   mentee.save_changes(:validate => false)
    
    request = Request.new
    request.mentee_id = id
