@@ -9,13 +9,14 @@ describe "An admin" do
         register_mentee "MenteeFirst","MenteeSur","TestMentee","Male","mentee123@test.com"
         log_in "TestAdmin"
         click_link '> All Mentees'
+        # The request count should intially be 0 for a new mentee account
         expect(page).to have_content(" 0 ")
     end
     it "can see an updated request count after the mentee makes more requests" do
-        #Make the mentee account contact a mentor when system is in place, then get admin to check TODO
+        #Make the mentee account contact a mentor when system is in place, then get admin to check
     end
     it "can ban a mentee" do
-        #Make admin ban a mentee, then check that the mentee cannot log in TODO
+        #Make admin ban a mentee, then check that the mentee cannot log in
         clear_db
     end
 end

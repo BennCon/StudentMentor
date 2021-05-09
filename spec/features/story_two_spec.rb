@@ -7,6 +7,7 @@ describe "The edit profile system" do
         click_button "accEdit"
         fill_in "biography", with: "Lorem Ipsum"
         click_button "save"
+        # The new biography should show up on the account page, correctly signified
         expect(page).to have_content "Biography: Lorem Ipsum"
         clear_db
     end

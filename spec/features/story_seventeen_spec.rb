@@ -10,12 +10,14 @@ describe "A mentee's email" do
         click_link "> Logout"
         log_in "TestMentor"
         click_link "> My Requests"
+        # A currently pending request should not show the email to the mentor
         expect(page).not_to have_content("mentee123@test.com")
     end
     it "is shown to a mentor after a match is made" do
         log_in "TestMentor"
         click_link "> My Requests"
         click_button "Accept"
+        # After the request is accepted it does show the email to the mentor
         expect(page).to have_content("mentee123@test.com")
         clear_db
     end
