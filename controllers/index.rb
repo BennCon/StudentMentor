@@ -11,7 +11,6 @@ post '/' do
 
   #Checks if user is valid, sends them to the correct my-account page
   if @user.exist?
-    puts @user.get_type
     session[:logged_in] = true
     if @user.get_type == "admin"
        username = params.fetch("username", "").strip

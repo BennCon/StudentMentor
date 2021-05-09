@@ -65,13 +65,9 @@ post "/acceptMethod" do
 
     body = "One of your requests was accepted. Go check it on the website."
 
-    puts "Sending email..."
-    if send_mail(email, subject, body)
-      puts "Email sent ok."
-    else
-      puts "Send failed."
-    end
-   
+
+    send_mail(email, subject, body)
+    
    redirect "/requests-mentor"
 end
 

@@ -63,13 +63,8 @@ post "/runMethod" do
 
     body = "You have a new mentee request. Go check it on the website."
 
-    puts "Sending email..."
-    if send_mail(email, subject, body)
-      puts "Email sent ok."
-    else
-      puts "Send failed."
-    end
-
-     
-   redirect "/find-mentor"
+   
+    send_mail(email, subject, body)
+    
+   redirect "/success-request"
 end
