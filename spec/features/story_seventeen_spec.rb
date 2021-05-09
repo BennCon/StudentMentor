@@ -7,6 +7,7 @@ describe "A mentee's email" do
         log_in "TestMentee"
         click_link "> Find A Mentor"
         click_button "Request"
+        visit "/find-mentor"
         click_link "> Logout"
         log_in "TestMentor"
         click_link "> My Requests"

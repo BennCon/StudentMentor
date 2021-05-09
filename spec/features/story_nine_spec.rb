@@ -8,6 +8,7 @@ describe "A mentor" do
         log_in "TestMentee"
         click_link '> Find A Mentor'
         click_button "Request"
+        visit "/find-mentor"
         click_link "> Logout"
         # The mentor accepts the request
         log_in "TestMentor"

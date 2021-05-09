@@ -7,6 +7,7 @@ describe "A mentor's email" do
         log_in "TestMentee"
         click_link "> Find A Mentor"
         click_button "Request"
+        visit "/find-mentor"
         click_link "> My Requests"
         # The request is currently 'pending', and thus should not show the mentors email
         expect(page).not_to have_content("mentortest@test.com")

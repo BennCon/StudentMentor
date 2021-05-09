@@ -8,6 +8,7 @@ describe "A Mentor" do
         # A mentee requests a mentor
         click_link "> Find A Mentor"
         click_button "Request"
+        visit "/find-mentor"
         click_link "> Logout"
         log_in "TestMentor"
         click_link "> My Requests"
