@@ -2,7 +2,7 @@ require_relative "../../helpers/spec_helper.rb"
 
 describe "A mentor's email" do
     it "is hidden to a mentee before a match is made" do
-        register_mentee "MenteeFirst","MenteeSur","TestMentee","Male","mentee123@test.com"
+        register_mentee "MenteeFirst","MenteeSur","TestMentee","Male","1st","mentee123@test.com"
         register_mentor "MentorFirst","Surname","TestMentor","Male","Aerospace","Aerospace","mentortest@test.com"
         log_in "TestMentee"
         click_link "> Find A Mentor"

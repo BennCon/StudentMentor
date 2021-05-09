@@ -2,7 +2,7 @@ require_relative "../../helpers/spec_helper.rb"
 
 describe "A mentee" do
     it "can have their request denied by a mentor" do
-        register_mentee "MenteeFirst","MenteeSur","TestMentee","Male","mentee123@test.com"
+        register_mentee "MenteeFirst","MenteeSur","TestMentee","Male","1st","mentee123@test.com"
         register_mentor "MentorOne","SurOne","TestMentor1","Male","Aerospace","Aerospace","mentortest123@test.com"
         # Request a mentor
         log_in "TestMentee"

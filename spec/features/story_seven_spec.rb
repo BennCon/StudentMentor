@@ -22,5 +22,6 @@ describe "The splash page gives the option to" do
         click_link('sign up as an admin')
         expect(page).to have_content "Signing up"
         expect(page).to have_content "ADMIN"
+        clear_db
     end
 end

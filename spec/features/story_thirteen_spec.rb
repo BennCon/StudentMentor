@@ -6,7 +6,7 @@ describe "An admin" do
         code = Code.new(id: 55, code: "codetest", used: 0)
         code.save_changes
         register_admin "TestAdmin","testcode","admintest@test.com"
-        register_mentee "MenteeFirst","MenteeSur","TestMentee","Male","mentee123@test.com"
+        register_mentee "MenteeFirst","MenteeSur","TestMentee","Male","1st","mentee123@test.com"
         log_in "TestAdmin"
         click_link '> All Mentees'
         # The request count should intially be 0 for a new mentee account

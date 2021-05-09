@@ -2,7 +2,7 @@ require_relative "../../helpers/spec_helper.rb"
 
 describe "A mentor" do
     it "can be declined by their current mentee" do
-        register_mentee "MenteeFirst","MenteeSur","TestMentee","Male","mentee123@test.com"
+        register_mentee "MenteeFirst","MenteeSur","TestMentee","Male","1st","mentee123@test.com"
         register_mentor "MentorFirst","Surname","TestMentor","Male","Aerospace","Aerospace","mentortest@test.com"
         # Request the mentor
         log_in "TestMentee"

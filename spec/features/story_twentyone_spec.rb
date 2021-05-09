@@ -23,7 +23,7 @@ describe "Help Page updates" do
         click_button "save"
     end
     it "can be seen by mentees" do
-        register_mentee "MenteeFirst","MenteeSur","TestMentee","Male","mentee123@test.com"
+        register_mentee "MenteeFirst","MenteeSur","TestMentee","Male","1st","mentee123@test.com"
         log_in "TestMentee"
         click_link '> Get Help'
         # The added FAQ should be visible to the mentee

@@ -2,7 +2,7 @@ require_relative "../../helpers/spec_helper.rb"
 
 describe "A Mentor" do
     it "has the option to respond once through the website to a request" do
-        register_mentee "MenteeFirst","MenteeSur","TestMentee","Male","mentee123@test.com"
+        register_mentee "MenteeFirst","MenteeSur","TestMentee","Male","1st","mentee123@test.com"
         register_mentor "MentorFirst","Surname","TestMentor","Male","Aerospace","Aerospace","mentortest@test.com"
         log_in "TestMentee"
         # A mentee requests a mentor

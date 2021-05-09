@@ -2,7 +2,7 @@ require_relative "../../helpers/spec_helper.rb"
 
 describe "A user" do
     it "can have their password changed by an admin" do
-        register_mentee "MenteeFirst","MenteeSur","TestMentee","Male","mentee123@test.com"
+        register_mentee "MenteeFirst","MenteeSur","TestMentee","Male","1st","mentee123@test.com"
         Code.unrestrict_primary_key
         code = Code.new(id: 45, code: "qwerty", used: 0)
         code.save_changes

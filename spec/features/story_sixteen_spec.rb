@@ -6,7 +6,7 @@ describe "Admin emails" do
         code = Code.new(id: 25, code: "acode", used: 0)
         code.save_changes
         register_admin "TestAdmin","acode","admintest123@test.com"
-        register_mentee "MenteeFirst","MenteeSur","TestMentee","Male","mentee123@test.com"
+        register_mentee "MenteeFirst","MenteeSur","TestMentee","Male","1st","mentee123@test.com"
         log_in "TestMentee"
         click_link '> Get Help'
         # Emails of admin accounts should show up on the mentee help page

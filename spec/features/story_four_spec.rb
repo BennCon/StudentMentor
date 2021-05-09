@@ -7,7 +7,7 @@ describe "The Filter System" do
         register_mentor "Mister","Planes","planes123","Male","Aerospace","Aerospace","planes123@test.com"
         register_mentor "Miss","Plants","plants123","Female","Agriculture","Agriculture","plants123@test.com"
         
-        register_mentee "MenteeFirst","MenteeSur","TestMentee","Male","mentee123@test.com"
+        register_mentee "MenteeFirst","MenteeSur","TestMentee","Male","1st","mentee123@test.com"
         log_in "TestMentee"
         click_link '> Find A Mentor'
         expect(page).to have_content "Mister"
