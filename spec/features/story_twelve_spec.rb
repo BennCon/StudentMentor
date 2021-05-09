@@ -10,6 +10,7 @@ describe "An Admin" do
         register_mentee "MenteeTwo","SurTwo","TestMentee2","Female","mentee456@test.com"
         log_in "TestAdmin"
         click_link '> All Mentees'
+        # All of the newly created mentee accounts should be visible to an admin on the page
         expect(page).to have_content("TestMentee1")
         expect(page).to have_content("TestMentee2")
         clear_db

@@ -25,19 +25,25 @@
                  <% (@mentees).each do |mentee| %>
                     <% if @mentee_req_ids.include? mentee[:id] %>
                         <div class="mentor">
-                              <section id="mentor-top">
-                                 <form method="post" action="/acceptMethod" >
+                             <div id="accept-reject">
+                                 <div id="accept">
+                                     <form method="post" action="/acceptMethod" >
                                     <button id="request" type="submit">Accept</button>
                                        <input type="hidden" id="menteeId" name="menteeId" value=<%= mentee[:id] %> >
                                        <input type="hidden" id="menteeEmail" name="menteeEmail" value=<%= mentee[:email] %> >
-                                 </form>
-                                 <form method="post" action="/rejectMethod" >
+                                 </form> 
+                                 </div>
+                                 <div id="reject">
+                                    <form method="post" action="/rejectMethod" >
                                     <button id="request" type="submit">Reject</button>
                                     <input type="hidden" id="menteeId" name="menteeId" value=<%= mentee[:id] %> >
                                     <input type="hidden" id="menteeEmail" name="menteeEmail" value=<%= mentee[:email] %> >
-                                 </form>
+                                 </form>   
+                                 </div>
+                                  
+                            </div>
                                  
-                              </section>
+                              
                               <section id="mentor-bottom">
                                   <aside>
                                       <div id="profile">

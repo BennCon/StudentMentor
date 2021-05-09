@@ -139,6 +139,7 @@ nav li a {
 main {
     padding-left: 5%;
     padding-right: 10%;
+    width: 100%;
 }
 
 .accDetails {
@@ -171,13 +172,22 @@ main {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
-   
-    
+    width: 100%;   
 }
+
+#accept-reject {
+    display: flex;
+    flex-direction: row;
+}
+#reject {
+    margin-left: 25.5%;
+}
+
 
 #mentor-bottom{
     display:flex;
     flex-direction: row;
+    
 }
 
 #request {

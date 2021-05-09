@@ -9,12 +9,14 @@ describe "Admin emails" do
         register_mentee "MenteeFirst","MenteeSur","TestMentee","Male","mentee123@test.com"
         log_in "TestMentee"
         click_link '> Get Help'
+        # Emails of admin accounts should show up on the mentee help page
         expect(page).to have_content("admintest123@test.com")
     end
     it "are displayed to mentors" do
         register_mentor "MentorFirst","Surname","TestMentor","Male","Aerospace","Aerospace","mentortest@test.com"
         log_in "TestMentor"
         click_link '> Get Help'
+        # Emails of admin accounts should show up on the mentor help page
         expect(page).to have_content("admintest123@test.com")
         clear_db
     end

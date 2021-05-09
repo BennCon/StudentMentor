@@ -4,6 +4,7 @@ describe "The sign up pages" do
     it "can create mentee accounts" do
         register_mentee "MenteeFirst","MenteeSur","TestMentee","Male","mentee123@test.com"
         log_in "TestMentee"
+        # If they have logged in successfully, they will be on their account page that includes their name
         expect(page).to have_content "MenteeFirst"
     end
         

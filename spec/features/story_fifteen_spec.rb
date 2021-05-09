@@ -8,6 +8,7 @@ describe "A mentor's email" do
         click_link "> Find A Mentor"
         click_button "Request"
         click_link "> My Requests"
+        # The request is currently 'pending', and thus should not show the mentors email
         expect(page).not_to have_content("mentortest@test.com")
     end
     it "is shown to a mentee after a match is made" do
@@ -17,6 +18,7 @@ describe "A mentor's email" do
         click_link "> Logout"
         log_in "TestMentee"
         click_link "> My Requests"
+        # The request has moved from pending to 'accepted', and thus should show the mentors email
         expect(page).to have_content("mentortest@test.com")
         clear_db
     end

@@ -7,6 +7,7 @@ describe "A mentee" do
         click_button "accEdit"
         fill_in "email", with: "newmenteetest@test.com"
         click_button "save"
+        # Need to check that the 'email' field of the description has updated on the page
         expect(page).to have_content "Email: newmenteetest@test.com"
         clear_db
     end
