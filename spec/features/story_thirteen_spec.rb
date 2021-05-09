@@ -6,14 +6,23 @@ describe "An admin" do
         code = Code.new(id: 55, code: "codetest", used: 0)
         code.save_changes
         register_admin "TestAdmin","testcode","admintest@test.com"
-        register_mentee "MenteeFirst","MenteeSur","TestMentee","Male","1st","mentee123@test.com"
+        register_mentee "MenteeFirst","MenteeSur","TestMentee","Male","2nd","mentee123@test.com"
         log_in "TestAdmin"
         click_link '> All Mentees'
         # The request count should intially be 0 for a new mentee account
         expect(page).to have_content(" 0 ")
     end
     it "can see an updated request count after the mentee makes more requests" do
-        #Make the mentee account contact a mentor when system is in place, then get admin to check
+        # Make the mentee account contact a mentor, then get admin to check
+        register_mentor "MentorFirst","Surname","TestMentor","Male","Aerospace","Aerospace","mentortest@test.com"
+        log_in "TestMentee"
+        click_link "> Find A Mentor"
+        click_button "Request"
+        visit "/find-mentor"
+        click_link "> Logout"
+        log_in "TestAdmin"
+        click_link "> All Mentees"
+        expect(page).to have_content(" 1 ")
     end
     it "can ban a mentee" do
         #Make admin ban a mentee, then check that the mentee cannot log in
