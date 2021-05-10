@@ -293,6 +293,11 @@ main {
    color:white;
    transition:0.5s;
 }
+
+#users-table tr #problem {
+    color: red;
+    font-weight: bold;
+}
 /* styling help_users */
 
 .hide {
@@ -307,5 +312,6 @@ main {
 #success {
     color:	#96d65e
 }
+
 
 
