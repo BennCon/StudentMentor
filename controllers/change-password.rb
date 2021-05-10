@@ -1,5 +1,6 @@
 post "/change-password" do 
-       
+   
+   #Gets the ID/new password of the user
    user_data = Hash.new
    user_data["id"] = params.fetch("id", "").strip
    id = user_data["id"]
@@ -9,6 +10,7 @@ post "/change-password" do
 
    user = User[id] if User.id_exists?(id)
    
+   #Updates the correct database for that user
    if user[:user_type] == "mentee"
         mentee = Mentee[id]
         mentee.load_passw_change(params)

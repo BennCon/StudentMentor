@@ -2,7 +2,7 @@ require_relative "../../helpers/spec_helper.rb"
 
 describe "A user" do
     it "can have their password changed by an admin" do
-        register_mentee "MenteeFirst","MenteeSur","TestMentee","Male","mentee123@test.com"
+        register_mentee "MenteeFirst","MenteeSur","TestMentee","Male","1st","mentee123@test.com"
         Code.unrestrict_primary_key
         code = Code.new(id: 45, code: "qwerty", used: 0)
         code.save_changes
@@ -10,13 +10,14 @@ describe "A user" do
         log_in "TestAdmin"
         click_link "> All Mentees"
         expect(page).to have_button('change_passw')
-        #Change the mentees password to 'newtestpass' for the next test
+        # Change the mentees password to 'newtestpass' for the next test
         click_button 'change_passw'
         fill_in "id", with: "1"
         fill_in "password", with: "newtestpass"
         click_button 'save'
     end
     it "can only log in with a changed password" do
+        # They shouldn't be able to log in with their old details
         log_in "TestMentee"
         expect(page).to have_content("incorrect")
         fill_in "username", with: "TestMentee"

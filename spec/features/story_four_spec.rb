@@ -3,16 +3,18 @@ require_relative "../../helpers/spec_helper.rb"
 describe "The Filter System" do
     
     it "shows all available mentors when no filter is selected" do
+        # Creates two new mentors in the system, that are both distinct and can be tested for
         register_mentor "Mister","Planes","planes123","Male","Aerospace","Aerospace","planes123@test.com"
         register_mentor "Miss","Plants","plants123","Female","Agriculture","Agriculture","plants123@test.com"
         
-        register_mentee "MenteeFirst","MenteeSur","TestMentee","Male","mentee123@test.com"
+        register_mentee "MenteeFirst","MenteeSur","TestMentee","Male","1st","mentee123@test.com"
         log_in "TestMentee"
         click_link '> Find A Mentor'
         expect(page).to have_content "Mister"
         expect(page).to have_content "Miss"
     end
     
+    # Check each filter in turn
     it "filters by gender" do
         log_in "TestMentee"
         click_link '> Find A Mentor'
