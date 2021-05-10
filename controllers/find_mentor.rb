@@ -3,7 +3,7 @@ get "/find-mentor" do
    id = session[:id]
    @mentee = Mentee[id] if Mentee.id_exists?(id)
    @user = User[id]
-   @mentors = DB[:mentors]
+   @mentors = DB[:mentors].where(seeking_mentee: 1)
    @requests = DB[:requests].where(mentee_id: id)
    
    #For filtering mentors

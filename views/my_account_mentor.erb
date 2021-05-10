@@ -46,7 +46,12 @@
                         <input type="name" name="surname" id="name" value="<%= h @mentor.surname%>" required>
                         <label for="username">|Edit your username</label>
                         <input type="username" name="username" id="username" value="<%= h @mentor.username%>" required>
-                        <label for="industry"> Choose Industry </label>
+                        <label for="seeking">Seeking mentees?</label>
+                        <input type="radio" id="1" name="seeking_mentee" value="1" required>
+                           <label for="1">Yes</label><br>
+                           <input type="radio" id="0" name="seeking_mentee" value="0">
+                           <label for="0">No</label><br>
+                           <label for="industry"> Choose Industry </label>
                          <select  name="industry">
                              <option value="<%= @mentor.industry%>"><%= @mentor.industry%></option>
                               <option value="Aerospace">Aerospace</option>

@@ -21,6 +21,7 @@ class Mentor < Sequel::Model
        self.industry = params.fetch("industry", "").strip
        self.company = params.fetch("company", "").strip
        self.biography = params.fetch("biography", "").strip
+       self.seeking_mentee = params.fetch("seeking_mentee", "").strip
     end
    
     def load_passw_change(params)
