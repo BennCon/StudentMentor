@@ -15,8 +15,10 @@ To run (in the terminal):
 To stop the application (in the terminal):
 - press Ctrl-C
 
-To access the web page type in the browser the following link:
-- http://piano-baboon-4567.codio.io 
+To access the web page type in the browser the link:
+- Created by looking for a code box domain like this “XX-XX.codio.io”
+- Once found, add -4567 to make it look like “XX-XX-4567.codio.io”
+- Run this on your browser and the app will load.
 - The link will only work when the ruby app is run in the client demo project
 
 To run all automated tests, run:
