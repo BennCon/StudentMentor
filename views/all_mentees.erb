@@ -55,23 +55,41 @@
                       <th>Rejections</th>
                     </tr>
                   <% @mentees.each do |mentee| %>
-                    <tr id="selectedRow">
-                      <td><%=h mentee.id %></td>
-                      <td><%=h mentee.first_name %></td>
-                      <td><%=h mentee.surname%></td>
-                      <td><%=h mentee.username %></td>
-                      <td><%=h mentee.gender %></td>
-                      <td><%=h mentee.course %></td>
-                      <td><%=h mentee.year_of_study %></td>
-                      <td><%=h mentee.biography %></td>
-                      <td><%=h mentee.email %></td>
-                      <td><%=h mentee.password %></td>
-                      <td><%=h mentee.has_contacted %></td>
-                      <td><%=h mentee.has_mentor %></td>
-                      <td><%=h mentee.number_of_rejections %></td>
-                    </tr>
-                  <% end %> 
-                  </table>
+                    <% if mentee.has_contacted > 3 || mentee.number_of_rejections > 3 %>
+                        <tr id="selectedRow" class="error">
+                          <td><%=h mentee.id %></td>
+                          <td><%=h mentee.first_name %></td>
+                          <td><%=h mentee.surname%></td>
+                          <td><%=h mentee.username %></td>
+                          <td><%=h mentee.gender %></td>
+                          <td><%=h mentee.course %></td>
+                          <td><%=h mentee.year_of_study %></td>
+                          <td><%=h mentee.biography %></td>
+                          <td><%=h mentee.email %></td>
+                          <td><%=h mentee.password %></td>
+                          <td><%=h mentee.has_contacted %></td>
+                          <td><%=h mentee.has_mentor %></td>
+                          <td><%=h mentee.number_of_rejections %></td>
+                        </tr>
+                     <% else %>
+                       <tr id="selectedRow" class="error">
+                          <td><%=h mentee.id %></td>
+                          <td><%=h mentee.first_name %></td>
+                          <td><%=h mentee.surname%></td>
+                          <td><%=h mentee.username %></td>
+                          <td><%=h mentee.gender %></td>
+                          <td><%=h mentee.course %></td>
+                          <td><%=h mentee.year_of_study %></td>
+                          <td><%=h mentee.biography %></td>
+                          <td><%=h mentee.email %></td>
+                          <td><%=h mentee.password %></td>
+                          <td><%=h mentee.has_contacted %></td>
+                          <td><%=h mentee.has_mentor %></td>
+                          <td><%=h mentee.number_of_rejections %></td>
+                        </tr>
+                      <% end %> 
+                 <% end %> 
+                </table>
                 <% else %>
                   <p>The database is empty!</p>
                 <% end %>
