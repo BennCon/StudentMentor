@@ -1,7 +1,7 @@
 require_relative "../../helpers/spec_helper"
 
 RSpec.describe "Mentor Form" do
-    describe "POST /change-password as mentee" do
+    describe "POST /change-password as mentor" do
         
         before(:all) do
             create_mentor_model
