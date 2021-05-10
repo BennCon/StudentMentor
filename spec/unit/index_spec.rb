@@ -49,4 +49,4 @@ RSpec.describe "Index" do
             expect(last_response.body).to include('Username/Password combination incorrect')
         end
     end
-end
+end 

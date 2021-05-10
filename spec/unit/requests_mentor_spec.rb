@@ -42,7 +42,6 @@ RSpec.describe "Requests Page" do
             request = Request.new(mentee_id: 2, mentor_id: 1, accepted: 0)
             request.save_changes
             post "/acceptMethod", "menteeId" => 1
-            puts request.accepted
             expect(request.accepted).to eq(1)
         end
         
@@ -50,7 +49,6 @@ RSpec.describe "Requests Page" do
             request = Request.new(mentee_id: 2, mentor_id: 200, accepted: 0)
             request.save_changes
             post "/acceptMethod", "menteeId" => 1
-            puts request.accepted
             expect(request.accepted).to eq(1)
          end
     end
