@@ -37,7 +37,7 @@ post "/requestMethod" do
    
    #Updates mentee's database
    mentee = Mentee[id]
-   mentee[:has_contacted] = 1
+   mentee[:has_contacted] += 1
    mentee.save_changes(:validate => false)
    
    #Makes a request in the request table
