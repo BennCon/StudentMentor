@@ -1,7 +1,7 @@
 # Install commands
 First you need to open a terminal:
 - if one does not automatically open you go to Tools>Terminal
-
+- Type git clone and “git@git.shefcompsci.org.uk:com1001-2020-21/team33/project.git” to clone the git repository.
 To install in a terminal you need to change directory:
 - cd project
 
@@ -23,13 +23,17 @@ To run all automated tests, run:
 - rspec spec 
 To test user accounts, follow these test codes:
 - For mentee: 
-    Username: menteeTest1
-    Password: mentee
+    Username: mentee1
+    Password: mentee1
+    Username: mentee2
+    Password: mentee2
 - For mentor:
-    Username: mentorTest1
-    Password: mentor
+    Username: mentor1
+    Password: mentor1
+    Username: mentor2
+    Password: mentor2
 - For admin:
-    Username: adminTest1
+    Username: admin
     Password: admin 
 Once on the my account page, as a mentor or mentee :
 - Account details can be edited via the edit button and submitted and saved via the save button once edited. 
