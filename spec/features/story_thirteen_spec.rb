@@ -25,7 +25,16 @@ describe "An admin" do
         expect(page).to have_content(" 1 ")
     end
     it "can ban a mentee" do
-        #Make admin ban a mentee, then check that the mentee cannot log in
+        # The admin can change the user's password to something only known by the admin to ban them
+        log_in "TestAdmin"
+        click_link "> All Mentees"
+        click_button 'change_passw'
+        fill_in "id", with: "2"
+        fill_in "password", with: "banhammer"
+        click_button 'save'
+        click_link "> Logout"
+        log_in "TestMentee"
+        expect(page).not_to have_content("MenteeFirst")
         clear_db
     end
 end
