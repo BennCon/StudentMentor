@@ -29801,3 +29801,52 @@ I, [2021-05-10T10:42:35.366432 #398]  INFO -- : (0.000090s) SELECT * FROM `admin
 I, [2021-05-10T10:42:36.018226 #398]  INFO -- : (0.000172s) SELECT * FROM `mentors` WHERE `id` = 5
 I, [2021-05-10T10:42:36.018445 #398]  INFO -- : (0.000109s) SELECT * FROM `mentors` WHERE `id` = 5
 I, [2021-05-10T10:42:36.018568 #398]  INFO -- : (0.000070s) SELECT * FROM `users` WHERE `id` = 5
+I, [2021-05-10T10:48:44.923388 #433]  INFO -- : (0.000187s) PRAGMA foreign_keys = 1
+I, [2021-05-10T10:48:44.923485 #433]  INFO -- : (0.000018s) PRAGMA case_sensitive_like = 1
+I, [2021-05-10T10:48:44.924209 #433]  INFO -- : (0.000069s) SELECT sqlite_version()
+I, [2021-05-10T10:48:44.924444 #433]  INFO -- : (0.000108s) PRAGMA table_info('admins')
+I, [2021-05-10T10:48:44.925172 #433]  INFO -- : (0.000105s) PRAGMA table_info('codes')
+I, [2021-05-10T10:48:44.925769 #433]  INFO -- : (0.000087s) PRAGMA table_info('questions_answers')
+I, [2021-05-10T10:48:44.926678 #433]  INFO -- : (0.000164s) PRAGMA table_info('mentees')
+I, [2021-05-10T10:48:44.927931 #433]  INFO -- : (0.000194s) PRAGMA table_info('mentors')
+I, [2021-05-10T10:48:44.928805 #433]  INFO -- : (0.000088s) PRAGMA table_info('requests')
+I, [2021-05-10T10:48:44.929578 #433]  INFO -- : (0.000106s) PRAGMA table_info('users')
+I, [2021-05-10T10:49:08.478346 #433]  INFO -- : (0.000180s) SELECT * FROM `users`
+I, [2021-05-10T10:49:08.478551 #433]  INFO -- : (0.000093s) SELECT * FROM `users`
+I, [2021-05-10T10:49:08.478698 #433]  INFO -- : (0.000019s) BEGIN
+I, [2021-05-10T10:49:08.479689 #433]  INFO -- : (0.000227s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('Mentee', 'Test', 'menteeTest1', 'mentee@test', 'mentee', 'mentee')
+I, [2021-05-10T10:49:08.479927 #433]  INFO -- : (0.000086s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-10T10:49:08.586738 #433]  INFO -- : (0.106740s) COMMIT
+I, [2021-05-10T10:49:08.586890 #433]  INFO -- : (0.000020s) BEGIN
+I, [2021-05-10T10:49:08.587210 #433]  INFO -- : (0.000150s) INSERT INTO `mentees` (`first_name`, `surname`, `username`, `course`, `university`, `gender`, `year_of_study`, `email`, `password`) VALUES ('Mentee', 'Test', 'menteeTest1', 'Computer Science', 'Aga Khan University', 'male', 1, 'mentee@test', 'mentee')
+I, [2021-05-10T10:49:08.588172 #433]  INFO -- : (0.000849s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-10T10:49:08.676026 #433]  INFO -- : (0.087771s) COMMIT
+I, [2021-05-10T10:49:08.676218 #433]  INFO -- : (0.000023s) BEGIN
+I, [2021-05-10T10:49:08.676516 #433]  INFO -- : (0.000142s) UPDATE `mentees` SET `has_contacted` = 0, `has_mentor` = 0, `mentor_id` = 0, `number_of_rejections` = 0 WHERE (`id` = 1)
+I, [2021-05-10T10:49:08.791161 #433]  INFO -- : (0.114573s) COMMIT
+I, [2021-05-10T10:49:36.318773 #433]  INFO -- : (0.000134s) SELECT * FROM `users`
+I, [2021-05-10T10:49:36.318969 #433]  INFO -- : (0.000106s) SELECT * FROM `users`
+I, [2021-05-10T10:49:36.319094 #433]  INFO -- : (0.000017s) BEGIN
+I, [2021-05-10T10:49:36.319485 #433]  INFO -- : (0.000234s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('Mentor', 'Test', 'mentorTest1', 'mentor@test', 'mentor', 'mentor')
+I, [2021-05-10T10:49:36.319746 #433]  INFO -- : (0.000094s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-05-10T10:49:36.406893 #433]  INFO -- : (0.087041s) COMMIT
+I, [2021-05-10T10:49:36.407054 #433]  INFO -- : (0.000025s) BEGIN
+I, [2021-05-10T10:49:36.407609 #433]  INFO -- : (0.000307s) INSERT INTO `mentors` (`first_name`, `surname`, `username`, `gender`, `industry`, `company`, `sheffield_graduate`, `degree_field`, `email`, `password`) VALUES ('Mentor', 'Test', 'mentorTest1', 'male', 'Aerospace', 'mentorCompany', 0, 'accounting', 'mentor@test', 'mentor')
+I, [2021-05-10T10:49:36.408622 #433]  INFO -- : (0.000168s) SELECT * FROM `mentors` WHERE `id` = 1
+I, [2021-05-10T10:49:36.496243 #433]  INFO -- : (0.087521s) COMMIT
+I, [2021-05-10T10:49:36.496461 #433]  INFO -- : (0.000030s) BEGIN
+I, [2021-05-10T10:49:36.496828 #433]  INFO -- : (0.000180s) UPDATE `mentors` SET `id` = 2, `number_of_mentees` = 0, `seeking_mentee` = 1 WHERE (`id` = 1)
+I, [2021-05-10T10:49:36.596548 #433]  INFO -- : (0.099630s) COMMIT
+I, [2021-05-10T10:49:49.368147 #433]  INFO -- : (0.000159s) SELECT * FROM `users`
+I, [2021-05-10T10:49:49.368334 #433]  INFO -- : (0.000081s) SELECT * FROM `users`
+I, [2021-05-10T10:49:49.368441 #433]  INFO -- : (0.000015s) BEGIN
+I, [2021-05-10T10:49:49.368722 #433]  INFO -- : (0.000145s) INSERT INTO `users` (`first_name`, `surname`, `username`, `email`, `password`, `user_type`) VALUES ('Admin', 'Test', 'adminTest1', 'admin@test', 'admin', 'admin')
+I, [2021-05-10T10:49:49.368907 #433]  INFO -- : (0.000073s) SELECT * FROM `users` WHERE `id` = 3
+I, [2021-05-10T10:49:49.476193 #433]  INFO -- : (0.107212s) COMMIT
+I, [2021-05-10T10:49:49.476387 #433]  INFO -- : (0.000031s) BEGIN
+I, [2021-05-10T10:49:49.476717 #433]  INFO -- : (0.000155s) INSERT INTO `admins` (`first_name`, `surname`, `username`, `admin_code`, `email`, `password`) VALUES ('Admin', 'Test', 'adminTest1', 'adminCode', 'admin@test', 'admin')
+I, [2021-05-10T10:49:49.476924 #433]  INFO -- : (0.000092s) SELECT * FROM `admins` WHERE `id` = 1
+I, [2021-05-10T10:49:49.571415 #433]  INFO -- : (0.094404s) COMMIT
+I, [2021-05-10T10:49:49.571748 #433]  INFO -- : (0.000048s) BEGIN
+I, [2021-05-10T10:49:49.572236 #433]  INFO -- : (0.000254s) UPDATE `admins` SET `id` = 3 WHERE (`id` = 1)
+I, [2021-05-10T10:49:49.660966 #433]  INFO -- : (0.088631s) COMMIT
