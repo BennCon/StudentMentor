@@ -5,7 +5,7 @@ describe "An admin" do
         Code.unrestrict_primary_key
         code = Code.new(id: 55, code: "codetest", used: 0)
         code.save_changes
-        register_admin "TestAdmin","testcode","admintest@test.com"
+        register_admin "TestAdmin","codetest","admintest@test.com"
         register_mentee "MenteeFirst","MenteeSur","TestMentee","Male","2nd","mentee123@test.com"
         log_in "TestAdmin"
         click_link '> All Mentees'
