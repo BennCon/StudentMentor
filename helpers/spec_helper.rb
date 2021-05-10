@@ -98,17 +98,17 @@ end
 def create_mentor_model
     User.unrestrict_primary_key
     Mentor.unrestrict_primary_key
-    user = User.new(first_name: "A", surname: "B", password: "test1234", user_type: "mentor", id:9999, username: "user")
+    user = User.new(first_name: "A", surname: "B", password: "test1234", user_type: "mentor", username: "user")
     user.save_changes(:validate => false)
-    mentor = Mentor.new(first_name: "A", username: "user", surname: "B", industry: "ABCDEF", company:"ABCDE", email: "testtest@test.test", password: "test1234", sheffield_graduate: true, degree_field: "ABCD", id:9999)
+    mentor = Mentor.new(first_name: "A", username: "user", surname: "B", industry: "ABCDEF", company:"ABCDE", email: "testtest@test.test", password: "test1234", sheffield_graduate: true, degree_field: "ABCD")
     mentor.save_changes(:validate => false)
 end
 
 def create_mentee_model
     User.unrestrict_primary_key
     Mentee.unrestrict_primary_key
-    user = User.new(username: "user", password: "test1234", user_type: "mentee", id:9999)
+    user = User.new(username: "user", password: "test1234", user_type: "mentee")
     user.save_changes(:validate => false)
-    mentee = Mentee.new(username: "user", first_name: "A", surname: "B", course: "ABCD", year_of_study: 9999, email: "testtest@test.test", password: "test1234", id:9999)
+    mentee = Mentee.new(username: "user", first_name: "A", surname: "B", course: "ABCD", year_of_study: 9999, email: "testtest@test.test", password: "test1234")
     mentee.save_changes(:validate => false)
 end
