@@ -16,7 +16,7 @@ post "/admin-form" do
    
 #   Checks if admin code is valid
    if @admin.valid?
-#      if @admin.valid_code?(@admin.admin_code)
+     if @admin.valid_code?(@admin.admin_code)
         @user.save_changes
         @admin.save_changes(:validate => false)
 
@@ -26,7 +26,7 @@ post "/admin-form" do
         @user.save_changes
         @admin.save_changes(:validate => false)
         redirect "/success"
-#      end
+     end
   end
    #Refreshes page if invalid
 
