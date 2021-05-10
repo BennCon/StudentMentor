@@ -791,3 +791,202 @@ I, [2021-05-10T13:16:48.516285 #1329]  INFO -- : (0.000122s) SELECT * FROM `admi
 I, [2021-05-10T13:16:48.516453 #1329]  INFO -- : (0.000077s) SELECT * FROM `admins` WHERE `id` = 5
 I, [2021-05-10T13:16:48.516568 #1329]  INFO -- : (0.000066s) SELECT * FROM `users` WHERE `id` = 5
 I, [2021-05-10T13:16:48.516668 #1329]  INFO -- : (0.000051s) SELECT * FROM `questions_answers`
+I, [2021-05-10T14:30:05.062871 #1448]  INFO -- : (0.000181s) PRAGMA foreign_keys = 1
+I, [2021-05-10T14:30:05.062960 #1448]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
+I, [2021-05-10T14:30:05.063636 #1448]  INFO -- : (0.000056s) SELECT sqlite_version()
+I, [2021-05-10T14:30:05.063858 #1448]  INFO -- : (0.000102s) PRAGMA table_info('admins')
+I, [2021-05-10T14:30:05.064528 #1448]  INFO -- : (0.000094s) PRAGMA table_info('codes')
+I, [2021-05-10T14:30:05.065087 #1448]  INFO -- : (0.000081s) PRAGMA table_info('questions_answers')
+I, [2021-05-10T14:30:05.066033 #1448]  INFO -- : (0.000154s) PRAGMA table_info('mentees')
+I, [2021-05-10T14:30:05.067198 #1448]  INFO -- : (0.000143s) PRAGMA table_info('mentors')
+I, [2021-05-10T14:30:05.068026 #1448]  INFO -- : (0.000088s) PRAGMA table_info('requests')
+I, [2021-05-10T14:30:05.068815 #1448]  INFO -- : (0.000118s) PRAGMA table_info('users')
+I, [2021-05-10T14:30:13.882529 #1448]  INFO -- : (0.000161s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2021-05-10T14:30:13.882805 #1448]  INFO -- : (0.000093s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2021-05-10T14:30:13.883555 #1448]  INFO -- : (0.000606s) SELECT * FROM `admins` WHERE (`username` LIKE '%admin%' ESCAPE '\') LIMIT 1
+I, [2021-05-10T14:30:13.883772 #1448]  INFO -- : (0.000084s) SELECT * FROM `admins` WHERE (`username` = 'admin') LIMIT 1
+I, [2021-05-10T14:30:14.019245 #1448]  INFO -- : (0.000149s) SELECT * FROM `admins` WHERE `id` = 5
+I, [2021-05-10T14:30:14.019455 #1448]  INFO -- : (0.000107s) SELECT * FROM `admins` WHERE `id` = 5
+I, [2021-05-10T14:30:14.020134 #1448]  INFO -- : (0.000078s) SELECT * FROM `users` WHERE `id` = 5
+I, [2021-05-10T14:30:20.446219 #1448]  INFO -- : (0.000191s) SELECT * FROM `mentees`
+I, [2021-05-10T14:30:22.509113 #1448]  INFO -- : (0.000205s) SELECT * FROM `mentors`
+I, [2021-05-10T14:30:23.696123 #1448]  INFO -- : (0.000189s) SELECT * FROM `admins` WHERE `id` = 5
+I, [2021-05-10T14:30:23.696367 #1448]  INFO -- : (0.000116s) SELECT * FROM `admins` WHERE `id` = 5
+I, [2021-05-10T14:30:23.696533 #1448]  INFO -- : (0.000093s) SELECT * FROM `users` WHERE `id` = 5
+I, [2021-05-10T14:30:23.696728 #1448]  INFO -- : (0.000079s) SELECT * FROM `questions_answers`
+I, [2021-05-10T14:30:24.981934 #1448]  INFO -- : (0.000302s) SELECT * FROM `mentors`
+I, [2021-05-10T14:30:29.850636 #1448]  INFO -- : (0.000182s) SELECT * FROM `mentees`
+I, [2021-05-10T14:30:38.566317 #1448]  INFO -- : (0.000183s) SELECT * FROM `mentors`
+I, [2021-05-10T14:30:39.618137 #1448]  INFO -- : (0.000153s) SELECT * FROM `admins` WHERE `id` = 5
+I, [2021-05-10T14:30:39.618323 #1448]  INFO -- : (0.000081s) SELECT * FROM `admins` WHERE `id` = 5
+I, [2021-05-10T14:30:39.619409 #1448]  INFO -- : (0.001031s) SELECT * FROM `users` WHERE `id` = 5
+I, [2021-05-10T14:30:39.619552 #1448]  INFO -- : (0.000066s) SELECT * FROM `questions_answers`
+I, [2021-05-10T14:31:06.143352 #1448]  INFO -- : (0.000037s) BEGIN
+I, [2021-05-10T14:31:06.143793 #1448]  INFO -- : (0.000213s) INSERT INTO `questions_answers` (`question`, `answer`, `user_type`) VALUES ('How do I change my password?', 'Contact one of the admins listed.', 'both')
+I, [2021-05-10T14:31:06.144024 #1448]  INFO -- : (0.000081s) SELECT * FROM `questions_answers` WHERE `id` = 1
+I, [2021-05-10T14:31:06.250285 #1448]  INFO -- : (0.106187s) COMMIT
+I, [2021-05-10T14:31:06.353590 #1448]  INFO -- : (0.000163s) SELECT * FROM `admins` WHERE `id` = 5
+I, [2021-05-10T14:31:06.353765 #1448]  INFO -- : (0.000086s) SELECT * FROM `admins` WHERE `id` = 5
+I, [2021-05-10T14:31:06.353903 #1448]  INFO -- : (0.000079s) SELECT * FROM `users` WHERE `id` = 5
+I, [2021-05-10T14:31:06.354030 #1448]  INFO -- : (0.000070s) SELECT * FROM `questions_answers`
+I, [2021-05-10T14:31:45.122080 #1448]  INFO -- : (0.000220s) SELECT * FROM `users` WHERE (`username` = 'mentee1') LIMIT 1
+I, [2021-05-10T14:31:45.122428 #1448]  INFO -- : (0.000145s) SELECT * FROM `users` WHERE (`username` = 'mentee1') LIMIT 1
+I, [2021-05-10T14:31:45.122662 #1448]  INFO -- : (0.000117s) SELECT * FROM `users` WHERE (`username` = 'mentee1') LIMIT 1
+I, [2021-05-10T14:31:45.123161 #1448]  INFO -- : (0.000268s) SELECT * FROM `mentees` WHERE (`username` LIKE '%mentee1%' ESCAPE '\') LIMIT 1
+I, [2021-05-10T14:31:45.123489 #1448]  INFO -- : (0.000156s) SELECT * FROM `mentees` WHERE (`username` = 'mentee1') LIMIT 1
+I, [2021-05-10T14:31:45.225940 #1448]  INFO -- : (0.000154s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-10T14:31:45.226100 #1448]  INFO -- : (0.000092s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-10T14:31:45.226214 #1448]  INFO -- : (0.000066s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-10T14:31:48.356769 #1448]  INFO -- : (0.000172s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-10T14:31:48.356973 #1448]  INFO -- : (0.000105s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-10T14:31:48.357190 #1448]  INFO -- : (0.000150s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-10T14:31:48.357535 #1448]  INFO -- : (0.000079s) SELECT * FROM `requests` WHERE (`mentee_id` = 1)
+I, [2021-05-10T14:31:48.358738 #1448]  INFO -- : (0.000093s) SELECT count(*) AS 'count' FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\')) LIMIT 1
+I, [2021-05-10T14:31:48.358965 #1448]  INFO -- : (0.000131s) SELECT * FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\'))
+I, [2021-05-10T14:31:52.941155 #1448]  INFO -- : (0.000173s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-10T14:31:52.941380 #1448]  INFO -- : (0.000131s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-10T14:31:52.941511 #1448]  INFO -- : (0.000074s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-10T14:31:52.941774 #1448]  INFO -- : (0.000136s) SELECT * FROM `requests` WHERE (`mentee_id` = 1)
+I, [2021-05-10T14:31:54.374228 #1448]  INFO -- : (0.000270s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-10T14:31:54.374429 #1448]  INFO -- : (0.000104s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-10T14:31:54.374548 #1448]  INFO -- : (0.000068s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-10T14:31:54.374875 #1448]  INFO -- : (0.000135s) SELECT * FROM `requests` WHERE (`mentee_id` = 1)
+I, [2021-05-10T14:31:54.376006 #1448]  INFO -- : (0.000162s) SELECT count(*) AS 'count' FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\')) LIMIT 1
+I, [2021-05-10T14:31:54.376233 #1448]  INFO -- : (0.000129s) SELECT * FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\'))
+I, [2021-05-10T14:31:55.996053 #1448]  INFO -- : (0.000164s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-10T14:31:55.996324 #1448]  INFO -- : (0.000173s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-10T14:31:55.996447 #1448]  INFO -- : (0.000070s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-10T14:31:55.996621 #1448]  INFO -- : (0.000058s) SELECT * FROM `requests` WHERE (`mentee_id` = 1)
+I, [2021-05-10T14:31:57.243378 #1448]  INFO -- : (0.000165s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-10T14:31:57.243578 #1448]  INFO -- : (0.000102s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-10T14:31:57.243765 #1448]  INFO -- : (0.000137s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-10T14:31:57.244029 #1448]  INFO -- : (0.000064s) SELECT * FROM `requests` WHERE (`mentee_id` = 1)
+I, [2021-05-10T14:31:57.245212 #1448]  INFO -- : (0.000090s) SELECT count(*) AS 'count' FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\')) LIMIT 1
+I, [2021-05-10T14:31:57.245470 #1448]  INFO -- : (0.000137s) SELECT * FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\'))
+I, [2021-05-10T14:31:58.422198 #1448]  INFO -- : (0.000255s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-10T14:31:58.422413 #1448]  INFO -- : (0.000128s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-10T14:31:58.422554 #1448]  INFO -- : (0.000079s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-10T14:31:58.422751 #1448]  INFO -- : (0.000064s) SELECT * FROM `requests` WHERE (`mentee_id` = 1)
+I, [2021-05-10T14:31:58.873662 #1448]  INFO -- : (0.000143s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-10T14:31:58.873942 #1448]  INFO -- : (0.000181s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-10T14:31:58.874084 #1448]  INFO -- : (0.000075s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-10T14:31:58.874352 #1448]  INFO -- : (0.000071s) SELECT * FROM `requests` WHERE (`mentee_id` = 1)
+I, [2021-05-10T14:31:58.875468 #1448]  INFO -- : (0.000089s) SELECT count(*) AS 'count' FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\')) LIMIT 1
+I, [2021-05-10T14:31:58.875783 #1448]  INFO -- : (0.000205s) SELECT * FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\'))
+I, [2021-05-10T14:32:00.756865 #1448]  INFO -- : (0.000166s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-10T14:32:00.757058 #1448]  INFO -- : (0.000020s) BEGIN
+I, [2021-05-10T14:32:00.757467 #1448]  INFO -- : (0.000220s) UPDATE `mentees` SET `has_contacted` = 1 WHERE (`id` = 1)
+I, [2021-05-10T14:32:00.852003 #1448]  INFO -- : (0.094392s) COMMIT
+I, [2021-05-10T14:32:00.852183 #1448]  INFO -- : (0.000019s) BEGIN
+I, [2021-05-10T14:32:00.852439 #1448]  INFO -- : (0.000117s) INSERT INTO `requests` (`mentee_id`, `mentor_id`, `accepted`) VALUES (1, 3, 0)
+I, [2021-05-10T14:32:00.852603 #1448]  INFO -- : (0.000065s) SELECT * FROM `requests` WHERE `id` = 1
+I, [2021-05-10T14:32:00.990226 #1448]  INFO -- : (0.137571s) COMMIT
+I, [2021-05-10T14:32:03.569159 #1448]  INFO -- : (0.000236s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-10T14:32:03.569475 #1448]  INFO -- : (0.000198s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-10T14:32:03.569661 #1448]  INFO -- : (0.000109s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-10T14:32:03.570058 #1448]  INFO -- : (0.000101s) SELECT * FROM `requests` WHERE (`mentee_id` = 1)
+I, [2021-05-10T14:32:03.571415 #1448]  INFO -- : (0.000093s) SELECT count(*) AS 'count' FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\')) LIMIT 1
+I, [2021-05-10T14:32:03.571669 #1448]  INFO -- : (0.000137s) SELECT * FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\'))
+I, [2021-05-10T14:32:08.508039 #1448]  INFO -- : (0.000151s) SELECT * FROM `users` WHERE (`username` = 'mentor1') LIMIT 1
+I, [2021-05-10T14:32:08.508274 #1448]  INFO -- : (0.000088s) SELECT * FROM `users` WHERE (`username` = 'mentor1') LIMIT 1
+I, [2021-05-10T14:32:08.508416 #1448]  INFO -- : (0.000070s) SELECT * FROM `users` WHERE (`username` = 'mentor1') LIMIT 1
+I, [2021-05-10T14:32:08.508677 #1448]  INFO -- : (0.000106s) SELECT * FROM `mentors` WHERE (`username` LIKE '%mentor1%' ESCAPE '\') LIMIT 1
+I, [2021-05-10T14:32:08.508892 #1448]  INFO -- : (0.000093s) SELECT * FROM `mentors` WHERE (`username` = 'mentor1') LIMIT 1
+I, [2021-05-10T14:32:08.611981 #1448]  INFO -- : (0.000114s) SELECT * FROM `mentors` WHERE `id` = 3
+I, [2021-05-10T14:32:08.612162 #1448]  INFO -- : (0.000111s) SELECT * FROM `mentors` WHERE `id` = 3
+I, [2021-05-10T14:32:08.612298 #1448]  INFO -- : (0.000078s) SELECT * FROM `users` WHERE `id` = 3
+I, [2021-05-10T14:32:09.619934 #1448]  INFO -- : (0.000163s) SELECT * FROM `mentors` WHERE `id` = 3
+I, [2021-05-10T14:32:09.620169 #1448]  INFO -- : (0.000136s) SELECT * FROM `mentors` WHERE `id` = 3
+I, [2021-05-10T14:32:09.620309 #1448]  INFO -- : (0.000079s) SELECT * FROM `users` WHERE `id` = 3
+I, [2021-05-10T14:32:09.620526 #1448]  INFO -- : (0.000074s) SELECT * FROM `requests` WHERE (`mentor_id` = 3)
+I, [2021-05-10T14:32:09.621627 #1448]  INFO -- : (0.000078s) SELECT count(*) AS 'count' FROM `requests` WHERE (`mentor_id` = 3) LIMIT 1
+I, [2021-05-10T14:32:09.621825 #1448]  INFO -- : (0.000117s) SELECT * FROM `mentees`
+I, [2021-05-10T14:32:09.621958 #1448]  INFO -- : (0.000065s) SELECT count(*) AS 'count' FROM `requests` WHERE (`mentor_id` = 3) LIMIT 1
+I, [2021-05-10T14:32:09.622130 #1448]  INFO -- : (0.000121s) SELECT * FROM `mentees`
+I, [2021-05-10T14:32:10.963106 #1448]  INFO -- : (0.000150s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-10T14:32:10.963311 #1448]  INFO -- : (0.000023s) BEGIN
+I, [2021-05-10T14:32:10.963679 #1448]  INFO -- : (0.000154s) UPDATE `mentees` SET `has_mentor` = 1, `mentor_id` = 3 WHERE (`id` = 1)
+I, [2021-05-10T14:32:11.071189 #1448]  INFO -- : (0.107426s) COMMIT
+I, [2021-05-10T14:32:11.071470 #1448]  INFO -- : (0.000155s) SELECT * FROM `mentors` WHERE `id` = 3
+I, [2021-05-10T14:32:11.071600 #1448]  INFO -- : (0.000015s) BEGIN
+I, [2021-05-10T14:32:11.071902 #1448]  INFO -- : (0.000133s) UPDATE `mentors` SET `number_of_mentees` = 1 WHERE (`id` = 3)
+I, [2021-05-10T14:32:11.190572 #1448]  INFO -- : (0.118604s) COMMIT
+I, [2021-05-10T14:32:11.190937 #1448]  INFO -- : (0.000051s) SELECT * FROM `requests` WHERE `id` = 1
+I, [2021-05-10T14:32:11.191066 #1448]  INFO -- : (0.000014s) BEGIN
+I, [2021-05-10T14:32:11.191320 #1448]  INFO -- : (0.000112s) UPDATE `requests` SET `accepted` = 1 WHERE (`id` = 1)
+I, [2021-05-10T14:32:11.296074 #1448]  INFO -- : (0.104682s) COMMIT
+I, [2021-05-10T14:32:11.296185 #1448]  INFO -- : (0.105450s) SELECT * FROM `requests`
+I, [2021-05-10T14:32:11.627835 #1448]  INFO -- : (0.000260s) SELECT * FROM `mentors` WHERE `id` = 3
+I, [2021-05-10T14:32:11.628092 #1448]  INFO -- : (0.000124s) SELECT * FROM `mentors` WHERE `id` = 3
+I, [2021-05-10T14:32:11.628221 #1448]  INFO -- : (0.000071s) SELECT * FROM `users` WHERE `id` = 3
+I, [2021-05-10T14:32:11.628431 #1448]  INFO -- : (0.000071s) SELECT * FROM `requests` WHERE (`mentor_id` = 3)
+I, [2021-05-10T14:32:11.629643 #1448]  INFO -- : (0.000077s) SELECT count(*) AS 'count' FROM `requests` WHERE (`mentor_id` = 3) LIMIT 1
+I, [2021-05-10T14:32:11.629823 #1448]  INFO -- : (0.000117s) SELECT * FROM `mentees`
+I, [2021-05-10T14:32:11.629935 #1448]  INFO -- : (0.000059s) SELECT count(*) AS 'count' FROM `requests` WHERE (`mentor_id` = 3) LIMIT 1
+I, [2021-05-10T14:32:11.630090 #1448]  INFO -- : (0.000109s) SELECT * FROM `mentees`
+I, [2021-05-10T14:32:22.819863 #1448]  INFO -- : (0.000163s) SELECT * FROM `users` WHERE (`username` = 'mentee1') LIMIT 1
+I, [2021-05-10T14:32:22.820153 #1448]  INFO -- : (0.000103s) SELECT * FROM `users` WHERE (`username` = 'mentee1') LIMIT 1
+I, [2021-05-10T14:32:22.820365 #1448]  INFO -- : (0.000119s) SELECT * FROM `users` WHERE (`username` = 'mentee1') LIMIT 1
+I, [2021-05-10T14:32:22.820685 #1448]  INFO -- : (0.000120s) SELECT * FROM `mentees` WHERE (`username` LIKE '%mentee1%' ESCAPE '\') LIMIT 1
+I, [2021-05-10T14:32:22.820944 #1448]  INFO -- : (0.000106s) SELECT * FROM `mentees` WHERE (`username` = 'mentee1') LIMIT 1
+I, [2021-05-10T14:32:22.924337 #1448]  INFO -- : (0.000168s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-10T14:32:22.924526 #1448]  INFO -- : (0.000097s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-10T14:32:22.924642 #1448]  INFO -- : (0.000067s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-10T14:32:24.101017 #1448]  INFO -- : (0.000324s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-10T14:32:24.101415 #1448]  INFO -- : (0.000232s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-10T14:32:24.101642 #1448]  INFO -- : (0.000127s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-10T14:32:24.102144 #1448]  INFO -- : (0.000123s) SELECT * FROM `requests` WHERE (`mentee_id` = 1)
+I, [2021-05-10T14:32:24.103991 #1448]  INFO -- : (0.000156s) SELECT count(*) AS 'count' FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\')) LIMIT 1
+I, [2021-05-10T14:32:24.104386 #1448]  INFO -- : (0.000232s) SELECT * FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\'))
+I, [2021-05-10T14:32:25.384328 #1448]  INFO -- : (0.000190s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-10T14:32:25.384525 #1448]  INFO -- : (0.000100s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-10T14:32:25.384649 #1448]  INFO -- : (0.000068s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-10T14:32:25.384837 #1448]  INFO -- : (0.000071s) SELECT * FROM `requests` WHERE (`mentee_id` = 1)
+I, [2021-05-10T14:32:25.385853 #1448]  INFO -- : (0.000122s) SELECT * FROM `mentors`
+I, [2021-05-10T14:32:29.631845 #1448]  INFO -- : (0.000179s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-10T14:32:29.632064 #1448]  INFO -- : (0.000024s) BEGIN
+I, [2021-05-10T14:32:29.632387 #1448]  INFO -- : (0.000149s) UPDATE `mentees` SET `has_mentor` = 0, `mentor_id` = 0 WHERE (`id` = 1)
+I, [2021-05-10T14:32:29.763646 #1448]  INFO -- : (0.131168s) COMMIT
+I, [2021-05-10T14:32:29.764039 #1448]  INFO -- : (0.000187s) SELECT * FROM `mentors` WHERE `id` = 3
+I, [2021-05-10T14:32:29.764195 #1448]  INFO -- : (0.000019s) BEGIN
+I, [2021-05-10T14:32:29.764513 #1448]  INFO -- : (0.000138s) UPDATE `mentors` SET `number_of_mentees` = 0 WHERE (`id` = 3)
+I, [2021-05-10T14:32:29.873151 #1448]  INFO -- : (0.108561s) COMMIT
+I, [2021-05-10T14:32:29.873598 #1448]  INFO -- : (0.000051s) SELECT * FROM `requests` WHERE `id` = 1
+I, [2021-05-10T14:32:29.991325 #1448]  INFO -- : (0.117630s) DELETE FROM `requests` WHERE `id` = 1
+I, [2021-05-10T14:32:29.991420 #1448]  INFO -- : (0.118022s) SELECT * FROM `requests` WHERE (`mentee_id` = 1)
+I, [2021-05-10T14:32:30.119701 #1448]  INFO -- : (0.000166s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-10T14:32:30.119947 #1448]  INFO -- : (0.000114s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-10T14:32:30.120076 #1448]  INFO -- : (0.000072s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-10T14:32:30.120252 #1448]  INFO -- : (0.000058s) SELECT * FROM `requests` WHERE (`mentee_id` = 1)
+I, [2021-05-10T14:32:31.427081 #1448]  INFO -- : (0.000170s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-10T14:32:31.427276 #1448]  INFO -- : (0.000100s) SELECT * FROM `mentees` WHERE `id` = 1
+I, [2021-05-10T14:32:31.427396 #1448]  INFO -- : (0.000071s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-05-10T14:32:31.427651 #1448]  INFO -- : (0.000064s) SELECT * FROM `requests` WHERE (`mentee_id` = 1)
+I, [2021-05-10T14:32:31.428656 #1448]  INFO -- : (0.000096s) SELECT count(*) AS 'count' FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\')) LIMIT 1
+I, [2021-05-10T14:32:31.428884 #1448]  INFO -- : (0.000129s) SELECT * FROM `mentors` WHERE ((`gender` LIKE '%' ESCAPE '\') AND (`industry` LIKE '%' ESCAPE '\') AND (`degree_field` LIKE '%' ESCAPE '\') AND (`sheffield_graduate` LIKE '%' ESCAPE '\'))
+I, [2021-05-10T14:33:11.617069 #1448]  INFO -- : (0.000036s) BEGIN
+I, [2021-05-10T14:33:11.617506 #1448]  INFO -- : (0.000230s) INSERT INTO `questions_answers` (`question`, `answer`, `user_type`) VALUES ('What if I want to change mentor?', 'Go to your requests page, there will be an option to ''delete'' your current mentor. Then you can request a new one.', 'mentee')
+I, [2021-05-10T14:33:11.617740 #1448]  INFO -- : (0.000088s) SELECT * FROM `questions_answers` WHERE `id` = 2
+I, [2021-05-10T14:33:11.724375 #1448]  INFO -- : (0.106561s) COMMIT
+I, [2021-05-10T14:33:16.746278 #1448]  INFO -- : (0.000149s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2021-05-10T14:33:16.746507 #1448]  INFO -- : (0.000088s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2021-05-10T14:33:16.746746 #1448]  INFO -- : (0.000082s) SELECT * FROM `admins` WHERE (`username` LIKE '%admin%' ESCAPE '\') LIMIT 1
+I, [2021-05-10T14:33:16.746933 #1448]  INFO -- : (0.000073s) SELECT * FROM `admins` WHERE (`username` = 'admin') LIMIT 1
+I, [2021-05-10T14:33:16.857191 #1448]  INFO -- : (0.000090s) SELECT * FROM `admins` WHERE `id` = 5
+I, [2021-05-10T14:33:16.857343 #1448]  INFO -- : (0.000089s) SELECT * FROM `admins` WHERE `id` = 5
+I, [2021-05-10T14:33:16.857479 #1448]  INFO -- : (0.000070s) SELECT * FROM `users` WHERE `id` = 5
+I, [2021-05-10T14:33:18.307223 #1448]  INFO -- : (0.000144s) SELECT * FROM `admins` WHERE `id` = 5
+I, [2021-05-10T14:33:18.307420 #1448]  INFO -- : (0.000087s) SELECT * FROM `admins` WHERE `id` = 5
+I, [2021-05-10T14:33:18.307548 #1448]  INFO -- : (0.000069s) SELECT * FROM `users` WHERE `id` = 5
+I, [2021-05-10T14:33:18.307679 #1448]  INFO -- : (0.000071s) SELECT * FROM `questions_answers`
+I, [2021-05-10T14:33:58.157822 #1448]  INFO -- : (0.000173s) SELECT * FROM `mentors`
+I, [2021-05-10T14:34:01.166702 #1448]  INFO -- : (0.000175s) SELECT * FROM `mentees`
+I, [2021-05-10T14:34:02.155615 #1448]  INFO -- : (0.000174s) SELECT * FROM `mentors`
+I, [2021-05-10T14:34:04.174920 #1448]  INFO -- : (0.000263s) SELECT * FROM `mentees`
+I, [2021-05-10T14:34:04.698774 #1448]  INFO -- : (0.000153s) SELECT * FROM `admins` WHERE `id` = 5
+I, [2021-05-10T14:34:04.698984 #1448]  INFO -- : (0.000093s) SELECT * FROM `admins` WHERE `id` = 5
+I, [2021-05-10T14:34:04.699116 #1448]  INFO -- : (0.000072s) SELECT * FROM `users` WHERE `id` = 5
+I, [2021-05-10T14:34:05.554607 #1448]  INFO -- : (0.000145s) SELECT * FROM `admins` WHERE `id` = 5
+I, [2021-05-10T14:34:05.554796 #1448]  INFO -- : (0.000097s) SELECT * FROM `admins` WHERE `id` = 5
+I, [2021-05-10T14:34:05.554933 #1448]  INFO -- : (0.000076s) SELECT * FROM `users` WHERE `id` = 5
+I, [2021-05-10T14:34:05.555063 #1448]  INFO -- : (0.000071s) SELECT * FROM `questions_answers`
