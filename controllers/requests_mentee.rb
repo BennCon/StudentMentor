@@ -40,7 +40,8 @@ post "/deleteMethod" do
    @requests.each do |request|
       if request[:mentor_id] == mentor_id
          request = Request[request[:id]]
-         request.delete
+         request[:accepted] = 3
+         request.save_changes(:validate => false)
       end
    end
    
