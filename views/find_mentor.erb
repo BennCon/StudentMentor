@@ -134,12 +134,11 @@
               <% end %> 
           </div>
         </main>
-</div>
+        </div>
+        <script>
+         var submitButton = document.getElementsByClassName('button')[0]
+         var accdetails = document.getElementsByClassName('accDetails')[0]
+         submitButton.addEventListener('click',function(a){accdetails.classList.toggle('active-form')})
+        </script>
 
-<script>
- var submitButton = document.getElementsByClassName('button')[0]
- var accdetails = document.getElementsByClassName('accDetails')[0]
- submitButton.addEventListener('click',function(a){accdetails.classList.toggle('active-form')})
-</script>
-                
 <%= erb :"commons/footer" %>

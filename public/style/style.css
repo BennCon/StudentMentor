@@ -205,12 +205,15 @@ main {
 #button-filters {
    border-radius: 20%;
    background-color:#FCA311;  
-}
+   
+    font-size: large;
+    }
 
 #button-filters:hover {
    background-color:#14213D;
    color:white;
    transition:0.5s; 
+   
 }
 
 .filter-form {
